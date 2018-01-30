@@ -6,7 +6,7 @@
     <file alias="transaction_abandoned">res/icons/shade/transaction_abandoned.png</file>
     <file alias="hd_enabled">res/icons/shade/hd_enabled.png</file>
     <file alias="hd_disabled">res/icons/shade/hd_disabled.png</file>
-    <file alias="syscoin">res/icons/shade/syscoin.png</file>
+    <file alias="Zioncoin">res/icons/shade/Zioncoin.png</file>
     <file alias="address-book">res/icons/shade/address-book.png</file>
     <file alias="quit">res/icons/shade/quit.png</file>
     <file alias="send">res/icons/shade/send.png</file>

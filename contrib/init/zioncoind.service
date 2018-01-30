@@ -1,15 +1,15 @@
 [Unit]
-Description=Syscoin's distributed currency daemon
+Description=Zioncoin's distributed currency daemon
 After=network.target
 
 [Service]
-User=syscoin
-Group=syscoin
+User=Zioncoin
+Group=Zioncoin
 
 Type=forking
-PIDFile=/var/lib/syscoind/syscoind.pid
-ExecStart=/usr/bin/syscoind -daemon -pid=/var/lib/syscoind/syscoind.pid \
--conf=/etc/syscoin/syscoin.conf -datadir=/var/lib/syscoind -disablewallet
+PIDFile=/var/lib/Zioncoind/Zioncoind.pid
+ExecStart=/usr/bin/Zioncoind -daemon -pid=/var/lib/Zioncoind/Zioncoind.pid \
+-conf=/etc/Zioncoin/Zioncoin.conf -datadir=/var/lib/Zioncoind -disablewallet
 
 Restart=always
 PrivateTmp=true

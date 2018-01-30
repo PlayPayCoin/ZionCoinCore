@@ -1,14 +1,14 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
-#include "syscoingui.h"
+#include "Zioncoingui.h"
 
-#include "syscoinunits.h"
+#include "Zioncoinunits.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
 #include "guiutil.h"
@@ -63,7 +63,7 @@
 #include <QUrlQuery>
 #endif
 
-const std::string SyscoinGUI::DEFAULT_UIPLATFORM =
+const std::string ZioncoinGUI::DEFAULT_UIPLATFORM =
 #if defined(Q_OS_MAC)
         "macosx"
 #elif defined(Q_OS_WIN)
@@ -73,9 +73,9 @@ const std::string SyscoinGUI::DEFAULT_UIPLATFORM =
 #endif
         ;
 
-const QString SyscoinGUI::DEFAULT_WALLET = "~Default";
+const QString ZioncoinGUI::DEFAULT_WALLET = "~Default";
 
-SyscoinGUI::SyscoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
+ZioncoinGUI::ZioncoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
     QMainWindow(parent),
     clientModel(0),
     walletFrame(0),
@@ -118,7 +118,7 @@ SyscoinGUI::SyscoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     platformStyle(platformStyle)
 {
     GUIUtil::restoreWindowGeometry("nWindow", QSize(850, 550), this);
-    // SYSCOIN
+    // Zioncoin
 	/* Open CSS when configured */
     this->setStyleSheet(GUIUtil::loadStyleSheet());
     QString windowTitle = tr(PACKAGE_NAME) + " - ";
@@ -242,7 +242,7 @@ SyscoinGUI::SyscoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     subscribeToCoreSignals();
 }
 
-SyscoinGUI::~SyscoinGUI()
+ZioncoinGUI::~ZioncoinGUI()
 {
     // Unsubscribe from notifications from core
     unsubscribeFromCoreSignals();
@@ -258,10 +258,10 @@ SyscoinGUI::~SyscoinGUI()
     delete rpcConsole;
 }
 
-void SyscoinGUI::createActions()
+void ZioncoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
-	// SYSCOIN
+	// Zioncoin
 	QString theme = GUIUtil::getThemeName();
 	overviewAction = new QAction(platformStyle->SingleColorIcon(":/icons/" + theme + "/overview"), tr("Overview"), this);
     overviewAction->setStatusTip(tr("Show general overview of wallet"));
@@ -270,33 +270,33 @@ void SyscoinGUI::createActions()
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
-	// SYSCOIN
+	// Zioncoin
     sendCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/" + theme + "/send"), tr("Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Syscoin address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a Zioncoin address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
 
-	// SYSCOIN
+	// Zioncoin
 	sendCoinsMenuAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/send"), sendCoinsAction->text(), this);
     sendCoinsMenuAction->setStatusTip(sendCoinsAction->statusTip());
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
-	// SYSCOIN
+	// Zioncoin
     receiveCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/" + theme + "/receiving_addresses"), tr("Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and syscoin: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and Zioncoin: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(receiveCoinsAction);
 
-	// SYSCOIN
+	// Zioncoin
     receiveCoinsMenuAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/receiving_addresses"), receiveCoinsAction->text(), this);
     receiveCoinsMenuAction->setStatusTip(receiveCoinsAction->statusTip());
     receiveCoinsMenuAction->setToolTip(receiveCoinsMenuAction->statusTip());
 
-	// SYSCOIN
+	// Zioncoin
     historyAction = new QAction(platformStyle->SingleColorIcon(":/icons/" + theme + "/history"), tr("&Transactions"), this);
     historyAction->setStatusTip(tr("Browse transaction history"));
     historyAction->setToolTip(historyAction->statusTip());
@@ -321,67 +321,67 @@ void SyscoinGUI::createActions()
     connect(historyAction, SIGNAL(triggered()), this, SLOT(gotoHistoryPage()));
 #endif // ENABLE_WALLET
 
-	// SYSCOIN
+	// Zioncoin
     quitAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/quit"), tr("E&xit"), this);
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-	// SYSCOIN
-    aboutAction = new QAction(QIcon(":/icons/" + theme + "/about"), tr("&About Syscoin Core"), this);
+	// Zioncoin
+    aboutAction = new QAction(QIcon(":/icons/" + theme + "/about"), tr("&About Zioncoin Core"), this);
     aboutAction->setStatusTip(tr("Show information about %1").arg(tr(PACKAGE_NAME)));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutAction->setEnabled(false);
-	// SYSCOIN
+	// Zioncoin
     aboutQtAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/about_qt"), tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
-	// SYSCOIN
+	// Zioncoin
     optionsAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/options"), tr("&Options..."), this);
     optionsAction->setStatusTip(tr("Modify configuration options for %1").arg(tr(PACKAGE_NAME)));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     optionsAction->setEnabled(false);
-	// SYSCOIN
+	// Zioncoin
     toggleHideAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/about"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
-	// SYSCOIN
+	// Zioncoin
     encryptWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/lock_closed"), tr("&Encrypt Wallet..."), this);
     encryptWalletAction->setStatusTip(tr("Encrypt the private keys that belong to your wallet"));
     encryptWalletAction->setCheckable(true);
-	// SYSCOIN
+	// Zioncoin
     backupWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/filesave"), tr("&Backup Wallet..."), this);
     backupWalletAction->setStatusTip(tr("Backup wallet to another location"));
-	// SYSCOIN
+	// Zioncoin
     changePassphraseAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/key"), tr("&Change Passphrase..."), this);
     changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
-	// SYSCOIN
+	// Zioncoin
     signMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Syscoin addresses to prove you own them"));
-	// SYSCOIN
+    signMessageAction->setStatusTip(tr("Sign messages with your Zioncoin addresses to prove you own them"));
+	// Zioncoin
     verifyMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/verify"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Syscoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Zioncoin addresses"));
 
-	// SYSCOIN
+	// Zioncoin
     openRPCConsoleAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
     // initially disable the debug window menu item
     openRPCConsoleAction->setEnabled(false);
 
-	// SYSCOIN
+	// Zioncoin
     usedSendingAddressesAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/address-book"), tr("&Sending addresses..."), this);
     usedSendingAddressesAction->setStatusTip(tr("Show the list of used sending addresses and labels"));
-	// SYSCOIN
+	// Zioncoin
     usedReceivingAddressesAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/address-book"), tr("&Receiving addresses..."), this);
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
-	// SYSCOIN
+	// Zioncoin
     openAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a syscoin: URI or payment request"));
+    openAction->setStatusTip(tr("Open a Zioncoin: URI or payment request"));
 
-	// SYSCOIN
+	// Zioncoin
     showHelpMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/" + theme + "/info"), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible Syscoin command-line options").arg(tr(PACKAGE_NAME)));
+    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible Zioncoin command-line options").arg(tr(PACKAGE_NAME)));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -411,7 +411,7 @@ void SyscoinGUI::createActions()
     new QShortcut(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_D), this, SLOT(showDebugWindow()));
 }
 
-void SyscoinGUI::createMenuBar()
+void ZioncoinGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     // Create a decoupled menu bar on Mac which stays even if the window is closed
@@ -456,7 +456,7 @@ void SyscoinGUI::createMenuBar()
     help->addAction(aboutQtAction);
 }
 
-void SyscoinGUI::createToolBars()
+void ZioncoinGUI::createToolBars()
 {
     if(walletFrame)
     {
@@ -471,7 +471,7 @@ void SyscoinGUI::createToolBars()
     }
 }
 
-void SyscoinGUI::setClientModel(ClientModel *clientModel)
+void ZioncoinGUI::setClientModel(ClientModel *clientModel)
 {
     this->clientModel = clientModel;
     if(clientModel)
@@ -529,7 +529,7 @@ void SyscoinGUI::setClientModel(ClientModel *clientModel)
 }
 
 #ifdef ENABLE_WALLET
-bool SyscoinGUI::addWallet(const QString& name, WalletModel *walletModel)
+bool ZioncoinGUI::addWallet(const QString& name, WalletModel *walletModel)
 {
     if(!walletFrame)
         return false;
@@ -537,14 +537,14 @@ bool SyscoinGUI::addWallet(const QString& name, WalletModel *walletModel)
     return walletFrame->addWallet(name, walletModel);
 }
 
-bool SyscoinGUI::setCurrentWallet(const QString& name)
+bool ZioncoinGUI::setCurrentWallet(const QString& name)
 {
     if(!walletFrame)
         return false;
     return walletFrame->setCurrentWallet(name);
 }
 
-void SyscoinGUI::removeAllWallets()
+void ZioncoinGUI::removeAllWallets()
 {
     if(!walletFrame)
         return;
@@ -553,7 +553,7 @@ void SyscoinGUI::removeAllWallets()
 }
 #endif // ENABLE_WALLET
 
-void SyscoinGUI::setWalletActionsEnabled(bool enabled)
+void ZioncoinGUI::setWalletActionsEnabled(bool enabled)
 {
     overviewAction->setEnabled(enabled);
     sendCoinsAction->setEnabled(enabled);
@@ -571,7 +571,7 @@ void SyscoinGUI::setWalletActionsEnabled(bool enabled)
     openAction->setEnabled(enabled);
 }
 
-void SyscoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
+void ZioncoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
 {
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
@@ -584,7 +584,7 @@ void SyscoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
     notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
 }
 
-void SyscoinGUI::createTrayIconMenu()
+void ZioncoinGUI::createTrayIconMenu()
 {
 #ifndef Q_OS_MAC
     // return if trayIcon is unset (only on non-Mac OSes)
@@ -621,7 +621,7 @@ void SyscoinGUI::createTrayIconMenu()
 }
 
 #ifndef Q_OS_MAC
-void SyscoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void ZioncoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -631,7 +631,7 @@ void SyscoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
-void SyscoinGUI::optionsClicked()
+void ZioncoinGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -641,7 +641,7 @@ void SyscoinGUI::optionsClicked()
     dlg.exec();
 }
 
-void SyscoinGUI::aboutClicked()
+void ZioncoinGUI::aboutClicked()
 {
     if(!clientModel)
         return;
@@ -650,7 +650,7 @@ void SyscoinGUI::aboutClicked()
     dlg.exec();
 }
 
-void SyscoinGUI::showDebugWindow()
+void ZioncoinGUI::showDebugWindow()
 {
     rpcConsole->showNormal();
     rpcConsole->show();
@@ -658,19 +658,19 @@ void SyscoinGUI::showDebugWindow()
     rpcConsole->activateWindow();
 }
 
-void SyscoinGUI::showDebugWindowActivateConsole()
+void ZioncoinGUI::showDebugWindowActivateConsole()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_CONSOLE);
     showDebugWindow();
 }
 
-void SyscoinGUI::showHelpMessageClicked()
+void ZioncoinGUI::showHelpMessageClicked()
 {
     helpMessageDialog->show();
 }
 
 #ifdef ENABLE_WALLET
-void SyscoinGUI::openClicked()
+void ZioncoinGUI::openClicked()
 {
     OpenURIDialog dlg(this);
     if(dlg.exec())
@@ -679,45 +679,45 @@ void SyscoinGUI::openClicked()
     }
 }
 
-void SyscoinGUI::gotoOverviewPage()
+void ZioncoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     if (walletFrame) walletFrame->gotoOverviewPage();
 }
 
-void SyscoinGUI::gotoHistoryPage()
+void ZioncoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     if (walletFrame) walletFrame->gotoHistoryPage();
 }
 
-void SyscoinGUI::gotoReceiveCoinsPage()
+void ZioncoinGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoReceiveCoinsPage();
 }
 
-void SyscoinGUI::gotoSendCoinsPage(QString addr)
+void ZioncoinGUI::gotoSendCoinsPage(QString addr)
 {
     sendCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
 }
 
-void SyscoinGUI::gotoSignMessageTab(QString addr)
+void ZioncoinGUI::gotoSignMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoSignMessageTab(addr);
 }
 
-void SyscoinGUI::gotoVerifyMessageTab(QString addr)
+void ZioncoinGUI::gotoVerifyMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoVerifyMessageTab(addr);
 }
 #endif // ENABLE_WALLET
 
-void SyscoinGUI::setNumConnections(int count)
+void ZioncoinGUI::setNumConnections(int count)
 {
     QString icon;
-	// SYSCOIN
+	// Zioncoin
     QString theme = GUIUtil::getThemeName();
     switch(count)
     {
@@ -728,10 +728,10 @@ void SyscoinGUI::setNumConnections(int count)
     default: icon = ":/icons/" + theme + "/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(platformStyle->SingleColorIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Syscoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Zioncoin network", "", count));
 }
 
-void SyscoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerificationProgress, bool header)
+void ZioncoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerificationProgress, bool header)
 {
     if(!clientModel)
         return;
@@ -777,7 +777,7 @@ void SyscoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVer
     // Set icon state: spinning if catching up, tick otherwise
     if(secs < 90*60)
     {
-		// SYSCOIN
+		// Zioncoin
 		QString theme = GUIUtil::getThemeName();
         tooltip = tr("Up to date") + QString(".<br>") + tooltip;
         labelBlocksIcon->setPixmap(platformStyle->SingleColorIcon(":/icons/" + theme + "/synced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
@@ -853,9 +853,9 @@ void SyscoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVer
     progressBar->setToolTip(tooltip);
 }
 
-void SyscoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
+void ZioncoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("Syscoin"); // default title
+    QString strTitle = tr("Zioncoin"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -881,7 +881,7 @@ void SyscoinGUI::message(const QString &title, const QString &message, unsigned 
             break;
         }
     }
-    // Append title to "Syscoin - "
+    // Append title to "Zioncoin - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 
@@ -912,7 +912,7 @@ void SyscoinGUI::message(const QString &title, const QString &message, unsigned 
         notificator->notify((Notificator::Class)nNotifyIcon, strTitle, message);
 }
 
-void SyscoinGUI::changeEvent(QEvent *e)
+void ZioncoinGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -931,7 +931,7 @@ void SyscoinGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void SyscoinGUI::closeEvent(QCloseEvent *event)
+void ZioncoinGUI::closeEvent(QCloseEvent *event)
 {
 #ifndef Q_OS_MAC // Ignored on Mac
     if(clientModel && clientModel->getOptionsModel())
@@ -954,7 +954,7 @@ void SyscoinGUI::closeEvent(QCloseEvent *event)
 #endif
 }
 
-void SyscoinGUI::showEvent(QShowEvent *event)
+void ZioncoinGUI::showEvent(QShowEvent *event)
 {
     // enable the debug window when the main window shows up
     openRPCConsoleAction->setEnabled(true);
@@ -963,11 +963,11 @@ void SyscoinGUI::showEvent(QShowEvent *event)
 }
 
 #ifdef ENABLE_WALLET
-void SyscoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label)
+void ZioncoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label)
 {
     // On new transaction, make an info balloon
     QString msg = tr("Date: %1\n").arg(date) +
-                  tr("Amount: %1\n").arg(SyscoinUnits::formatWithUnit(unit, amount, true)) +
+                  tr("Amount: %1\n").arg(ZioncoinUnits::formatWithUnit(unit, amount, true)) +
                   tr("Type: %1\n").arg(type);
     if (!label.isEmpty())
         msg += tr("Label: %1\n").arg(label);
@@ -978,14 +978,14 @@ void SyscoinGUI::incomingTransaction(const QString& date, int unit, const CAmoun
 }
 #endif // ENABLE_WALLET
 
-void SyscoinGUI::dragEnterEvent(QDragEnterEvent *event)
+void ZioncoinGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void SyscoinGUI::dropEvent(QDropEvent *event)
+void ZioncoinGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -997,7 +997,7 @@ void SyscoinGUI::dropEvent(QDropEvent *event)
     event->acceptProposedAction();
 }
 
-bool SyscoinGUI::eventFilter(QObject *object, QEvent *event)
+bool ZioncoinGUI::eventFilter(QObject *object, QEvent *event)
 {
     // Catch status tip events
     if (event->type() == QEvent::StatusTip)
@@ -1010,7 +1010,7 @@ bool SyscoinGUI::eventFilter(QObject *object, QEvent *event)
 }
 
 #ifdef ENABLE_WALLET
-bool SyscoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
+bool ZioncoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
 {
     // URI has to be valid
     if (walletFrame && walletFrame->handlePaymentRequest(recipient))
@@ -1022,9 +1022,9 @@ bool SyscoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
     return false;
 }
 
-void SyscoinGUI::setEncryptionStatus(int status)
+void ZioncoinGUI::setEncryptionStatus(int status)
 {
-	// SYSCOIN
+	// Zioncoin
 	QString theme = GUIUtil::getThemeName();
     switch(status)
     {
@@ -1054,7 +1054,7 @@ void SyscoinGUI::setEncryptionStatus(int status)
 }
 #endif // ENABLE_WALLET
 
-void SyscoinGUI::showNormalIfMinimized(bool fToggleHidden)
+void ZioncoinGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     if(!clientModel)
         return;
@@ -1079,12 +1079,12 @@ void SyscoinGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void SyscoinGUI::toggleHidden()
+void ZioncoinGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void SyscoinGUI::detectShutdown()
+void ZioncoinGUI::detectShutdown()
 {
     if (ShutdownRequested())
     {
@@ -1094,7 +1094,7 @@ void SyscoinGUI::detectShutdown()
     }
 }
 
-void SyscoinGUI::showProgress(const QString &title, int nProgress)
+void ZioncoinGUI::showProgress(const QString &title, int nProgress)
 {
     if (nProgress == 0)
     {
@@ -1117,7 +1117,7 @@ void SyscoinGUI::showProgress(const QString &title, int nProgress)
         progressDialog->setValue(nProgress);
 }
 
-void SyscoinGUI::setTrayIconVisible(bool fHideTrayIcon)
+void ZioncoinGUI::setTrayIconVisible(bool fHideTrayIcon)
 {
     if (trayIcon)
     {
@@ -1125,7 +1125,7 @@ void SyscoinGUI::setTrayIconVisible(bool fHideTrayIcon)
     }
 }
 
-static bool ThreadSafeMessageBox(SyscoinGUI *gui, const std::string& message, const std::string& caption, unsigned int style)
+static bool ThreadSafeMessageBox(ZioncoinGUI *gui, const std::string& message, const std::string& caption, unsigned int style)
 {
     bool modal = (style & CClientUIInterface::MODAL);
     // The SECURE flag has no effect in the Qt GUI.
@@ -1142,14 +1142,14 @@ static bool ThreadSafeMessageBox(SyscoinGUI *gui, const std::string& message, co
     return ret;
 }
 
-void SyscoinGUI::subscribeToCoreSignals()
+void ZioncoinGUI::subscribeToCoreSignals()
 {
     // Connect signals to client
     uiInterface.ThreadSafeMessageBox.connect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
     uiInterface.ThreadSafeQuestion.connect(boost::bind(ThreadSafeMessageBox, this, _1, _3, _4));
 }
 
-void SyscoinGUI::unsubscribeFromCoreSignals()
+void ZioncoinGUI::unsubscribeFromCoreSignals()
 {
     // Disconnect signals from client
     uiInterface.ThreadSafeMessageBox.disconnect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
@@ -1162,12 +1162,12 @@ UnitDisplayStatusBarControl::UnitDisplayStatusBarControl(const PlatformStyle *pl
 {
     createContextMenu();
     setToolTip(tr("Unit to show amounts in. Click to select another unit."));
-    QList<SyscoinUnits::Unit> units = SyscoinUnits::availableUnits();
+    QList<ZioncoinUnits::Unit> units = ZioncoinUnits::availableUnits();
     int max_width = 0;
     const QFontMetrics fm(font());
-    Q_FOREACH (const SyscoinUnits::Unit unit, units)
+    Q_FOREACH (const ZioncoinUnits::Unit unit, units)
     {
-        max_width = qMax(max_width, fm.width(SyscoinUnits::name(unit)));
+        max_width = qMax(max_width, fm.width(ZioncoinUnits::name(unit)));
     }
     setMinimumSize(max_width, 0);
     setAlignment(Qt::AlignRight | Qt::AlignVCenter);
@@ -1184,9 +1184,9 @@ void UnitDisplayStatusBarControl::mousePressEvent(QMouseEvent *event)
 void UnitDisplayStatusBarControl::createContextMenu()
 {
     menu = new QMenu(this);
-    Q_FOREACH(SyscoinUnits::Unit u, SyscoinUnits::availableUnits())
+    Q_FOREACH(ZioncoinUnits::Unit u, ZioncoinUnits::availableUnits())
     {
-        QAction *menuAction = new QAction(QString(SyscoinUnits::name(u)), this);
+        QAction *menuAction = new QAction(QString(ZioncoinUnits::name(u)), this);
         menuAction->setData(QVariant(u));
         menu->addAction(menuAction);
     }
@@ -1211,7 +1211,7 @@ void UnitDisplayStatusBarControl::setOptionsModel(OptionsModel *optionsModel)
 /** When Display Units are changed on OptionsModel it will refresh the display text of the control on the status bar */
 void UnitDisplayStatusBarControl::updateDisplayUnit(int newUnits)
 {
-    setText(SyscoinUnits::name(newUnits));
+    setText(ZioncoinUnits::name(newUnits));
 }
 
 /** Shows context menu with Display Unit options by the mouse coordinates */

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Syscoin Core developers
+# Copyright (c) 2014-2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +35,7 @@ PORT_MIN = 11000
 # The number of ports to "reserve" for p2p and rpc, each
 PORT_RANGE = 5000
 
-SYSCOIND_PROC_WAIT_TIMEOUT = 60
+ZioncoinD_PROC_WAIT_TIMEOUT = 60
 
 
 class PortSeed:
@@ -150,14 +150,14 @@ def sync_mempools(rpc_connections, wait=1, timeout=60):
         timeout -= wait
     raise AssertionError("Mempool sync failed")
 
-syscoind_processes = {}
+Zioncoind_processes = {}
 
 def initialize_datadir(dirname, n):
     datadir = os.path.join(dirname, "node"+str(n))
     if not os.path.isdir(datadir):
         os.makedirs(datadir)
     rpc_u, rpc_p = rpc_auth_pair(n)
-    with open(os.path.join(datadir, "syscoin.conf"), 'w', encoding='utf8') as f:
+    with open(os.path.join(datadir, "Zioncoin.conf"), 'w', encoding='utf8') as f:
         f.write("regtest=1\n")
         f.write("rpcuser=" + rpc_u + "\n")
         f.write("rpcpassword=" + rpc_p + "\n")
@@ -181,14 +181,14 @@ def rpc_url(i, rpchost=None):
             host = rpchost
     return "http://%s:%s@%s:%d" % (rpc_u, rpc_p, host, int(port))
 
-def wait_for_syscoind_start(process, url, i):
+def wait_for_Zioncoind_start(process, url, i):
     '''
-    Wait for syscoind to start. This means that RPC is accessible and fully initialized.
-    Raise an exception if syscoind exits during initialization.
+    Wait for Zioncoind to start. This means that RPC is accessible and fully initialized.
+    Raise an exception if Zioncoind exits during initialization.
     '''
     while True:
         if process.poll() is not None:
-            raise Exception('syscoind exited with status %i during initialization' % process.returncode)
+            raise Exception('Zioncoind exited with status %i during initialization' % process.returncode)
         try:
             rpc = get_rpc_proxy(url, i)
             blocks = rpc.getblockcount()
@@ -221,16 +221,16 @@ def initialize_chain(test_dir, num_nodes):
             if os.path.isdir(os.path.join("cache","node"+str(i))):
                 shutil.rmtree(os.path.join("cache","node"+str(i)))
 
-        # Create cache directories, run syscoinds:
+        # Create cache directories, run Zioncoinds:
         for i in range(MAX_NODES):
             datadir=initialize_datadir("cache", i)
-            args = [ os.getenv("SYSCOIND", "syscoind"), "-server", "-keypool=1", "-datadir="+datadir, "-discover=0" ]
+            args = [ os.getenv("ZioncoinD", "Zioncoind"), "-server", "-keypool=1", "-datadir="+datadir, "-discover=0" ]
             if i > 0:
                 args.append("-connect=127.0.0.1:"+str(p2p_port(0)))
-            syscoind_processes[i] = subprocess.Popen(args)
+            Zioncoind_processes[i] = subprocess.Popen(args)
             if os.getenv("PYTHON_DEBUG", ""):
-                print("initialize_chain: syscoind started, waiting for RPC to come up")
-            wait_for_syscoind_start(syscoind_processes[i], rpc_url(i), i)
+                print("initialize_chain: Zioncoind started, waiting for RPC to come up")
+            wait_for_Zioncoind_start(Zioncoind_processes[i], rpc_url(i), i)
             if os.getenv("PYTHON_DEBUG", ""):
                 print("initialize_chain: RPC succesfully started")
 
@@ -273,7 +273,7 @@ def initialize_chain(test_dir, num_nodes):
         from_dir = os.path.join("cache", "node"+str(i))
         to_dir = os.path.join(test_dir,  "node"+str(i))
         shutil.copytree(from_dir, to_dir)
-        initialize_datadir(test_dir, i) # Overwrite port/rpcport in syscoin.conf
+        initialize_datadir(test_dir, i) # Overwrite port/rpcport in Zioncoin.conf
 
 def initialize_chain_clean(test_dir, num_nodes):
     """
@@ -306,18 +306,18 @@ def _rpchost_to_args(rpchost):
 
 def start_node(i, dirname, extra_args=None, rpchost=None, timewait=None, binary=None):
     """
-    Start a syscoind and return RPC connection to it
+    Start a Zioncoind and return RPC connection to it
     """
     datadir = os.path.join(dirname, "node"+str(i))
     if binary is None:
-        binary = os.getenv("SYSCOIND", "syscoind")
+        binary = os.getenv("ZioncoinD", "Zioncoind")
     args = [ binary, "-datadir="+datadir, "-server", "-keypool=1", "-discover=0", "-rest", "-mocktime="+str(get_mocktime()) ]
     if extra_args is not None: args.extend(extra_args)
-    syscoind_processes[i] = subprocess.Popen(args)
+    Zioncoind_processes[i] = subprocess.Popen(args)
     if os.getenv("PYTHON_DEBUG", ""):
-        print("start_node: syscoind started, waiting for RPC to come up")
+        print("start_node: Zioncoind started, waiting for RPC to come up")
     url = rpc_url(i, rpchost)
-    wait_for_syscoind_start(syscoind_processes[i], url, i)
+    wait_for_Zioncoind_start(Zioncoind_processes[i], url, i)
     if os.getenv("PYTHON_DEBUG", ""):
         print("start_node: RPC succesfully started")
     proxy = get_rpc_proxy(url, i, timeout=timewait)
@@ -329,7 +329,7 @@ def start_node(i, dirname, extra_args=None, rpchost=None, timewait=None, binary=
 
 def start_nodes(num_nodes, dirname, extra_args=None, rpchost=None, timewait=None, binary=None):
     """
-    Start multiple syscoinds, return RPC connections to them
+    Start multiple Zioncoinds, return RPC connections to them
     """
     if extra_args is None: extra_args = [ None for _ in range(num_nodes) ]
     if binary is None: binary = [ None for _ in range(num_nodes) ]
@@ -350,8 +350,8 @@ def stop_node(node, i):
         node.stop()
     except http.client.CannotSendRequest as e:
         print("WARN: Unable to stop node: " + repr(e))
-    syscoind_processes[i].wait(timeout=SYSCOIND_PROC_WAIT_TIMEOUT)
-    del syscoind_processes[i]
+    Zioncoind_processes[i].wait(timeout=ZioncoinD_PROC_WAIT_TIMEOUT)
+    del Zioncoind_processes[i]
 
 def stop_nodes(nodes):
     for node in nodes:
@@ -360,17 +360,17 @@ def stop_nodes(nodes):
         except http.client.CannotSendRequest as e:
             print("WARN: Unable to stop node: " + repr(e))
     del nodes[:] # Emptying array closes connections as a side effect
-    wait_syscoinds()
+    wait_Zioncoinds()
 
 def set_node_times(nodes, t):
     for node in nodes:
         node.setmocktime(t)
 
-def wait_syscoinds():
-    # Wait for all syscoinds to cleanly exit
-    for syscoind in syscoind_processes.values():
-        syscoind.wait(timeout=SYSCOIND_PROC_WAIT_TIMEOUT)
-    syscoind_processes.clear()
+def wait_Zioncoinds():
+    # Wait for all Zioncoinds to cleanly exit
+    for Zioncoind in Zioncoind_processes.values():
+        Zioncoind.wait(timeout=ZioncoinD_PROC_WAIT_TIMEOUT)
+    Zioncoind_processes.clear()
 
 def connect_nodes(from_connection, node_num):
     ip_port = "127.0.0.1:"+str(p2p_port(node_num))

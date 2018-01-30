@@ -1,10 +1,10 @@
 // Copyright (c) 2012 Pieter Wuille
-// Copyright (c) 2012-2015 The Syscoin Core developers
+// Copyright (c) 2012-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_ADDRMAN_H
-#define SYSCOIN_ADDRMAN_H
+#ifndef Zioncoin_ADDRMAN_H
+#define Zioncoin_ADDRMAN_H
 
 #include "netbase.h"
 #include "protocol.h"
@@ -602,4 +602,4 @@ public:
 
 };
 
-#endif // SYSCOIN_ADDRMAN_H
+#endif // Zioncoin_ADDRMAN_H

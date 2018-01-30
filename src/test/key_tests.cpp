@@ -1,4 +1,4 @@
-// Copyright (c) 2012-2015 The Syscoin Core developers
+// Copyright (c) 2012-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +9,7 @@
 #include "uint256.h"
 #include "util.h"
 #include "utilstrencodings.h"
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 
 #include <string>
 #include <vector>
@@ -42,14 +42,14 @@ void dumpKeyInfo(uint256 privkey)
     {
         bool fCompressed = nCompressed == 1;
         printf("  * %s:\n", fCompressed ? "compressed" : "uncompressed");
-        CSyscoinSecret bsecret;
+        CZioncoinSecret bsecret;
         bsecret.SetSecret(secret, fCompressed);
         printf("    * secret (base58): %s\n", bsecret.ToString().c_str());
         CKey key;
         key.SetSecret(secret, fCompressed);
         vector<unsigned char> vchPubKey = key.GetPubKey();
         printf("    * pubkey (hex): %s\n", HexStr(vchPubKey).c_str());
-        printf("    * address (base58): %s\n", CSyscoinAddress(vchPubKey).ToString().c_str());
+        printf("    * address (base58): %s\n", CZioncoinAddress(vchPubKey).ToString().c_str());
     }
 }
 #endif
@@ -59,12 +59,12 @@ BOOST_FIXTURE_TEST_SUITE(key_tests, BasicTestingSetup)
 
 BOOST_AUTO_TEST_CASE(key_test1)
 {
-	// SYSCOIN instantiation here because it relies on alias which checks Params()
-	CSyscoinAddress addr1 = CSyscoinAddress("1QFqqMUD55ZV3PJEJZtaKCsQmjLT6JkjvJ");
-	CSyscoinAddress addr2 = CSyscoinAddress("1F5y5E5FMc5YzdJtB9hLaUe43GDxEKXENJ");
-	CSyscoinAddress addr1C = CSyscoinAddress("1NoJrossxPBKfCHuJXT4HadJrXRE9Fxiqs");
-	CSyscoinAddress addr2C  = CSyscoinAddress("1CRj2HyM1CXWzHAXLQtiGLyggNT9WQqsDs");
-    CSyscoinSecret bsecret1, bsecret2, bsecret1C, bsecret2C, baddress1;
+	// Zioncoin instantiation here because it relies on alias which checks Params()
+	CZioncoinAddress addr1 = CZioncoinAddress("1QFqqMUD55ZV3PJEJZtaKCsQmjLT6JkjvJ");
+	CZioncoinAddress addr2 = CZioncoinAddress("1F5y5E5FMc5YzdJtB9hLaUe43GDxEKXENJ");
+	CZioncoinAddress addr1C = CZioncoinAddress("1NoJrossxPBKfCHuJXT4HadJrXRE9Fxiqs");
+	CZioncoinAddress addr2C  = CZioncoinAddress("1CRj2HyM1CXWzHAXLQtiGLyggNT9WQqsDs");
+    CZioncoinSecret bsecret1, bsecret2, bsecret1C, bsecret2C, baddress1;
     BOOST_CHECK( bsecret1.SetString (strSecret1));
     BOOST_CHECK( bsecret2.SetString (strSecret2));
     BOOST_CHECK( bsecret1C.SetString(strSecret1C));

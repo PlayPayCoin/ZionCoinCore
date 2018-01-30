@@ -1,17 +1,17 @@
-// Copyright (c) 2014-2015 The Syscoin Core developers
+// Copyright (c) 2014-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "chainparams.h"
 #include "main.h"
 
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 
 #include <boost/signals2/signal.hpp>
 #include <boost/test/unit_test.hpp>
 
 BOOST_FIXTURE_TEST_SUITE(main_tests, TestingSetup)
-// SYSCOIN
+// Zioncoin
 /*
 static void TestBlockSubsidyHalvings(const Consensus::Params& consensusParams)
 {
@@ -47,7 +47,7 @@ BOOST_AUTO_TEST_CASE(block_subsidy_test)
 BOOST_AUTO_TEST_CASE(subsidy_limit_test)
 {
      const Consensus::Params& consensusParams = Params(CBaseChainParams::MAIN).GetConsensus();
-	// SYSCOIN snapshot
+	// Zioncoin snapshot
     CAmount nSum = 0;
     for (int nHeight = 0; nHeight < 27856853; nHeight++) {
         CAmount nSubsidy = GetBlockSubsidy(nHeight, consensusParams);

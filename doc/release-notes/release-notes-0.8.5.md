@@ -1,11 +1,11 @@
-Syscoin-Qt version 0.8.5 is now available from:
-  http://sourceforge.net/projects/syscoin/files/Syscoin/syscoin-0.8.5/
+Zioncoin-Qt version 0.8.5 is now available from:
+  http://sourceforge.net/projects/Zioncoin/files/Zioncoin/Zioncoin-0.8.5/
 
 This is a maintenance release to fix a critical bug;
 we urge all users to upgrade.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/syscoin/syscoin2/issues
+  https://github.com/Zioncoin/Zioncoin2/issues
 
 
 How to Upgrade
@@ -14,7 +14,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/Syscoin-Qt (on Mac) or syscoind/syscoin-qt (on Linux).
+/Applications/Zioncoin-Qt (on Mac) or Zioncoind/Zioncoin-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you
 run 0.8.5 your blockchain files will be re-indexed, which will take

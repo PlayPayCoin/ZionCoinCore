@@ -414,7 +414,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -424,8 +424,8 @@
         <translation>Билдирүүнү &amp;текшерүү...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -512,7 +512,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Information</source>
         <translation>Маалымат</translation>

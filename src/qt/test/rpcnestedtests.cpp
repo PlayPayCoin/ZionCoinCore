@@ -1,4 +1,4 @@
-// Copyright (c) 2016 The Syscoin Core developers
+// Copyright (c) 2016 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -27,7 +27,7 @@ void RPCNestedTests::rpcNestedTests()
     const CChainParams& chainparams = Params();
     RegisterAllCoreRPCCommands(tableRPC);
     ClearDatadirCache();
-    std::string path = QDir::tempPath().toStdString() + "/" + strprintf("test_syscoin_qt_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
+    std::string path = QDir::tempPath().toStdString() + "/" + strprintf("test_Zioncoin_qt_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
     QDir dir(QString::fromStdString(path));
     dir.mkpath(".");
     mapArgs["-datadir"] = path;

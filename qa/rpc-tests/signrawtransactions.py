@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2016 The Syscoin Core developers
+# Copyright (c) 2015-2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 from test_framework.util import *
 
 
-class SignRawTransactionsTest(SyscoinTestFramework):
+class SignRawTransactionsTest(ZioncoinTestFramework):
     """Tests transaction signing via RPC command "signrawtransaction"."""
 
     def __init__(self):

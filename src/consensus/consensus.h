@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CONSENSUS_CONSENSUS_H
-#define SYSCOIN_CONSENSUS_CONSENSUS_H
+#ifndef Zioncoin_CONSENSUS_CONSENSUS_H
+#define Zioncoin_CONSENSUS_CONSENSUS_H
 
 #include <stdint.h>
 
@@ -28,4 +28,4 @@ enum {
     LOCKTIME_MEDIAN_TIME_PAST = (1 << 1),
 };
 
-#endif // SYSCOIN_CONSENSUS_CONSENSUS_H
+#endif // Zioncoin_CONSENSUS_CONSENSUS_H

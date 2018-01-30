@@ -418,7 +418,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>&amp;File</source>
         <translation>&amp;پەرگە</translation>
@@ -488,7 +488,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>هەڵبژاردنەکان:</translation>

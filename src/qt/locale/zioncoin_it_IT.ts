@@ -314,7 +314,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>Transazioni</translation>
@@ -352,6 +352,6 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     </context>
 </TS>

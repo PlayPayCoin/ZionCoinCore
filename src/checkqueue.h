@@ -1,9 +1,9 @@
-// Copyright (c) 2012-2015 The Syscoin Core developers
+// Copyright (c) 2012-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CHECKQUEUE_H
-#define SYSCOIN_CHECKQUEUE_H
+#ifndef Zioncoin_CHECKQUEUE_H
+#define Zioncoin_CHECKQUEUE_H
 
 #include <algorithm>
 #include <vector>
@@ -212,4 +212,4 @@ public:
     }
 };
 
-#endif // SYSCOIN_CHECKQUEUE_H
+#endif // Zioncoin_CHECKQUEUE_H

@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@
 #include "utilstrencodings.h"
 #include "crypto/common.h"
 
-// SYSCOIN setauxpow and remove gethash (moved to pureheader.cpp)
+// Zioncoin setauxpow and remove gethash (moved to pureheader.cpp)
 void CBlockHeader::SetAuxpow (CAuxPow* apow)
 {
     if (apow)

@@ -696,7 +696,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>नेटवर्क से समकालिक (मिल) रहा है ...</translation>
@@ -735,7 +735,7 @@
         <translation>पहचान शब्द/अक्षर जो वॉलेट एनक्रिपशन के लिए इस्तेमाल किया है उसे बदलिए!</translation>
     </message>
     <message>
-        <source>Syscoin</source>
+        <source>Zioncoin</source>
         <translation>बीटकोइन</translation>
     </message>
     <message>
@@ -1071,7 +1071,7 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>विकल्प:</translation>

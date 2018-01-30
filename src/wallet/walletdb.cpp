@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -359,13 +359,13 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
         {
             string strAddress;
             ssKey >> strAddress;
-            ssValue >> pwallet->mapAddressBook[CSyscoinAddress(strAddress).Get()].name;
+            ssValue >> pwallet->mapAddressBook[CZioncoinAddress(strAddress).Get()].name;
         }
         else if (strType == "purpose")
         {
             string strAddress;
             ssKey >> strAddress;
-            ssValue >> pwallet->mapAddressBook[CSyscoinAddress(strAddress).Get()].purpose;
+            ssValue >> pwallet->mapAddressBook[CZioncoinAddress(strAddress).Get()].purpose;
         }
         else if (strType == "tx")
         {
@@ -376,13 +376,13 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             CValidationState state;
             if (!(CheckTransaction(wtx, state) && (wtx.GetHash() == hash) && state.IsValid()))
 			{
-				// SYSCOIN
- 				if(wtx.GetHash() != hash && wtx.nVersion == GetSyscoinTxVersion())
+				// Zioncoin
+ 				if(wtx.GetHash() != hash && wtx.nVersion == GetZioncoinTxVersion())
  					return true;
  				strErr = "Error reading wallet database. CheckTransaction failed, validation state: " + FormatStateMessage(state);
                 return false;
 			}
-			// SYSCOIN don't need this
+			// Zioncoin don't need this
             // Undo serialize changes in 31600
            /* if (31404 <= wtx.fTimeReceivedIsTxTime && wtx.fTimeReceivedIsTxTime <= 31703)
             {
@@ -599,7 +599,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             ssKey >> strAddress;
             ssKey >> strKey;
             ssValue >> strValue;
-            if (!pwallet->LoadDestData(CSyscoinAddress(strAddress).Get(), strKey, strValue))
+            if (!pwallet->LoadDestData(CZioncoinAddress(strAddress).Get(), strKey, strValue))
             {
                 strErr = "Error reading wallet database: LoadDestData failed";
                 return false;
@@ -860,7 +860,7 @@ DBErrors CWalletDB::ZapWalletTx(CWallet* pwallet, vector<CWalletTx>& vWtx)
 void ThreadFlushWalletDB(const string& strFile)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("syscoin-wallet");
+    RenameThread("Zioncoin-wallet");
 
     static bool fOneThread;
     if (fOneThread)

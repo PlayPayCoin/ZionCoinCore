@@ -1,11 +1,11 @@
-// Copyright (c) 2009-2014 The Syscoin Core developers
+// Copyright (c) 2009-2014 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_COMPAT_SANITY_H
-#define SYSCOIN_COMPAT_SANITY_H
+#ifndef Zioncoin_COMPAT_SANITY_H
+#define Zioncoin_COMPAT_SANITY_H
 
 bool glibc_sanity_test();
 bool glibcxx_sanity_test();
 
-#endif // SYSCOIN_COMPAT_SANITY_H
+#endif // Zioncoin_COMPAT_SANITY_H

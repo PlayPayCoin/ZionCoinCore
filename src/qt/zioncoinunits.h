@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_SYSCOINUNITS_H
-#define SYSCOIN_QT_SYSCOINUNITS_H
+#ifndef Zioncoin_QT_ZioncoinUNITS_H
+#define Zioncoin_QT_ZioncoinUNITS_H
 
 #include "amount.h"
 
@@ -41,18 +41,18 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** Syscoin unit definitions. Encapsulates parsing and formatting
+/** Zioncoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class SyscoinUnits: public QAbstractListModel
+class ZioncoinUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit SyscoinUnits(QObject *parent);
+    explicit ZioncoinUnits(QObject *parent);
 
-    /** Syscoin units.
-      @note Source: https://en.syscoin.it/wiki/Units . Please add only sensible ones
+    /** Zioncoin units.
+      @note Source: https://en.Zioncoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
@@ -121,8 +121,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<SyscoinUnits::Unit> unitlist;
+    QList<ZioncoinUnits::Unit> unitlist;
 };
-typedef SyscoinUnits::Unit SyscoinUnit;
+typedef ZioncoinUnits::Unit ZioncoinUnit;
 
-#endif // SYSCOIN_QT_SYSCOINUNITS_H
+#endif // Zioncoin_QT_ZioncoinUNITS_H

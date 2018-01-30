@@ -1,4 +1,4 @@
-// Copyright (c) 2012-2015 The Syscoin Core developers
+// Copyright (c) 2012-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +8,7 @@
 #include "base58.h"
 #include "netbase.h"
 
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 
 #include <boost/algorithm/string.hpp>
 #include <boost/assign/list_of.hpp>
@@ -183,7 +183,7 @@ BOOST_AUTO_TEST_CASE(rpc_parse_monetary_values)
     BOOST_CHECK_EQUAL(AmountFromValue(ValueFromString("1.00000000")), 100000000LL);
     BOOST_CHECK_EQUAL(AmountFromValue(ValueFromString("20999999.9999999")), 2099999999999990LL);
     BOOST_CHECK_EQUAL(AmountFromValue(ValueFromString("20999999.99999999")), 2099999999999999LL);
-	// SYSCOIN max money
+	// Zioncoin max money
 	BOOST_CHECK_THROW(AmountFromValue(ValueFromString("888000001")), UniValue); //should fail
     BOOST_CHECK_EQUAL(AmountFromValue(ValueFromString("888000000")), 888000000*COIN);
 

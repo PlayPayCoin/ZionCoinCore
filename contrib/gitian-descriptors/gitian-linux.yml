@@ -1,5 +1,5 @@
 ---
-name: "syscoin-linux-2.1.6"
+name: "Zioncoin-linux-2.1.6"
 enable_cache: true
 suites:
 - "trusty"
@@ -28,8 +28,8 @@ packages:
 - "libtool"
 - "python"
 remotes:
-- "url": "https://github.com/syscoin/syscoin2.git"
-  "dir": "syscoin"
+- "url": "https://github.com/Zioncoin/Zioncoin2.git"
+  "dir": "Zioncoin"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped
@@ -112,7 +112,7 @@ script: |
   chmod +x ${WRAP_DIR}/${prog}
   done
 
-  cd syscoin
+  cd Zioncoin
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
@@ -134,13 +134,13 @@ script: |
   ./autogen.sh
   CONFIG_SITE=${BASEPREFIX}/`echo "${HOSTS}" | awk '{print $1;}'`/share/config.site ./configure --prefix=/
   make dist
-  SOURCEDIST=`echo syscoin-*.tar.gz`
+  SOURCEDIST=`echo Zioncoin-*.tar.gz`
   DISTNAME=`echo ${SOURCEDIST} | sed 's/.tar.*//'`
   # Correct tar file order
   mkdir -p temp
   pushd temp
   tar xf ../$SOURCEDIST
-  find syscoin-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
+  find Zioncoin-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
   popd
 
   ORIGPATH="$PATH"

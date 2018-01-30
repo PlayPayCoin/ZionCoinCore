@@ -88,12 +88,12 @@
         <translation>Endereços de recebimento</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Esses são seus endereços Syscoin para enviar pagamentos. Confira sempre a quantia e o destinatário antes de enviar moedas.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Esses são seus endereços Zioncoin para enviar pagamentos. Confira sempre a quantia e o destinatário antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estes são os seus endereços Syscoin para receber pagamentos. Recomenda-se a utilização de um novo endereço de recebimento para cada transação.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estes são os seus endereços Zioncoin para receber pagamentos. Recomenda-se a utilização de um novo endereço de recebimento para cada transação.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -203,8 +203,8 @@
         <translation>Confirmar criptografia da carteira</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Atenção: Se você criptografar sua carteira e perder sua frase, você vai &lt;b&gt;perder todos os seus SYSCOINS!&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Atenção: Se você criptografar sua carteira e perder sua frase, você vai &lt;b&gt;perder todos os seus ZioncoinS!&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -461,8 +461,8 @@
         <translation>Editar endereço de envio</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>O endereço digitado "%1" não é um endereço Syscoin válido.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>O endereço digitado "%1" não é um endereço Zioncoin válido.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -689,8 +689,8 @@
         <translation>Como essa é a primeira vez que o programa é executado, você pode escolher onde %1 armazenará seus dados.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Syscoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>O %1 irá baixar e armazenar uma cópia do block chain do Syscoin. Pelo menos %2GB de dados serão armazenados neste diretório, e ele crescerá ao longo do tempo. A carteira também será armazenada neste diretório.</translation>
+        <source>%1 will download and store a copy of the Zioncoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>O %1 irá baixar e armazenar uma cópia do block chain do Zioncoin. Pelo menos %2GB de dados serão armazenados neste diretório, e ele crescerá ao longo do tempo. A carteira também será armazenada neste diretório.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1024,8 +1024,8 @@
         <translation>Minimizar em vez de fechar o programa quando a janela for fechada. Quando essa opção estiver ativa, o programa só será fechado somente pela opção Sair no menu Arquivo.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>A linguagem da interface do usuário pode ser alterada aqui. A mudança ocorrerá após o reinício do Syscoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>A linguagem da interface do usuário pode ser alterada aqui. A mudança ocorrerá após o reinício do Zioncoin Core.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1052,12 +1052,12 @@
         <translation>Rede</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>Inicar automaticamente o Syscoin ao logar no sistema.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>Inicar automaticamente o Zioncoin ao logar no sistema.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>&amp;Iniciar Syscoin no login do sistema</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>&amp;Iniciar Zioncoin no login do sistema</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -1084,16 +1084,16 @@
         <translation>Ga&amp;star mudança não confirmada</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir as portas do cliente Syscoin automaticamente no roteador. Isto só funcionará se seu roteador suportar UPnP e esta função estiver habilitada.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir as portas do cliente Zioncoin automaticamente no roteador. Isto só funcionará se seu roteador suportar UPnP e esta função estiver habilitada.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapear porta usando &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>Conectar na rede Syscoin através de um proxy SOCKS5.</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>Conectar na rede Zioncoin através de um proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1132,8 +1132,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Conecte-se à rede Syscoin através de um proxy SOCKS5 separado para utilizar serviços ocultos Tor.</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Conecte-se à rede Zioncoin através de um proxy SOCKS5 separado para utilizar serviços ocultos Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1177,7 +1177,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Escolha a unidade padrão de subdivisão para interface mostrar quando enviar syscoins.</translation>
+        <translation>Escolha a unidade padrão de subdivisão para interface mostrar quando enviar Zioncoins.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1257,8 +1257,8 @@
         <translation>Formulário</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>A informação mostrada pode estar desatualizada. Sua carteira sincroniza automaticamente com a rede Syscoin depois que a conexão é estabelecida, mas este processo pode não estar completo ainda.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>A informação mostrada pode estar desatualizada. Sua carteira sincroniza automaticamente com a rede Zioncoin depois que a conexão é estabelecida, mas este processo pode não estar completo ainda.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1332,8 +1332,8 @@
         <translation>Erro no pedido de pagamento</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Não foi possível iniciar syscoin: manipulador clique-para-pagar</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Não foi possível iniciar Zioncoin: manipulador clique-para-pagar</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1348,8 +1348,8 @@
         <translation>Endereço de pagamento inválido %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>URI não pode ser analisado ! Isto pode ser causado por um endereço Syscoin inválido ou parâmetros URI informados incorretamente.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>URI não pode ser analisado ! Isto pode ser causado por um endereço Zioncoin inválido ou parâmetros URI informados incorretamente.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1807,8 +1807,8 @@
         <translation>R&amp;eutilize um endereço de recebimento (não recomendado)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
-        <translation>Uma mensagem opcional que será anexada na cobrança e será mostrada quando ela for aberta. Nota: A mensagem não será enviada com o pagamento pela rede Syscoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
+        <translation>Uma mensagem opcional que será anexada na cobrança e será mostrada quando ela for aberta. Nota: A mensagem não será enviada com o pagamento pela rede Zioncoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2031,7 +2031,7 @@
         <translation>pelo menos</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
         <translation>Pagando apenas a taxa mínima é bom, desde que haja pouco volume de transações. Mas esteja ciente de que isso pode acabar em uma transação nunca confirmanda uma vez que há mais demanda por transações do que a rede pode processar.</translation>
     </message>
     <message>
@@ -2172,7 +2172,7 @@
     </message>
     <message>
         <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>A transação foi rejeitada! Isso pode acontecer se alguns syscoins na sua carteira já foram gastos em outro local, por exemplo se você tiver uma cópia do wallet.dat e os syscoins tiverem sido gastos na cópia mas não marcados como gastos aqui ainda.</translation>
+        <translation>A transação foi rejeitada! Isso pode acontecer se alguns Zioncoins na sua carteira já foram gastos em outro local, por exemplo se você tiver uma cópia do wallet.dat e os Zioncoins tiverem sido gastos na cópia mas não marcados como gastos aqui ainda.</translation>
     </message>
     <message>
         <source>A fee higher than %1 is considered an absurdly high fee.</source>
@@ -2187,8 +2187,8 @@
         <translation>Pagar somente a taxa requerida de %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Atenção: endereço de Syscoin inválido</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Atenção: endereço de Zioncoin inválido</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2222,7 +2222,7 @@
         <translation>Este é um pagamento normal.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
+        <source>The Zioncoin address to send the payment to</source>
         <translation>Endereço que enviará o pagamento</translation>
     </message>
     <message>
@@ -2242,8 +2242,8 @@
         <translation>Remover esta entrada</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>A taxa será deduzida da quantia sendo enviada. O destinatário receberá menos syscoins do que você colocou no campo de quantidade. Se varios destinatários estão selecionados, a taxa é dividida igualmente.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>A taxa será deduzida da quantia sendo enviada. O destinatário receberá menos Zioncoins do que você colocou no campo de quantidade. Se varios destinatários estão selecionados, a taxa é dividida igualmente.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2266,8 +2266,8 @@
         <translation>Digite um rótulo para este endereço para adicioná-lo no catálogo</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>A mensagem que foi anexada ao syscoin: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede Syscoin.</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>A mensagem que foi anexada ao Zioncoin: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede Zioncoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2314,12 +2314,12 @@
         <translation>&amp;Assinar mensagem</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Você pode assinar mensagens com seus endereços para provar que você pode receber syscoins enviados por alguém. Cuidado para não assinar nada vago ou aleatório, pois ataques phishing podem tentar te enganar para assinar coisas para eles como se fosse você. Somente assine termos bem detalhados que você concorde.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Você pode assinar mensagens com seus endereços para provar que você pode receber Zioncoins enviados por alguém. Cuidado para não assinar nada vago ou aleatório, pois ataques phishing podem tentar te enganar para assinar coisas para eles como se fosse você. Somente assine termos bem detalhados que você concorde.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
-        <translation>O enderesso Syscoin que assinará a mensagem</translation>
+        <source>The Zioncoin address to sign the message with</source>
+        <translation>O enderesso Zioncoin que assinará a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2350,8 +2350,8 @@
         <translation>Copiar a assinatura para a área de transferência do sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Assinar mensagem para provar que você é dono deste endereço Syscoin</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Assinar mensagem para provar que você é dono deste endereço Zioncoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2374,12 +2374,12 @@
         <translation>Coloque o endereço do autor, a mensagem (certifique-se de copiar toda a mensagem, incluindo quebras de linha, espaços, tabulações, etc.) e a assinatura embaixo para verificar a mensagem. Cuidado para não ler mais da assinatura do que está assinado na mensagem, para evitar ser enganado pelo ataque man-in-the-middle. Note que isso somente prova a propriedade de um endereço, e não o remetende de qualquer transação.</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
-        <translation>O enderesso Syscoin que assionou a mesnagem</translation>
+        <source>The Zioncoin address the message was signed with</source>
+        <translation>O enderesso Zioncoin que assionou a mesnagem</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Verificar mensagem para se assegurar que ela foi assinada pelo dono de um endereço Syscoin específico.</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Verificar mensagem para se assegurar que ela foi assinada pelo dono de um endereço Zioncoin específico.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2450,7 +2450,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Assinar mensagem...</translation>
@@ -2532,8 +2532,8 @@
         <translation>Reindexando blocos no disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Enviar moedas para um endereço syscoin</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Enviar moedas para um endereço Zioncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -2556,8 +2556,8 @@
         <translation>&amp;Verificar mensagem...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2576,12 +2576,12 @@
         <translation>Criptografar as chaves privadas que pertencem à sua carteira</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Assine mensagens com seus endereços Syscoin para provar que você é dono delas</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Assine mensagens com seus endereços Zioncoin para provar que você é dono delas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Verificar mensagens para se assegurar que elas foram assinadas pelo dono de Endereços Syscoin específicos</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Verificar mensagens para se assegurar que elas foram assinadas pelo dono de Endereços Zioncoin específicos</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -2600,8 +2600,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Solicitações de pagamentos (gera códigos QR e syscoin: URIs)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Solicitações de pagamentos (gera códigos QR e Zioncoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -2612,16 +2612,16 @@
         <translation>Mostrar a lista de endereços de recebimento usados ​​e rótulos</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Abrir um syscoin: URI ou cobrança</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Abrir um Zioncoin: URI ou cobrança</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opções de linha de &amp;comando</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
-        <translation><numerusform>%n conexão ativa na rede Syscoin</numerusform><numerusform>%n conexões ativas na rede Syscoin</numerusform></translation>
+        <source>%n active connection(s) to Zioncoin network</source>
+        <translation><numerusform>%n conexão ativa na rede Zioncoin</numerusform><numerusform>%n conexões ativas na rede Zioncoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -2668,12 +2668,12 @@
         <translation>Atualizado</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>&amp;Sobre Syscoin</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>&amp;Sobre Zioncoin</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Syscoin command-line options</source>
-        <translation>Mostrar a mensagem de ajuda do %1 para obter uma lista com possíveis opções de linha de comando Syscoin</translation>
+        <source>Show the %1 help message to get a list with possible Zioncoin command-line options</source>
+        <translation>Mostrar a mensagem de ajuda do %1 para obter uma lista com possíveis opções de linha de comando Zioncoin</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -2845,7 +2845,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Syscoins recém minerados precisam aguardar %1 blocos antes de serem gastos. Quando o bloco foi gerado, ele foi disseminado pela rede para ser adicionado à blockchain. Se ele falhar em ser inserido na cadeia, seu estado será modificado para "não aceito" e ele não poderá ser gasto. Isso pode acontecer eventualmente quando blocos são gerados quase que simultaneamente.</translation>
+        <translation>Zioncoins recém minerados precisam aguardar %1 blocos antes de serem gastos. Quando o bloco foi gerado, ele foi disseminado pela rede para ser adicionado à blockchain. Se ele falhar em ser inserido na cadeia, seu estado será modificado para "não aceito" e ele não poderá ser gasto. Isso pode acontecer eventualmente quando blocos são gerados quase que simultaneamente.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2979,7 +2979,7 @@
     </message>
     <message>
         <source>Whether or not a watch-only address is involved in this transaction.</source>
-        <translation>Mostrar ou não endereços Syscoin na lista de transações.</translation>
+        <translation>Mostrar ou não endereços Zioncoin na lista de transações.</translation>
     </message>
     <message>
         <source>User-defined intent/purpose of the transaction.</source>
@@ -3190,7 +3190,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opções:</translation>
@@ -3256,8 +3256,8 @@
         <translation>Aceitar conexões externas (padrão: 1 se opções -proxy ou -connect não estiverem presentes)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>-fallbackfee is set very high! This is the transaction fee you may pay when fee estimates are not available.</source>
@@ -3828,8 +3828,8 @@
         <translation>Sempre pergunte pelo endereço de peer via pesquisa DNS (padrão: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Desenvolvedores Syscoin Core</translation>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i Desenvolvedores Zioncoin Core</translation>
     </message>
     <message>
         <source>How many blocks to check at startup (default: %u, 0 = all)</source>

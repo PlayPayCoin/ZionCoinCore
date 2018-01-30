@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_RPCCONSOLE_H
-#define SYSCOIN_QT_RPCCONSOLE_H
+#ifndef Zioncoin_QT_RPCCONSOLE_H
+#define Zioncoin_QT_RPCCONSOLE_H
 
 #include "guiutil.h"
 #include "peertablemodel.h"
@@ -27,7 +27,7 @@ class QMenu;
 class QItemSelection;
 QT_END_NAMESPACE
 
-/** Local Syscoin RPC console. */
+/** Local Zioncoin RPC console. */
 class RPCConsole: public QWidget
 {
     Q_OBJECT
@@ -144,4 +144,4 @@ private:
     QThread thread;
 };
 
-#endif // SYSCOIN_QT_RPCCONSOLE_H
+#endif // Zioncoin_QT_RPCCONSOLE_H

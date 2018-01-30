@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_AMOUNT_H
-#define SYSCOIN_AMOUNT_H
+#ifndef Zioncoin_AMOUNT_H
+#define Zioncoin_AMOUNT_H
 
 #include "serialize.h"
 
@@ -21,7 +21,7 @@ extern const std::string CURRENCY_UNIT;
 
 /** No amount larger than this (in satoshi) is valid.
  *
- * Note that this constant is *not* the total money supply, which in Syscoin
+ * Note that this constant is *not* the total money supply, which in Zioncoin
  * currently happens to be less than 0.9B SYS for various reasons, but
  * rather a sanity check. As this sanity check is used by consensus-critical
  * validation code, the exact value of the MAX_MONEY constant is consensus
@@ -69,4 +69,4 @@ public:
     }
 };
 
-#endif //  SYSCOIN_AMOUNT_H
+#endif //  Zioncoin_AMOUNT_H

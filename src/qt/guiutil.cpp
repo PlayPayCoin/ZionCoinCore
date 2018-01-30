@@ -1,11 +1,11 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "guiutil.h"
 
-#include "syscoinaddressvalidator.h"
-#include "syscoinunits.h"
+#include "Zioncoinaddressvalidator.h"
+#include "Zioncoinunits.h"
 #include "qvalidatedlineedit.h"
 #include "walletmodel.h"
 
@@ -117,7 +117,7 @@ static std::string DummyAddress(const CChainParams &params)
     sourcedata.insert(sourcedata.end(), dummydata, dummydata + sizeof(dummydata));
     for(int i=0; i<256; ++i) { // Try every trailing byte
         std::string s = EncodeBase58(begin_ptr(sourcedata), end_ptr(sourcedata));
-        if (!CSyscoinAddress(s).IsValid())
+        if (!CZioncoinAddress(s).IsValid())
             return s;
         sourcedata[sourcedata.size()-1] += 1;
     }
@@ -132,12 +132,12 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-	// SYSCOIN
-    widget->setPlaceholderText(QObject::tr("Enter a Syscoin address e.g. johnsmith or ") +  QString::fromStdString(DummyAddress(Params())));
+	// Zioncoin
+    widget->setPlaceholderText(QObject::tr("Enter a Zioncoin address e.g. johnsmith or ") +  QString::fromStdString(DummyAddress(Params())));
 #endif
-	// SYSCOIN
-    //widget->setValidator(new SyscoinAddressEntryValidator(parent));
-    widget->setCheckValidator(new SyscoinAddressCheckValidator(parent));
+	// Zioncoin
+    //widget->setValidator(new ZioncoinAddressEntryValidator(parent));
+    widget->setCheckValidator(new ZioncoinAddressCheckValidator(parent));
 }
 
 void setupAmountWidget(QLineEdit *widget, QWidget *parent)
@@ -149,7 +149,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
     widget->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
 }
 
-// SYSCOIN Open CSS when configured
+// Zioncoin Open CSS when configured
 // Return name of current UI-theme or default theme if no theme was found
 QString getThemeName()
 {
@@ -178,10 +178,10 @@ QString loadStyleSheet()
         
     return styleSheet;
 }
-bool parseSyscoinURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseZioncoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no syscoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("syscoin"))
+    // return if URI is not valid or is no Zioncoin: URI
+    if(!uri.isValid() || uri.scheme() != QString("Zioncoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -221,7 +221,7 @@ bool parseSyscoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!SyscoinUnits::parse(SyscoinUnits::SYS, i->second, &rv.amount))
+                if(!ZioncoinUnits::parse(ZioncoinUnits::SYS, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -239,20 +239,20 @@ bool parseSyscoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseSyscoinURI(QString uri, SendCoinsRecipient *out)
+bool parseZioncoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert syscoin:// to syscoin:
+    // Convert Zioncoin:// to Zioncoin:
     //
-    //    Cannot handle this later, because syscoin:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because Zioncoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("syscoin://", Qt::CaseInsensitive))
+    if(uri.startsWith("Zioncoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 10, "syscoin:");
+        uri.replace(0, 10, "Zioncoin:");
     }
     QUrl uriInstance(uri);
-    return parseSyscoinURI(uriInstance, out);
+    return parseZioncoinURI(uriInstance, out);
 }
-// SYSCOIN
+// Zioncoin
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
     QString ret = QString("bitcoin:%1").arg(info.address);
@@ -260,7 +260,7 @@ QString formatBitcoinURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(SyscoinUnits::format(SyscoinUnits::SYS, info.amount, false, SyscoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(ZioncoinUnits::format(ZioncoinUnits::SYS, info.amount, false, ZioncoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -287,7 +287,7 @@ QString formatZCashURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(SyscoinUnits::format(SyscoinUnits::SYS, info.amount, false, SyscoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(ZioncoinUnits::format(ZioncoinUnits::SYS, info.amount, false, ZioncoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -307,14 +307,14 @@ QString formatZCashURI(const SendCoinsRecipient &info)
 
     return ret;
 }
-QString formatSyscoinURI(const SendCoinsRecipient &info)
+QString formatZioncoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("syscoin:%1").arg(info.address);
+    QString ret = QString("Zioncoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(SyscoinUnits::format(SyscoinUnits::SYS, info.amount, false, SyscoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(ZioncoinUnits::format(ZioncoinUnits::SYS, info.amount, false, ZioncoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -337,8 +337,8 @@ QString formatSyscoinURI(const SendCoinsRecipient &info)
 
 bool isDust(const QString& address, const CAmount& amount)
 {
-	// SYSCOIN
-	CSyscoinAddress addr = CSyscoinAddress(address.toStdString());
+	// Zioncoin
+	CZioncoinAddress addr = CZioncoinAddress(address.toStdString());
     CScript script = GetScriptForDestination(addr.Get());
 	CScript scriptPubKey =  GetScriptForDestination(addr.Get());
 	if(!addr.vchRedeemScript.empty())
@@ -697,15 +697,15 @@ boost::filesystem::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Syscoin.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Zioncoin.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Syscoin (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Syscoin (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Zioncoin (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Zioncoin (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Syscoin*.lnk
+    // check for Zioncoin*.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -797,8 +797,8 @@ boost::filesystem::path static GetAutostartFilePath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "syscoin.desktop";
-    return GetAutostartDir() / strprintf("syscoin-%s.lnk", chain);
+        return GetAutostartDir() / "Zioncoin.desktop";
+    return GetAutostartDir() / strprintf("Zioncoin-%s.lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -837,13 +837,13 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         std::string chain = ChainNameFromCommandLine();
-        // Write a syscoin.desktop file to the autostart directory:
+        // Write a Zioncoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=Syscoin\n";
+            optionFile << "Name=Zioncoin\n";
         else
-            optionFile << strprintf("Name=Syscoin (%s)\n", chain);
+            optionFile << strprintf("Name=Zioncoin (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", GetBoolArg("-testnet", false), GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -862,7 +862,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the syscoin app
+    // loop through the list of startup items and try to find the Zioncoin app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -894,21 +894,21 @@ LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef
 
 bool GetStartOnSystemStartup()
 {
-    CFURLRef syscoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFURLRef ZioncoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, syscoinAppUrl);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, ZioncoinAppUrl);
     return !!foundItem; // return boolified object
 }
 
 bool SetStartOnSystemStartup(bool fAutoStart)
 {
-    CFURLRef syscoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFURLRef ZioncoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, syscoinAppUrl);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, ZioncoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add syscoin app to startup item list
-        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, syscoinAppUrl, NULL, NULL);
+        // add Zioncoin app to startup item list
+        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, ZioncoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {
         // remove item

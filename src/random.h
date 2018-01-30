@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Syscoin Core developers
+// Copyright (c) 2009-2014 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_RANDOM_H
-#define SYSCOIN_RANDOM_H
+#ifndef Zioncoin_RANDOM_H
+#define Zioncoin_RANDOM_H
 
 #include "uint256.h"
 
@@ -49,4 +49,4 @@ static inline uint32_t insecure_rand(void)
     return (insecure_rand_Rw << 16) + insecure_rand_Rz;
 }
 
-#endif // SYSCOIN_RANDOM_H
+#endif // Zioncoin_RANDOM_H

@@ -758,7 +758,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;பரிவர்த்தனைகள்</translation>
@@ -792,8 +792,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -912,10 +912,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin மையம்</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

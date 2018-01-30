@@ -15,29 +15,29 @@ LIBUNIVALUE = $(UNIVALUE_LIBS)
 endif
 
           
-SYSCOIN_CONFIG_INCLUDES=-I$(builddir)/config
-SYSCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
+Zioncoin_CONFIG_INCLUDES=-I$(builddir)/config
+Zioncoin_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
 
-SYSCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
-SYSCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
+Zioncoin_INCLUDES += -I$(srcdir)/secp256k1/include
+Zioncoin_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBSYSCOIN_SERVER=libsyscoin_server.a
-LIBSYSCOIN_COMMON=libsyscoin_common.a
-LIBSYSCOIN_CONSENSUS=libsyscoin_consensus.a
-LIBSYSCOIN_CLI=libsyscoin_cli.a
-LIBSYSCOIN_UTIL=libsyscoin_util.a
-LIBSYSCOIN_CRYPTO=crypto/libsyscoin_crypto.a
-LIBSYSCOINQT=qt/libsyscoinqt.a
+LIBZioncoin_SERVER=libZioncoin_server.a
+LIBZioncoin_COMMON=libZioncoin_common.a
+LIBZioncoin_CONSENSUS=libZioncoin_consensus.a
+LIBZioncoin_CLI=libZioncoin_cli.a
+LIBZioncoin_UTIL=libZioncoin_util.a
+LIBZioncoin_CRYPTO=crypto/libZioncoin_crypto.a
+LIBZioncoinQT=qt/libZioncoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBSYSCOIN_ZMQ=libsyscoin_zmq.a
+LIBZioncoin_ZMQ=libZioncoin_zmq.a
 endif
-if BUILD_SYSCOIN_LIBS
-LIBSYSCOINCONSENSUS=libsyscoinconsensus.la
+if BUILD_Zioncoin_LIBS
+LIBZioncoinCONSENSUS=libZioncoinconsensus.la
 endif
 if ENABLE_WALLET
-LIBSYSCOIN_WALLET=libsyscoin_wallet.a
+LIBZioncoin_WALLET=libZioncoin_wallet.a
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -46,32 +46,32 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  $(LIBSYSCOIN_CRYPTO) \
-  $(LIBSYSCOIN_UTIL) \
-  $(LIBSYSCOIN_COMMON) \
-  $(LIBSYSCOIN_CONSENSUS) \
-  $(LIBSYSCOIN_SERVER) \
-  $(LIBSYSCOIN_CLI) \
-  $(LIBSYSCOIN_WALLET) \
-  $(LIBSYSCOIN_ZMQ)
+  $(LIBZioncoin_CRYPTO) \
+  $(LIBZioncoin_UTIL) \
+  $(LIBZioncoin_COMMON) \
+  $(LIBZioncoin_CONSENSUS) \
+  $(LIBZioncoin_SERVER) \
+  $(LIBZioncoin_CLI) \
+  $(LIBZioncoin_WALLET) \
+  $(LIBZioncoin_ZMQ)
 
-lib_LTLIBRARIES = $(LIBSYSCOINCONSENSUS)
+lib_LTLIBRARIES = $(LIBZioncoinCONSENSUS)
 
 bin_PROGRAMS =
 TESTS =
 BENCHMARKS =
 
-if BUILD_SYSCOIND
-  bin_PROGRAMS += syscoind
+if BUILD_ZioncoinD
+  bin_PROGRAMS += Zioncoind
 endif
 
-if BUILD_SYSCOIN_UTILS
-  bin_PROGRAMS += syscoin-cli syscoin-tx
+if BUILD_Zioncoin_UTILS
+  bin_PROGRAMS += Zioncoin-cli Zioncoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# syscoin core #
-SYSCOIN_CORE_H = \
+# Zioncoin core #
+Zioncoin_CORE_H = \
   alias.h \
   offer.h \
   message.h \
@@ -168,12 +168,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libsyscoin_util_a-clientversion.$(OBJEXT): obj/build.h
+libZioncoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between syscoind and syscoin-qt
-libsyscoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libsyscoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libsyscoin_server_a_SOURCES = \
+# server: shared between Zioncoind and Zioncoin-qt
+libZioncoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libZioncoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libZioncoin_server_a_SOURCES = \
   alias.cpp \
   offer.cpp \
   message.cpp \
@@ -213,23 +213,23 @@ libsyscoin_server_a_SOURCES = \
   ui_interface.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  $(SYSCOIN_CORE_H)
+  $(Zioncoin_CORE_H)
 
 if ENABLE_ZMQ
-libsyscoin_zmq_a_CPPFLAGS = $(SYSCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libsyscoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libsyscoin_zmq_a_SOURCES = \
+libZioncoin_zmq_a_CPPFLAGS = $(Zioncoin_INCLUDES) $(ZMQ_CFLAGS)
+libZioncoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libZioncoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
 endif
 
 
-# wallet: shared between syscoind and syscoin-qt, but only linked
+# wallet: shared between Zioncoind and Zioncoin-qt, but only linked
 # when wallet enabled
-libsyscoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES)
-libsyscoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libsyscoin_wallet_a_SOURCES = \
+libZioncoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES)
+libZioncoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libZioncoin_wallet_a_SOURCES = \
   wallet/crypter.cpp \
   wallet/db.cpp \
   wallet/rpcdump.cpp \
@@ -237,12 +237,12 @@ libsyscoin_wallet_a_SOURCES = \
   wallet/wallet.cpp \
   wallet/walletdb.cpp \
   policy/rbf.cpp \
-  $(SYSCOIN_CORE_H)
+  $(Zioncoin_CORE_H)
 
 # crypto primitives library
-crypto_libsyscoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_CONFIG_INCLUDES)
-crypto_libsyscoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libsyscoin_crypto_a_SOURCES = \
+crypto_libZioncoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_CONFIG_INCLUDES)
+crypto_libZioncoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libZioncoin_crypto_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/common.h \
@@ -260,9 +260,9 @@ crypto_libsyscoin_crypto_a_SOURCES = \
   crypto/sha512.h
 
 # consensus: shared between all executables that validate any consensus rules.
-libsyscoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES)
-libsyscoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libsyscoin_consensus_a_SOURCES = \
+libZioncoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES)
+libZioncoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libZioncoin_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -281,7 +281,7 @@ libsyscoin_consensus_a_SOURCES = \
   primitives/transaction.h \
   pubkey.cpp \
   pubkey.h \
-  script/syscoinconsensus.cpp \
+  script/Zioncoinconsensus.cpp \
   script/interpreter.cpp \
   script/interpreter.h \
   script/script.cpp \
@@ -296,10 +296,10 @@ libsyscoin_consensus_a_SOURCES = \
   utilstrencodings.h \
   version.h
 
-# common: shared between syscoind, and syscoin-qt and non-server tools
-libsyscoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES)
-libsyscoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libsyscoin_common_a_SOURCES = \
+# common: shared between Zioncoind, and Zioncoin-qt and non-server tools
+libZioncoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES)
+libZioncoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libZioncoin_common_a_SOURCES = \
   amount.cpp \
   base58.cpp \
   chainparams.cpp \
@@ -316,14 +316,14 @@ libsyscoin_common_a_SOURCES = \
   script/script.cpp \
   script/sign.cpp \
   script/standard.cpp \
-  $(SYSCOIN_CORE_H)
+  $(Zioncoin_CORE_H)
 
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libsyscoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES)
-libsyscoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libsyscoin_util_a_SOURCES = \
+libZioncoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES)
+libZioncoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libZioncoin_util_a_SOURCES = \
   support/pagelocker.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -338,106 +338,106 @@ libsyscoin_util_a_SOURCES = \
   utilmoneystr.cpp \
   utilstrencodings.cpp \
   utiltime.cpp \
-  $(SYSCOIN_CORE_H)
+  $(Zioncoin_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libsyscoin_util_a_SOURCES += compat/glibc_compat.cpp
+libZioncoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between syscoin-cli and syscoin-qt
-libsyscoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES)
-libsyscoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libsyscoin_cli_a_SOURCES = \
+# cli: shared between Zioncoin-cli and Zioncoin-qt
+libZioncoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES)
+libZioncoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libZioncoin_cli_a_SOURCES = \
   rpc/client.cpp \
-  $(SYSCOIN_CORE_H)
+  $(Zioncoin_CORE_H)
 
-nodist_libsyscoin_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libZioncoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# syscoind binary #
-syscoind_SOURCES = syscoind.cpp
-syscoind_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES)
-syscoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-syscoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# Zioncoind binary #
+Zioncoind_SOURCES = Zioncoind.cpp
+Zioncoind_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES)
+Zioncoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Zioncoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-syscoind_SOURCES += syscoind-res.rc
+Zioncoind_SOURCES += Zioncoind-res.rc
 endif
 
-syscoind_LDADD = \
-  $(LIBSYSCOIN_SERVER) \
-  $(LIBSYSCOIN_COMMON) \
+Zioncoind_LDADD = \
+  $(LIBZioncoin_SERVER) \
+  $(LIBZioncoin_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBSYSCOIN_UTIL) \
-  $(LIBSYSCOIN_WALLET) \
-  $(LIBSYSCOIN_ZMQ) \
-  $(LIBSYSCOIN_CONSENSUS) \
-  $(LIBSYSCOIN_CRYPTO) \
+  $(LIBZioncoin_UTIL) \
+  $(LIBZioncoin_WALLET) \
+  $(LIBZioncoin_ZMQ) \
+  $(LIBZioncoin_CONSENSUS) \
+  $(LIBZioncoin_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-syscoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+Zioncoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# syscoin-cli binary #
-syscoin_cli_SOURCES = syscoin-cli.cpp
-syscoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES) $(EVENT_CFLAGS)
-syscoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-syscoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# Zioncoin-cli binary #
+Zioncoin_cli_SOURCES = Zioncoin-cli.cpp
+Zioncoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES) $(EVENT_CFLAGS)
+Zioncoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Zioncoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-syscoin_cli_SOURCES += syscoin-cli-res.rc
+Zioncoin_cli_SOURCES += Zioncoin-cli-res.rc
 endif
 
-syscoin_cli_LDADD = \
-  $(LIBSYSCOIN_CLI) \
+Zioncoin_cli_LDADD = \
+  $(LIBZioncoin_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBSYSCOIN_UTIL) \
-  $(LIBSYSCOIN_CRYPTO)
+  $(LIBZioncoin_UTIL) \
+  $(LIBZioncoin_CRYPTO)
 
-syscoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+Zioncoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# syscoin-tx binary #
-syscoin_tx_SOURCES = syscoin-tx.cpp
-syscoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES)
-syscoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-syscoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# Zioncoin-tx binary #
+Zioncoin_tx_SOURCES = Zioncoin-tx.cpp
+Zioncoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES)
+Zioncoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Zioncoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-syscoin_tx_SOURCES += syscoin-tx-res.rc
+Zioncoin_tx_SOURCES += Zioncoin-tx-res.rc
 endif
 
-syscoin_tx_LDADD = \
-  $(LIBSYSCOIN_SERVER) \
-  $(LIBSYSCOIN_COMMON) \
+Zioncoin_tx_LDADD = \
+  $(LIBZioncoin_SERVER) \
+  $(LIBZioncoin_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBSYSCOIN_UTIL) \
-  $(LIBSYSCOIN_WALLET) \
-  $(LIBSYSCOIN_ZMQ) \
-  $(LIBSYSCOIN_CONSENSUS) \
-  $(LIBSYSCOIN_CRYPTO) \
+  $(LIBZioncoin_UTIL) \
+  $(LIBZioncoin_WALLET) \
+  $(LIBZioncoin_ZMQ) \
+  $(LIBZioncoin_CONSENSUS) \
+  $(LIBZioncoin_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-syscoin_tx_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+Zioncoin_tx_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 #
 
-# syscoinconsensus library #
-if BUILD_SYSCOIN_LIBS
-include_HEADERS = script/syscoinconsensus.h
-libsyscoinconsensus_la_SOURCES = $(crypto_libsyscoin_crypto_a_SOURCES) $(libsyscoin_consensus_a_SOURCES) $(libsyscoin_server_a_SOURCES)
+# Zioncoinconsensus library #
+if BUILD_Zioncoin_LIBS
+include_HEADERS = script/Zioncoinconsensus.h
+libZioncoinconsensus_la_SOURCES = $(crypto_libZioncoin_crypto_a_SOURCES) $(libZioncoin_consensus_a_SOURCES) $(libZioncoin_server_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libsyscoinconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libZioncoinconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libsyscoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libsyscoinconsensus_la_LIBADD = $(LIBSECP256K1)
-libsyscoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) $(SYSCOIN_INCLUDES) -DBUILD_SYSCOIN_INTERNAL $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libsyscoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libZioncoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libZioncoinconsensus_la_LIBADD = $(LIBSECP256K1)
+libZioncoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) $(Zioncoin_INCLUDES) -DBUILD_Zioncoin_INTERNAL $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libZioncoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #

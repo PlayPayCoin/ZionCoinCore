@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Syscoin Core developers
+// Copyright (c) 2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_TEST_TEST_SYSCOIN_H
-#define SYSCOIN_TEST_TEST_SYSCOIN_H
+#ifndef Zioncoin_TEST_TEST_Zioncoin_H
+#define Zioncoin_TEST_TEST_Zioncoin_H
 
 #include "chainparamsbase.h"
 #include "key.h"

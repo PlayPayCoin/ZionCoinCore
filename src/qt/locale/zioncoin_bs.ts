@@ -266,10 +266,10 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     </context>
 <context>
@@ -320,10 +320,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Jezrga</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Jezrga</translation>
     </message>
     </context>
 </TS>

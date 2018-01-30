@@ -1,11 +1,11 @@
-#include "test/test_syscoin_services.h"
+#include "test/test_Zioncoin_services.h"
 #include "utiltime.h"
 #include "rpc/server.h"
 #include "alias.h"
 #include <boost/test/unit_test.hpp>
-BOOST_GLOBAL_FIXTURE( SyscoinTestingSetup );
+BOOST_GLOBAL_FIXTURE( ZioncoinTestingSetup );
 
-BOOST_FIXTURE_TEST_SUITE (syscoin_alias_tests, BasicSyscoinTestingSetup)
+BOOST_FIXTURE_TEST_SUITE (Zioncoin_alias_tests, BasicZioncoinTestingSetup)
 
 BOOST_AUTO_TEST_CASE (generate_sysrates_alias)
 {

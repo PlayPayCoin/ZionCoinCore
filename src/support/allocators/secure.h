@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_SUPPORT_ALLOCATORS_SECURE_H
-#define SYSCOIN_SUPPORT_ALLOCATORS_SECURE_H
+#ifndef Zioncoin_SUPPORT_ALLOCATORS_SECURE_H
+#define Zioncoin_SUPPORT_ALLOCATORS_SECURE_H
 
 #include "support/pagelocker.h"
 
@@ -59,4 +59,4 @@ struct secure_allocator : public std::allocator<T> {
 // This is exactly like std::string, but with a custom allocator.
 typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> > SecureString;
 
-#endif // SYSCOIN_SUPPORT_ALLOCATORS_SECURE_H
+#endif // Zioncoin_SUPPORT_ALLOCATORS_SECURE_H

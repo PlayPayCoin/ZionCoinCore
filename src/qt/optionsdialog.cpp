@@ -1,15 +1,15 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
 #include "optionsdialog.h"
 #include "ui_optionsdialog.h"
 
-#include "syscoinunits.h"
+#include "Zioncoinunits.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
 
@@ -83,13 +83,13 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
         ui->tabWidget->removeTab(ui->tabWidget->indexOf(ui->tabWallet));
     }
     /* Display elements init */
-    // SYSCOIN Theme selector
+    // Zioncoin Theme selector
     ui->theme->addItem(tr("shade"), QVariant(""));
 	ui->theme->addItem(tr("solid"), QVariant("1"));
 	ui->theme->addItem(tr("white"), QVariant("2"));
 	ui->defaultPegAlias->setPlaceholderText("sysrates.peg");
-	ui->zecEndPoint->setPlaceholderText("http://zec.syscoin.org:8080/");
-	ui->btcEndPoint->setPlaceholderText("http://btc.syscoin.org:8080/");
+	ui->zecEndPoint->setPlaceholderText("http://zec.Zioncoin.org:8080/");
+	ui->btcEndPoint->setPlaceholderText("http://btc.Zioncoin.org:8080/");
 	ui->zecRPCLogin->setPlaceholderText("sysuser");
 	ui->btcRPCLogin->setPlaceholderText("sysuser");
 	ui->zecRPCPassword->setPlaceholderText("JcfJqiyhVVRsYJo0MQKjBJxOZMCrXPqQjUt2Kte2qU");
@@ -97,8 +97,8 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     /* Display elements init */
     QDir translations(":translations");
 
-    ui->syscoinAtStartup->setToolTip(ui->syscoinAtStartup->toolTip().arg(tr(PACKAGE_NAME)));
-    ui->syscoinAtStartup->setText(ui->syscoinAtStartup->text().arg(tr(PACKAGE_NAME)));
+    ui->ZioncoinAtStartup->setToolTip(ui->ZioncoinAtStartup->toolTip().arg(tr(PACKAGE_NAME)));
+    ui->ZioncoinAtStartup->setText(ui->ZioncoinAtStartup->text().arg(tr(PACKAGE_NAME)));
 
     ui->lang->setToolTip(ui->lang->toolTip().arg(tr(PACKAGE_NAME)));
     ui->lang->addItem(QString("(") + tr("default") + QString(")"), QVariant(""));
@@ -132,7 +132,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     ui->thirdPartyTxUrls->setPlaceholderText("https://example.com/tx/%s");
 #endif
 
-    ui->unit->setModel(new SyscoinUnits(this));
+    ui->unit->setModel(new ZioncoinUnits(this));
 
     /* Widget-to-option mapper */
     mapper = new QDataWidgetMapper(this);
@@ -186,7 +186,7 @@ void OptionsDialog::setModel(OptionsModel *_model)
     connect(ui->connectSocks, SIGNAL(clicked(bool)), this, SLOT(showRestartWarning()));
     connect(ui->connectSocksTor, SIGNAL(clicked(bool)), this, SLOT(showRestartWarning()));
     /* Display */
-	// SYSCOIN
+	// Zioncoin
 	connect(ui->theme, SIGNAL(valueChanged(int)), this, SLOT(showRestartWarning()));
     connect(ui->lang, SIGNAL(valueChanged()), this, SLOT(showRestartWarning()));
     connect(ui->thirdPartyTxUrls, SIGNAL(textChanged(const QString &)), this, SLOT(showRestartWarning()));
@@ -195,7 +195,7 @@ void OptionsDialog::setModel(OptionsModel *_model)
 void OptionsDialog::setMapper()
 {
     /* Main */
-    mapper->addMapping(ui->syscoinAtStartup, OptionsModel::StartAtStartup);
+    mapper->addMapping(ui->ZioncoinAtStartup, OptionsModel::StartAtStartup);
     mapper->addMapping(ui->threadsScriptVerif, OptionsModel::ThreadsScriptVerif);
     mapper->addMapping(ui->databaseCache, OptionsModel::DatabaseCache);
 
@@ -223,7 +223,7 @@ void OptionsDialog::setMapper()
 #endif
 
    /* Display */
-	// SYSCOIN
+	// Zioncoin
 	mapper->addMapping(ui->zecEndPoint, OptionsModel::ZecEndPoint);
 	mapper->addMapping(ui->btcEndPoint, OptionsModel::BTCEndPoint);
 	mapper->addMapping(ui->zecRPCLogin, OptionsModel::ZecRPCLogin);

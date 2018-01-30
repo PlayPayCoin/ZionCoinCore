@@ -1,29 +1,29 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "syscoinunits.h"
+#include "Zioncoinunits.h"
 
 #include "primitives/transaction.h"
 
 #include <QStringList>
 
-SyscoinUnits::SyscoinUnits(QObject *parent):
+ZioncoinUnits::ZioncoinUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<SyscoinUnits::Unit> SyscoinUnits::availableUnits()
+QList<ZioncoinUnits::Unit> ZioncoinUnits::availableUnits()
 {
-    QList<SyscoinUnits::Unit> unitlist;
+    QList<ZioncoinUnits::Unit> unitlist;
     unitlist.append(SYS);
     unitlist.append(mSYS);
     unitlist.append(uSYS);
     return unitlist;
 }
 
-bool SyscoinUnits::valid(int unit)
+bool ZioncoinUnits::valid(int unit)
 {
     switch(unit)
     {
@@ -36,7 +36,7 @@ bool SyscoinUnits::valid(int unit)
     }
 }
 
-QString SyscoinUnits::name(int unit)
+QString ZioncoinUnits::name(int unit)
 {
     switch(unit)
     {
@@ -47,18 +47,18 @@ QString SyscoinUnits::name(int unit)
     }
 }
 
-QString SyscoinUnits::description(int unit)
+QString ZioncoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case SYS: return QString("Syscoins");
-    case mSYS: return QString("Milli-Syscoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uSYS: return QString("Micro-Syscoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case SYS: return QString("Zioncoins");
+    case mSYS: return QString("Milli-Zioncoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uSYS: return QString("Micro-Zioncoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
 
-qint64 SyscoinUnits::factor(int unit)
+qint64 ZioncoinUnits::factor(int unit)
 {
     switch(unit)
     {
@@ -69,7 +69,7 @@ qint64 SyscoinUnits::factor(int unit)
     }
 }
 
-int SyscoinUnits::decimals(int unit)
+int ZioncoinUnits::decimals(int unit)
 {
     switch(unit)
     {
@@ -80,7 +80,7 @@ int SyscoinUnits::decimals(int unit)
     }
 }
 
-QString SyscoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
+QString ZioncoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -119,12 +119,12 @@ QString SyscoinUnits::format(int unit, const CAmount& nIn, bool fPlus, Separator
 // Please take care to use formatHtmlWithUnit instead, when
 // appropriate.
 
-QString SyscoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString ZioncoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     return format(unit, amount, plussign, separators) + QString(" ") + name(unit);
 }
 
-QString SyscoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString ZioncoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(formatWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
@@ -132,7 +132,7 @@ QString SyscoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool p
 }
 
 
-bool SyscoinUnits::parse(int unit, const QString &value, CAmount *val_out)
+bool ZioncoinUnits::parse(int unit, const QString &value, CAmount *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -171,23 +171,23 @@ bool SyscoinUnits::parse(int unit, const QString &value, CAmount *val_out)
     return ok;
 }
 
-QString SyscoinUnits::getAmountColumnTitle(int unit)
+QString ZioncoinUnits::getAmountColumnTitle(int unit)
 {
     QString amountTitle = QObject::tr("Amount");
-    if (SyscoinUnits::valid(unit))
+    if (ZioncoinUnits::valid(unit))
     {
-        amountTitle += " ("+SyscoinUnits::name(unit) + ")";
+        amountTitle += " ("+ZioncoinUnits::name(unit) + ")";
     }
     return amountTitle;
 }
 
-int SyscoinUnits::rowCount(const QModelIndex &parent) const
+int ZioncoinUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant SyscoinUnits::data(const QModelIndex &index, int role) const
+QVariant ZioncoinUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())
@@ -207,7 +207,7 @@ QVariant SyscoinUnits::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-CAmount SyscoinUnits::maxMoney()
+CAmount ZioncoinUnits::maxMoney()
 {
     return MAX_MONEY;
 }

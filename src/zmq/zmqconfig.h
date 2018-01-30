@@ -1,12 +1,12 @@
-// Copyright (c) 2014 The Syscoin Core developers
+// Copyright (c) 2014 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_ZMQ_ZMQCONFIG_H
-#define SYSCOIN_ZMQ_ZMQCONFIG_H
+#ifndef Zioncoin_ZMQ_ZMQCONFIG_H
+#define Zioncoin_ZMQ_ZMQCONFIG_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
 #include <stdarg.h>
@@ -21,4 +21,4 @@
 
 void zmqError(const char *str);
 
-#endif // SYSCOIN_ZMQ_ZMQCONFIG_H
+#endif // Zioncoin_ZMQ_ZMQCONFIG_H

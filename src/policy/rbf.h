@@ -1,9 +1,9 @@
-// Copyright (c) 2016 The Syscoin developers
+// Copyright (c) 2016 The Zioncoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_POLICY_RBF_H
-#define SYSCOIN_POLICY_RBF_H
+#ifndef Zioncoin_POLICY_RBF_H
+#define Zioncoin_POLICY_RBF_H
 
 #include "txmempool.h"
 
@@ -23,4 +23,4 @@ bool SignalsOptInRBF(const CTransaction &tx);
 // as the sequence numbers of all in-mempool ancestors.
 RBFTransactionState IsRBFOptIn(const CTransaction &tx, CTxMemPool &pool);
 
-#endif // SYSCOIN_POLICY_RBF_H
+#endif // Zioncoin_POLICY_RBF_H

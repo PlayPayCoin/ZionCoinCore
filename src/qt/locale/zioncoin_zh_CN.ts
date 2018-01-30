@@ -384,11 +384,11 @@
         <translation>正在接收地址</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>这是您用来付款的比特币地址。在付款前，请仔细核实付款金额和收款地址。</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>这些都是您的比特币地址，可用于收款。建议对每笔交易都使用一个新的地址。</translation>
     </message>
     <message>
@@ -478,8 +478,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>搜索Syscoin昵称。从钱包里选择安全搜索，如果你想忽略潜在攻击性的昵称（在默认情况下）</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>搜索Zioncoin昵称。从钱包里选择安全搜索，如果你想忽略潜在攻击性的昵称（在默认情况下）</translation>
     </message>
     <message>
         <source>Error searching alias: </source>
@@ -599,7 +599,7 @@
         <translation>确认加密钱包</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
         <translation>警告：如果您加密了您的钱包，但是忘记了密码，你将会&lt;b&gt;丢失所有的比特币&lt;/b&gt;！</translation>
     </message>
     <message>
@@ -611,8 +611,8 @@
         <translation>钱包已加密</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your syscoins from being stolen by malware infecting your computer.</source>
-        <translation>%1现在接近完成加密过程。请记住，加密你的钱包不能完全保护您的syscoins通过恶意软件感染您的计算机被盗。</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Zioncoins from being stolen by malware infecting your computer.</source>
+        <translation>%1现在接近完成加密过程。请记住，加密你的钱包不能完全保护您的Zioncoins通过恶意软件感染您的计算机被盗。</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -693,8 +693,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>搜索Syscoin证书。从钱包里选择安全搜索，如果你想忽略潜在攻击性的证书（在默认情况下）</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>搜索Zioncoin证书。从钱包里选择安全搜索，如果你想忽略潜在攻击性的证书（在默认情况下）</translation>
     </message>
     <message>
         <source>Copy Value</source>
@@ -961,7 +961,7 @@
         <translation>编辑发送地址</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
         <translation>您输入的“%1”不是有效的比特币地址。</translation>
     </message>
     <message>
@@ -1076,8 +1076,8 @@
         <translation>选择这个别名为1至5年的标准到期时间（UTC中），或者选中“使用自定义到期时间”复选框以输入过期时间戳。这是每年成倍比较贵，计算FEERATE *（2.88 ^年）。 FEERATE是每个中使用此别名的钉住别名设置字节收费的动态聪。</translation>
     </message>
     <message>
-        <source>Warning: transferring your alias will transfer ownership all of your syscoin services that use this alias.</source>
-        <translation>警告：您的转移将别名所有权转让所有使用此别名您syscoin服务。</translation>
+        <source>Warning: transferring your alias will transfer ownership all of your Zioncoin services that use this alias.</source>
+        <translation>警告：您的转移将别名所有权转让所有使用此别名您Zioncoin服务。</translation>
     </message>
     <message>
         <source>Is this alias safe to search? Anything that can be considered offensive to someone should be set to 'No' here. If you do create an alias that is offensive and do not set this option to 'No' your alias will be banned!</source>
@@ -1164,8 +1164,8 @@
         <translation>错误转移别名：</translation>
     </message>
     <message>
-        <source>The entered alias is not a valid Syscoin alias. Alias: </source>
-        <translation>输入的别名是不是一个有效Syscoin别名。别名：</translation>
+        <source>The entered alias is not a valid Zioncoin alias. Alias: </source>
+        <translation>输入的别名是不是一个有效Zioncoin别名。别名：</translation>
     </message>
     <message>
         <source>New Alias</source>
@@ -1351,8 +1351,8 @@
         <translation>错误传递证书：</translation>
     </message>
     <message>
-        <source>The entered cert is not a valid Syscoin cert.</source>
-        <translation>输入的证书是不是有效的Syscoin证书。</translation>
+        <source>The entered cert is not a valid Zioncoin cert.</source>
+        <translation>输入的证书是不是有效的Zioncoin证书。</translation>
     </message>
     <message>
         <source>General exception creating new Cert</source>
@@ -1510,12 +1510,12 @@
         <translation>如果你愿意，你可以输入你的商家地理位置（经纬度坐标），以帮助跟踪运费等物流信息</translation>
     </message>
     <message>
-        <source>You will receive payment in Syscoin equivalent to the Market-value of the currency you have selected</source>
-        <translation>您将收到Syscoin支付相当于您所选择的货币的市场价值</translation>
+        <source>You will receive payment in Zioncoin equivalent to the Market-value of the currency you have selected</source>
+        <translation>您将收到Zioncoin支付相当于您所选择的货币的市场价值</translation>
     </message>
     <message>
-        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Syscoin Marketplace, you will need to import your Syscoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
-        <translation>选择您要允许作为此优惠的支付方法，加密货币。你的选择是SYS，BTC或ZEC的任意组合。一个例子设置所有三个：“SYS + BTC + ZEC”。对于SYS和亚：“SYS + ZEC”。请注意，为了通过消费市场Syscoin支付给你金币，你将需要导入外部钱包（S）如果BTC或[亚都选择了你的Syscoin私钥。</translation>
+        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Zioncoin Marketplace, you will need to import your Zioncoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
+        <translation>选择您要允许作为此优惠的支付方法，加密货币。你的选择是SYS，BTC或ZEC的任意组合。一个例子设置所有三个：“SYS + BTC + ZEC”。对于SYS和亚：“SYS + ZEC”。请注意，为了通过消费市场Zioncoin支付给你金币，你将需要导入外部钱包（S）如果BTC或[亚都选择了你的Zioncoin私钥。</translation>
     </message>
     <message>
         <source>Warning: alias peg not found. No currency information available for </source>
@@ -1598,8 +1598,8 @@
         <translation>一般例外更新报价：</translation>
     </message>
     <message>
-        <source>The entered offer is not a valid Syscoin offer</source>
-        <translation>输入的报价是不是一个有效的Syscoin报价</translation>
+        <source>The entered offer is not a valid Zioncoin offer</source>
+        <translation>输入的报价是不是一个有效的Zioncoin报价</translation>
     </message>
     <message>
         <source>This transaction requires more signatures. Transaction hex has been copied to your clipboard for your reference. Please provide it to a signee that has not yet signed.</source>
@@ -1915,8 +1915,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>搜索Syscoin Escrows。</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>搜索Zioncoin Escrows。</translation>
     </message>
     <message>
         <source>Copy Offer ID</source>
@@ -1931,8 +1931,8 @@
         <translation>确认托管确认</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>警告：您将要承认从买方付款。如果要运送的项目，请通过Syscoin消息传达一个跟踪号码给买方。</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>警告：您将要承认从买方付款。如果要运送的项目，请通过Zioncoin消息传达一个跟踪号码给买方。</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2051,8 +2051,8 @@
         <translation>版本</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>Syscoin客户端</translation>
+        <source>Zioncoin Client</source>
+        <translation>Zioncoin客户端</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -2106,8 +2106,8 @@
 <context>
     <name>InMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>这些都是你收到Syscoin消息。你可以选择别名来查看使用下拉到正确的相关消息。</translation>
+        <source>These are Zioncoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>这些都是你收到Zioncoin消息。你可以选择别名来查看使用下拉到正确的相关消息。</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -2185,8 +2185,8 @@
         <translation>由于这是第一次启动程序时，您可以选择其中%1将存储其数据。</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Syscoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1将下载并存储Syscoin块链的一个副本。至少%2GB的数据将被存储在这个目录中，它会随着时间而增加。钱包也将被存储在该目录中。</translation>
+        <source>%1 will download and store a copy of the Zioncoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1将下载并存储Zioncoin块链的一个副本。至少%2GB的数据将被存储在这个目录中，它会随着时间而增加。钱包也将被存储在该目录中。</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -2296,12 +2296,12 @@
         <translation>你是在托管方式持有的报价'商人'，你可以退还硬币回给买方。</translation>
     </message>
     <message>
-        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Syscoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
-        <translation>你是在托管方式持有的报价'仲裁者'，你可以退还硬币回买家，如果你有证据证明商家没有履行协议出货报价项目。您也可以释放硬币给商家，如果买方没有及时庄园释放。您可以使用Syscoin信息与买家和商家进行沟通，以确保你有你的决定充分证据。</translation>
+        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Zioncoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
+        <translation>你是在托管方式持有的报价'仲裁者'，你可以退还硬币回买家，如果你有证据证明商家没有履行协议出货报价项目。您也可以释放硬币给商家，如果买方没有及时庄园释放。您可以使用Zioncoin信息与买家和商家进行沟通，以确保你有你的决定充分证据。</translation>
     </message>
     <message>
-        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Syscoin messages. You may leave feedback after the money is claimed by the merchant.</source>
-        <translation>你是在托管方式持有的报价“买方。代管已经发布给商家。您可以通过Syscoin消息您仲裁者或商户沟通。钱是由商家声称后可能会留下的反馈信息。</translation>
+        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Zioncoin messages. You may leave feedback after the money is claimed by the merchant.</source>
+        <translation>你是在托管方式持有的报价“买方。代管已经发布给商家。您可以通过Zioncoin消息您仲裁者或商户沟通。钱是由商家声称后可能会留下的反馈信息。</translation>
     </message>
     <message>
         <source>You are the 'merchant' of the offer held in escrow. The payment of coins have been released to you, you may claim them now. After claiming, please return to this dialog and provide feedback for this escrow transaction.</source>
@@ -2340,8 +2340,8 @@
         <translation>代管已成功退还给买家。代管完成。</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>代管状态无法识别。请联系Syscoin团队。</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>代管状态无法识别。请联系Zioncoin团队。</translation>
     </message>
     <message>
         <source>arbiter</source>
@@ -2615,12 +2615,12 @@
         <translation>表单</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
-        <translation>所显示的信息可能过时。你的钱包与Syscoin网络自动同步建立连接后，但这一过程尚未完成。这意味着，最近的交易将不可见，和余量不会达到最新直到这个过程已完成。</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
+        <translation>所显示的信息可能过时。你的钱包与Zioncoin网络自动同步建立连接后，但这一过程尚未完成。这意味着，最近的交易将不可见，和余量不会达到最新直到这个过程已完成。</translation>
     </message>
     <message>
-        <source>Spending syscoins may not be possible during that phase!</source>
-        <translation>在该阶段花费syscoins可能无法！</translation>
+        <source>Spending Zioncoins may not be possible during that phase!</source>
+        <translation>在该阶段花费Zioncoins可能无法！</translation>
     </message>
     <message>
         <source>Amount of blocks left</source>
@@ -2774,8 +2774,8 @@
         <translation>确认付款确认</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>警告：您将要承认从买方付款。如果要运送的项目，请通过Syscoin消息传达一个跟踪号码给买方。</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>警告：您将要承认从买方付款。如果要运送的项目，请通过Zioncoin消息传达一个跟踪号码给买方。</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2969,8 +2969,8 @@
         <translation>出口</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>这些都是你的注册Syscoin别名。别名操作（创建，更新，传输）需要2-5分钟才能生效。</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>这些都是你的注册Zioncoin别名。别名操作（创建，更新，传输）需要2-5分钟才能生效。</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -3104,8 +3104,8 @@
         <translation>出口</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
-        <translation>这些都是你的注册Syscoin证书。证书操作（创建，更新，传输）需要2-5分钟才能生效。你可以选择别名来查看使用下拉到正确的相关证书。</translation>
+        <source>These are your registered Zioncoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
+        <translation>这些都是你的注册Zioncoin证书。证书操作（创建，更新，传输）需要2-5分钟才能生效。你可以选择别名来查看使用下拉到正确的相关证书。</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3255,8 +3255,8 @@
         <translation>出口</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
-        <translation>这些都是你的注册Syscoin Escrows。托管操作（创建，发布，退票，完整的）需要2-5分钟才能生效。你可以选择别名来查看使用下拉向右相关escrows。</translation>
+        <source>These are your registered Zioncoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
+        <translation>这些都是你的注册Zioncoin Escrows。托管操作（创建，发布，退票，完整的）需要2-5分钟才能生效。你可以选择别名来查看使用下拉向右相关escrows。</translation>
     </message>
     <message>
         <source>All</source>
@@ -3319,8 +3319,8 @@
         <translation>确认托管确认</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>警告：您将要承认从买方付款。如果要运送的项目，请通过Syscoin消息传达一个跟踪号码给买方。</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>警告：您将要承认从买方付款。如果要运送的项目，请通过Zioncoin消息传达一个跟踪号码给买方。</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -3414,8 +3414,8 @@
         <translation>导出当前数据到文件</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
-        <translation>这些都是你的注册Syscoin优惠。要约操作（创建，更新）需要2-5分钟才能生效。你可以选择别名来查看使用下拉到正确的相关报价。</translation>
+        <source>These are your registered Zioncoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
+        <translation>这些都是你的注册Zioncoin优惠。要约操作（创建，更新）需要2-5分钟才能生效。你可以选择别名来查看使用下拉到正确的相关报价。</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3679,8 +3679,8 @@
         <translation>错误回复消息：</translation>
     </message>
     <message>
-        <source>The entered message is not a valid Syscoin message</source>
-        <translation>输入的信息是不是一个有效的Syscoin消息</translation>
+        <source>The entered message is not a valid Zioncoin message</source>
+        <translation>输入的信息是不是一个有效的Zioncoin消息</translation>
     </message>
     <message>
         <source>General exception creating new message</source>
@@ -3745,8 +3745,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>接受Syscoin发售</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>接受Zioncoin发售</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3765,8 +3765,8 @@
         <translation>与BTC支付</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>与Syscoin支付</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>与Zioncoin支付</translation>
     </message>
     <message>
         <source>Pay with SYS</source>
@@ -3781,8 +3781,8 @@
         <translation>找不到货币在钉住利率此优惠。货币：</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant</source>
-        <translation>输入Syscoin仲裁者是mutally自己和商家之间的信任</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant</source>
+        <translation>输入Zioncoin仲裁者是mutally自己和商家之间的信任</translation>
     </message>
     <message>
         <source>Are you sure you want to purchase</source>
@@ -3840,8 +3840,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>接受Syscoin发售</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>接受Zioncoin发售</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3896,12 +3896,12 @@
         <translation>无法解析JSON结果</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>输入Syscoin仲裁者是mutally自己和商家之间的信任。然后启用“使用托管”复选框</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>输入Zioncoin仲裁者是mutally自己和商家之间的信任。然后启用“使用托管”复选框</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>在付款分散Syscoin市场。报价ID：</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>在付款分散Zioncoin市场。报价ID：</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4015,8 +4015,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>接受Syscoin发售</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>接受Zioncoin发售</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -4079,12 +4079,12 @@
         <translation>无法解析JSON结果</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>输入Syscoin仲裁者是mutally自己和商家之间的信任。然后启用“使用托管”复选框</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>输入Zioncoin仲裁者是mutally自己和商家之间的信任。然后启用“使用托管”复选框</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>在付款分散Syscoin市场。报价ID：</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>在付款分散Zioncoin市场。报价ID：</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4590,8 +4590,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>搜索Syscoin提供（在一个双击购买）。从钱包里选择安全搜索，如果你想忽略潜在攻击性的优惠（在默认情况下）</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>搜索Zioncoin提供（在一个双击购买）。从钱包里选择安全搜索，如果你想忽略潜在攻击性的优惠（在默认情况下）</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -4836,7 +4836,7 @@
         <translation>窗口被关闭时最小化而不是退出应用程序。当此选项启用时，应用程序只会在菜单中选择退出时退出。</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
         <translation>可以在这里设置用户界面语言。此设置将在重新启动比特币核心后生效。</translation>
     </message>
     <message>
@@ -4856,8 +4856,8 @@
         <translation>用户界面主题：</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>用户界面的主题可以在此设置。此设置将重新启动Syscoin核心后生效。</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>用户界面的主题可以在此设置。此设置将重新启动Zioncoin核心后生效。</translation>
     </message>
     <message>
         <source>Default Alias:</source>
@@ -4932,11 +4932,11 @@
         <translation>网络(&amp;N)</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
         <translation>登录到系统后自动启动比特币核心。</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
+        <source>&amp;Start Zioncoin Core on system login</source>
         <translation>系统登录时启动比特币核心(&amp;S)</translation>
     </message>
     <message>
@@ -4964,7 +4964,7 @@
         <translation>使用未经确认的零钱(&amp;S)</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>自动在路由器中打开比特币端口。只有当您的路由器开启了 UPnP 选项时此功能才有效。</translation>
     </message>
     <message>
@@ -4972,7 +4972,7 @@
         <translation>使用 &amp;UPnP 映射端口</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
         <translation>通过 SOCKS5 代理连接比特币网络。</translation>
     </message>
     <message>
@@ -5012,7 +5012,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>在Tor匿名网络下通过不同的SOCKS5代理连接比特币网络</translation>
     </message>
     <message>
@@ -5134,8 +5134,8 @@
 <context>
     <name>OutMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>这些是已发送Syscoin消息。你可以选择别名来查看使用下拉到正确的相关消息。</translation>
+        <source>These are Zioncoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>这些是已发送Zioncoin消息。你可以选择别名来查看使用下拉到正确的相关消息。</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -5201,7 +5201,7 @@
         <translation>表单</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
         <translation>现在显示的消息可能是过期的. 在连接上比特币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成。</translation>
     </message>
     <message>
@@ -5276,7 +5276,7 @@
         <translation>支付请求出错</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
         <translation>暂时无法启动比特币：点击支付功能</translation>
     </message>
     <message>
@@ -5292,7 +5292,7 @@
         <translation>无效的付款地址 %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
         <translation>URI无法解析！原因可能是比特币地址不正确，或者URI参数错误。</translation>
     </message>
     <message>
@@ -5386,8 +5386,8 @@
         <translation>金额</translation>
     </message>
     <message>
-        <source>Enter a Syscoin address e.g. johnsmith or </source>
-        <translation>例如输入Syscoin地址JohnSmith对或</translation>
+        <source>Enter a Zioncoin address e.g. johnsmith or </source>
+        <translation>例如输入Zioncoin地址JohnSmith对或</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -5783,7 +5783,7 @@
         <translation>重用现有的接收地址（不推荐）</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
         <translation>可在付款请求上备注一条信息，在打开付款请求时可以看到。注意：该消息不是通过比特币网络传送。</translation>
     </message>
     <message>
@@ -6055,7 +6055,7 @@
         <translation>最小额 </translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
         <translation>交易量小时只支付最小交易费是可以的。但是请注意，当交易量大到超出网络可处理时您的交易可能永远无法确认。</translation>
     </message>
     <message>
@@ -6215,7 +6215,7 @@
         <translation><numerusform>估计开始%n挡（S）内确认。</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
+        <source>Warning: Invalid Zioncoin address</source>
         <translation>警告：无效的比特币地址</translation>
     </message>
     <message>
@@ -6250,7 +6250,7 @@
         <translation>这是笔正常的支付。</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
+        <source>The Zioncoin address to send the payment to</source>
         <translation>付款目的地址</translation>
     </message>
     <message>
@@ -6270,7 +6270,7 @@
         <translation>移除此项</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>交易费将从发送总额中扣除。接收人将收到比您在金额框中输入的更少的比特币。如果选中了多个收件人，交易费平分。</translation>
     </message>
     <message>
@@ -6294,8 +6294,8 @@
         <translation>请为此地址输入一个标签以将它加入用过的地址列表</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>syscoin:URI 附带的备注信息，将会和交易一起存储，备查。 注意：该消息不会通过比特币网络传输。</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>Zioncoin:URI 附带的备注信息，将会和交易一起存储，备查。 注意：该消息不会通过比特币网络传输。</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -6355,32 +6355,32 @@
         <translation>一般例外解码的原始交易</translation>
     </message>
     <message>
-        <source>Sign a raw syscoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
-        <translation>签原料syscoin交易，并将其发送到网络，如果它是完成了所有需要的签名。在下面输入十六进制原料交易编码</translation>
+        <source>Sign a raw Zioncoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
+        <translation>签原料Zioncoin交易，并将其发送到网络，如果它是完成了所有需要的签名。在下面输入十六进制原料交易编码</translation>
     </message>
     <message>
-        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any syscoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
-        <translation>一旦你在常规部分输入有效的原始交易这一区域将成为人口与原交易信息，包括任何syscoin相关的服务信息，所以你会知道什么该交易签署并可能将其发送到网络之前做的事情。</translation>
+        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any Zioncoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
+        <translation>一旦你在常规部分输入有效的原始交易这一区域将成为人口与原交易信息，包括任何Zioncoin相关的服务信息，所以你会知道什么该交易签署并可能将其发送到网络之前做的事情。</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction. Currently there is nothing to display</source>
-        <translation>下方的区域是显示关于该事务syscoin特定信息。目前没有任何显示</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction. Currently there is nothing to display</source>
+        <translation>下方的区域是显示关于该事务Zioncoin特定信息。目前没有任何显示</translation>
     </message>
     <message>
         <source>Error creating decoding raw transaction: </source>
         <translation>错误创建解码的原始交易：</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction</source>
-        <translation>以下的面积为显示对这次交易syscoin的具体信息</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction</source>
+        <translation>以下的面积为显示对这次交易Zioncoin的具体信息</translation>
     </message>
     <message>
-        <source>Error creating decoding raw syscoin transaction: </source>
-        <translation>错误创建解码原始syscoin交易：</translation>
+        <source>Error creating decoding raw Zioncoin transaction: </source>
+        <translation>错误创建解码原始Zioncoin交易：</translation>
     </message>
     <message>
-        <source>General exception decoding raw syscoin transaction</source>
-        <translation>一般例外解码原始syscoin交易</translation>
+        <source>General exception decoding raw Zioncoin transaction</source>
+        <translation>一般例外解码原始Zioncoin交易</translation>
     </message>
     <message>
         <source>Transaction was completed successfully!</source>
@@ -6410,11 +6410,11 @@
         <translation>签名消息(&amp;S)</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>您可以用你的地址对消息/协议进行签名，以证明您可以接收发送到该地址的比特币。注意不要对任何模棱两可或者随机的消息进行签名，以免遭受钓鱼式攻击。请确保消息内容准确的表达了您的真实意愿。</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
+        <source>The Zioncoin address to sign the message with</source>
         <translation>用来对消息签名的地址 </translation>
     </message>
     <message>
@@ -6446,7 +6446,7 @@
         <translation>复制当前签名至剪切板</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
+        <source>Sign the message to prove you own this Zioncoin address</source>
         <translation>签名消息，证明这个地址属于您。</translation>
     </message>
     <message>
@@ -6470,11 +6470,11 @@
         <translation>请在下面输入接收者地址、消息（确保换行符、空格符、制表符等完全相同）和签名以验证消息。请仔细核对签名信息，以提防中间人攻击。请注意，这只是证明接收方签名的地址，它不能证明任何交易！</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
+        <source>The Zioncoin address the message was signed with</source>
         <translation>消息使用的签名地址</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
         <translation>验证消息，确保消息是由指定的比特币地址签名过的。</translation>
     </message>
     <message>
@@ -6546,7 +6546,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>消息签名(&amp;M)...</translation>
@@ -6656,7 +6656,7 @@
         <translation>正在为数据块重建索引...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
+        <source>Send coins to a Zioncoin address</source>
         <translation>向一个比特币地址发送比特币</translation>
     </message>
     <message>
@@ -6680,7 +6680,7 @@
         <translation>验证消息(&amp;V)...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
+        <source>Zioncoin</source>
         <translation>比特币</translation>
     </message>
     <message>
@@ -6700,11 +6700,11 @@
         <translation>对钱包中的私钥加密</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
         <translation>用比特币地址关联的私钥为消息签名，以证明您拥有这个比特币地址</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
         <translation>校验消息，确保该消息是由指定的比特币地址所有者签名的</translation>
     </message>
     <message>
@@ -6724,8 +6724,8 @@
         <translation>分页工具栏</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>请求支付（生成二维码和 syscoin: URI）</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>请求支付（生成二维码和 Zioncoin: URI）</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -6736,7 +6736,7 @@
         <translation>显示用过的接收地址和标签的列表</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
+        <source>Open a Zioncoin: URI or payment request</source>
         <translation>打开一个比特币：URI 或支付请求</translation>
     </message>
     <message>
@@ -6744,7 +6744,7 @@
         <translation>命令行选项(&amp;C)</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
+        <source>%n active connection(s) to Zioncoin network</source>
         <translation><numerusform>%n 个到比特币网络的活动连接</numerusform></translation>
     </message>
     <message>
@@ -6812,12 +6812,12 @@
         <translation>与报价Escrows</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
+        <source>&amp;About Zioncoin Core</source>
         <translation>关于比特币核心(&amp;A)</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Syscoin command-line options</source>
-        <translation>显示%1帮助信息获取与可能Syscoin命令行选项列表</translation>
+        <source>Show the %1 help message to get a list with possible Zioncoin command-line options</source>
+        <translation>显示%1帮助信息获取与可能Zioncoin命令行选项列表</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -7650,7 +7650,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>选项：
@@ -7721,7 +7721,7 @@
         <translation>接受来自外部的连接 (缺省: 如果不带 -proxy or -connect 参数设置为1)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
+        <source>Zioncoin Core</source>
         <translation>比特币核心</translation>
     </message>
     <message>
@@ -8454,16 +8454,16 @@
         <translation>数据块验证 严密级别  -checkblocks (0-4, 默认: %u) </translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
-        <translation>无效Syscoin身份。必须遵循的3至64个字符的域名规范，没有前面或尾随破折号和2至6个字符的TLD</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
+        <translation>无效Zioncoin身份。必须遵循的3至64个字符的域名规范，没有前面或尾随破折号和2至6个字符的TLD</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
-        <translation>无效Syscoin身份。必须遵循的3至64个字符的域名规范，没有前面或尾随破折号</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
+        <translation>无效Zioncoin身份。必须遵循的3至64个字符的域名规范，没有前面或尾随破折号</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Please enter a password atleast 4 characters long</source>
-        <translation>无效Syscoin身份。请输入密码ATLEAST 4个字符长</translation>
+        <source>Invalid Zioncoin Identity. Please enter a password atleast 4 characters long</source>
+        <translation>无效Zioncoin身份。请输入密码ATLEAST 4个字符长</translation>
     </message>
     <message>
         <source>Invalid price and/or quantity values. Quantity must be less than 4294967296 and greater than or equal to -1</source>
@@ -8502,16 +8502,16 @@
         <translation>块的支持筛选和交易与布隆过滤器（默认值：%u）</translation>
     </message>
     <message>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
-        <translation>Syscoin是开发一个全球性的生产网络的开源软件。通过下载，分发和使用Syscoin和Syscoin网络你释放任何和所有责任参与Syscoin项目过去，现在和未来的开发者。您负责的Syscoin网络上的作品。您同意Syscoin项目的开发人员携带的动作/数据或*网络由自己或他人在网络上创建的任何定义*您可能会接触到哪些实体不承担任何责任。</translation>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <translation>Zioncoin是开发一个全球性的生产网络的开源软件。通过下载，分发和使用Zioncoin和Zioncoin网络你释放任何和所有责任参与Zioncoin项目过去，现在和未来的开发者。您负责的Zioncoin网络上的作品。您同意Zioncoin项目的开发人员携带的动作/数据或*网络由自己或他人在网络上创建的任何定义*您可能会接触到哪些实体不承担任何责任。</translation>
     </message>
     <message>
-        <source>The Syscoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
-        <translation>你要使用此事务的Syscoin别名无效或已更新，但没有得到证实！请稍等块，然后再试一次...</translation>
+        <source>The Zioncoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
+        <translation>你要使用此事务的Zioncoin别名无效或已更新，但没有得到证实！请稍等块，然后再试一次...</translation>
     </message>
     <message>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
-        <translation>该项目Syscoin的开发人员不必修改Syscoin网络上的数据的能力，它是由一个不变blockchain，您通过使用Syscoin的Syscoin网络和Syscoin服务的进一步认可支持。如果您不同意这些条款，请使用Syscoin及其相关服务避免。</translation>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
+        <translation>该项目Zioncoin的开发人员不必修改Zioncoin网络上的数据的能力，它是由一个不变blockchain，您通过使用Zioncoin的Zioncoin网络和Zioncoin服务的进一步认可支持。如果您不同意这些条款，请使用Zioncoin及其相关服务避免。</translation>
     </message>
     <message>
         <source>This resold offer must be of higher price than the original offer including any discount</source>
@@ -8670,8 +8670,8 @@
         <translation>只能释放积极的中介</translation>
     </message>
     <message>
-        <source>Can't determine type of alias input into syscoin service transaction</source>
-        <translation>无法确定的别名输入的类型分为syscoin服务事务</translation>
+        <source>Can't determine type of alias input into Zioncoin service transaction</source>
+        <translation>无法确定的别名输入的类型分为Zioncoin服务事务</translation>
     </message>
     <message>
         <source>Cannot change category to wanted</source>
@@ -8874,8 +8874,8 @@
         <translation>委员会必须-90至100</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
-        <translation>版权所有 (C) 2009-%i Syscoin Core 开发者</translation>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
+        <translation>版权所有 (C) 2009-%i Zioncoin Core 开发者</translation>
     </message>
     <message>
         <source>Could not create escrow transaction: Invalid response from createescrow</source>
@@ -9438,8 +9438,8 @@
         <translation>没有私钥发现参与这一中介</translation>
     </message>
     <message>
-        <source>Non-Syscoin transaction found</source>
-        <translation>非Syscoin发现交易</translation>
+        <source>Non-Zioncoin transaction found</source>
+        <translation>非Zioncoin发现交易</translation>
     </message>
     <message>
         <source>Not enough quantity left in this offer for this purchase</source>

@@ -1,6 +1,6 @@
 [Protocol]
-exec=syscoin-qt '%u'
-protocol=syscoin
+exec=Zioncoin-qt '%u'
+protocol=Zioncoin
 input=none
 output=none
 helper=true

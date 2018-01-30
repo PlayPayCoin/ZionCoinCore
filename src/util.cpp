@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
 #include "util.h"
@@ -99,8 +99,8 @@ namespace boost {
 
 using namespace std;
 
-const char * const SYSCOIN_CONF_FILENAME = "syscoin.conf";
-const char * const SYSCOIN_PID_FILENAME = "syscoind.pid";
+const char * const Zioncoin_CONF_FILENAME = "Zioncoin.conf";
+const char * const Zioncoin_PID_FILENAME = "Zioncoind.pid";
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
@@ -435,7 +435,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "syscoin";
+    const char* pszModule = "Zioncoin";
 #endif
     if (pex)
         return strprintf(
@@ -455,13 +455,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Syscoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Syscoin
-    // Mac: ~/Library/Application Support/Syscoin
-    // Unix: ~/.syscoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Zioncoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Zioncoin
+    // Mac: ~/Library/Application Support/Zioncoin
+    // Unix: ~/.Zioncoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Syscoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Zioncoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -471,10 +471,10 @@ boost::filesystem::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Syscoin";
+    return pathRet / "Library/Application Support/Zioncoin";
 #else
     // Unix
-    return pathRet / ".syscoin";
+    return pathRet / ".Zioncoin";
 #endif
 #endif
 }
@@ -521,7 +521,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", SYSCOIN_CONF_FILENAME));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", Zioncoin_CONF_FILENAME));
     if (!pathConfigFile.is_complete())
         pathConfigFile = GetDataDir(false) / pathConfigFile;
 
@@ -533,14 +533,14 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
-        return; // No syscoin.conf file is OK
+        return; // No Zioncoin.conf file is OK
 
     set<string> setOptions;
     setOptions.insert("*");
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override syscoin.conf
+        // Don't overwrite existing settings so command line settings override Zioncoin.conf
         string strKey = string("-") + it->string_key;
         string strValue = it->value[0];
         InterpretNegativeSetting(strKey, strValue);
@@ -555,7 +555,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 #ifndef WIN32
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", SYSCOIN_PID_FILENAME));
+    boost::filesystem::path pathPidFile(GetArg("-pid", Zioncoin_PID_FILENAME));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -803,9 +803,9 @@ std::string CopyrightHolders(const std::string& strPrefix)
 {
     std::string strCopyrightHolders = strPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 
-    // Check for untranslated substitution to make sure Syscoin Core copyright is not removed by accident
-    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Syscoin Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The Syscoin Core developers";
+    // Check for untranslated substitution to make sure Zioncoin Core copyright is not removed by accident
+    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Zioncoin Core") == std::string::npos) {
+        strCopyrightHolders += "\n" + strPrefix + "The Zioncoin Core developers";
     }
     return strCopyrightHolders;
 }

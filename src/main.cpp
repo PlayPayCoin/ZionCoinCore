@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2016 The Syscoin Core developers
+// Copyright (c) 2009-2016 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -47,7 +47,7 @@
 #include <boost/filesystem/fstream.hpp>
 #include <boost/math/distributions/poisson.hpp>
 #include <boost/thread.hpp>
-// SYSCOIN
+// Zioncoin
 #include "auxpow.h"
 #include "offer.h"
 #include "cert.h"
@@ -58,7 +58,7 @@
 using namespace std;
 
 #if defined(NDEBUG)
-# error "Syscoin cannot be compiled without assertions."
+# error "Zioncoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -123,7 +123,7 @@ static void CheckBlockIndex(const Consensus::Params& consensusParams);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Syscoin Signed Message:\n";
+const string strMessageMagic = "Zioncoin Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -877,7 +877,7 @@ static std::pair<int, int64_t> CalculateSequenceLocks(const CTransaction &tx, in
     // tx.nVersion is signed integer so requires cast to unsigned otherwise
     // we would be doing a signed comparison and half the range of nVersion
     // wouldn't support BIP 68.
-	// SYSCOIN
+	// Zioncoin
     bool fEnforceBIP68 = true;
 
     // Do not enforce sequence numbers as a relative lock time
@@ -1146,8 +1146,8 @@ std::string FormatStateMessage(const CValidationState &state)
         state.GetDebugMessage().empty() ? "" : ", "+state.GetDebugMessage(),
         state.GetRejectCode());
 }
-// SYSCOIN
-bool CheckSyscoinInputs(const CTransaction& tx, const CCoinsViewCache& inputs, bool fJustCheck, int nHeight=0)
+// Zioncoin
+bool CheckZioncoinInputs(const CTransaction& tx, const CCoinsViewCache& inputs, bool fJustCheck, int nHeight=0)
 {
 	vector<vector<unsigned char> > vvchArgs;
 	int op;
@@ -1155,7 +1155,7 @@ bool CheckSyscoinInputs(const CTransaction& tx, const CCoinsViewCache& inputs, b
 	if(nHeight == 0)
 		nHeight = chainActive.Height();
 	string errorMessage;
-	if(tx.nVersion == GetSyscoinTxVersion())
+	if(tx.nVersion == GetZioncoinTxVersion())
 	{
 		bool good = true;
 		for(unsigned int j = 0;j<tx.vout.size();j++)
@@ -1230,8 +1230,8 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CValidationState& state, const C
     // sure that such transactions will be mined (unless we're on
     // -testnet/-regtest).
     const CChainParams& chainparams = Params();
-	// SYSCOIN
-    if (fRequireStandard && tx.nVersion != GetSyscoinTxVersion() && tx.nVersion >= 2 && VersionBitsTipState(chainparams.GetConsensus(), Consensus::DEPLOYMENT_CSV) != THRESHOLD_ACTIVE) {
+	// Zioncoin
+    if (fRequireStandard && tx.nVersion != GetZioncoinTxVersion() && tx.nVersion >= 2 && VersionBitsTipState(chainparams.GetConsensus(), Consensus::DEPLOYMENT_CSV) != THRESHOLD_ACTIVE) {
         return state.DoS(0, false, REJECT_NONSTANDARD, "premature-version2-tx");
     }
 
@@ -1621,8 +1621,8 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CValidationState& state, const C
             return error("%s: BUG! PLEASE REPORT THIS! ConnectInputs failed against MANDATORY but not STANDARD flags %s, %s",
                 __func__, hash.ToString(), FormatStateMessage(state));
         }
-		// SYSCOIN
-        if (!CheckSyscoinInputs(tx, view, true))
+		// Zioncoin
+        if (!CheckZioncoinInputs(tx, view, true))
 			return false;
         // Remove conflicting transactions from the mempool
         BOOST_FOREACH(const CTxMemPool::txiter it, allConflicting)
@@ -1735,7 +1735,7 @@ bool GetTransaction(const uint256 &hash, CTransaction &txOut, const Consensus::P
 //
 // CBlock and CBlockIndex
 //
-// SYSCOIN check header auxpow proof of work
+// Zioncoin check header auxpow proof of work
 bool CheckProofOfWork(const CBlockHeader& block, const Consensus::Params& params)
 {
     /* If there is no auxpow, just check the block hash.  */
@@ -1794,7 +1794,7 @@ bool WriteBlockToDisk(const CBlock& block, CDiskBlockPos& pos, const CMessageHea
 
 /* Generic implementation of block reading that can handle
    both a block and its header.  */
-// SYSCOIN: block header template's for auxpow integration
+// Zioncoin: block header template's for auxpow integration
 template<typename T>
 static bool ReadBlockOrHeader(T& block, const CDiskBlockPos& pos, const Consensus::Params& consensusParams)
 {
@@ -1813,7 +1813,7 @@ static bool ReadBlockOrHeader(T& block, const CDiskBlockPos& pos, const Consensu
         return error("%s: Deserialize or I/O error - %s at %s", __func__, e.what(), pos.ToString());
     }
 
-    // SYSCOIN Check the header
+    // Zioncoin Check the header
     if (!CheckProofOfWork(block, consensusParams))
         return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
 
@@ -1854,7 +1854,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 		std::string chain = ChainNameFromCommandLine();
 		if (chain == CBaseChainParams::MAIN || chain == CBaseChainParams::REGTEST)
 		{
-			// SYSCOIN 2.1 snapshot
+			// Zioncoin 2.1 snapshot
 			return 4000000 * COIN; // PREMINE
 		}
 	}
@@ -2419,7 +2419,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("syscoin-scriptch");
+    RenameThread("Zioncoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2523,7 +2523,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     // Now that the whole chain is irreversibly beyond that time it is applied to all blocks except the
     // two in the chain that violate it. This prevents exploiting the issue against nodes during their
     // initial block download.
-	// SYSCOIN
+	// Zioncoin
     bool fEnforceBIP30 = true;
 
     if (fEnforceBIP30) {
@@ -2535,21 +2535,21 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         }
     }
 
-    // SYSCOIN
+    // Zioncoin
     bool fStrictPayToScriptHash = true;
 
     unsigned int flags = fStrictPayToScriptHash ? SCRIPT_VERIFY_P2SH : SCRIPT_VERIFY_NONE;
 
     // Start enforcing the DERSIG (BIP66) rules, for block.nVersion=3 blocks,
     // when 75% of the network has upgraded:
-	// SYSCOIN
+	// Zioncoin
     if (block.GetBaseVersion() >= 3 && IsSuperMajority(3, pindex->pprev, chainparams.GetConsensus().nMajorityEnforceBlockUpgrade, chainparams.GetConsensus())) {
         flags |= SCRIPT_VERIFY_DERSIG;
     }
 
     // Start enforcing CHECKLOCKTIMEVERIFY, (BIP65) for block.nVersion=4
     // blocks, when 75% of the network has upgraded:
-	// SYSCOIN
+	// Zioncoin
     if (block.GetBaseVersion() >= 4 && IsSuperMajority(4, pindex->pprev, chainparams.GetConsensus().nMajorityEnforceBlockUpgrade, chainparams.GetConsensus())) {
         flags |= SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY;
     }
@@ -2576,7 +2576,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     std::vector<uint256> vOrphanErase;
     std::vector<int> prevheights;
-	// SYSCOIN inflate when high demand for services
+	// Zioncoin inflate when high demand for services
 	uint64_t nSysBlockTx = 0;
 	CAmount nSysRegenFees = 0;
     CAmount nFees = 0;
@@ -2591,14 +2591,14 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     for (unsigned int i = 0; i < block.vtx.size(); i++)
     {
         const CTransaction &tx = block.vtx[i];
-		// SYSCOIN inflate and regenerate based on opreturn value set when creating the service(user)
+		// Zioncoin inflate and regenerate based on opreturn value set when creating the service(user)
 		// originally the creation tx actually burns the opreturn data fee, but here we account for that burn + inflate supply by that value (so multiple by 2)
-		if(tx.nVersion == GetSyscoinTxVersion())
+		if(tx.nVersion == GetZioncoinTxVersion())
 		{
 			nSysBlockTx++;
 			if(nSysBlockTx >= 5)
 			{
-				int nOut = GetSyscoinDataOutput(tx);
+				int nOut = GetZioncoinDataOutput(tx);
 				if (nOut != -1)
 					nSysRegenFees += tx.vout[nOut].nValue*2;
 			}
@@ -2655,9 +2655,9 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
             if (!CheckInputs(tx, state, view, fScriptChecks, flags, fCacheResults, txdata[i], nScriptCheckThreads ? &vChecks : NULL))
                 return error("ConnectBlock(): CheckInputs on %s failed with %s",
                     tx.GetHash().ToString(), FormatStateMessage(state));
-			// SYSCOIN
-			if (!CheckSyscoinInputs(tx, view, fJustCheck, pindex->nHeight))
-				return error("ConnectBlock(): CheckSyscoinInputs on %s failed",tx.GetHash().ToString());
+			// Zioncoin
+			if (!CheckZioncoinInputs(tx, view, fJustCheck, pindex->nHeight))
+				return error("ConnectBlock(): CheckZioncoinInputs on %s failed",tx.GetHash().ToString());
             control.Add(vChecks);
         }
 
@@ -2673,7 +2673,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     int64_t nTime3 = GetTimeMicros(); nTimeConnect += nTime3 - nTime2;
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime3 - nTime2), 0.001 * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * 0.000001);
 
-	// SYSCOIN Add dynamic inflation based on service demand
+	// Zioncoin Add dynamic inflation based on service demand
     CAmount blockReward = nSysRegenFees + nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
     if (block.vtx[0].GetValueOut() > blockReward)
         return state.DoS(100,
@@ -2876,7 +2876,7 @@ void static UpdateTip(CBlockIndex *pindexNew, const CChainParams& chainParams) {
         int nUpgraded = 0;
         const CBlockIndex* pindex = chainActive.Tip();
         for (int bit = 0; bit < VERSIONBITS_NUM_BITS; bit++) {
-			// SYSCOIN, skip auxpow bit 8 or dummy bit 28
+			// Zioncoin, skip auxpow bit 8 or dummy bit 28
 			if(bit == 8 || bit == 28)
 				continue;
             WarningBitsConditionChecker checker(bit);
@@ -2896,7 +2896,7 @@ void static UpdateTip(CBlockIndex *pindexNew, const CChainParams& chainParams) {
         // Check the version of the last 100 blocks to see if we need to upgrade:
         for (int i = 0; i < 100 && pindex != NULL; i++)
         {
-			// SYSCOIN getbaseversion
+			// Zioncoin getbaseversion
             const int32_t nExpectedVersion = ComputeBlockVersion(pindex->pprev, chainParams.GetConsensus());
             if (pindex->GetBaseVersion() > VERSIONBITS_LAST_OLD_BLOCK_VERSION && (pindex->GetBaseVersion() & ~nExpectedVersion) != 0)
                 ++nUpgraded;
@@ -3547,7 +3547,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 
 bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, const Consensus::Params& consensusParams, bool fCheckPOW)
 {
-	// SYSCOIN check auxpow first then fallback to normal check
+	// Zioncoin check auxpow first then fallback to normal check
     if (fCheckPOW && !CheckProofOfWork(block, consensusParams))
         return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
 
@@ -3695,22 +3695,22 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     if (block.nBits != GetNextWorkRequired(pindexPrev, &block, consensusParams))
         return state.DoS(100, false, REJECT_INVALID, "bad-diffbits", false, "incorrect proof of work");
 
-	// SYSCOIN
+	// Zioncoin
 	std::string chain = ChainNameFromCommandLine();
 
     // Check timestamp against prev
-	// SYSCOIN
+	// Zioncoin
     if (chain != CBaseChainParams::REGTEST && block.GetBlockTime() <= pindexPrev->GetMedianTimePast())
         return state.Invalid(false, REJECT_INVALID, "time-too-old", "block's timestamp is too early");
 
     // Check timestamp
-	// SYSCOIN
+	// Zioncoin
     if (chain != CBaseChainParams::REGTEST && block.GetBlockTime() > nAdjustedTime + 2 * 60 * 60)
         return state.Invalid(false, REJECT_INVALID, "time-too-new", "block timestamp too far in the future");
 
 
     // Reject outdated version blocks when 95% (75% on testnet) of the network has upgraded:
-	// SYSCOIN
+	// Zioncoin
 	/*
     for (int32_t version = 2; version < 5; ++version) // check for version 2, 3 and 4 upgrades
         if (block.GetBaseVersion() < version && IsSuperMajority(version, pindexPrev, consensusParams.nMajorityRejectBlockOutdated, consensusParams))
@@ -3744,7 +3744,7 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
 
     // Enforce block.nVersion=2 rule that the coinbase starts with serialized block height
     // if 750 of the last 1,000 blocks are version 2 or greater (51/100 if testnet):
-	// SYSCOIN
+	// Zioncoin
     if (block.GetBaseVersion() >= 2 && IsSuperMajority(2, pindexPrev, consensusParams.nMajorityEnforceBlockUpgrade, consensusParams))
     {
         CScript expect = CScript() << nHeight;
@@ -5634,7 +5634,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         LogPrint("net", "getheaders %d to %s from peer=%d\n", (pindex ? pindex->nHeight : -1), hashStop.ToString(), pfrom->id);
         for (; pindex; pindex = chainActive.Next(pindex))
         {
-			// SYSCOIN
+			// Zioncoin
             vHeaders.push_back(pindex->GetBlockHeader(chainparams.GetConsensus()));
             if (--nLimit <= 0 || pindex->GetBlockHash() == hashStop)
                 break;
@@ -5736,7 +5736,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                         if (orphanTx.wit.IsNull() && !stateDummy.CorruptionPossible()) {
                             // Do not use rejection cache for witness transactions or
                             // witness-stripped transactions, as they can have been malleated.
-                            // See https://github.com/syscoin/syscoin2/issues/8279 for details.
+                            // See https://github.com/Zioncoin/Zioncoin2/issues/8279 for details.
                             assert(recentRejects);
                             recentRejects->insert(orphanHash);
                         }
@@ -5778,7 +5778,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             if (tx.wit.IsNull() && !state.CorruptionPossible()) {
                 // Do not use rejection cache for witness transactions or
                 // witness-stripped transactions, as they can have been malleated.
-                // See https://github.com/syscoin/syscoin2/issues/8279 for details.
+                // See https://github.com/Zioncoin/Zioncoin2/issues/8279 for details.
                 assert(recentRejects);
                 recentRejects->insert(tx.GetHash());
             }
@@ -6796,7 +6796,7 @@ bool SendMessages(CNode* pto)
                     pBestIndex = pindex;
                     if (fFoundStartingHeader) {
                         // add this to the headers message
-						// SYSCOIN
+						// Zioncoin
                         vHeaders.push_back(pindex->GetBlockHeader(consensusParams));
                     } else if (PeerHasHeader(&state, pindex)) {
                         continue; // keep looking for the first new block
@@ -6804,7 +6804,7 @@ bool SendMessages(CNode* pto)
                         // Peer doesn't have this header but they do have the prior one.
                         // Start sending headers.
                         fFoundStartingHeader = true;
-						// SYSCOIN
+						// Zioncoin
                         vHeaders.push_back(pindex->GetBlockHeader(consensusParams));
                     } else {
                         // Peer doesn't have this header or the prior one -- nothing will

@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Syscoin Core developers
+// Copyright (c) 2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_HTTPSERVER_H
-#define SYSCOIN_HTTPSERVER_H
+#ifndef Zioncoin_HTTPSERVER_H
+#define Zioncoin_HTTPSERVER_H
 
 #include <string>
 #include <stdint.h>
@@ -146,4 +146,4 @@ private:
     struct event* ev;
 };
 
-#endif // SYSCOIN_HTTPSERVER_H
+#endif // Zioncoin_HTTPSERVER_H

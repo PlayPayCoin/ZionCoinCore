@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +7,7 @@
 #include "chainparams.h"
 #include "random.h"
 
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 
 #include <boost/test/unit_test.hpp>
 
@@ -16,7 +16,7 @@ struct RegtestingSetup : public TestingSetup {
 };
 
 BOOST_FIXTURE_TEST_SUITE(blockencodings_tests, RegtestingSetup)
-// SYSCOIN
+// Zioncoin
 static void SetBlockVersion(CPureBlockHeader& header, int32_t baseVersion) {
   const int32_t nChainId = Params().GetConsensus().nAuxpowChainId;
   header.SetBaseVersion(baseVersion, nChainId);
@@ -31,7 +31,7 @@ static CBlock BuildBlockTestCase() {
 
     block.vtx.resize(3);
     block.vtx[0] = tx;
-    // SYSCOIN
+    // Zioncoin
     SetBlockVersion(block, 42);
     block.hashPrevBlock = GetRandHash();
     block.nBits = 0x207fffff;
@@ -261,7 +261,7 @@ BOOST_AUTO_TEST_CASE(EmptyBlockRoundTripTest)
     CBlock block;
     block.vtx.resize(1);
     block.vtx[0] = coinbase;
-	// SYSCOIN
+	// Zioncoin
     SetBlockVersion(block, 42);
     block.hashPrevBlock = GetRandHash();
     block.nBits = 0x207fffff;

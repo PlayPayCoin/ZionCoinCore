@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_MINER_H
-#define SYSCOIN_MINER_H
+#ifndef Zioncoin_MINER_H
+#define Zioncoin_MINER_H
 
 #include "primitives/block.h"
 #include "txmempool.h"
@@ -148,7 +148,7 @@ private:
     uint64_t nBlockWeight;
     uint64_t nBlockSize;
     uint64_t nBlockTx;
-	// SYSCOIN
+	// Zioncoin
 	uint64_t nSysBlockTx;
 	CAmount nSysRegenFees;
 
@@ -213,4 +213,4 @@ private:
 void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned int& nExtraNonce);
 int64_t UpdateTime(CBlockHeader* pblock, const Consensus::Params& consensusParams, const CBlockIndex* pindexPrev);
 
-#endif // SYSCOIN_MINER_H
+#endif // Zioncoin_MINER_H

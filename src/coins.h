@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_COINS_H
-#define SYSCOIN_COINS_H
+#ifndef Zioncoin_COINS_H
+#define Zioncoin_COINS_H
 
 #include "compressor.h"
 #include "core_memusage.h"
@@ -466,7 +466,7 @@ public:
     size_t DynamicMemoryUsage() const;
 
     /** 
-     * Amount of syscoins coming in to a transaction
+     * Amount of Zioncoins coming in to a transaction
      * Note that lightweight clients may not know anything besides the hash of previous transactions,
      * so may not be able to calculate this.
      *
@@ -499,4 +499,4 @@ private:
     CCoinsViewCache(const CCoinsViewCache &);
 };
 
-#endif // SYSCOIN_COINS_H
+#endif // Zioncoin_COINS_H

@@ -314,7 +314,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     </context>
 <context>
     <name>TrafficGraphWidget</name>
@@ -348,6 +348,6 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     </context>
 </TS>

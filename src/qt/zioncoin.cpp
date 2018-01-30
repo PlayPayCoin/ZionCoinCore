@@ -1,12 +1,12 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
-#include "syscoingui.h"
+#include "Zioncoingui.h"
 
 #include "chainparams.h"
 #include "clientmodel.h"
@@ -91,7 +91,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("syscoin-core", psz).toStdString();
+    return QCoreApplication::translate("Zioncoin-core", psz).toStdString();
 }
 
 static QString GetLangTerritory()
@@ -138,11 +138,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. syscoin_de.qm (shortcut "de" needs to be defined in syscoin.qrc)
+    // Load e.g. Zioncoin_de.qm (shortcut "de" needs to be defined in Zioncoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. syscoin_de_DE.qm (shortcut "de_DE" needs to be defined in syscoin.qrc)
+    // Load e.g. Zioncoin_de_DE.qm (shortcut "de_DE" needs to be defined in Zioncoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -163,14 +163,14 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 }
 #endif
 
-/** Class encapsulating Syscoin Core startup and shutdown.
+/** Class encapsulating Zioncoin Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class SyscoinCore: public QObject
+class ZioncoinCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit SyscoinCore();
+    explicit ZioncoinCore();
 
 public Q_SLOTS:
     void initialize();
@@ -189,13 +189,13 @@ private:
     void handleRunawayException(const std::exception *e);
 };
 
-/** Main Syscoin application object */
-class SyscoinApplication: public QApplication
+/** Main Zioncoin application object */
+class ZioncoinApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit SyscoinApplication(int &argc, char **argv);
-    ~SyscoinApplication();
+    explicit ZioncoinApplication(int &argc, char **argv);
+    ~ZioncoinApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -218,7 +218,7 @@ public:
     /// Get process return value
     int getReturnValue() { return returnValue; }
 
-    /// Get window identifier of QMainWindow (SyscoinGUI)
+    /// Get window identifier of QMainWindow (ZioncoinGUI)
     WId getMainWinId() const;
 
 public Q_SLOTS:
@@ -237,7 +237,7 @@ private:
     QThread *coreThread;
     OptionsModel *optionsModel;
     ClientModel *clientModel;
-    SyscoinGUI *window;
+    ZioncoinGUI *window;
     QTimer *pollShutdownTimer;
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer;
@@ -250,20 +250,20 @@ private:
     void startThread();
 };
 
-#include "syscoin.moc"
+#include "Zioncoin.moc"
 
-SyscoinCore::SyscoinCore():
+ZioncoinCore::ZioncoinCore():
     QObject()
 {
 }
 
-void SyscoinCore::handleRunawayException(const std::exception *e)
+void ZioncoinCore::handleRunawayException(const std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(strMiscWarning));
 }
 
-void SyscoinCore::initialize()
+void ZioncoinCore::initialize()
 {
     try
     {
@@ -277,7 +277,7 @@ void SyscoinCore::initialize()
     }
 }
 
-void SyscoinCore::shutdown()
+void ZioncoinCore::shutdown()
 {
     try
     {
@@ -294,7 +294,7 @@ void SyscoinCore::shutdown()
     }
 }
 
-SyscoinApplication::SyscoinApplication(int &argc, char **argv):
+ZioncoinApplication::ZioncoinApplication(int &argc, char **argv):
     QApplication(argc, argv),
     coreThread(0),
     optionsModel(0),
@@ -310,17 +310,17 @@ SyscoinApplication::SyscoinApplication(int &argc, char **argv):
     setQuitOnLastWindowClosed(false);
 
     // UI per-platform customization
-    // This must be done inside the SyscoinApplication constructor, or after it, because
+    // This must be done inside the ZioncoinApplication constructor, or after it, because
     // PlatformStyle::instantiate requires a QApplication
     std::string platformName;
-    platformName = GetArg("-uiplatform", SyscoinGUI::DEFAULT_UIPLATFORM);
+    platformName = GetArg("-uiplatform", ZioncoinGUI::DEFAULT_UIPLATFORM);
     platformStyle = PlatformStyle::instantiate(QString::fromStdString(platformName));
     if (!platformStyle) // Fall back to "other" if specified name not found
         platformStyle = PlatformStyle::instantiate("other");
     assert(platformStyle);
 }
 
-SyscoinApplication::~SyscoinApplication()
+ZioncoinApplication::~ZioncoinApplication()
 {
     if(coreThread)
     {
@@ -343,30 +343,30 @@ SyscoinApplication::~SyscoinApplication()
 }
 
 #ifdef ENABLE_WALLET
-void SyscoinApplication::createPaymentServer()
+void ZioncoinApplication::createPaymentServer()
 {
     paymentServer = new PaymentServer(this);
 }
 #endif
 
-void SyscoinApplication::createOptionsModel(bool resetSettings)
+void ZioncoinApplication::createOptionsModel(bool resetSettings)
 {
     optionsModel = new OptionsModel(NULL, resetSettings);
 }
 
-void SyscoinApplication::createWindow(const NetworkStyle *networkStyle)
+void ZioncoinApplication::createWindow(const NetworkStyle *networkStyle)
 {
-    window = new SyscoinGUI(platformStyle, networkStyle, 0);
+    window = new ZioncoinGUI(platformStyle, networkStyle, 0);
 
     pollShutdownTimer = new QTimer(window);
     connect(pollShutdownTimer, SIGNAL(timeout()), window, SLOT(detectShutdown()));
     pollShutdownTimer->start(200);
 }
 
-void SyscoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
+void ZioncoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
 {
     SplashScreen *splash = new SplashScreen(0, networkStyle);
-    // SYSCOIN make window translucent modal w/no background
+    // Zioncoin make window translucent modal w/no background
     splash->setWindowFlags(Qt::Widget | Qt::FramelessWindowHint);
     splash->setParent(0); // Create TopLevel-Widget
     splash->setAttribute(Qt::WA_TranslucentBackground, true);
@@ -377,12 +377,12 @@ void SyscoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
     connect(this, SIGNAL(requestedShutdown()), splash, SLOT(close()));
 }
 
-void SyscoinApplication::startThread()
+void ZioncoinApplication::startThread()
 {
     if(coreThread)
         return;
     coreThread = new QThread(this);
-    SyscoinCore *executor = new SyscoinCore();
+    ZioncoinCore *executor = new ZioncoinCore();
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
@@ -398,20 +398,20 @@ void SyscoinApplication::startThread()
     coreThread->start();
 }
 
-void SyscoinApplication::parameterSetup()
+void ZioncoinApplication::parameterSetup()
 {
     InitLogging();
     InitParameterInteraction();
 }
 
-void SyscoinApplication::requestInitialize()
+void ZioncoinApplication::requestInitialize()
 {
     qDebug() << __func__ << ": Requesting initialize";
     startThread();
     Q_EMIT requestedInitialize();
 }
 
-void SyscoinApplication::requestShutdown()
+void ZioncoinApplication::requestShutdown()
 {
     // Show a simple window indicating shutdown status
     // Do this first as some of the steps may take some time below,
@@ -436,7 +436,7 @@ void SyscoinApplication::requestShutdown()
     Q_EMIT requestedShutdown();
 }
 
-void SyscoinApplication::initializeResult(int retval)
+void ZioncoinApplication::initializeResult(int retval)
 {
     qDebug() << __func__ << ": Initialization result: " << retval;
     // Set exit result: 0 if successful, 1 if failure
@@ -458,8 +458,8 @@ void SyscoinApplication::initializeResult(int retval)
         {
             walletModel = new WalletModel(platformStyle, pwalletMain, optionsModel);
 
-            window->addWallet(SyscoinGUI::DEFAULT_WALLET, walletModel);
-            window->setCurrentWallet(SyscoinGUI::DEFAULT_WALLET);
+            window->addWallet(ZioncoinGUI::DEFAULT_WALLET, walletModel);
+            window->setCurrentWallet(ZioncoinGUI::DEFAULT_WALLET);
 
             connect(walletModel, SIGNAL(coinsSent(CWallet*,SendCoinsRecipient,QByteArray)),
                              paymentServer, SLOT(fetchPaymentACK(CWallet*,const SendCoinsRecipient&,QByteArray)));
@@ -479,7 +479,7 @@ void SyscoinApplication::initializeResult(int retval)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // syscoin: URIs or payment requests:
+        // Zioncoin: URIs or payment requests:
         connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                          window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         connect(window, SIGNAL(receivedURI(QString)),
@@ -493,19 +493,19 @@ void SyscoinApplication::initializeResult(int retval)
     }
 }
 
-void SyscoinApplication::shutdownResult(int retval)
+void ZioncoinApplication::shutdownResult(int retval)
 {
     qDebug() << __func__ << ": Shutdown result: " << retval;
     quit(); // Exit main loop after shutdown finished
 }
 
-void SyscoinApplication::handleRunawayException(const QString &message)
+void ZioncoinApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", SyscoinGUI::tr("A fatal error occurred. Syscoin can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", ZioncoinGUI::tr("A fatal error occurred. Zioncoin can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
-WId SyscoinApplication::getMainWinId() const
+WId ZioncoinApplication::getMainWinId() const
 {
     if (!window)
         return 0;
@@ -513,7 +513,7 @@ WId SyscoinApplication::getMainWinId() const
     return window->winId();
 }
 
-#ifndef SYSCOIN_QT_TEST
+#ifndef Zioncoin_QT_TEST
 int main(int argc, char *argv[])
 {
     SetupEnvironment();
@@ -531,10 +531,10 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
 
-    Q_INIT_RESOURCE(syscoin);
-    Q_INIT_RESOURCE(syscoin_locale);
+    Q_INIT_RESOURCE(Zioncoin);
+    Q_INIT_RESOURCE(Zioncoin_locale);
 
-    SyscoinApplication app(argc, argv);
+    ZioncoinApplication app(argc, argv);
 #if QT_VERSION > 0x050100
     // Generate high-dpi pixmaps
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
@@ -587,7 +587,7 @@ int main(int argc, char *argv[])
     if (!Intro::pickDataDirectory())
         return EXIT_SUCCESS;
 
-    /// 6. Determine availability of data directory and parse syscoin.conf
+    /// 6. Determine availability of data directory and parse Zioncoin.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!boost::filesystem::is_directory(GetDataDir(false)))
     {
@@ -639,7 +639,7 @@ int main(int argc, char *argv[])
         exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // syscoin: links repeatedly have their payment requests routed to this process:
+    // Zioncoin: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 
@@ -687,4 +687,4 @@ int main(int argc, char *argv[])
     }
     return app.getReturnValue();
 }
-#endif // SYSCOIN_QT_TEST
+#endif // Zioncoin_QT_TEST

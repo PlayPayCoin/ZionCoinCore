@@ -1,9 +1,9 @@
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_WALLET_CRYPTER_H
-#define SYSCOIN_WALLET_CRYPTER_H
+#ifndef Zioncoin_WALLET_CRYPTER_H
+#define Zioncoin_WALLET_CRYPTER_H
 
 #include "keystore.h"
 #include "serialize.h"
@@ -76,7 +76,7 @@ namespace wallet_crypto
 class CCrypter
 {
 friend class wallet_crypto::TestCrypter; // for test access to chKey/chIV
-// SYSCOIN
+// Zioncoin
 public:
 	unsigned char chKey[WALLET_CRYPTO_KEY_SIZE];
 private:
@@ -204,4 +204,4 @@ public:
     boost::signals2::signal<void (CCryptoKeyStore* wallet)> NotifyStatusChanged;
 };
 
-#endif // SYSCOIN_WALLET_CRYPTER_H
+#endif // Zioncoin_WALLET_CRYPTER_H

@@ -1,11 +1,11 @@
-// Copyright (c) 2014-2015 The Syscoin Core developers
+// Copyright (c) 2014-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "networkstyle.h"
 
 #include "guiconstants.h"
-// SYSCOIN 
+// Zioncoin 
 #include "guiutil.h"
 #include <QApplication>
 
@@ -27,18 +27,18 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
     appName(_appName),
     titleAddText(qApp->translate("SplashScreen", _titleAddText))
 {
-	// SYSCOIN
+	// Zioncoin
 	QString theme = GUIUtil::getThemeName();
     // load pixmap
-    QPixmap pixmap(":/icons/" + theme + "/syscoin");
-	// SYSCOIN
+    QPixmap pixmap(":/icons/" + theme + "/Zioncoin");
+	// Zioncoin
 	QPixmap splashImagePixmap(":/images/" + theme + "/splash");
 
     if(iconColorHueShift != 0 && iconColorSaturationReduction != 0)
     {
         // generate QImage from QPixmap
         QImage img = pixmap.toImage();
-		// SYSCOIN
+		// Zioncoin
 		QImage splashImageImg = splashImagePixmap.toImage();
         int h,s,l,a;
 
@@ -80,14 +80,14 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
 		splashImagePixmap.convertFromImage(splashImageImg);
 #else
         pixmap = QPixmap::fromImage(img);
-		// SYSCOIN
+		// Zioncoin
 		splashImagePixmap = QPixmap::fromImage(splashImageImg);
 #endif
     }
 
     appIcon             = QIcon(pixmap);
     trayAndWindowIcon   = QIcon(pixmap.scaled(QSize(256,256)));
-	// SYSCOIN
+	// Zioncoin
 	splashImage         = splashImagePixmap;
 }
 

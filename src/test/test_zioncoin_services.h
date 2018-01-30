@@ -1,10 +1,10 @@
-#ifndef SYSCOIN_TEST_TEST_SYSCOIN_SERVICES_H
-#define SYSCOIN_TEST_TEST_SYSCOIN_SERVICES_H
+#ifndef Zioncoin_TEST_TEST_Zioncoin_SERVICES_H
+#define Zioncoin_TEST_TEST_Zioncoin_SERVICES_H
 
 #include <stdio.h>
 #include <univalue.h>
 using namespace std;
-/** Testing syscoin services setup that configures a complete environment with 3 nodes.
+/** Testing Zioncoin services setup that configures a complete environment with 3 nodes.
  */
 UniValue CallRPC(const string &dataDir, const string& commandWithArgs, bool regTest = true, bool readJson = true);
 void StartNode(const string &dataDir, bool regTest = true, const string& extraArgs="");
@@ -50,17 +50,17 @@ void EscrowRelease(const string& node, const string& role, const string& guid);
 void EscrowClaimRelease(const string& node, const string& guid);
 void EscrowRefund(const string& node, const string& role, const string& guid);
 void EscrowClaimRefund(const string& node, const string& guid);
-// SYSCOIN testing setup
-struct SyscoinTestingSetup {
-    SyscoinTestingSetup();
-    ~SyscoinTestingSetup();
+// Zioncoin testing setup
+struct ZioncoinTestingSetup {
+    ZioncoinTestingSetup();
+    ~ZioncoinTestingSetup();
 };
-struct BasicSyscoinTestingSetup {
-    BasicSyscoinTestingSetup();
-    ~BasicSyscoinTestingSetup();
+struct BasicZioncoinTestingSetup {
+    BasicZioncoinTestingSetup();
+    ~BasicZioncoinTestingSetup();
 };
-struct SyscoinMainNetSetup {
-	SyscoinMainNetSetup();
-	~SyscoinMainNetSetup();
+struct ZioncoinMainNetSetup {
+	ZioncoinMainNetSetup();
+	~ZioncoinMainNetSetup();
 };
 #endif

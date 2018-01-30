@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_COINCONTROL_H
-#define SYSCOIN_COINCONTROL_H
+#ifndef Zioncoin_COINCONTROL_H
+#define Zioncoin_COINCONTROL_H
 
 #include "primitives/transaction.h"
 
@@ -73,4 +73,4 @@ private:
     std::set<COutPoint> setSelected;
 };
 
-#endif // SYSCOIN_COINCONTROL_H
+#endif // Zioncoin_COINCONTROL_H

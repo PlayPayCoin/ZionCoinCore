@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Syscoin Core developers
+// Copyright (c) 2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_HTTPRPC_H
-#define SYSCOIN_HTTPRPC_H
+#ifndef Zioncoin_HTTPRPC_H
+#define Zioncoin_HTTPRPC_H
 
 #include <string>
 #include <map>

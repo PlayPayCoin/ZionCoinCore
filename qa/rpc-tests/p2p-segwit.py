@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2016 The Syscoin Core developers
+# Copyright (c) 2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 from test_framework.mininode import *
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 from test_framework.util import *
 from test_framework.script import *
 from test_framework.blocktools import create_block, create_coinbase, add_witness_commitment, WITNESS_COMMITMENT_HEADER
@@ -178,7 +178,7 @@ def sign_P2PK_witness_input(script, txTo, inIdx, hashtype, value, key):
     txTo.rehash()
 
 
-class SegWitTest(SyscoinTestFramework):
+class SegWitTest(ZioncoinTestFramework):
     def setup_chain(self):
         initialize_chain_clean(self.options.tmpdir, 3)
 
@@ -275,7 +275,7 @@ class SegWitTest(SyscoinTestFramework):
         # rule).
         self.test_node.test_witness_block(block, accepted=False)
         # TODO: fix synchronization so we can test reject reason
-        # Right now, syscoind delays sending reject messages for blocks
+        # Right now, Zioncoind delays sending reject messages for blocks
         # until the future, making synchronization here difficult.
         #assert_equal(self.test_node.last_reject.reason, "unexpected-witness")
 
@@ -599,7 +599,7 @@ class SegWitTest(SyscoinTestFramework):
         self.nodes[0].submitblock(bytes_to_hex_str(block.serialize(True)))
         assert(self.nodes[0].getbestblockhash() != block.hash)
 
-        # Now redo commitment with the standard nonce, but let syscoind fill it in.
+        # Now redo commitment with the standard nonce, but let Zioncoind fill it in.
         add_witness_commitment(block, nonce=0)
         block.vtx[0].wit = CTxWitness()
         block.solve()
@@ -1515,7 +1515,7 @@ class SegWitTest(SyscoinTestFramework):
         # This transaction should not be accepted into the mempool pre- or
         # post-segwit.  Mempool acceptance will use SCRIPT_VERIFY_WITNESS which
         # will require a witness to spend a witness program regardless of
-        # segwit activation.  Note that older syscoind's that are not
+        # segwit activation.  Note that older Zioncoind's that are not
         # segwit-aware would also reject this for failing CLEANSTACK.
         self.test_node.test_transaction_acceptance(spend_tx, with_witness=False, accepted=False)
 
@@ -1551,12 +1551,12 @@ class SegWitTest(SyscoinTestFramework):
     # Test the behavior of starting up a segwit-aware node after the softfork
     # has activated.  As segwit requires different block data than pre-segwit
     # nodes would have stored, this requires special handling.
-    # To enable this test, pass --oldbinary=<path-to-pre-segwit-syscoind> to
+    # To enable this test, pass --oldbinary=<path-to-pre-segwit-Zioncoind> to
     # the test.
     def test_upgrade_after_activation(self, node, node_id):
         print("\tTesting software upgrade after softfork activation")
 
-        assert(node_id != 0) # node0 is assumed to be a segwit-active syscoind
+        assert(node_id != 0) # node0 is assumed to be a segwit-active Zioncoind
 
         # Make sure the nodes are all up
         sync_blocks(self.nodes)

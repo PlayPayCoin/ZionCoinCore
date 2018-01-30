@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_STREAMS_H
-#define SYSCOIN_STREAMS_H
+#ifndef Zioncoin_STREAMS_H
+#define Zioncoin_STREAMS_H
 
 #include "support/allocators/zeroafterfree.h"
 #include "serialize.h"
@@ -641,4 +641,4 @@ public:
     }
 };
 
-#endif // SYSCOIN_STREAMS_H
+#endif // Zioncoin_STREAMS_H

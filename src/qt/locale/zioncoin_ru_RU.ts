@@ -362,7 +362,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Опции командной строки</translation>
@@ -380,8 +380,8 @@
         <translation>Информация</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>О Syscoin Core</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>О Zioncoin Core</translation>
     </message>
     </context>
 <context>
@@ -436,10 +436,10 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Core</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Core</translation>
     </message>
     <message>
         <source>Information</source>

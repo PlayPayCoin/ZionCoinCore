@@ -1,9 +1,9 @@
-// Copyright (c) 2017 The Syscoin Core developers
+// Copyright (c) 2017 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_MODALOVERLAY_H
-#define SYSCOIN_QT_MODALOVERLAY_H
+#ifndef Zioncoin_QT_MODALOVERLAY_H
+#define Zioncoin_QT_MODALOVERLAY_H
 
 #include <QDateTime>
 #include <QWidget>
@@ -41,4 +41,4 @@ private:
     bool userClosed;
 };
 
-#endif // SYSCOIN_QT_MODALOVERLAY_H
+#endif // Zioncoin_QT_MODALOVERLAY_H

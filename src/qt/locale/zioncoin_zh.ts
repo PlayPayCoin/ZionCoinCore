@@ -235,7 +235,7 @@
         <translation>仅支付全额的%1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
+        <source>Warning: Invalid Zioncoin address</source>
         <translation>警告：比特币地址无效</translation>
     </message>
     </context>
@@ -258,7 +258,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Error</source>
         <translation>错误</translation>
@@ -308,7 +308,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Transaction amounts must be positive</source>
         <translation>转账额度须为正数</translation>

@@ -288,11 +288,11 @@
         <translation>כתובות לקבלה</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>אלה כתובת הביטקוין שלך לצורך שליחת תשלומים. תמיד יש לבדוק את הכמות ואת כתובות מקבלי התשלומים לפני שליחת מטבעות.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>אלה כתובות הביטקוין שלך לצורך קבלת תשלומים. מומלץ להשתמש בכתובת קבלה חדשה לכל העברה.</translation>
     </message>
     <message>
@@ -370,8 +370,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>חפש כינויי Syscoin. בחר חיפוש בטוח מפני אפשרויות ארנק אם ברצונך להשמיט כינויים שעלולים להיות פוגעניים (פועל כברירת מחדל)</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>חפש כינויי Zioncoin. בחר חיפוש בטוח מפני אפשרויות ארנק אם ברצונך להשמיט כינויים שעלולים להיות פוגעניים (פועל כברירת מחדל)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Aliases starting with 'name'). Empty will search for all.</source>
@@ -467,7 +467,7 @@
         <translation>אישור הצפנת הארנק</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
         <translation>אזהרה: הצפנת הארנק ואיבוד מילת הצופן עשויה להוביל &lt;b&gt;לאיבוד כל הביטקוינים שלך&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -553,8 +553,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>חפש תעודות Syscoin. בחר חיפוש בטוח מפני אפשרויות ארנק אם ברצונך להשמיט תעודות שעלולים להיות פוגעניות (פועל כברירת מחדל)</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>חפש תעודות Zioncoin. בחר חיפוש בטוח מפני אפשרויות ארנק אם ברצונך להשמיט תעודות שעלולים להיות פוגעניות (פועל כברירת מחדל)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Certificates starting with 'name'). Empty will search for all.</source>
@@ -801,7 +801,7 @@
         <translation>עריכת כתובת לשליחה</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
         <translation>הכתובת שהוכנסה „%1“ אינה כתובת ביטקוין תקנית.</translation>
     </message>
     <message>
@@ -1327,8 +1327,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>חפש escrows Syscoin.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>חפש escrows Zioncoin.</translation>
     </message>
     <message>
         <source>Enter search term. Search for arbiter/seller or escrow GUID. Empty will search for all.</source>
@@ -1423,8 +1423,8 @@
         <translation>גרסה</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>לקוח Syscoin</translation>
+        <source>Zioncoin Client</source>
+        <translation>לקוח Zioncoin</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -1600,8 +1600,8 @@
         <translation>השלשה הוחזרה במלואה בהצלחה לקונה. השלשה הושלמה.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>מעמדו השלשה לא הוכר. אנא צור קשר עם צוות Syscoin.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>מעמדו השלשה לא הוכר. אנא צור קשר עם צוות Zioncoin.</translation>
     </message>
     <message>
         <source>none</source>
@@ -1921,8 +1921,8 @@
         <translation>יצוא הנתונים מהלשונית הנוכחית לקובץ</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>אלה הם כינויי Syscoin הרשומים שלך. כינוי פעולות (ליצור, לעדכן, העברה) לקחת 2-5 דקות כדי להיות פעילות.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>אלה הם כינויי Zioncoin הרשומים שלך. כינוי פעולות (ליצור, לעדכן, העברה) לקחת 2-5 דקות כדי להיות פעילות.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -2433,8 +2433,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>קבל הצעת Syscoin</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>קבל הצעת Zioncoin</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2449,8 +2449,8 @@
         <translation>שלם עם BTC</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>שלם עם Syscoin</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>שלם עם Zioncoin</translation>
     </message>
     <message>
         <source>Use Escrow</source>
@@ -2484,8 +2484,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>קבל הצעת Syscoin</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>קבל הצעת Zioncoin</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2555,8 +2555,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>קבל הצעת Syscoin</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>קבל הצעת Zioncoin</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2850,8 +2850,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>חפש הצעות Syscoin (לחיצה כפולה על אחד לרכוש). בחר חיפוש בטוח מפני אפשרויות ארנק אם ברצונך להשמיט הצעות שעלולים להיות פוגעניות (פועל כברירת מחדל)</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>חפש הצעות Zioncoin (לחיצה כפולה על אחד לרכוש). בחר חיפוש בטוח מפני אפשרויות ארנק אם ברצונך להשמיט הצעות שעלולים להיות פוגעניות (פועל כברירת מחדל)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Offer's starting with 'name'). Empty will search for all.</source>
@@ -3028,8 +3028,8 @@
         <translation>מזער במקום לסגור את התכנה כאשר החלון סגור. כאשר אפשרות זו מופעלת, היישום ייסגר רק לאחר בחירת יציאה בתפריט.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>שפת ממשק המשתמש ניתן להגדיר כאן. הגדרה זו תיכנס לתוקף לאחר הפעלה מחדש Core Syscoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>שפת ממשק המשתמש ניתן להגדיר כאן. הגדרה זו תיכנס לתוקף לאחר הפעלה מחדש Core Zioncoin.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -3048,8 +3048,8 @@
         <translation>נושא ממשק משתמש:</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>נושא ממשק המשתמש ניתן להגדיר כאן. הגדרה זו תיכנס לתוקף לאחר הפעלה מחדש Core Syscoin.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>נושא ממשק המשתמש ניתן להגדיר כאן. הגדרה זו תיכנס לתוקף לאחר הפעלה מחדש Core Zioncoin.</translation>
     </message>
     <message>
         <source>Default Peg Alias:</source>
@@ -3084,12 +3084,12 @@
         <translation>&amp;רשת</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>באופן אוטומטי להתחיל Syscoin Core לאחר ההתחברות למערכת.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>באופן אוטומטי להתחיל Zioncoin Core לאחר ההתחברות למערכת.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>&amp; התחל Core Syscoin על מערכת כניסה</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>&amp; התחל Core Zioncoin על מערכת כניסה</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -3116,7 +3116,7 @@
         <translation>עודף &amp;בלתי מאושר מההשקעה</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>פתיחת הפתחה של ביטקוין בנתב באופן אוטומטי. עובד רק אם UPnP מופעל ונתמך בנתב.</translation>
     </message>
     <message>
@@ -3124,8 +3124,8 @@
         <translation>מיפוי פתחה באמצעות UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>התחבר לרשת Syscoin ידי שלוח SOCKS5.</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>התחבר לרשת Zioncoin ידי שלוח SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -3164,8 +3164,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>התחבר לרשת Syscoin ידי שלוח SOCKS5 נפרד עבור שירותים מוסתרים Tor.</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>התחבר לרשת Zioncoin ידי שלוח SOCKS5 נפרד עבור שירותים מוסתרים Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -3325,7 +3325,7 @@
         <translation>טופס</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
         <translation>המידע המוצג עשוי להיות מיושן. הארנק שלך מסתנכרן באופן אוטומטי עם רשת הביטקוין לאחר יצירת החיבור, אך התהליך טרם הסתיים.</translation>
     </message>
     <message>
@@ -3400,7 +3400,7 @@
         <translation>שגיאה בבקשת תשלום</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
         <translation>לא ניתן להתחיל את ביטקוין: טיפול בלחיצה–לתשלום </translation>
     </message>
     <message>
@@ -3416,7 +3416,7 @@
         <translation>כתובת תשלום שגויה %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
         <translation>לא ניתן לנתח את כתובת המשאב! מצב זה יכול לקרות עקב כתובת ביטקוין שגויה או פרמטרים שגויים בכתובת המשאב.</translation>
     </message>
     <message>
@@ -3859,7 +3859,7 @@
         <translation>ש&amp;ימוש &amp;חוזר בכתובת קבלה קיימת (לא מומלץ)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
         <translation>הודעת רשות לצירוף לבקשת התשלום שתוצג בעת פתיחת הבקשה. לתשומת לבך: ההודעה לא תישלח עם התשלום ברשת ביטקוין.</translation>
     </message>
     <message>
@@ -4107,8 +4107,8 @@
         <translation>סה''כ לפחות</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
-        <translation>תשלום דמי המינימום רק הוא בסדר גמור כל עוד יש נפח העסקה נמוך מנפח בתוך הבלוקים. אבל להיות מודע לכך שזה יכול בסופו של דבר העסקה לא המאשר פעם יש ביקוש יותר לעסקאות syscoin מאשר ברשת יכול לעבד.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
+        <translation>תשלום דמי המינימום רק הוא בסדר גמור כל עוד יש נפח העסקה נמוך מנפח בתוך הבלוקים. אבל להיות מודע לכך שזה יכול בסופו של דבר העסקה לא המאשר פעם יש ביקוש יותר לעסקאות Zioncoin מאשר ברשת יכול לעבד.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -4251,7 +4251,7 @@
         <translation>בקשת תשלום פגה.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
+        <source>Warning: Invalid Zioncoin address</source>
         <translation>אזהרה: כתובת ביטקוין שגויה</translation>
     </message>
     <message>
@@ -4286,7 +4286,7 @@
         <translation>זהו תשלום רגיל.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
+        <source>The Zioncoin address to send the payment to</source>
         <translation>כתובת הביטקוין של המוטב</translation>
     </message>
     <message>
@@ -4306,8 +4306,8 @@
         <translation>הסרת רשומה זו</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>דמי תנוכה מהסכום שנשלח. הנמען יקבל פחות syscoins מ שתזין בשדה הסכום. אם נמענים נבחרים, האגרה להתחלק שווה בשווה.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>דמי תנוכה מהסכום שנשלח. הנמען יקבל פחות Zioncoins מ שתזין בשדה הסכום. אם נמענים נבחרים, האגרה להתחלק שווה בשווה.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -4330,7 +4330,7 @@
         <translation>יש להזין תווית עבור כתובת זו כדי להוסיף אותה לרשימת הכתובות בשימוש</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
         <translation>הודעה שצורפה לביטקוין: כתובת שתאוחסן בהעברה לצורך מעקב מצדך. לתשומת לבך: הודעה זו לא תישלח ברשת הביטקוין.</translation>
     </message>
     <message>
@@ -4386,11 +4386,11 @@
         <translation>חתימה על הו&amp;דעה</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>אתה יכול לחתום הודעות / הסכמים עם הכתובות שלך כדי להוכיח שאתה יכול לקבל syscoins שהופנה אליהם. היזהר שלא לחתום על דבר מעורפל או אקראי, כמו התקפות פישינג יכול לנסות להטעות אותך לחתום זהותך אליהם. רק לחתום אמירות מפורטות מלא אתה מסכים.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>אתה יכול לחתום הודעות / הסכמים עם הכתובות שלך כדי להוכיח שאתה יכול לקבל Zioncoins שהופנה אליהם. היזהר שלא לחתום על דבר מעורפל או אקראי, כמו התקפות פישינג יכול לנסות להטעות אותך לחתום זהותך אליהם. רק לחתום אמירות מפורטות מלא אתה מסכים.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
+        <source>The Zioncoin address to sign the message with</source>
         <translation>כתובת הביטקוין אתה לחתום אתה את ההודעה</translation>
     </message>
     <message>
@@ -4422,7 +4422,7 @@
         <translation>העתקת החתימה הנוכחית ללוח הגזירים</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
+        <source>Sign the message to prove you own this Zioncoin address</source>
         <translation>ניתן לחתום על ההודעה כדי להוכיח שכתובת הביטקוין הזו בבעלותך.</translation>
     </message>
     <message>
@@ -4446,11 +4446,11 @@
         <translation>הזן את הכתובת של כונס הנכסים, מסר (להבטיח לך להעתיק מעברי שורה, רווחים, טאבים, וכו 'בדיוק) וחתימה שלמטה כדי לאמת את ההודעה. היזהר שלא לקרוא יותר לתוך החתימה ממה כלול בהודעת חתם עצמו, כדי למנוע להיות מרומה על ידי התקפת man-in-the-middle. שימו לב כי זה רק מוכיח את מסיבת החתימה מקבלת עם הכתובת, זה לא יכול להוכיח sendership של כל עסקה!</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
+        <source>The Zioncoin address the message was signed with</source>
         <translation>כתובת הביטקוין שאתה נחתמה ההודעה</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
         <translation>ניתן לאמת את ההודעה כדי להבטיח שהיא נחתמה עם כתובת הביטקוין הנתונה</translation>
     </message>
     <message>
@@ -4522,7 +4522,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;חתימה על הודעה…</translation>
@@ -4612,7 +4612,7 @@
         <translation>המקטעים נוספים למפתח בכונן…</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
+        <source>Send coins to a Zioncoin address</source>
         <translation>שליחת מטבעות לכתובת ביטקוין</translation>
     </message>
     <message>
@@ -4636,7 +4636,7 @@
         <translation>&amp;אימות הודעה…</translation>
     </message>
     <message>
-        <source>Syscoin</source>
+        <source>Zioncoin</source>
         <translation>ביטקוין</translation>
     </message>
     <message>
@@ -4656,11 +4656,11 @@
         <translation>הצפנת המפתחות הפרטיים ששייכים לארנק שלך</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
         <translation>חתום על הודעות עם כתובות הביטקוין שלך כדי להוכיח שהן בבעלותך</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
         <translation>אמת הודעות כדי להבטיח שהן נחתמו עם כתובת ביטקוין מסוימות</translation>
     </message>
     <message>
@@ -4680,8 +4680,8 @@
         <translation>סרגל כלים לשוניות</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :syscoin)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :Zioncoin)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -4692,7 +4692,7 @@
         <translation>הצגת רשימת הכתובות והתוויות הנמצאות בשימוש</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
+        <source>Open a Zioncoin: URI or payment request</source>
         <translation>פתיחת ביטקוין: כתובת משאב או בקשת תשלום</translation>
     </message>
     <message>
@@ -4756,7 +4756,7 @@
         <translation>Escrows עם הצעות</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
+        <source>&amp;About Zioncoin Core</source>
         <translation>על &amp;אודות ליבת ביטקוין</translation>
     </message>
     <message>
@@ -5232,7 +5232,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>אפשרויות:</translation>
@@ -5266,7 +5266,7 @@
         <translation>קבלת חיבורים מבחוץ (בררת מחדל: 1 ללא ‎-proxy או ‎-connect)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
+        <source>Zioncoin Core</source>
         <translation>ליבת ביטקוין</translation>
     </message>
     <message>
@@ -5534,7 +5534,7 @@
         <translation>(ברירת מחדל: %s)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
         <translation>כל הזכויות שמורות (C)‏ 2009‏-%i מתכנתי ליבת ביטקוין</translation>
     </message>
     <message>

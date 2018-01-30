@@ -20,17 +20,17 @@ Dependencies
 
 NOTE: Building with Qt4 is still supported, however, could result in a broken UI. Building with Qt5 is recommended.
 
-Build Syscoin Core
+Build Zioncoin Core
 ------------------------
 
-1. Clone the syscoin source code and cd into `syscoin`
+1. Clone the Zioncoin source code and cd into `Zioncoin`
 
-        git clone https://github.com/syscoin/syscoin2
-        cd syscoin
+        git clone https://github.com/Zioncoin/Zioncoin2
+        cd Zioncoin
 
-2.  Build syscoin-core:
+2.  Build Zioncoin-core:
 
-    Configure and build the headless syscoin binaries as well as the GUI (if Qt is found).
+    Configure and build the headless Zioncoin binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -49,37 +49,37 @@ Build Syscoin Core
 Running
 -------
 
-Syscoin Core is now available at `./src/syscoind`
+Zioncoin Core is now available at `./src/Zioncoind`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=syscoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Syscoin/syscoin.conf"
+    echo -e "rpcuser=Zioncoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Zioncoin/Zioncoin.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/Syscoin/syscoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Zioncoin/Zioncoin.conf"
 
-The first time you run syscoind, it will start downloading the blockchain. This process could take several hours.
+The first time you run Zioncoind, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/Syscoin/debug.log
+    tail -f $HOME/Library/Application\ Support/Zioncoin/debug.log
 
 Other commands:
 -------
 
-    ./src/syscoind -daemon # Starts the syscoin daemon.
-    ./src/syscoin-cli --help # Outputs a list of command-line options.
-    ./src/syscoin-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/Zioncoind -daemon # Starts the Zioncoin daemon.
+    ./src/Zioncoin-cli --help # Outputs a list of command-line options.
+    ./src/Zioncoin-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Using Qt Creator as IDE
 ------------------------
-You can use Qt Creator as an IDE, for syscoin development.
+You can use Qt Creator as an IDE, for Zioncoin development.
 Download and install the community edition of [Qt Creator](https://www.qt.io/download/).
 Uncheck everything except Qt Creator during the installation process.
 
 1. Make sure you installed everything through Homebrew mentioned above
 2. Do a proper ./configure --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "syscoin-qt" as project name, enter src/qt as location
+4. Enter "Zioncoin-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -92,4 +92,4 @@ Notes
 
 * Tested on OS X 10.8 through 10.12 on 64-bit Intel processors only.
 
-* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/syscoin/syscoin2/issues/7714)
+* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/Zioncoin/Zioncoin2/issues/7714)

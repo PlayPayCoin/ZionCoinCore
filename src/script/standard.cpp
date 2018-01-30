@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,8 +13,8 @@
 #include <boost/foreach.hpp>
 
 using namespace std;
-// SYSCOIN services
-extern void RemoveSyscoinScript(const CScript& scriptPubKeyIn, CScript& scriptPubKeyOut);
+// Zioncoin services
+extern void RemoveZioncoinScript(const CScript& scriptPubKeyIn, CScript& scriptPubKeyOut);
 typedef vector<unsigned char> valtype;
 
 bool fAcceptDatacarrier = DEFAULT_ACCEPT_DATACARRIER;
@@ -41,7 +41,7 @@ const char* GetTxnOutputType(txnouttype t)
 /**
  * Return public keys or hashes from scriptPubKey, for 'standard' transaction types.
  */
-// SYSCOIN
+// Zioncoin
 bool Solver(const CScript& scriptPubKeyIn, txnouttype& typeRet, vector<vector<unsigned char> >& vSolutionsRet)
 {
     // Templates
@@ -51,16 +51,16 @@ bool Solver(const CScript& scriptPubKeyIn, txnouttype& typeRet, vector<vector<un
         // Standard tx, sender provides pubkey, receiver adds signature
         mTemplates.insert(make_pair(TX_PUBKEY, CScript() << OP_PUBKEY << OP_CHECKSIG));
 
-        // Syscoin address tx, sender provides hash of pubkey, receiver provides signature and pubkey
+        // Zioncoin address tx, sender provides hash of pubkey, receiver provides signature and pubkey
         mTemplates.insert(make_pair(TX_PUBKEYHASH, CScript() << OP_DUP << OP_HASH160 << OP_PUBKEYHASH << OP_EQUALVERIFY << OP_CHECKSIG));
 
         // Sender provides N pubkeys, receivers provides M signatures
         mTemplates.insert(make_pair(TX_MULTISIG, CScript() << OP_SMALLINTEGER << OP_PUBKEYS << OP_SMALLINTEGER << OP_CHECKMULTISIG));
     }
 
-	// SYSCOIN check to see if this is a syscoin service transaction, if so get the scriptPubKey by extracting service specific script information
+	// Zioncoin check to see if this is a Zioncoin service transaction, if so get the scriptPubKey by extracting service specific script information
 	CScript scriptPubKey = scriptPubKeyIn;
-	RemoveSyscoinScript(scriptPubKeyIn, scriptPubKey);
+	RemoveZioncoinScript(scriptPubKeyIn, scriptPubKey);
     vSolutionsRet.clear();
 
     // Shortcut for pay-to-script-hash, which are more constrained than the other types:
@@ -210,7 +210,7 @@ bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet)
         addressRet = CScriptID(uint160(vSolutions[0]));
         return true;
     }
-	// SYSCOIN
+	// Zioncoin
     else if (whichType == TX_MULTISIG)
     {
 		vector<CPubKey> pubKeys;

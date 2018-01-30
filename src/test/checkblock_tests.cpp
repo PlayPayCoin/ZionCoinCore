@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2015 The Syscoin Core developers
+// Copyright (c) 2013-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +6,7 @@
 #include "consensus/validation.h"
 #include "main.h" // For CheckBlock
 #include "primitives/block.h"
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 #include "utiltime.h"
 
 #include <cstdio>
@@ -46,7 +46,7 @@ BOOST_AUTO_TEST_CASE(May15)
     // Putting a 1MB binary file in the git repository is not a great
     // idea, so this test is only run if you manually download
     // test/data/Mar12Fork.dat from
-    // http://sourceforge.net/projects/syscoin/files/Syscoin/blockchain/Mar12Fork.dat/download
+    // http://sourceforge.net/projects/Zioncoin/files/Zioncoin/blockchain/Mar12Fork.dat/download
     unsigned int tMay15 = 1368576000;
     SetMockTime(tMay15); // Test as if it was right at May 15
 

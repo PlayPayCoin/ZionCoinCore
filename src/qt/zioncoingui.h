@@ -1,12 +1,12 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_SYSCOINGUI_H
-#define SYSCOIN_QT_SYSCOINGUI_H
+#ifndef Zioncoin_QT_ZioncoinGUI_H
+#define Zioncoin_QT_ZioncoinGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
 #include "amount.h"
@@ -39,10 +39,10 @@ class QProgressDialog;
 QT_END_NAMESPACE
 
 /**
-  Syscoin GUI main class. This class represents the main window of the Syscoin UI. It communicates with both the client and
+  Zioncoin GUI main class. This class represents the main window of the Zioncoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class SyscoinGUI : public QMainWindow
+class ZioncoinGUI : public QMainWindow
 {
     Q_OBJECT
 
@@ -50,8 +50,8 @@ public:
     static const QString DEFAULT_WALLET;
     static const std::string DEFAULT_UIPLATFORM;
 
-    explicit SyscoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = 0);
-    ~SyscoinGUI();
+    explicit ZioncoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = 0);
+    ~ZioncoinGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -60,7 +60,7 @@ public:
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
-        The wallet model represents a syscoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a Zioncoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     bool addWallet(const QString& name, WalletModel *walletModel);
@@ -251,4 +251,4 @@ private Q_SLOTS:
     void onMenuSelection(QAction* action);
 };
 
-#endif // SYSCOIN_QT_SYSCOINGUI_H
+#endif // Zioncoin_QT_ZioncoinGUI_H

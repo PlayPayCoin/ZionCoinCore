@@ -1,9 +1,9 @@
 .PHONY: FORCE
 all: FORCE
-	$(MAKE) -C .. syscoin_qt test_syscoin_qt
+	$(MAKE) -C .. Zioncoin_qt test_Zioncoin_qt
 clean: FORCE
-	$(MAKE) -C .. syscoin_qt_clean test_syscoin_qt_clean
+	$(MAKE) -C .. Zioncoin_qt_clean test_Zioncoin_qt_clean
 check: FORCE
-	$(MAKE) -C .. test_syscoin_qt_check
-syscoin-qt syscoin-qt.exe: FORCE
-	 $(MAKE) -C .. syscoin_qt
+	$(MAKE) -C .. test_Zioncoin_qt_check
+Zioncoin-qt Zioncoin-qt.exe: FORCE
+	 $(MAKE) -C .. Zioncoin_qt

@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_UINT256_H
-#define SYSCOIN_UINT256_H
+#ifndef Zioncoin_UINT256_H
+#define Zioncoin_UINT256_H
 
 #include <assert.h>
 #include <cstring>
@@ -163,4 +163,4 @@ inline uint256 uint256S(const std::string& str)
     return rv;
 }
 
-#endif // SYSCOIN_UINT256_H
+#endif // Zioncoin_UINT256_H

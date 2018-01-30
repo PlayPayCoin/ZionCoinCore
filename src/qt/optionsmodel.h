@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_OPTIONSMODEL_H
-#define SYSCOIN_QT_OPTIONSMODEL_H
+#ifndef Zioncoin_QT_OPTIONSMODEL_H
+#define Zioncoin_QT_OPTIONSMODEL_H
 
 #include "amount.h"
 
@@ -13,7 +13,7 @@ QT_BEGIN_NAMESPACE
 class QNetworkProxy;
 QT_END_NAMESPACE
 
-/** Interface from Qt to configuration data structure for Syscoin client.
+/** Interface from Qt to configuration data structure for Zioncoin client.
    To Qt, the options are presented as a list with the different options
    laid out vertically.
    This can be changed to a tree once the settings become sufficiently
@@ -38,9 +38,9 @@ public:
         ProxyUseTor,            // bool
         ProxyIPTor,             // QString
         ProxyPortTor,           // int
-        DisplayUnit,            // SyscoinUnits::Unit
+        DisplayUnit,            // ZioncoinUnits::Unit
         ThirdPartyTxUrls,       // QString
-		// SYSCOIN
+		// Zioncoin
 		Theme,                  // QString
 		DefaultAlias,			// QString
 		DefaultPegAlias,		// QString
@@ -106,4 +106,4 @@ Q_SIGNALS:
     void hideTrayIconChanged(bool);
 };
 
-#endif // SYSCOIN_QT_OPTIONSMODEL_H
+#endif // Zioncoin_QT_OPTIONSMODEL_H

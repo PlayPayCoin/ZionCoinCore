@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Syscoin developers
+// Copyright (c) 2015 The Zioncoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_MEMUSAGE_H
-#define SYSCOIN_MEMUSAGE_H
+#ifndef Zioncoin_MEMUSAGE_H
+#define Zioncoin_MEMUSAGE_H
 
 #include "indirectmap.h"
 
@@ -169,4 +169,4 @@ static inline size_t DynamicUsage(const boost::unordered_map<X, Y, Z>& m)
 
 }
 
-#endif // SYSCOIN_MEMUSAGE_H
+#endif // Zioncoin_MEMUSAGE_H

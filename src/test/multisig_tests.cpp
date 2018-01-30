@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2014 The Syscoin Core developers
+// Copyright (c) 2011-2014 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +11,7 @@
 #include "script/sign.h"
 #include "script/ismine.h"
 #include "uint256.h"
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 
 
 #include <boost/foreach.hpp>
@@ -233,7 +233,7 @@ BOOST_AUTO_TEST_CASE(multisig_Solver1)
         BOOST_CHECK(Solver(s, whichType, solutions));
         BOOST_CHECK_EQUAL(solutions.size(), 4U);
         CTxDestination addr;
-		// SYSCOIN
+		// Zioncoin
         BOOST_CHECK(ExtractDestination(s, addr));
         BOOST_CHECK(IsMine(keystore, s));
         BOOST_CHECK(!IsMine(emptykeystore, s));
@@ -254,7 +254,7 @@ BOOST_AUTO_TEST_CASE(multisig_Solver1)
         BOOST_CHECK(nRequired == 1);
         BOOST_CHECK(IsMine(keystore, s));
         BOOST_CHECK(!IsMine(emptykeystore, s));
-		// SYSCOIN
+		// Zioncoin
         BOOST_CHECK(IsMine(partialkeystore, s));
     }
     {

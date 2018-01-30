@@ -654,7 +654,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Cysoni â'r rhwydwaith...</translation>
@@ -712,8 +712,8 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -756,8 +756,8 @@
         <translation>Cyfamserol</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>&amp;Ynghylch Craidd Syscoin</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>&amp;Ynghylch Craidd Zioncoin</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -904,14 +904,14 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Craidd Syscoin</translation>
+        <source>Zioncoin Core</source>
+        <translation>Craidd Zioncoin</translation>
     </message>
     <message>
         <source>Information</source>

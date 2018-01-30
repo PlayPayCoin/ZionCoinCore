@@ -1,9 +1,9 @@
-// Copyright (c) 2016 The Syscoin Core developers
+// Copyright (c) 2016 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_BLOCK_ENCODINGS_H
-#define SYSCOIN_BLOCK_ENCODINGS_H
+#ifndef Zioncoin_BLOCK_ENCODINGS_H
+#define Zioncoin_BLOCK_ENCODINGS_H
 
 #include "primitives/block.h"
 

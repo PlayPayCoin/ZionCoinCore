@@ -18,7 +18,7 @@
 #include <boost/thread.hpp>
 #include <boost/algorithm/string/predicate.hpp>
 using namespace std;
-extern void SendMoneySyscoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CWalletTx* wtxInAlias=NULL, int nTxOutAlias = 0, bool syscoinMultiSigTx=false, const CCoinControl* coinControl=NULL, const CWalletTx* wtxInLinkAlias=NULL,  int nTxOutLinkAlias = 0)
+extern void SendMoneyZioncoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CWalletTx* wtxInAlias=NULL, int nTxOutAlias = 0, bool ZioncoinMultiSigTx=false, const CCoinControl* coinControl=NULL, const CWalletTx* wtxInLinkAlias=NULL,  int nTxOutLinkAlias = 0)
 ;
 void PutToCertList(std::vector<CCert> &certList, CCert& index) {
 	int i = certList.size() - 1;
@@ -84,7 +84,7 @@ bool CCert::UnserializeFromTx(const CTransaction &tx) {
 	vector<unsigned char> vchData;
 	vector<unsigned char> vchHash;
 	int nOut;
-	if(!GetSyscoinData(tx, vchData, vchHash, nOut))
+	if(!GetZioncoinData(tx, vchData, vchHash, nOut))
 	{
 		SetNull();
 		return false;
@@ -242,7 +242,7 @@ bool CCertDB::ScanCerts(const std::vector<unsigned char>& vchCert, const string 
 }
 
 int IndexOfCertOutput(const CTransaction& tx) {
-	if (tx.nVersion != SYSCOIN_TX_VERSION)
+	if (tx.nVersion != Zioncoin_TX_VERSION)
 		return -1;
     vector<vector<unsigned char> > vvch;
 	int op;
@@ -269,7 +269,7 @@ bool GetTxOfCert(const vector<unsigned char> &vchCert,
         return false;
     }
 
-    if (!GetSyscoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
+    if (!GetZioncoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
         return error("GetTxOfCert() : could not read tx from disk");
 
     return true;
@@ -287,7 +287,7 @@ bool GetTxAndVtxOfCert(const vector<unsigned char> &vchCert,
         return false;
     }
 
-    if (!GetSyscoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
+    if (!GetZioncoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
         return error("GetTxOfCert() : could not read tx from disk");
 
     return true;
@@ -398,9 +398,9 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 
 	int prevAliasOp = 0;
     // Make sure cert outputs are not spent by a regular transaction, or the cert would be lost
-	if (tx.nVersion != SYSCOIN_TX_VERSION) 
+	if (tx.nVersion != Zioncoin_TX_VERSION) 
 	{
-		errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2000 - " + _("Non-Syscoin transaction found");
+		errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2000 - " + _("Non-Zioncoin transaction found");
 		return true;
 	}
 	vector<vector<unsigned char> > vvchPrevAliasArgs;
@@ -409,9 +409,9 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 	vector<unsigned char> vchData;
 	vector<unsigned char> vchHash;
 	int nDataOut;
-	if(!GetSyscoinData(tx, vchData, vchHash, nDataOut) || !theCert.UnserializeFromData(vchData, vchHash))
+	if(!GetZioncoinData(tx, vchData, vchHash, nDataOut) || !theCert.UnserializeFromData(vchData, vchHash))
 	{
-		errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR ERRCODE: 2001 - " + _("Cannot unserialize data inside of this transaction relating to a certificate");
+		errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR ERRCODE: 2001 - " + _("Cannot unserialize data inside of this transaction relating to a certificate");
 		return true;
 	}
 
@@ -419,14 +419,14 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 	{
 		if(vvchArgs.size() != 2)
 		{
-			errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2002 - " + _("Certificate arguments incorrect size");
+			errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2002 - " + _("Certificate arguments incorrect size");
 			return error(errorMessage.c_str());
 		}
 
 					
 		if(vvchArgs.size() <= 1 || vchHash != vvchArgs[1])
 		{
-			errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2003 - " + _("Hash provided doesn't match the calculated hash of the data");
+			errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2003 - " + _("Hash provided doesn't match the calculated hash of the data");
 			return true;
 		}
 			
@@ -441,7 +441,7 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 			prevCoins = inputs.AccessCoins(prevOutput->hash);
 			if(prevCoins == NULL)
 				continue;
-			if(prevCoins->vout.size() <= prevOutput->n || !IsSyscoinScript(prevCoins->vout[prevOutput->n].scriptPubKey, pop, vvch) || pop == OP_ALIAS_PAYMENT)
+			if(prevCoins->vout.size() <= prevOutput->n || !IsZioncoinScript(prevCoins->vout[prevOutput->n].scriptPubKey, pop, vvch) || pop == OP_ALIAS_PAYMENT)
 				continue;
 			if(foundAlias)
 				break;
@@ -464,54 +464,54 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 	{
 		if (vvchArgs.empty() ||  vvchArgs[0].size() > MAX_GUID_LENGTH)
 		{
-			errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2004 - " + _("Certificate hex guid too long");
+			errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2004 - " + _("Certificate hex guid too long");
 			return error(errorMessage.c_str());
 		}
 		if(theCert.sCategory.size() > MAX_NAME_LENGTH)
 		{
-			errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2005 - " + _("Certificate category too big");
+			errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2005 - " + _("Certificate category too big");
 			return error(errorMessage.c_str());
 		}
 		if(theCert.vchData.size() > MAX_ENCRYPTED_VALUE_LENGTH)
 		{
-			errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2006 - " + _("Certificate private data too big");
+			errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2006 - " + _("Certificate private data too big");
 			return error(errorMessage.c_str());
 		}
 		if(theCert.vchPubData.size() > MAX_VALUE_LENGTH)
 		{
-			errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2007 - " + _("Certificate public data too big");
+			errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2007 - " + _("Certificate public data too big");
 			return error(errorMessage.c_str());
 		}
 		if(!theCert.vchCert.empty() && theCert.vchCert != vvchArgs[0])
 		{
-			errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2008 - " + _("Guid in data output doesn't match guid in transaction");
+			errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2008 - " + _("Guid in data output doesn't match guid in transaction");
 			return error(errorMessage.c_str());
 		}
 		switch (op) {
 		case OP_CERT_ACTIVATE:
 			if (theCert.vchCert != vvchArgs[0])
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2009 - " + _("Certificate guid mismatch");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2009 - " + _("Certificate guid mismatch");
 				return error(errorMessage.c_str());
 			}
 			if(!theCert.vchLinkAlias.empty())
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2010 - " + _("Certificate linked alias not allowed in activate");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2010 - " + _("Certificate linked alias not allowed in activate");
 				return error(errorMessage.c_str());
 			}
 			if(!IsAliasOp(prevAliasOp) || vvchPrevAliasArgs.empty() || theCert.vchAlias != vvchPrevAliasArgs[0])
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2011 - " + _("Alias input mismatch");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2011 - " + _("Alias input mismatch");
 				return error(errorMessage.c_str());
 			}
 			if((theCert.vchTitle.size() > MAX_NAME_LENGTH || theCert.vchTitle.empty()))
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2012 - " + _("Certificate title too big or is empty");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2012 - " + _("Certificate title too big or is empty");
 				return error(errorMessage.c_str());
 			}
 			if(!boost::algorithm::istarts_with(stringFromVch(theCert.sCategory), "certificates"))
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2013 - " + _("Must use a certificate category");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2013 - " + _("Must use a certificate category");
 				return true;
 			}
 			break;
@@ -519,22 +519,22 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 		case OP_CERT_UPDATE:
 			if (theCert.vchCert != vvchArgs[0])
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2014 - " + _("Certificate guid mismatch");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2014 - " + _("Certificate guid mismatch");
 				return error(errorMessage.c_str());
 			}
 			if(theCert.vchTitle.size() > MAX_NAME_LENGTH)
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2015 - " + _("Certificate title too big");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2015 - " + _("Certificate title too big");
 				return error(errorMessage.c_str());
 			}
 			if(!IsAliasOp(prevAliasOp) || vvchPrevAliasArgs.empty() || theCert.vchAlias != vvchPrevAliasArgs[0])
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2016 - " + _("Alias input mismatch");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2016 - " + _("Alias input mismatch");
 				return error(errorMessage.c_str());
 			}
 			if(theCert.sCategory.size() > 0 && !boost::algorithm::istarts_with(stringFromVch(theCert.sCategory), "certificates"))
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2017 - " + _("Must use a certificate category");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2017 - " + _("Must use a certificate category");
 				return true;
 			}
 			break;
@@ -542,23 +542,23 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 		case OP_CERT_TRANSFER:
 			if (theCert.vchCert != vvchArgs[0])
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2018 - " + _("Certificate guid mismatch");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2018 - " + _("Certificate guid mismatch");
 				return error(errorMessage.c_str());
 			}
 			if(!IsAliasOp(prevAliasOp) || vvchPrevAliasArgs.empty() || theCert.vchAlias != vvchPrevAliasArgs[0])
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2019 - " + _("Alias input mismatch");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2019 - " + _("Alias input mismatch");
 				return error(errorMessage.c_str());
 			}
 			if(theCert.sCategory.size() > 0 && !boost::algorithm::istarts_with(stringFromVch(theCert.sCategory), "certificates"))
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2020 - " + _("Must use a certificate category");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2020 - " + _("Must use a certificate category");
 				return true;
 			}
 			break;
 
 		default:
-			errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2021 - " + _("Certificate transaction has unknown op");
+			errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2021 - " + _("Certificate transaction has unknown op");
 			return error(errorMessage.c_str());
 		}
 	}
@@ -570,7 +570,7 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 			CCert dbCert;
 			if(!GetVtxOfCert(vvchArgs[0], dbCert, vtxPos))	
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2022 - " + _("Failed to read from certificate DB");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2022 - " + _("Failed to read from certificate DB");
 				return true;
 			}
 			if(theCert.vchData.empty())
@@ -587,7 +587,7 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 			theCert.vchCert = dbCert.vchCert;
 			if(theCert.vchAlias != dbCert.vchAlias)
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2023 - " + _("Wrong alias input provided in this certificate transaction");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2023 - " + _("Wrong alias input provided in this certificate transaction");
 				theCert.vchAlias = dbCert.vchAlias;
 			}
 			else if(!theCert.vchLinkAlias.empty())
@@ -600,14 +600,14 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 				// check toalias
 				if(!GetVtxOfAlias(theCert.vchLinkAlias, alias, vtxAlias, isExpired))
 				{
-					errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2024 - " + _("Cannot find alias you are transferring to. It may be expired");		
+					errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2024 - " + _("Cannot find alias you are transferring to. It may be expired");		
 				}
 				else
 				{
 							
 					if(!alias.acceptCertTransfers)
 					{
-						errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2025 - " + _("The alias you are transferring to does not accept certificate transfers");
+						errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2025 - " + _("The alias you are transferring to does not accept certificate transfers");
 						theCert = dbCert;	
 					}
 				}
@@ -619,7 +619,7 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 			theCert.vchLinkAlias.clear();
 			if(dbCert.bTransferViewOnly)
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2026 - " + _("Cannot edit or transfer this certificate. It is view-only.");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2026 - " + _("Cannot edit or transfer this certificate. It is view-only.");
 				theCert = dbCert;
 			}
 		}
@@ -627,7 +627,7 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 		{
 			if (pcertdb->ExistsCert(vvchArgs[0]))
 			{
-				errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2027 - " + _("Certificate already exists");
+				errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2027 - " + _("Certificate already exists");
 				return true;
 			}
 		}
@@ -639,7 +639,7 @@ bool CheckCertInputs(const CTransaction &tx, int op, int nOut, const vector<vect
 
         if (!dontaddtodb && !pcertdb->WriteCert(vvchArgs[0], vtxPos))
 		{
-			errorMessage = "SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2028 - " + _("Failed to write to certifcate DB");
+			errorMessage = "Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2028 - " + _("Failed to write to certifcate DB");
             return error(errorMessage.c_str());
 		}
 		
@@ -682,16 +682,16 @@ UniValue certnew(const UniValue& params, bool fHelp) {
 	CAliasIndex theAlias;
 	const CWalletTx *wtxAliasIn = NULL;
 	if (!GetTxOfAlias(vchAlias, theAlias, aliastx))
-		throw runtime_error("SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2500 - " + _("failed to read alias from alias DB"));
+		throw runtime_error("Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2500 - " + _("failed to read alias from alias DB"));
 
 	if(!IsMyAlias(theAlias)) {
-		throw runtime_error("SYSCOIN_CERTIFICATE_CONSENSUS_ERROR ERRCODE: 2501 - " + _("This alias is not yours"));
+		throw runtime_error("Zioncoin_CERTIFICATE_CONSENSUS_ERROR ERRCODE: 2501 - " + _("This alias is not yours"));
 	}
 	COutPoint outPoint;
 	int numResults  = aliasunspent(vchAlias, outPoint);
 	wtxAliasIn = pwalletMain->GetWalletTx(outPoint.hash);
 	if (wtxAliasIn == NULL)
-		throw runtime_error("SYSCOIN_CERTIFICATE_CONSENSUS_ERROR ERRCODE: 2502 - " + _("This alias is not in your wallet"));
+		throw runtime_error("Zioncoin_CERTIFICATE_CONSENSUS_ERROR ERRCODE: 2502 - " + _("This alias is not in your wallet"));
 
 
 	if(params.size() >= 6)
@@ -707,13 +707,13 @@ UniValue certnew(const UniValue& params, bool fHelp) {
         vchData = vchFromString(" ");
 	
     // gather inputs
-	vector<unsigned char> vchCert = vchFromString(GenerateSyscoinGuid());
-    // this is a syscoin transaction
+	vector<unsigned char> vchCert = vchFromString(GenerateZioncoinGuid());
+    // this is a Zioncoin transaction
     CWalletTx wtx;
 
 	EnsureWalletIsUnlocked();
     CScript scriptPubKeyOrig;
-	CSyscoinAddress aliasAddress;
+	CZioncoinAddress aliasAddress;
 	GetAddress(theAlias, &aliasAddress, scriptPubKeyOrig);
 
 
@@ -764,13 +764,13 @@ UniValue certnew(const UniValue& params, bool fHelp) {
 	
 	
 	
-	SendMoneySyscoin(vecSend, recipient.nAmount+fee.nAmount+aliasRecipient.nAmount, false, wtx, wtxAliasIn, outPoint.n, theAlias.multiSigInfo.vchAliases.size() > 0);
+	SendMoneyZioncoin(vecSend, recipient.nAmount+fee.nAmount+aliasRecipient.nAmount, false, wtx, wtxAliasIn, outPoint.n, theAlias.multiSigInfo.vchAliases.size() > 0);
 	UniValue res(UniValue::VARR);
 	if(theAlias.multiSigInfo.vchAliases.size() > 0)
 	{
 		UniValue signParams(UniValue::VARR);
 		signParams.push_back(EncodeHexTx(wtx));
-		const UniValue &resSign = tableRPC.execute("syscoinsignrawtransaction", signParams);
+		const UniValue &resSign = tableRPC.execute("Zioncoinsignrawtransaction", signParams);
 		const UniValue& so = resSign.get_obj();
 		string hex_str = "";
 
@@ -832,7 +832,7 @@ UniValue certupdate(const UniValue& params, bool fHelp) {
 
     if (vchData.size() < 1)
         vchData = vchFromString(" ");
-    // this is a syscoind txn
+    // this is a Zioncoind txn
     CWalletTx wtx;
     CScript scriptPubKeyOrig;
 
@@ -843,25 +843,25 @@ UniValue certupdate(const UniValue& params, bool fHelp) {
 	CCert theCert;
 	
     if (!GetTxOfCert( vchCert, theCert, tx))
-        throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2504 - " + _("Could not find a certificate with this key"));
+        throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2504 - " + _("Could not find a certificate with this key"));
 
 	CTransaction aliastx;
 	CAliasIndex theAlias;
 	const CWalletTx *wtxAliasIn = NULL;
 	if (!GetTxOfAlias(theCert.vchAlias, theAlias, aliastx))
-		throw runtime_error("SYSCOIN_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2505 - " + _("Failed to read alias from alias DB"));
+		throw runtime_error("Zioncoin_CERTIFICATE_CONSENSUS_ERROR: ERRCODE: 2505 - " + _("Failed to read alias from alias DB"));
 	if(!IsMyAlias(theAlias)) {
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR ERRCODE: 2506 - " + _("This alias is not yours"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR ERRCODE: 2506 - " + _("This alias is not yours"));
 	}
 	COutPoint outPoint;
 	int numResults  = aliasunspent(theCert.vchAlias, outPoint);
 	wtxAliasIn = pwalletMain->GetWalletTx(outPoint.hash);
 	if (wtxAliasIn == NULL)
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR ERRCODE: 2507 - " + _("This alias is not in your wallet"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR ERRCODE: 2507 - " + _("This alias is not in your wallet"));
 
 	CCert copyCert = theCert;
 	theCert.ClearCert();
-	CSyscoinAddress aliasAddress;
+	CZioncoinAddress aliasAddress;
 	GetAddress(theAlias, &aliasAddress, scriptPubKeyOrig);
 
     // create CERTUPDATE txn keys
@@ -911,13 +911,13 @@ UniValue certupdate(const UniValue& params, bool fHelp) {
 	
 	
 	
-	SendMoneySyscoin(vecSend, recipient.nAmount+aliasRecipient.nAmount+fee.nAmount, false, wtx, wtxAliasIn, outPoint.n, theAlias.multiSigInfo.vchAliases.size() > 0);	
+	SendMoneyZioncoin(vecSend, recipient.nAmount+aliasRecipient.nAmount+fee.nAmount, false, wtx, wtxAliasIn, outPoint.n, theAlias.multiSigInfo.vchAliases.size() > 0);	
  	UniValue res(UniValue::VARR);
 	if(theAlias.multiSigInfo.vchAliases.size() > 0)
 	{
 		UniValue signParams(UniValue::VARR);
 		signParams.push_back(EncodeHexTx(wtx));
-		const UniValue &resSign = tableRPC.execute("syscoinsignrawtransaction", signParams);
+		const UniValue &resSign = tableRPC.execute("Zioncoinsignrawtransaction", signParams);
 		const UniValue& so = resSign.get_obj();
 		string hex_str = "";
 
@@ -963,9 +963,9 @@ UniValue certtransfer(const UniValue& params, bool fHelp) {
 	CTransaction tx;
 	CAliasIndex toAlias;
 	if (!GetTxOfAlias(vchAlias, toAlias, tx))
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2509 - " + _("Failed to read transfer alias from DB"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2509 - " + _("Failed to read transfer alias from DB"));
 
-    // this is a syscoin txn
+    // this is a Zioncoin txn
     CWalletTx wtx;
     CScript scriptPubKeyOrig, scriptPubKeyFromOrig;
 
@@ -973,27 +973,27 @@ UniValue certtransfer(const UniValue& params, bool fHelp) {
     CTransaction aliastx;
 	CCert theCert;
     if (!GetTxOfCert( vchCert, theCert, tx))
-        throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2510 - " + _("Could not find a certificate with this key"));
+        throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2510 - " + _("Could not find a certificate with this key"));
 
 	CAliasIndex fromAlias;
 	const CWalletTx *wtxAliasIn = NULL;
 	if(!GetTxOfAlias(theCert.vchAlias, fromAlias, aliastx))
 	{
-		 throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2511 - " + _("Could not find the certificate alias"));
+		 throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2511 - " + _("Could not find the certificate alias"));
 	}
 	if(!IsMyAlias(fromAlias)) {
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR ERRCODE: 2512 - " + _("This alias is not yours"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR ERRCODE: 2512 - " + _("This alias is not yours"));
 	}
 	COutPoint outPoint;
 	int numResults  = aliasunspent(theCert.vchAlias, outPoint);
 	wtxAliasIn = pwalletMain->GetWalletTx(outPoint.hash);
 	if (wtxAliasIn == NULL)
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR ERRCODE: 2513 - " + _("This alias is not in your wallet"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR ERRCODE: 2513 - " + _("This alias is not in your wallet"));
 
 	vector<unsigned char> vchData = theCert.vchData;
-	CSyscoinAddress sendAddr;
+	CZioncoinAddress sendAddr;
 	GetAddress(toAlias, &sendAddr, scriptPubKeyOrig);
-	CSyscoinAddress fromAddr;
+	CZioncoinAddress fromAddr;
 	GetAddress(fromAlias, &fromAddr, scriptPubKeyFromOrig);
 
 	CCert copyCert = theCert;
@@ -1036,14 +1036,14 @@ UniValue certtransfer(const UniValue& params, bool fHelp) {
 	
 	
 	
-	SendMoneySyscoin(vecSend, recipient.nAmount+aliasRecipient.nAmount+fee.nAmount, false, wtx, wtxAliasIn, outPoint.n, fromAlias.multiSigInfo.vchAliases.size() > 0);
+	SendMoneyZioncoin(vecSend, recipient.nAmount+aliasRecipient.nAmount+fee.nAmount, false, wtx, wtxAliasIn, outPoint.n, fromAlias.multiSigInfo.vchAliases.size() > 0);
 
 	UniValue res(UniValue::VARR);
 	if(fromAlias.multiSigInfo.vchAliases.size() > 0)
 	{
 		UniValue signParams(UniValue::VARR);
 		signParams.push_back(EncodeHexTx(wtx));
-		const UniValue &resSign = tableRPC.execute("syscoinsignrawtransaction", signParams);
+		const UniValue &resSign = tableRPC.execute("Zioncoinsignrawtransaction", signParams);
 		const UniValue& so = resSign.get_obj();
 		string hex_str = "";
 
@@ -1083,12 +1083,12 @@ UniValue certinfo(const UniValue& params, bool fHelp) {
     vector<unsigned char> vchValue;
 
 	if (!pcertdb->ReadCert(vchCert, vtxPos) || vtxPos.empty())
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2515 - " + _("Failed to read from cert DB"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2515 - " + _("Failed to read from cert DB"));
 
 	CAliasIndex alias;
 	CTransaction aliastx;
 	if (!GetTxOfAlias(vtxPos.back().vchAlias, alias, aliastx, true))
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2516 - " + _("Failed to read xfer alias from alias DB"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2516 - " + _("Failed to read xfer alias from alias DB"));
 
 	if(!BuildCertJson(vtxPos.back(), alias, oCert))
 		oCert.clear();
@@ -1129,7 +1129,7 @@ UniValue certcount(const UniValue& params, bool fHelp) {
 	if(aliases.size() > 0)
 	{
 		if (!pcertdb->ScanCerts(vchFromString(""), "", aliases, false, "", 1000,certScan))
-			throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2517 - " + _("Scan failed"));
+			throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2517 - " + _("Scan failed"));
 	}
 
     return (int)certScan.size();
@@ -1181,7 +1181,7 @@ UniValue certlist(const UniValue& params, bool fHelp) {
 	if (aliases.size() > 0)
 	{
 		if (!pcertdb->ScanCerts(vchNameUniq, stringFromVch(vchNameUniq), aliases, false, "", 1000, certScan))
-			throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2517 - " + _("Scan failed"));
+			throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2517 - " + _("Scan failed"));
 	}
 	CTransaction aliastx;
 	BOOST_FOREACH(const CCert& cert, certScan) {
@@ -1255,11 +1255,11 @@ UniValue certhistory(const UniValue& params, bool fHelp) {
  
     vector<CCert> vtxPos;
     if (!pcertdb->ReadCert(vchCert, vtxPos) || vtxPos.empty())
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2518 - " + _("Failed to read from cert DB"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2518 - " + _("Failed to read from cert DB"));
 
 	vector<CAliasIndex> vtxAliasPos;
 	if (!paliasdb->ReadAlias(vtxPos.back().vchAlias, vtxAliasPos) || vtxAliasPos.empty())
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2519 - " + _("Failed to read from alias DB"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2519 - " + _("Failed to read from alias DB"));
 	
     CCert txPos2;
 	CAliasIndex alias;
@@ -1270,7 +1270,7 @@ UniValue certhistory(const UniValue& params, bool fHelp) {
 		vector<CAliasIndex> vtxAliasPos;
 		if(!paliasdb->ReadAlias(txPos2.vchAlias, vtxAliasPos) || vtxAliasPos.empty())
 			continue;
-		if (!GetSyscoinTransaction(txPos2.nHeight, txPos2.txHash, tx, Params().GetConsensus())) {
+		if (!GetZioncoinTransaction(txPos2.nHeight, txPos2.txHash, tx, Params().GetConsensus())) {
 			continue;
 		}
 		if (!DecodeCertTx(tx, op, nOut, vvch) )
@@ -1330,7 +1330,7 @@ UniValue certfilter(const UniValue& params, bool fHelp) {
     vector<CCert> certScan;
 	vector<string> aliases;
     if (!pcertdb->ScanCerts(vchCert, strRegexp, aliases, safeSearch, strCategory, count, certScan))
-		throw runtime_error("SYSCOIN_CERTIFICATE_RPC_ERROR: ERRCODE: 2520 - " + _("Scan failed"));
+		throw runtime_error("Zioncoin_CERTIFICATE_RPC_ERROR: ERRCODE: 2520 - " + _("Scan failed"));
   
 	CTransaction aliastx;
 	uint256 txHash;

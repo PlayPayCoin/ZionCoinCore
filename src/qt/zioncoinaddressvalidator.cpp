@@ -1,8 +1,8 @@
-// Copyright (c) 2011-2014 The Syscoin Core developers
+// Copyright (c) 2011-2014 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "syscoinaddressvalidator.h"
+#include "Zioncoinaddressvalidator.h"
 
 #include "base58.h"
 
@@ -15,12 +15,12 @@
   - All lower-case letters except for 'l'
 */
 
-SyscoinAddressEntryValidator::SyscoinAddressEntryValidator(QObject *parent) :
+ZioncoinAddressEntryValidator::ZioncoinAddressEntryValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State SyscoinAddressEntryValidator::validate(QString &input, int &pos) const
+QValidator::State ZioncoinAddressEntryValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
 
@@ -80,16 +80,16 @@ QValidator::State SyscoinAddressEntryValidator::validate(QString &input, int &po
     return state;
 }
 
-SyscoinAddressCheckValidator::SyscoinAddressCheckValidator(QObject *parent) :
+ZioncoinAddressCheckValidator::ZioncoinAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State SyscoinAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State ZioncoinAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
-    // Validate the passed Syscoin address
-    CSyscoinAddress addr(input.toStdString());
+    // Validate the passed Zioncoin address
+    CZioncoinAddress addr(input.toStdString());
     if (addr.IsValid())
         return QValidator::Acceptable;
 

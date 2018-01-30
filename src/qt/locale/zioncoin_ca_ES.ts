@@ -384,12 +384,12 @@
         <translation>S'estan rebent les adreces</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Aquestes són les vostres adreces de Syscoin per enviar els pagaments. Sempre reviseu l'import i l'adreça del destinatari abans de transferir monedes.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Aquestes són les vostres adreces de Zioncoin per enviar els pagaments. Sempre reviseu l'import i l'adreça del destinatari abans de transferir monedes.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Aquestes són les vostres adreces Syscoin per rebre pagaments. Es recomana utilitzar una adreça nova de recepció per a cada transacció.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Aquestes són les vostres adreces Zioncoin per rebre pagaments. Es recomana utilitzar una adreça nova de recepció per a cada transacció.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -478,8 +478,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>Cercar Syscoin Alias. Seleccionar opcions de cerca segura de cartera si vol ometre Alias ​​potencialment ofensius (per defecte)</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>Cercar Zioncoin Alias. Seleccionar opcions de cerca segura de cartera si vol ometre Alias ​​potencialment ofensius (per defecte)</translation>
     </message>
     <message>
         <source>Error searching alias: </source>
@@ -599,8 +599,8 @@
         <translation>Confirma l'encriptació del moneder</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Avís: si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES SYSCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Avís: si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES ZioncoinS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -611,8 +611,8 @@
         <translation>Moneder encriptat</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your syscoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 es tancarà ara per acabar el procés de xifrat. Recordeu que la encriptació de la seva cartera no pot protegir completament als seus syscoins de ser robats pel malware infecti el seu equip.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Zioncoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 es tancarà ara per acabar el procés de xifrat. Recordeu que la encriptació de la seva cartera no pot protegir completament als seus Zioncoins de ser robats pel malware infecti el seu equip.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -693,8 +693,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>Cerca de Certificats Syscoin. Seleccionar opcions de cerca segura de cartera si vol ometre Certificats potencialment ofensius (per defecte)</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>Cerca de Certificats Zioncoin. Seleccionar opcions de cerca segura de cartera si vol ometre Certificats potencialment ofensius (per defecte)</translation>
     </message>
     <message>
         <source>Copy Value</source>
@@ -961,8 +961,8 @@
         <translation>Edita les adreces d'enviament</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>L'adreça introduïda «%1» no és una adreça de Syscoin vàlida.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>L'adreça introduïda «%1» no és una adreça de Zioncoin vàlida.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1076,8 +1076,8 @@
         <translation>Tria un temps estàndard de caducitat (en UTC) d'aquest àlies d'1 a 5 anys, o comprovar el "Utilitza Custom Temps de caducitat 'caixa de selecció per introduir una data i hora de caducitat. És exponencialment més cars per any, el càlcul és FEERATE * (2.88) ^ anys. FEERATE és la dinàmica Satoshi per quota de byte ubicat a l'àlies de vinculació de les utilitzades per a aquest àlies.</translation>
     </message>
     <message>
-        <source>Warning: transferring your alias will transfer ownership all of your syscoin services that use this alias.</source>
-        <translation>Notes: la transferència dels seus àlies transferirà la propietat tots els seus serveis syscoin que utilitzen aquest àlies.</translation>
+        <source>Warning: transferring your alias will transfer ownership all of your Zioncoin services that use this alias.</source>
+        <translation>Notes: la transferència dels seus àlies transferirà la propietat tots els seus serveis Zioncoin que utilitzen aquest àlies.</translation>
     </message>
     <message>
         <source>Is this alias safe to search? Anything that can be considered offensive to someone should be set to 'No' here. If you do create an alias that is offensive and do not set this option to 'No' your alias will be banned!</source>
@@ -1164,8 +1164,8 @@
         <translation>Error transferir Alias:</translation>
     </message>
     <message>
-        <source>The entered alias is not a valid Syscoin alias. Alias: </source>
-        <translation>L'àlies introduït no és un àlies d'Syscoin vàlida. àlies:</translation>
+        <source>The entered alias is not a valid Zioncoin alias. Alias: </source>
+        <translation>L'àlies introduït no és un àlies d'Zioncoin vàlida. àlies:</translation>
     </message>
     <message>
         <source>New Alias</source>
@@ -1351,8 +1351,8 @@
         <translation>Error transferir Cert:</translation>
     </message>
     <message>
-        <source>The entered cert is not a valid Syscoin cert.</source>
-        <translation>El CERT introduït no és un CERT Syscoin vàlida.</translation>
+        <source>The entered cert is not a valid Zioncoin cert.</source>
+        <translation>El CERT introduït no és un CERT Zioncoin vàlida.</translation>
     </message>
     <message>
         <source>General exception creating new Cert</source>
@@ -1510,12 +1510,12 @@
         <translation>Si ho desitja, pot introduir el seu geolocalització comerciant (coordenades de latitud i longitud) per ajudar les tarifes d'enviament de pista i altres aspectes logístics informació</translation>
     </message>
     <message>
-        <source>You will receive payment in Syscoin equivalent to the Market-value of the currency you have selected</source>
-        <translation>Va a rebre el pagament en Syscoin equivalent al valor de mercat de la moneda que hagi seleccionat</translation>
+        <source>You will receive payment in Zioncoin equivalent to the Market-value of the currency you have selected</source>
+        <translation>Va a rebre el pagament en Zioncoin equivalent al valor de mercat de la moneda que hagi seleccionat</translation>
     </message>
     <message>
-        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Syscoin Marketplace, you will need to import your Syscoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
-        <translation>Triar què cripto-moneda que voleu permetre com a mètode de pagament per a aquesta oferta. Les opcions són qualsevol combinació de SYS, BTC o ZEC. Un ajust per als tres exemple: 'SYS + BTC + ZEC'. Per SYS i ZEC: 'SYS + ZEC'. Recordeu que per passar monedes pagades a vostè a través Syscoin mercat, haurà d'importar la seva clau privada Syscoin a la carpeta (s) o externa si BTC ZEC són els elegits.</translation>
+        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Zioncoin Marketplace, you will need to import your Zioncoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
+        <translation>Triar què cripto-moneda que voleu permetre com a mètode de pagament per a aquesta oferta. Les opcions són qualsevol combinació de SYS, BTC o ZEC. Un ajust per als tres exemple: 'SYS + BTC + ZEC'. Per SYS i ZEC: 'SYS + ZEC'. Recordeu que per passar monedes pagades a vostè a través Zioncoin mercat, haurà d'importar la seva clau privada Zioncoin a la carpeta (s) o externa si BTC ZEC són els elegits.</translation>
     </message>
     <message>
         <source>Warning: alias peg not found. No currency information available for </source>
@@ -1598,8 +1598,8 @@
         <translation>excepció general actualització d'oferta:</translation>
     </message>
     <message>
-        <source>The entered offer is not a valid Syscoin offer</source>
-        <translation>L'oferta que va introduir no és una oferta vàlida Syscoin</translation>
+        <source>The entered offer is not a valid Zioncoin offer</source>
+        <translation>L'oferta que va introduir no és una oferta vàlida Zioncoin</translation>
     </message>
     <message>
         <source>This transaction requires more signatures. Transaction hex has been copied to your clipboard for your reference. Please provide it to a signee that has not yet signed.</source>
@@ -1915,8 +1915,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>Cercar Syscoin Escrows.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>Cercar Zioncoin Escrows.</translation>
     </message>
     <message>
         <source>Copy Offer ID</source>
@@ -1931,8 +1931,8 @@
         <translation>Reconeixement confirmar Escrow</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Notes: s'està a punt de reconèixer aquest pagament del comprador. Si vostè va a enviar un article, si us plau comunicar un nombre de seguiment el comprador a través d'un missatge Syscoin.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Notes: s'està a punt de reconèixer aquest pagament del comprador. Si vostè va a enviar un article, si us plau comunicar un nombre de seguiment el comprador a través d'un missatge Zioncoin.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2051,8 +2051,8 @@
         <translation>versió</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>client Syscoin</translation>
+        <source>Zioncoin Client</source>
+        <translation>client Zioncoin</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -2106,8 +2106,8 @@
 <context>
     <name>InMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>Aquests són els missatges que ha rebut Syscoin. Podeu triar què àlies per veure els missatges relacionats utilitzant el desplegable a la dreta.</translation>
+        <source>These are Zioncoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>Aquests són els missatges que ha rebut Zioncoin. Podeu triar què àlies per veure els missatges relacionats utilitzant el desplegable a la dreta.</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -2185,8 +2185,8 @@
         <translation>Com que aquesta és la primera vegada que es va posar en marxa el programa, pot triar on %1 emmagatzemarà les seves dades.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Syscoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 va a descarregar i emmagatzemar una còpia de la cadena de blocs Syscoin. Almenys %2 GB de dades s'emmagatzema en aquest directori, i creixerà amb el temps. La cartera també s'emmagatzema en aquest directori.</translation>
+        <source>%1 will download and store a copy of the Zioncoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 va a descarregar i emmagatzemar una còpia de la cadena de blocs Zioncoin. Almenys %2 GB de dades s'emmagatzema en aquest directori, i creixerà amb el temps. La cartera també s'emmagatzema en aquest directori.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -2296,12 +2296,12 @@
         <translation>Vostè és el 'comerciant' de l'oferta mantenen en reserva, és possible que la devolució de les monedes de nou al comprador.</translation>
     </message>
     <message>
-        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Syscoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
-        <translation>Vostè és el 'àrbitre' de l'oferta mantenen en reserva, és possible que la devolució de les monedes de tornada al comprador, si té evidència que el comerciant no compleix l'acord per enviar l'article oferta. També podeu descarregar les monedes al comerciant si el comprador no ha llançat en el menor temps possible. És possible utilitzar missatges Syscoin per comunicar-se amb el comprador i el venedor per assegurar-se tenir una prova adequada per a la seva decisió.</translation>
+        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Zioncoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
+        <translation>Vostè és el 'àrbitre' de l'oferta mantenen en reserva, és possible que la devolució de les monedes de tornada al comprador, si té evidència que el comerciant no compleix l'acord per enviar l'article oferta. També podeu descarregar les monedes al comerciant si el comprador no ha llançat en el menor temps possible. És possible utilitzar missatges Zioncoin per comunicar-se amb el comprador i el venedor per assegurar-se tenir una prova adequada per a la seva decisió.</translation>
     </message>
     <message>
-        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Syscoin messages. You may leave feedback after the money is claimed by the merchant.</source>
-        <translation>Vostè és el "comprador" de l'oferta mantinguts en dipòsit. El dipòsit de garantia ha estat posat en llibertat al comerciant. Vostè pot comunicar-se amb l'àrbitre o comerciant a través de missatges Syscoin. Vostè pot deixar la regeneració després els diners són reclamat pel comerciant.</translation>
+        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Zioncoin messages. You may leave feedback after the money is claimed by the merchant.</source>
+        <translation>Vostè és el "comprador" de l'oferta mantinguts en dipòsit. El dipòsit de garantia ha estat posat en llibertat al comerciant. Vostè pot comunicar-se amb l'àrbitre o comerciant a través de missatges Zioncoin. Vostè pot deixar la regeneració després els diners són reclamat pel comerciant.</translation>
     </message>
     <message>
         <source>You are the 'merchant' of the offer held in escrow. The payment of coins have been released to you, you may claim them now. After claiming, please return to this dialog and provide feedback for this escrow transaction.</source>
@@ -2340,8 +2340,8 @@
         <translation>El dipòsit de garantia ha estat retornat amb èxit per al comprador. El dipòsit de garantia és completa.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>L'estat de plica no va ser reconegut. Si us plau, poseu-vos en contacte amb l'equip Syscoin.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>L'estat de plica no va ser reconegut. Si us plau, poseu-vos en contacte amb l'equip Zioncoin.</translation>
     </message>
     <message>
         <source>arbiter</source>
@@ -2615,12 +2615,12 @@
         <translation>Formulari</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
-        <translation>La informació que es mostra pot estar fora de data. La seva cartera se sincronitza automàticament amb la xarxa Syscoin després que s'ha establert una connexió, però aquest procés no s'ha completat encara. Això significa que les transaccions recents no seran visibles, i el balanç no serà fins al dia fins que aquest procés s'ha completat.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
+        <translation>La informació que es mostra pot estar fora de data. La seva cartera se sincronitza automàticament amb la xarxa Zioncoin després que s'ha establert una connexió, però aquest procés no s'ha completat encara. Això significa que les transaccions recents no seran visibles, i el balanç no serà fins al dia fins que aquest procés s'ha completat.</translation>
     </message>
     <message>
-        <source>Spending syscoins may not be possible during that phase!</source>
-        <translation>syscoins despesa pot no ser possible durant aquesta fase!</translation>
+        <source>Spending Zioncoins may not be possible during that phase!</source>
+        <translation>Zioncoins despesa pot no ser possible durant aquesta fase!</translation>
     </message>
     <message>
         <source>Amount of blocks left</source>
@@ -2774,8 +2774,8 @@
         <translation>Confirma Reconeixement de Pagament</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Notes: s'està a punt de reconèixer aquest pagament del comprador. Si vostè va a enviar un article, si us plau comunicar un nombre de seguiment el comprador a través d'un missatge Syscoin.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Notes: s'està a punt de reconèixer aquest pagament del comprador. Si vostè va a enviar un article, si us plau comunicar un nombre de seguiment el comprador a través d'un missatge Zioncoin.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2969,8 +2969,8 @@
         <translation>exportació</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>Aquests són els seus àlies Syscoin registrats. operacions d'àlies (creació, actualització, transferència) prendre 2-5 minuts en activar-se.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>Aquests són els seus àlies Zioncoin registrats. operacions d'àlies (creació, actualització, transferència) prendre 2-5 minuts en activar-se.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -3104,8 +3104,8 @@
         <translation>exportació</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
-        <translation>Aquests són els seus certificats Syscoin registrats. operacions de certificats (creació, actualització, transferència) prendre 2-5 minuts en activar-se. Podeu triar què àlies per veure els certificats relacionats utilitzant el desplegable a la dreta.</translation>
+        <source>These are your registered Zioncoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
+        <translation>Aquests són els seus certificats Zioncoin registrats. operacions de certificats (creació, actualització, transferència) prendre 2-5 minuts en activar-se. Podeu triar què àlies per veure els certificats relacionats utilitzant el desplegable a la dreta.</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3255,8 +3255,8 @@
         <translation>exportació</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
-        <translation>Aquests són els seus Escrows Syscoin registrats. Fideïcomís operacions (crear, alliberament, reemborsament, completa) prendre 2-5 minuts en activar-se. Podeu triar què àlies per veure fideïcomisos relacionats utilitzant el desplegable a la dreta.</translation>
+        <source>These are your registered Zioncoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
+        <translation>Aquests són els seus Escrows Zioncoin registrats. Fideïcomís operacions (crear, alliberament, reemborsament, completa) prendre 2-5 minuts en activar-se. Podeu triar què àlies per veure fideïcomisos relacionats utilitzant el desplegable a la dreta.</translation>
     </message>
     <message>
         <source>All</source>
@@ -3319,8 +3319,8 @@
         <translation>Reconeixement confirmar Escrow</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Notes: s'està a punt de reconèixer aquest pagament del comprador. Si vostè va a enviar un article, si us plau comunicar un nombre de seguiment el comprador a través d'un missatge Syscoin.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Notes: s'està a punt de reconèixer aquest pagament del comprador. Si vostè va a enviar un article, si us plau comunicar un nombre de seguiment el comprador a través d'un missatge Zioncoin.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -3414,8 +3414,8 @@
         <translation>Exporta les dades de la pestanya actual a un fitxer</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
-        <translation>Aquests són les seves ofertes registrades Syscoin. operacions d'oferta (creació, actualització) prenen 2-5 minuts en activar-se. Podeu triar què àlies per veure ofertes relacionades utilitzant el desplegable a la dreta.</translation>
+        <source>These are your registered Zioncoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
+        <translation>Aquests són les seves ofertes registrades Zioncoin. operacions d'oferta (creació, actualització) prenen 2-5 minuts en activar-se. Podeu triar què àlies per veure ofertes relacionades utilitzant el desplegable a la dreta.</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3679,8 +3679,8 @@
         <translation>Error en resposta a missatge:</translation>
     </message>
     <message>
-        <source>The entered message is not a valid Syscoin message</source>
-        <translation>El missatge introduït no és un missatge vàlid Syscoin</translation>
+        <source>The entered message is not a valid Zioncoin message</source>
+        <translation>El missatge introduït no és un missatge vàlid Zioncoin</translation>
     </message>
     <message>
         <source>General exception creating new message</source>
@@ -3745,8 +3745,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Syscoin acceptar una Oferta</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Zioncoin acceptar una Oferta</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3765,8 +3765,8 @@
         <translation>Pagar amb BTC</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>Pagar amb Syscoin</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>Pagar amb Zioncoin</translation>
     </message>
     <message>
         <source>Pay with SYS</source>
@@ -3781,8 +3781,8 @@
         <translation>No s'ha pogut trobar la moneda en les taxes de clavilla per a aquesta oferta. Moneda:</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant</source>
-        <translation>Introduïu un àrbitre Syscoin que es mutally de confiança entre vostè i el comerciant</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant</source>
+        <translation>Introduïu un àrbitre Zioncoin que es mutally de confiança entre vostè i el comerciant</translation>
     </message>
     <message>
         <source>Are you sure you want to purchase</source>
@@ -3840,8 +3840,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Syscoin acceptar una Oferta</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Zioncoin acceptar una Oferta</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3896,12 +3896,12 @@
         <translation>No es pot analitzar els resultats JSON</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>Introduïu un àrbitre Syscoin que es mutally de confiança entre vostè i el comerciant. A continuació, habiliti la casella de verificació "Utilitza el fideïcomís '</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>Introduïu un àrbitre Zioncoin que es mutally de confiança entre vostè i el comerciant. A continuació, habiliti la casella de verificació "Utilitza el fideïcomís '</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>Pagament en Syscoin descentralitzada del mercat. ID de l'oferta:</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>Pagament en Zioncoin descentralitzada del mercat. ID de l'oferta:</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4015,8 +4015,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Syscoin acceptar una Oferta</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Zioncoin acceptar una Oferta</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -4079,12 +4079,12 @@
         <translation>No es pot analitzar els resultats JSON</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>Introduïu un àrbitre Syscoin que es mutally de confiança entre vostè i el comerciant. A continuació, habiliti la casella de verificació "Utilitza el fideïcomís '</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>Introduïu un àrbitre Zioncoin que es mutally de confiança entre vostè i el comerciant. A continuació, habiliti la casella de verificació "Utilitza el fideïcomís '</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>Pagament en Syscoin descentralitzada del mercat. ID de l'oferta:</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>Pagament en Zioncoin descentralitzada del mercat. ID de l'oferta:</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4590,8 +4590,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>Buscar Ofertes Syscoin (doble clic en un per a la compra). Seleccionar opcions de cerca segura de cartera si vol ometre Ofertes potencialment ofensius (per defecte)</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>Buscar Ofertes Zioncoin (doble clic en un per a la compra). Seleccionar opcions de cerca segura de cartera si vol ometre Ofertes potencialment ofensius (per defecte)</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -4836,8 +4836,8 @@
         <translation>Minimitza en comptes de sortir de l'aplicació quan la finestra es tanca. Quan s'habilita aquesta opció l'aplicació es tancara només quan se selecciona Surt del menú. </translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>La interfície d'usuari pot definir-se des d'aquí. El paràmetre tindrà efecte després de reiniciar el Syscoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>La interfície d'usuari pot definir-se des d'aquí. El paràmetre tindrà efecte després de reiniciar el Zioncoin Core.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -4856,8 +4856,8 @@
         <translation>Interfície d'Usuari Tema:</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>El tema de la interfície d'usuari pot establir-se aquí. Aquesta configuració s'aplicarà després de reiniciar Syscoin Core.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>El tema de la interfície d'usuari pot establir-se aquí. Aquesta configuració s'aplicarà després de reiniciar Zioncoin Core.</translation>
     </message>
     <message>
         <source>Default Alias:</source>
@@ -4932,12 +4932,12 @@
         <translation>&amp;Xarxa</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>Inicia el Syscoin Core automàticament després d'iniciar una sessió en el sistema.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>Inicia el Zioncoin Core automàticament després d'iniciar una sessió en el sistema.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>&amp;Inicia el Syscoin Core en inciar el sistema</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>&amp;Inicia el Zioncoin Core en inciar el sistema</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -4964,16 +4964,16 @@
         <translation>&amp;Gasta el canvi sense confirmar</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obre el port del client de Syscoin al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obre el port del client de Zioncoin al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Port obert amb &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>Connecta a la xarxa Syscoin a través d'un proxy SOCKS5.</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>Connecta a la xarxa Zioncoin a través d'un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -5012,8 +5012,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Conectar a la red de Syscoin a través de un proxy SOCKS5 per als serveis ocults de Tor</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Conectar a la red de Zioncoin a través de un proxy SOCKS5 per als serveis ocults de Tor</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -5134,8 +5134,8 @@
 <context>
     <name>OutMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>Aquests són els missatges que ha enviat Syscoin. Podeu triar què àlies per veure els missatges relacionats utilitzant el desplegable a la dreta.</translation>
+        <source>These are Zioncoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>Aquests són els missatges que ha enviat Zioncoin. Podeu triar què àlies per veure els missatges relacionats utilitzant el desplegable a la dreta.</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -5201,8 +5201,8 @@
         <translation>Formulari</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa Syscoin un cop s'ha establert connexió, però aquest proces no s'ha completat encara.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa Zioncoin un cop s'ha establert connexió, però aquest proces no s'ha completat encara.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -5276,8 +5276,8 @@
         <translation>Error en la sol·licitud de pagament</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>No es pot iniciar syscoin: gestor clica-per-pagar</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>No es pot iniciar Zioncoin: gestor clica-per-pagar</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -5292,8 +5292,8 @@
         <translation>Adreça de pagament no vàlida %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>L'URI no pot ser analitzat! Això pot ser a causa d'una adreça de Syscoin no vàlida o per paràmetres URI amb mal format.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>L'URI no pot ser analitzat! Això pot ser a causa d'una adreça de Zioncoin no vàlida o per paràmetres URI amb mal format.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -5386,8 +5386,8 @@
         <translation>Import</translation>
     </message>
     <message>
-        <source>Enter a Syscoin address e.g. johnsmith or </source>
-        <translation>Una adreça Syscoin per exemple, johnsmith o</translation>
+        <source>Enter a Zioncoin address e.g. johnsmith or </source>
+        <translation>Una adreça Zioncoin per exemple, johnsmith o</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -5783,8 +5783,8 @@
         <translation>R&amp;eutilitza una adreça de recepció anterior (no recomanat)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
-        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'obri la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Syscoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
+        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'obri la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Zioncoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -6055,8 +6055,8 @@
         <translation>total com a mínim</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
-        <translation>No hi ha cap problema en pagar només la comissió mínima sempre que hi hagi menys volum de transacció que espai en els blocs. Però tingueu present que això pot acabar en una transacció que mai es confirmi una vegada hi hagi més demanda de transaccions de syscoins que la xarxa pugui processar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
+        <translation>No hi ha cap problema en pagar només la comissió mínima sempre que hi hagi menys volum de transacció que espai en els blocs. Però tingueu present que això pot acabar en una transacció que mai es confirmi una vegada hi hagi més demanda de transaccions de Zioncoins que la xarxa pugui processar.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -6215,8 +6215,8 @@
         <translation><numerusform>Benvolgut per començar la confirmació dins el bloc (s) %n.</numerusform><numerusform>Benvolgut per començar la confirmació dins el bloc (s) %n.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Avís: adreça Syscoin no vàlida</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Avís: adreça Zioncoin no vàlida</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -6250,8 +6250,8 @@
         <translation>Això és un pagament normal.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
-        <translation>L'adreça Syscoin on enviar el pagament</translation>
+        <source>The Zioncoin address to send the payment to</source>
+        <translation>L'adreça Zioncoin on enviar el pagament</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -6270,8 +6270,8 @@
         <translation>Elimina aquesta entrada</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>La comissió es deduirà de l'import que s'enviarà. El destinatari rebrà menys syscoins que les que introduïu al camp d'import. Si se seleccionen múltiples destinataris, la comissió es dividirà per igual.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>La comissió es deduirà de l'import que s'enviarà. El destinatari rebrà menys Zioncoins que les que introduïu al camp d'import. Si se seleccionen múltiples destinataris, la comissió es dividirà per igual.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -6294,8 +6294,8 @@
         <translation>Introduïu una etiqueta per a aquesta adreça per afegir-la a la llista d'adreces utilitzades</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>Un missatge que s'ha adjuntat al syscoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Syscoin.</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>Un missatge que s'ha adjuntat al Zioncoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Zioncoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -6355,32 +6355,32 @@
         <translation>descodificació d'excepció general de transaccions en brut</translation>
     </message>
     <message>
-        <source>Sign a raw syscoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
-        <translation>Signar una transacció syscoin prima i enviar-lo a la xarxa si és complet amb totes les signatures necessàries. Introduïu l'operació codificada hexadecimal prima per sota</translation>
+        <source>Sign a raw Zioncoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
+        <translation>Signar una transacció Zioncoin prima i enviar-lo a la xarxa si és complet amb totes les signatures necessàries. Introduïu l'operació codificada hexadecimal prima per sota</translation>
     </message>
     <message>
-        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any syscoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
-        <translation>Una vegada que introdueix una transacció en brut vàlid en la part general aquesta àrea serà completada amb la informació de la transacció prima incloent qualsevol informació relacionada amb el servei syscoin perquè sàpiga el que està fent la transacció abans de signar i potencialment de enviar-lo a la xarxa.</translation>
+        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any Zioncoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
+        <translation>Una vegada que introdueix una transacció en brut vàlid en la part general aquesta àrea serà completada amb la informació de la transacció prima incloent qualsevol informació relacionada amb el servei Zioncoin perquè sàpiga el que està fent la transacció abans de signar i potencialment de enviar-lo a la xarxa.</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction. Currently there is nothing to display</source>
-        <translation>La zona situada per sota per a informació específica syscoin pel que fa a aquesta transacció. De moment no hi ha res per mostrar</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction. Currently there is nothing to display</source>
+        <translation>La zona situada per sota per a informació específica Zioncoin pel que fa a aquesta transacció. De moment no hi ha res per mostrar</translation>
     </message>
     <message>
         <source>Error creating decoding raw transaction: </source>
         <translation>Error en crear la descodificació de transacció en brut:</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction</source>
-        <translation>La zona situada per sota per mostrar la informació específica relativa a aquesta transacció syscoin</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction</source>
+        <translation>La zona situada per sota per mostrar la informació específica relativa a aquesta transacció Zioncoin</translation>
     </message>
     <message>
-        <source>Error creating decoding raw syscoin transaction: </source>
-        <translation>Error en crear la descodificació de transacció syscoin prima:</translation>
+        <source>Error creating decoding raw Zioncoin transaction: </source>
+        <translation>Error en crear la descodificació de transacció Zioncoin prima:</translation>
     </message>
     <message>
-        <source>General exception decoding raw syscoin transaction</source>
-        <translation>descodificació d'excepció general transacció syscoin prima</translation>
+        <source>General exception decoding raw Zioncoin transaction</source>
+        <translation>descodificació d'excepció general transacció Zioncoin prima</translation>
     </message>
     <message>
         <source>Transaction was completed successfully!</source>
@@ -6410,12 +6410,12 @@
         <translation>&amp;Signa el missatge</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les syscoins que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les Zioncoins que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
-        <translation>L'adreça Syscoin amb què signar el missatge</translation>
+        <source>The Zioncoin address to sign the message with</source>
+        <translation>L'adreça Zioncoin amb què signar el missatge</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -6446,8 +6446,8 @@
         <translation>Copia la signatura actual al porta-retalls del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Signa el missatge per provar que ets propietari d'aquesta adreça Syscoin</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Signa el missatge per provar que ets propietari d'aquesta adreça Zioncoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -6470,12 +6470,12 @@
         <translation>Introduïu l'adreça del receptor, el missatge (assegureu-vos de copiar els salts de línia, espais, tabuladors, etc. exactament) i signatura de sota per verificar el missatge. Tingueu cura de no llegir més en la signatura del que està al missatge signat, per evitar ser enganyat per un atac d'home-en-el-mig. Tingueu en compte que això només demostra que la part que signa rep amb l'adreça, i no es pot provar l'enviament de qualsevol transacció!</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
-        <translation>L'adreça Syscoin amb què va ser signat el missatge</translation>
+        <source>The Zioncoin address the message was signed with</source>
+        <translation>L'adreça Zioncoin amb què va ser signat el missatge</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça Syscoin específica</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça Zioncoin específica</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -6546,7 +6546,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signa el &amp;missatge...</translation>
@@ -6656,8 +6656,8 @@
         <translation>S'estan reindexant els blocs al disc...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Envia monedes a una adreça Syscoin</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Envia monedes a una adreça Zioncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -6680,8 +6680,8 @@
         <translation>&amp;Verifica el missatge...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -6700,12 +6700,12 @@
         <translation>Encripta les claus privades pertanyents al moneder</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Signa el missatges amb la seva adreça de Syscoin per provar que les poseeixes</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Signa el missatges amb la seva adreça de Zioncoin per provar que les poseeixes</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Syscoin específica.</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Zioncoin específica.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -6724,8 +6724,8 @@
         <translation>Barra d'eines de les pestanyes</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Sol·licita pagaments (genera codis QR i syscoin: URI)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Sol·licita pagaments (genera codis QR i Zioncoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -6736,16 +6736,16 @@
         <translation>Mostra la llista d'adreces de recepció i etiquetes utilitzades</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Obre una syscoin: sol·licitud d'URI o pagament</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Obre una Zioncoin: sol·licitud d'URI o pagament</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opcions de la &amp;línia d'ordres</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
-        <translation><numerusform>%n connexió activa a la xarxa Syscoin</numerusform><numerusform>%n connexions actives a la xarxa Syscoin</numerusform></translation>
+        <source>%n active connection(s) to Zioncoin network</source>
+        <translation><numerusform>%n connexió activa a la xarxa Zioncoin</numerusform><numerusform>%n connexions actives a la xarxa Zioncoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -6812,12 +6812,12 @@
         <translation>Pliques amb les ofertes</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>&amp;Quant al Syscoin Core</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>&amp;Quant al Zioncoin Core</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Syscoin command-line options</source>
-        <translation>Mostra el missatge d'ajuda %1 per obtenir una llista amb possibles Syscoin opcions de línia d'ordres</translation>
+        <source>Show the %1 help message to get a list with possible Zioncoin command-line options</source>
+        <translation>Mostra el missatge d'ajuda %1 per obtenir una llista amb possibles Zioncoin opcions de línia d'ordres</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -7650,7 +7650,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcions:</translation>
@@ -7716,8 +7716,8 @@
         <translation>Accepta connexions de fora (per defecte: 1 si no -proxy o -connect)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Nucli de Syscoin</translation>
+        <source>Zioncoin Core</source>
+        <translation>Nucli de Zioncoin</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -8448,16 +8448,16 @@
         <translation>Com d'exhaustiva és la verificació de blocs del -checkblocks (0-4, per defecte: %u)</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
-        <translation>No vàlid d'identitat Syscoin. Ha de seguir a l'especificació de noms de domini de 3 a 64 caràcters sense guions anteriors o que s'arrosseguen i un TLD de 2 a 6 caràcters</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
+        <translation>No vàlid d'identitat Zioncoin. Ha de seguir a l'especificació de noms de domini de 3 a 64 caràcters sense guions anteriors o que s'arrosseguen i un TLD de 2 a 6 caràcters</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
-        <translation>No vàlid d'identitat Syscoin. Ha de seguir a l'especificació de noms de domini de 3 a 64 caràcters sense guions anteriors o finals</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
+        <translation>No vàlid d'identitat Zioncoin. Ha de seguir a l'especificació de noms de domini de 3 a 64 caràcters sense guions anteriors o finals</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Please enter a password atleast 4 characters long</source>
-        <translation>No vàlid d'identitat Syscoin. Si us plau, introdueixi una contrasenya d'almenys 4 caràcters</translation>
+        <source>Invalid Zioncoin Identity. Please enter a password atleast 4 characters long</source>
+        <translation>No vàlid d'identitat Zioncoin. Si us plau, introdueixi una contrasenya d'almenys 4 caràcters</translation>
     </message>
     <message>
         <source>Invalid price and/or quantity values. Quantity must be less than 4294967296 and greater than or equal to -1</source>
@@ -8496,16 +8496,16 @@
         <translation>filtrat de suport dels blocs i la transacció amb filtres de floració (per defecte: %u)</translation>
     </message>
     <message>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
-        <translation>Syscoin és un programari de codi obert produït per una xarxa mundial de desenvolupadors. En realitzar la descàrrega, distribució i ús de la xarxa i Syscoin Syscoin de deixar anar els desenvolupadors involucrats en el passat Projecte Syscoin, present i futur de qualsevol i tota responsabilitat. Vostè és responsable de les seves creacions a la xarxa Syscoin. L'usuari accepta que els desenvolupadors del Projecte Syscoin no porten cap responsabilitat per les accions / dades o entitats de qualsevol definició * * creat a la xarxa per si mateix oa altres a la xarxa a la qual pot estar exposat.</translation>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <translation>Zioncoin és un programari de codi obert produït per una xarxa mundial de desenvolupadors. En realitzar la descàrrega, distribució i ús de la xarxa i Zioncoin Zioncoin de deixar anar els desenvolupadors involucrats en el passat Projecte Zioncoin, present i futur de qualsevol i tota responsabilitat. Vostè és responsable de les seves creacions a la xarxa Zioncoin. L'usuari accepta que els desenvolupadors del Projecte Zioncoin no porten cap responsabilitat per les accions / dades o entitats de qualsevol definició * * creat a la xarxa per si mateix oa altres a la xarxa a la qual pot estar exposat.</translation>
     </message>
     <message>
-        <source>The Syscoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
-        <translation>L'àlies Syscoin que està intentant utilitzar per a aquesta transacció és vàlida o ha estat actualitzada i no s'ha confirmat encara! Espereu un bloc i torna a intentar-ho ...</translation>
+        <source>The Zioncoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
+        <translation>L'àlies Zioncoin que està intentant utilitzar per a aquesta transacció és vàlida o ha estat actualitzada i no s'ha confirmat encara! Espereu un bloc i torna a intentar-ho ...</translation>
     </message>
     <message>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
-        <translation>Els desenvolupadors del projecte Syscoin no tenen la facultat de modificar les dades a la xarxa Syscoin, que està recolzat per un blockchain immutable, que reconeix, a més, a través de l'ús de Syscoin, la xarxa Syscoin, i els serveis Syscoin. Si no està d'acord amb aquests termes, si us plau, abstenir d'utilitzar Syscoin i els seus serveis relacionats.</translation>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
+        <translation>Els desenvolupadors del projecte Zioncoin no tenen la facultat de modificar les dades a la xarxa Zioncoin, que està recolzat per un blockchain immutable, que reconeix, a més, a través de l'ús de Zioncoin, la xarxa Zioncoin, i els serveis Zioncoin. Si no està d'acord amb aquests termes, si us plau, abstenir d'utilitzar Zioncoin i els seus serveis relacionats.</translation>
     </message>
     <message>
         <source>This resold offer must be of higher price than the original offer including any discount</source>
@@ -8664,8 +8664,8 @@
         <translation>Només es pot alliberar un dipòsit en garantia actius</translation>
     </message>
     <message>
-        <source>Can't determine type of alias input into syscoin service transaction</source>
-        <translation>No es pot determinar el tipus d'entrada d'àlies a la transacció de servei syscoin</translation>
+        <source>Can't determine type of alias input into Zioncoin service transaction</source>
+        <translation>No es pot determinar el tipus d'entrada d'àlies a la transacció de servei Zioncoin</translation>
     </message>
     <message>
         <source>Cannot change category to wanted</source>
@@ -8868,8 +8868,8 @@
         <translation>Comissió ha entre -90 i 100</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Els desenvolupadors del Syscoin Core</translation>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i Els desenvolupadors del Zioncoin Core</translation>
     </message>
     <message>
         <source>Could not create escrow transaction: Invalid response from createescrow</source>
@@ -9432,8 +9432,8 @@
         <translation>No hi ha claus privades trobats que participen en aquest dipòsit en garantia</translation>
     </message>
     <message>
-        <source>Non-Syscoin transaction found</source>
-        <translation>transacció no va trobar Syscoin</translation>
+        <source>Non-Zioncoin transaction found</source>
+        <translation>transacció no va trobar Zioncoin</translation>
     </message>
     <message>
         <source>Not enough quantity left in this offer for this purchase</source>

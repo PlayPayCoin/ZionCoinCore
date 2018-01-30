@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +14,7 @@
 #include <boost/foreach.hpp>
 
 using namespace std;
-// SYSCOIN
+// Zioncoin
 #include "base58.h"
 typedef vector<unsigned char> valtype;
 
@@ -142,7 +142,7 @@ isminetype IsMine(const CKeyStore &keystore, const CScript& scriptPubKey, bool& 
                 }
             }
         }
-		// SYSCOIN 
+		// Zioncoin 
         unsigned int nNumKeysFound = HaveKeys(keys, keystore);
 		if (nNumKeysFound == keys.size())
             return ISMINE_SPENDABLE;

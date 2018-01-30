@@ -1,8 +1,8 @@
-// Copyright (c) 2012-2015 The Syscoin Core developers
+// Copyright (c) 2012-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include "addrman.h"
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 #include <string>
 #include <boost/test/unit_test.hpp>
 
@@ -180,7 +180,7 @@ BOOST_AUTO_TEST_CASE(addrman_select)
     BOOST_CHECK(addrman.size() == 7);
 
     // Test 12: Select pulls from new and tried regardless of port number.
-	// SYSCOIN
+	// Zioncoin
  /*   BOOST_CHECK(addrman.Select().ToString() == "250.4.6.6:8369");
     BOOST_CHECK(addrman.Select().ToString() == "250.3.2.2:9999");
     BOOST_CHECK(addrman.Select().ToString() == "250.3.3.3:9999");
@@ -415,7 +415,7 @@ BOOST_AUTO_TEST_CASE(caddrinfo_get_tried_bucket)
     uint256 nKey1 = (uint256)(CHashWriter(SER_GETHASH, 0) << 1).GetHash();
     uint256 nKey2 = (uint256)(CHashWriter(SER_GETHASH, 0) << 2).GetHash();
 
-	// SYSCOIN
+	// Zioncoin
     //BOOST_CHECK(info1.GetTriedBucket(nKey1) == 40);
 
     // Test 26: Make sure key actually randomizes bucket placement. A fail on
@@ -428,7 +428,7 @@ BOOST_AUTO_TEST_CASE(caddrinfo_get_tried_bucket)
 
 	
     BOOST_CHECK(info1.GetKey() != info2.GetKey());
-	// SYSCOIN
+	// Zioncoin
     //BOOST_CHECK(info1.GetTriedBucket(nKey1) != info2.GetTriedBucket(nKey1));
 
     set<int> buckets;

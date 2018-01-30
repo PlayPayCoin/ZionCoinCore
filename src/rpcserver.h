@@ -1,10 +1,10 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_RPCSERVER_H
-#define SYSCOIN_RPCSERVER_H
+#ifndef Zioncoin_RPCSERVER_H
+#define Zioncoin_RPCSERVER_H
 
 #include "amount.h"
 #include "rpcprotocol.h"
@@ -125,7 +125,7 @@ public:
 };
 
 /**
- * Syscoin RPC command dispatcher.
+ * Zioncoin RPC command dispatcher.
  */
 class CRPCTable
 {
@@ -197,7 +197,7 @@ extern UniValue estimatefee(const UniValue& params, bool fHelp);
 extern UniValue estimatepriority(const UniValue& params, bool fHelp);
 extern UniValue estimatesmartfee(const UniValue& params, bool fHelp);
 extern UniValue estimatesmartpriority(const UniValue& params, bool fHelp);
-//SYSCOIN
+//Zioncoin
 extern UniValue getauxblock(const UniValue& params, bool fHelp);
 extern UniValue getv2address(const UniValue& params, bool fHelp); // in rpcwallet.cpp
 
@@ -274,4 +274,4 @@ void InterruptRPC();
 void StopRPC();
 std::string JSONRPCExecBatch(const UniValue& vReq);
 
-#endif // SYSCOIN_RPCSERVER_H
+#endif // Zioncoin_RPCSERVER_H

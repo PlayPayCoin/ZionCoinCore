@@ -1,18 +1,18 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_PRIMITIVES_BLOCK_H
-#define SYSCOIN_PRIMITIVES_BLOCK_H
+#ifndef Zioncoin_PRIMITIVES_BLOCK_H
+#define Zioncoin_PRIMITIVES_BLOCK_H
 
-// SYSCOIN auxpow
+// Zioncoin auxpow
 #include "auxpow.h"
 #include "primitives/transaction.h"
 #include "primitives/pureheader.h"
 #include "serialize.h"
 #include "uint256.h"
-// SYSCOIN for auxpow
+// Zioncoin for auxpow
 #include <boost/shared_ptr.hpp>
 /** Nodes collect new transactions into a block, hash them into a hash tree,
  * and scan through nonce values to make the block's hash satisfy proof-of-work
@@ -21,7 +21,7 @@
  * in the block is a special one that creates a new coin owned by the creator
  * of the block.
  */
-// SYSCOIN depends on pureblockheader for auxpow
+// Zioncoin depends on pureblockheader for auxpow
 class CBlockHeader : public CPureBlockHeader
 {
 public:
@@ -110,7 +110,7 @@ public:
         block.nTime          = nTime;
         block.nBits          = nBits;
         block.nNonce         = nNonce;
-		// SYSCOIN include auxpow in blockheader
+		// Zioncoin include auxpow in blockheader
 		block.auxpow         = auxpow;
         return block;
     }
@@ -157,4 +157,4 @@ struct CBlockLocator
 /** Compute the consensus-critical block weight (see BIP 141). */
 int64_t GetBlockWeight(const CBlock& tx);
 
-#endif // SYSCOIN_PRIMITIVES_BLOCK_H
+#endif // Zioncoin_PRIMITIVES_BLOCK_H

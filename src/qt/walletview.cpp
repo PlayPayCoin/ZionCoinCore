@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +6,7 @@
 
 #include "addressbookpage.h"
 #include "askpassphrasedialog.h"
-#include "syscoingui.h"
+#include "Zioncoingui.h"
 #include "clientmodel.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
@@ -44,11 +44,11 @@ WalletView::WalletView(const PlatformStyle *_platformStyle, QWidget *parent):
     transactionView = new TransactionView(platformStyle, this);
 
     vbox->addWidget(transactionView);
-	// SYSCOIN
+	// Zioncoin
     QPushButton *exportButton = new QPushButton(tr("Export"), this);
     exportButton->setToolTip(tr("Export the data in the current tab to a file"));
     if (platformStyle->getImagesOnButtons()) {
-		// SYSCOIN
+		// Zioncoin
 		QString theme = GUIUtil::getThemeName();
         exportButton->setIcon(platformStyle->SingleColorIcon(":/icons/" + theme + "/export"));
     }
@@ -88,7 +88,7 @@ WalletView::~WalletView()
 {
 }
 
-void WalletView::setSyscoinGUI(SyscoinGUI *gui)
+void WalletView::setZioncoinGUI(ZioncoinGUI *gui)
 {
     if (gui)
     {

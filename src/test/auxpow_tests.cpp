@@ -12,7 +12,7 @@
 #include "utilstrencodings.h"
 #include "uint256.h"
 
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 
 #include <boost/test/unit_test.hpp>
 

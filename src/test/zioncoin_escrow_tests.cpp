@@ -1,9 +1,9 @@
-#include "test/test_syscoin_services.h"
+#include "test/test_Zioncoin_services.h"
 #include "utiltime.h"
 #include "rpc/server.h"
 #include <boost/test/unit_test.hpp>
 #include "feedback.h"
-BOOST_FIXTURE_TEST_SUITE (syscoin_escrow_tests, BasicSyscoinTestingSetup)
+BOOST_FIXTURE_TEST_SUITE (Zioncoin_escrow_tests, BasicZioncoinTestingSetup)
 
 BOOST_AUTO_TEST_CASE (generate_escrow_release)
 {

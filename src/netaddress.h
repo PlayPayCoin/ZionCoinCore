@@ -1,12 +1,12 @@
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_NETADDRESS_H
-#define SYSCOIN_NETADDRESS_H
+#ifndef Zioncoin_NETADDRESS_H
+#define Zioncoin_NETADDRESS_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
 #include "compat.h"
@@ -168,4 +168,4 @@ class CService : public CNetAddr
         }
 };
 
-#endif // SYSCOIN_NETADDRESS_H
+#endif // Zioncoin_NETADDRESS_H

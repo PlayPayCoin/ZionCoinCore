@@ -1,11 +1,11 @@
-// Copyright (c) 2016 The Syscoin Core developers
+// Copyright (c) 2016 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_WALLET_TEST_FIXTURE_H
-#define SYSCOIN_WALLET_TEST_FIXTURE_H
+#ifndef Zioncoin_WALLET_TEST_FIXTURE_H
+#define Zioncoin_WALLET_TEST_FIXTURE_H
 
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 
 /** Testing setup and teardown for wallet.
  */

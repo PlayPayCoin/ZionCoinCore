@@ -1,9 +1,9 @@
-// Copyright (c) 2012-2015 The Syscoin Core developers
+// Copyright (c) 2012-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_LIMITEDMAP_H
-#define SYSCOIN_LIMITEDMAP_H
+#ifndef Zioncoin_LIMITEDMAP_H
+#define Zioncoin_LIMITEDMAP_H
 
 #include <assert.h>
 #include <map>
@@ -94,4 +94,4 @@ public:
     }
 };
 
-#endif // SYSCOIN_LIMITEDMAP_H
+#endif // Zioncoin_LIMITEDMAP_H

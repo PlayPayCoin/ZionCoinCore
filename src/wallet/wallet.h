@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_WALLET_WALLET_H
-#define SYSCOIN_WALLET_WALLET_H
+#ifndef Zioncoin_WALLET_WALLET_H
+#define Zioncoin_WALLET_WALLET_H
 
 #include "amount.h"
 #include "streams.h"
@@ -27,7 +27,7 @@
 #include <vector>
 
 #include <boost/shared_ptr.hpp>
-// SYSCOIN remove cmerkletx
+// Zioncoin remove cmerkletx
 #include "auxpow.h" // contains CMerkleTx
 extern CWallet* pwalletMain;
 
@@ -55,7 +55,7 @@ static const bool DEFAULT_SEND_FREE_TRANSACTIONS = false;
 //! Default for -walletrejectlongchains
 static const bool DEFAULT_WALLET_REJECT_LONG_CHAINS = false;
 //! -txconfirmtarget default
-// SYSCOIN set to 1 as when services are stored in db they should be usable
+// Zioncoin set to 1 as when services are stored in db they should be usable
 static const unsigned int DEFAULT_TX_CONFIRM_TARGET = 1;
 //! Largest (in bytes) free transaction we're willing to create
 static const unsigned int MAX_FREE_TRANSACTION_CREATE_SIZE = 1000;
@@ -158,7 +158,7 @@ struct COutputEntry
     CAmount amount;
     int vout;
 };
-// SYSCOIN
+// Zioncoin
 /*
 class CMerkleTx : public CTransaction
 {
@@ -750,7 +750,7 @@ public:
      * @note passing nChangePosInOut as -1 will result in setting a random position
      */
 
-	// SYSCOIN add data and input tx for syscoin service calls
+	// Zioncoin add data and input tx for Zioncoin service calls
     bool CreateTransaction(const std::vector<CRecipient>& vecSend, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet, int& nChangePosRet,
                            std::string& strFailReason, const CCoinControl *coinControl = NULL, bool sign = true, const CWalletTx* wtxIn=NULL, int nOut = 0, bool sysTx = false, const CWalletTx* wtxLinkIn=NULL, int nLinkOut = 0, bool bAliasPay=false);
     bool CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey);
@@ -960,4 +960,4 @@ public:
     }
 };
 
-#endif // SYSCOIN_WALLET_WALLET_H
+#endif // Zioncoin_WALLET_WALLET_H

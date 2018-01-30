@@ -18,7 +18,7 @@
 #include <boost/range/adaptor/reversed.hpp>
 #include <functional> 
 using namespace std;
-extern void SendMoneySyscoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CWalletTx* wtxInAlias=NULL, int nTxOutAlias = 0, bool syscoinMultiSigTx=false, const CCoinControl* coinControl=NULL, const CWalletTx* wtxInLinkAlias=NULL,  int nTxOutLinkAlias = 0)
+extern void SendMoneyZioncoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CWalletTx* wtxInAlias=NULL, int nTxOutAlias = 0, bool ZioncoinMultiSigTx=false, const CCoinControl* coinControl=NULL, const CWalletTx* wtxInLinkAlias=NULL,  int nTxOutLinkAlias = 0)
 ;
 void PutToMessageList(std::vector<CMessage> &messageList, CMessage& index) {
 	int i = messageList.size() - 1;
@@ -80,7 +80,7 @@ bool CMessage::UnserializeFromTx(const CTransaction &tx) {
 	vector<unsigned char> vchData;
 	vector<unsigned char> vchHash;
 	int nOut;
-	if(!GetSyscoinData(tx, vchData, vchHash, nOut))
+	if(!GetZioncoinData(tx, vchData, vchHash, nOut))
 	{
 		SetNull();
 		return false;
@@ -188,7 +188,7 @@ bool CMessageDB::ScanRecvMessages(const std::vector<unsigned char>& vchMessage, 
 }
 
 int IndexOfMessageOutput(const CTransaction& tx) {
-	if (tx.nVersion != SYSCOIN_TX_VERSION)
+	if (tx.nVersion != Zioncoin_TX_VERSION)
 		return -1;
     vector<vector<unsigned char> > vvch;
 	int op;
@@ -216,7 +216,7 @@ bool GetTxOfMessage(const vector<unsigned char> &vchMessage,
         return false;
     }
 
-    if (!GetSyscoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
+    if (!GetZioncoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
         return error("GetTxOfMessage() : could not read tx from disk");
 
     return true;
@@ -310,9 +310,9 @@ bool CheckMessageInputs(const CTransaction &tx, int op, int nOut, const vector<v
     const CCoins *prevCoins;
 
 	int prevAliasOp = 0;
-	if (tx.nVersion != SYSCOIN_TX_VERSION)
+	if (tx.nVersion != Zioncoin_TX_VERSION)
 	{
-		errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3000 - " + _("Non-Syscoin transaction found");
+		errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3000 - " + _("Non-Zioncoin transaction found");
 		return true;
 	}
 	// unserialize msg from txn, check for valid
@@ -322,9 +322,9 @@ bool CheckMessageInputs(const CTransaction &tx, int op, int nOut, const vector<v
 	vector<unsigned char> vchData;
 	vector<unsigned char> vchHash;
 	int nDataOut;
-	if(!GetSyscoinData(tx, vchData, vchHash, nDataOut) || !theMessage.UnserializeFromData(vchData, vchHash))
+	if(!GetZioncoinData(tx, vchData, vchHash, nDataOut) || !theMessage.UnserializeFromData(vchData, vchHash))
 	{
-		errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR ERRCODE: 3001 - " + _("Cannot unserialize data inside of this transaction relating to a message");
+		errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR ERRCODE: 3001 - " + _("Cannot unserialize data inside of this transaction relating to a message");
 		return true;
 	}
 
@@ -333,14 +333,14 @@ bool CheckMessageInputs(const CTransaction &tx, int op, int nOut, const vector<v
 	{	
 		if(vvchArgs.size() != 2)
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3002 - " + _("Message arguments incorrect size");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3002 - " + _("Message arguments incorrect size");
 			return error(errorMessage.c_str());
 		}
 		if(!theMessage.IsNull())
 		{
 			if(vvchArgs.size() <= 1 || vchHash != vvchArgs[1])
 			{
-				errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3003 - " + _("Hash provided doesn't match the calculated hash of the data");
+				errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3003 - " + _("Hash provided doesn't match the calculated hash of the data");
 				return true;
 			}
 		}
@@ -357,7 +357,7 @@ bool CheckMessageInputs(const CTransaction &tx, int op, int nOut, const vector<v
 			prevCoins = inputs.AccessCoins(prevOutput->hash);
 			if(prevCoins == NULL)
 				continue;
-			if(prevCoins->vout.size() <= prevOutput->n || !IsSyscoinScript(prevCoins->vout[prevOutput->n].scriptPubKey, pop, vvch) || pop == OP_ALIAS_PAYMENT)
+			if(prevCoins->vout.size() <= prevOutput->n || !IsZioncoinScript(prevCoins->vout[prevOutput->n].scriptPubKey, pop, vvch) || pop == OP_ALIAS_PAYMENT)
 				continue;
 			if (IsAliasOp(pop))
 			{
@@ -375,55 +375,55 @@ bool CheckMessageInputs(const CTransaction &tx, int op, int nOut, const vector<v
 	{
 		if (vvchArgs.empty() || vvchArgs[0].size() > MAX_GUID_LENGTH)
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3004 - " + _("Message transaction guid too big");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3004 - " + _("Message transaction guid too big");
 			return error(errorMessage.c_str());
 		}
 		if(theMessage.vchSubject.size() > MAX_NAME_LENGTH)
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3005 - " + _("Message subject too long");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3005 - " + _("Message subject too long");
 			return error(errorMessage.c_str());
 		}
 		if(theMessage.vchMessageTo.size() > MAX_ENCRYPTED_MESSAGE_LENGTH)
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3006 - " + _("Message too long");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3006 - " + _("Message too long");
 			return error(errorMessage.c_str());
 		}
 		if(theMessage.vchMessageFrom.size() > MAX_ENCRYPTED_VALUE_LENGTH)
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3007 - " + _("Message too long");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3007 - " + _("Message too long");
 			return error(errorMessage.c_str());
 		}
 		if(!theMessage.vchMessage.empty() && theMessage.vchMessage != vvchArgs[0])
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3008 - " + _("Message guid in data output does not match guid in transaction");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3008 - " + _("Message guid in data output does not match guid in transaction");
 			return error(errorMessage.c_str());
 		}
 		if(!IsValidAliasName(theMessage.vchAliasFrom))
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3009 - " + _("Alias name does not follow the domain name specification");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3009 - " + _("Alias name does not follow the domain name specification");
 			return error(errorMessage.c_str());
 		}
 		if(!IsValidAliasName(theMessage.vchAliasTo))
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3010 - " + _("Alias name does not follow the domain name specification");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3010 - " + _("Alias name does not follow the domain name specification");
 			return error(errorMessage.c_str());
 		}
 		if(op == OP_MESSAGE_ACTIVATE)
 		{
 			if(!IsAliasOp(prevAliasOp) || vvchPrevAliasArgs.empty() || theMessage.vchAliasFrom != vvchPrevAliasArgs[0])
 			{
-				errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3011 - " + _("Alias not provided as input");
+				errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3011 - " + _("Alias not provided as input");
 				return error(errorMessage.c_str());
 			}
 			if (theMessage.vchMessage != vvchArgs[0])
 			{
-				errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3012 - " + _("Message guid mismatch");
+				errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3012 - " + _("Message guid mismatch");
 				return error(errorMessage.c_str());
 			}
 
 		}
 		else{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3013 - " + _("Message transaction has unknown op");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3013 - " + _("Message transaction has unknown op");
 			return error(errorMessage.c_str());
 		}
 	}
@@ -436,13 +436,13 @@ bool CheckMessageInputs(const CTransaction &tx, int op, int nOut, const vector<v
 		bool isExpired = false;
 		if(!GetVtxOfAlias(theMessage.vchAliasTo, alias, vtxAlias, isExpired))
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3014 - " + _("Cannot find alias for the recipient of this message. It may be expired");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3014 - " + _("Cannot find alias for the recipient of this message. It may be expired");
 			return true;
 		}
 
 		vector<CMessage> vtxPos;
 		if (pmessagedb->ExistsMessage(vvchArgs[0])) {
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3016 - " + _("This message already exists");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3016 - " + _("This message already exists");
 			return true;
 		}      
         // set the message's txn-dependent values
@@ -453,7 +453,7 @@ bool CheckMessageInputs(const CTransaction &tx, int op, int nOut, const vector<v
 
 		if(!dontaddtodb && !pmessagedb->WriteMessage(vvchArgs[0], vtxPos))
 		{
-			errorMessage = "SYSCOIN_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3016 - " + _("Failed to write to message DB");
+			errorMessage = "Zioncoin_MESSAGE_CONSENSUS_ERROR: ERRCODE: 3016 - " + _("Failed to write to message DB");
             return error(errorMessage.c_str());
 		}
 	
@@ -493,12 +493,12 @@ UniValue messagenew(const UniValue& params, bool fHelp) {
 	CAliasIndex aliasFrom, aliasTo;
 	CTransaction aliastx;
 	if (!GetTxOfAlias(vchFromString(strFromAddress), aliasFrom, aliastx))
-		throw runtime_error("SYSCOIN_MESSAGE_RPC_ERROR: ERRCODE: 3500 - " + _("Could not find an alias with this name"));
+		throw runtime_error("Zioncoin_MESSAGE_RPC_ERROR: ERRCODE: 3500 - " + _("Could not find an alias with this name"));
     if(!IsMyAlias(aliasFrom)) {
-		throw runtime_error("SYSCOIN_MESSAGE_RPC_ERROR: ERRCODE: 3501 - " + _("This alias is not yours"));
+		throw runtime_error("Zioncoin_MESSAGE_RPC_ERROR: ERRCODE: 3501 - " + _("This alias is not yours"));
     }
 	CScript scriptPubKeyAliasOrig, scriptPubKeyAlias, scriptPubKeyOrig, scriptPubKey;
-	CSyscoinAddress fromAddr;
+	CZioncoinAddress fromAddr;
 	GetAddress(aliasFrom, &fromAddr, scriptPubKeyAliasOrig);
 
 
@@ -508,7 +508,7 @@ UniValue messagenew(const UniValue& params, bool fHelp) {
 	const CWalletTx *wtxAliasIn = pwalletMain->GetWalletTx(outPoint.hash);
 	if (wtxAliasIn == NULL)
 	{
-		throw runtime_error("SYSCOIN_MESSAGE_RPC_ERROR: ERRCODE: 3502 - " + _("This alias is not in your wallet"));
+		throw runtime_error("Zioncoin_MESSAGE_RPC_ERROR: ERRCODE: 3502 - " + _("This alias is not in your wallet"));
 	}
 
 
@@ -518,15 +518,15 @@ UniValue messagenew(const UniValue& params, bool fHelp) {
 
 	if(!GetTxOfAlias(vchFromString(strToAddress), aliasTo, aliastx))
 	{
-		throw runtime_error("SYSCOIN_MESSAGE_RPC_ERROR: ERRCODE: 3503 - " + _("Failed to read to alias from alias DB"));
+		throw runtime_error("Zioncoin_MESSAGE_RPC_ERROR: ERRCODE: 3503 - " + _("Failed to read to alias from alias DB"));
 	}
-	CSyscoinAddress toAddr;
+	CZioncoinAddress toAddr;
 	GetAddress(aliasTo, &toAddr, scriptPubKeyOrig);
 
 
     // gather inputs
-	vector<unsigned char> vchMessage = vchFromString(GenerateSyscoinGuid());
-    // this is a syscoin transaction
+	vector<unsigned char> vchMessage = vchFromString(GenerateZioncoinGuid());
+    // this is a Zioncoin transaction
     CWalletTx wtx;
 	
 
@@ -566,13 +566,13 @@ UniValue messagenew(const UniValue& params, bool fHelp) {
 	
 	
 	
-	SendMoneySyscoin(vecSend, recipient.nAmount+fee.nAmount, false, wtx, wtxAliasIn, outPoint.n, aliasFrom.multiSigInfo.vchAliases.size() > 0);
+	SendMoneyZioncoin(vecSend, recipient.nAmount+fee.nAmount, false, wtx, wtxAliasIn, outPoint.n, aliasFrom.multiSigInfo.vchAliases.size() > 0);
 	UniValue res(UniValue::VARR);
 	if(aliasFrom.multiSigInfo.vchAliases.size() > 0)
 	{
 		UniValue signParams(UniValue::VARR);
 		signParams.push_back(EncodeHexTx(wtx));
-		const UniValue &resSign = tableRPC.execute("syscoinsignrawtransaction", signParams);
+		const UniValue &resSign = tableRPC.execute("Zioncoinsignrawtransaction", signParams);
 		const UniValue& so = resSign.get_obj();
 		string hex_str = "";
 
@@ -620,10 +620,10 @@ UniValue messageinfo(const UniValue& params, bool fHelp) {
     vector<unsigned char> vchValue;
 
 	if (!pmessagedb->ReadMessage(vchMessage, vtxPos) || vtxPos.empty())
-		throw runtime_error("SYSCOIN_MESSAGE_RPC_ERROR: ERRCODE: 3506 - " + _("Failed to read from message DB"));
+		throw runtime_error("Zioncoin_MESSAGE_RPC_ERROR: ERRCODE: 3506 - " + _("Failed to read from message DB"));
 
 	if(!BuildMessageJson(vtxPos.back(), oMessage))
-		throw runtime_error("SYSCOIN_MESSAGE_RPC_ERROR: ERRCODE: 3507 - " + _("Could not find this message"));
+		throw runtime_error("Zioncoin_MESSAGE_RPC_ERROR: ERRCODE: 3507 - " + _("Could not find this message"));
 
     return oMessage;
 }
@@ -680,7 +680,7 @@ UniValue messagereceivecount(const UniValue& params, bool fHelp) {
 	if (aliases.size() > 0)
 	{
 		if (!pmessagedb->ScanRecvMessages(vchFromString(""), aliases, 1000, messageScan))
-			throw runtime_error("SYSCOIN_MESSAGE_RPC_ERROR: ERRCODE: 3508 - " + _("Scan failed"));
+			throw runtime_error("Zioncoin_MESSAGE_RPC_ERROR: ERRCODE: 3508 - " + _("Scan failed"));
 	}
 	found = messageScan.size();
 	return found;
@@ -731,7 +731,7 @@ UniValue messagereceivelist(const UniValue& params, bool fHelp) {
 	if (aliases.size() > 0)
 	{
 		if (!pmessagedb->ScanRecvMessages(vchNameUniq, aliases, 1000, messageScan))
-			throw runtime_error("SYSCOIN_MESSAGE_RPC_ERROR: ERRCODE: 3508 - " + _("Scan failed"));
+			throw runtime_error("Zioncoin_MESSAGE_RPC_ERROR: ERRCODE: 3508 - " + _("Scan failed"));
 	}
 	BOOST_FOREACH(const CMessage &message, messageScan) {
 		if (oRes.size() >= count)
@@ -787,7 +787,7 @@ UniValue messagesentcount(const UniValue& params, bool fHelp) {
 			CTransaction tx;
 			for (auto& it : boost::adaptors::reverse(vtxPos)) {
 				const CAliasIndex& theAlias = it;
-				if (!GetSyscoinTransaction(theAlias.nHeight, theAlias.txHash, tx, Params().GetConsensus()))
+				if (!GetZioncoinTransaction(theAlias.nHeight, theAlias.txHash, tx, Params().GetConsensus()))
 					continue;
 				CMessage message(tx);
 				if (!message.IsNull())
@@ -869,7 +869,7 @@ UniValue messagesentlist(const UniValue& params, bool fHelp) {
 				if (oRes.size() >= count)
 					break;
 				const CAliasIndex& theAlias = it;
-				if (!GetSyscoinTransaction(theAlias.nHeight, theAlias.txHash, tx, Params().GetConsensus()))
+				if (!GetZioncoinTransaction(theAlias.nHeight, theAlias.txHash, tx, Params().GetConsensus()))
 					continue;
 				CMessage message(tx);
 				if (!message.IsNull())

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string notr="true">Syscoin Core - Command-line options</string>
+   <string notr="true">Zioncoin Core - Command-line options</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_2">
    <property name="spacing">
@@ -142,7 +142,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../syscoin.qrc"/>
+  <include location="../Zioncoin.qrc"/>
  </resources>
  <connections>
   <connection>

@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,8 +11,8 @@
  * - E-mail usually won't line-break if there's no punctuation to break at.
  * - Double-clicking selects the whole string as one word if it's all alphanumeric.
  */
-#ifndef SYSCOIN_BASE58_H
-#define SYSCOIN_BASE58_H
+#ifndef Zioncoin_BASE58_H
+#define Zioncoin_BASE58_H
 
 #include "chainparams.h"
 #include "key.h"
@@ -95,15 +95,15 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded Syscoin addresses.
+/** base58-encoded Zioncoin addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CSyscoinAddress : public CBase58Data {
+class CZioncoinAddress : public CBase58Data {
 public:
-	// SYSCOIN
+	// Zioncoin
 	bool isAlias;
 	unsigned char safetyLevel;
 	bool safeSearch;
@@ -117,11 +117,11 @@ public:
     bool IsValid() const;
     bool IsValid(const CChainParams &params) const;
 
-	// SYSCOIN aliases as addresses
-    CSyscoinAddress();
-	CSyscoinAddress(const CTxDestination &dest, CChainParams::AddressType sysVer = CChainParams::ADDRESS_SYS);
-    CSyscoinAddress(const std::string& strAddress);
-    CSyscoinAddress(const char* pszAddress);
+	// Zioncoin aliases as addresses
+    CZioncoinAddress();
+	CZioncoinAddress(const CTxDestination &dest, CChainParams::AddressType sysVer = CChainParams::ADDRESS_SYS);
+    CZioncoinAddress(const std::string& strAddress);
+    CZioncoinAddress(const char* pszAddress);
 
     CTxDestination Get() const;
     bool GetKeyID(CKeyID &keyID) const;
@@ -131,7 +131,7 @@ public:
 /**
  * A base58-encoded secret key
  */
-class CSyscoinSecret : public CBase58Data
+class CZioncoinSecret : public CBase58Data
 {
 public:
     void SetKey(const CKey& vchSecret);
@@ -140,11 +140,11 @@ public:
     bool SetString(const char* pszSecret);
     bool SetString(const std::string& strSecret);
 
-    CSyscoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
-    CSyscoinSecret() {}
+    CZioncoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
+    CZioncoinSecret() {}
 };
 
-template<typename K, int Size, CChainParams::Base58Type Type> class CSyscoinExtKeyBase : public CBase58Data
+template<typename K, int Size, CChainParams::Base58Type Type> class CZioncoinExtKeyBase : public CBase58Data
 {
 public:
     void SetKey(const K &key) {
@@ -162,18 +162,18 @@ public:
         return ret;
     }
 
-    CSyscoinExtKeyBase(const K &key) {
+    CZioncoinExtKeyBase(const K &key) {
         SetKey(key);
     }
 
-    CSyscoinExtKeyBase(const std::string& strBase58c) {
+    CZioncoinExtKeyBase(const std::string& strBase58c) {
         SetString(strBase58c.c_str(), Params().Base58Prefix(Type).size());
     }
 
-    CSyscoinExtKeyBase() {}
+    CZioncoinExtKeyBase() {}
 };
 
-typedef CSyscoinExtKeyBase<CExtKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_SECRET_KEY> CSyscoinExtKey;
-typedef CSyscoinExtKeyBase<CExtPubKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_PUBLIC_KEY> CSyscoinExtPubKey;
+typedef CZioncoinExtKeyBase<CExtKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_SECRET_KEY> CZioncoinExtKey;
+typedef CZioncoinExtKeyBase<CExtPubKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_PUBLIC_KEY> CZioncoinExtPubKey;
 
-#endif // SYSCOIN_BASE58_H
+#endif // Zioncoin_BASE58_H

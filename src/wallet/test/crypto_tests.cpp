@@ -1,10 +1,10 @@
-// Copyright (c) 2014 The Syscoin Core developers
+// Copyright (c) 2014 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "random.h"
 #include "utilstrencodings.h"
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 #include "wallet/crypter.h"
 
 #include <vector>

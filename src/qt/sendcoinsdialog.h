@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_SENDCOINSDIALOG_H
-#define SYSCOIN_QT_SENDCOINSDIALOG_H
+#ifndef Zioncoin_QT_SENDCOINSDIALOG_H
+#define Zioncoin_QT_SENDCOINSDIALOG_H
 
 #include "walletmodel.h"
 
@@ -28,7 +28,7 @@ QT_END_NAMESPACE
 
 const int defaultConfirmTarget = 25;
 
-/** Dialog for sending syscoins */
+/** Dialog for sending Zioncoins */
 class SendCoinsDialog : public QDialog
 {
     Q_OBJECT
@@ -122,4 +122,4 @@ private:
     int secDelay;
 };
 
-#endif // SYSCOIN_QT_SENDCOINSDIALOG_H
+#endif // Zioncoin_QT_SENDCOINSDIALOG_H

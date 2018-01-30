@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_TRAFFICGRAPHWIDGET_H
-#define SYSCOIN_QT_TRAFFICGRAPHWIDGET_H
+#ifndef Zioncoin_QT_TRAFFICGRAPHWIDGET_H
+#define Zioncoin_QT_TRAFFICGRAPHWIDGET_H
 
 #include <QWidget>
 #include <QQueue>
@@ -45,4 +45,4 @@ private:
     ClientModel *clientModel;
 };
 
-#endif // SYSCOIN_QT_TRAFFICGRAPHWIDGET_H
+#endif // Zioncoin_QT_TRAFFICGRAPHWIDGET_H

@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Syscoin Core developers
+// Copyright (c) 2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef _SYSCOIN_PREVECTOR_H_
-#define _SYSCOIN_PREVECTOR_H_
+#ifndef _Zioncoin_PREVECTOR_H_
+#define _Zioncoin_PREVECTOR_H_
 
 #include <stdlib.h>
 #include <stdint.h>

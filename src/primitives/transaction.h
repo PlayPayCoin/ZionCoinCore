@@ -1,16 +1,16 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_PRIMITIVES_TRANSACTION_H
-#define SYSCOIN_PRIMITIVES_TRANSACTION_H
+#ifndef Zioncoin_PRIMITIVES_TRANSACTION_H
+#define Zioncoin_PRIMITIVES_TRANSACTION_H
 
 #include "amount.h"
 #include "script/script.h"
 #include "serialize.h"
 #include "uint256.h"
-// SYSCOIN
+// Zioncoin
 #include "alias.h"
 static const int SERIALIZE_TRANSACTION_NO_WITNESS = 0x40000000;
 
@@ -147,7 +147,7 @@ public:
     template <typename Stream, typename Operation>
     inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion) {
         READWRITE(nValue);
-		// SYSCOIN
+		// Zioncoin
 		uint64_t nTime;
 		if(scriptPubKey.IsUnspendable() && GetTimeToPrune(scriptPubKey, nTime))
 		{
@@ -485,4 +485,4 @@ struct CMutableTransaction
 /** Compute the weight of a transaction, as defined by BIP 141 */
 int64_t GetTransactionWeight(const CTransaction &tx);
 
-#endif // SYSCOIN_PRIMITIVES_TRANSACTION_H
+#endif // Zioncoin_PRIMITIVES_TRANSACTION_H

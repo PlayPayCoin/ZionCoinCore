@@ -1,4 +1,4 @@
-// Copyright (c) 2014 Syscoin Developers
+// Copyright (c) 2014 Zioncoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 //
@@ -37,8 +37,8 @@ CCertDB *pcertdb = NULL;
 CEscrowDB *pescrowdb = NULL;
 CMessageDB *pmessagedb = NULL;
 extern CScript GetScriptForMultisig(int nRequired, const std::vector<CPubKey>& keys);
-extern void SendMoneySyscoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CWalletTx* wtxInAlias=NULL, int nTxOutAlias = 0, bool syscoinMultiSigTx=false, const CCoinControl* coinControl=NULL, const CWalletTx* wtxInLinkAlias=NULL,  int nTxOutLinkAlias = 0);
-bool GetSyscoinTransaction(int nHeight, const uint256 &hash, CTransaction &txOut, const Consensus::Params& consensusParams)
+extern void SendMoneyZioncoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CWalletTx* wtxInAlias=NULL, int nTxOutAlias = 0, bool ZioncoinMultiSigTx=false, const CCoinControl* coinControl=NULL, const CWalletTx* wtxInLinkAlias=NULL,  int nTxOutLinkAlias = 0);
+bool GetZioncoinTransaction(int nHeight, const uint256 &hash, CTransaction &txOut, const Consensus::Params& consensusParams)
 {
 	if(nHeight < 0 || nHeight > chainActive.Height())
 		return false;
@@ -62,7 +62,7 @@ bool GetTimeToPrune(const CScript& scriptPubKey, uint64_t &nTime)
 {
 	vector<unsigned char> vchData;
 	vector<unsigned char> vchHash;
-	if(!GetSyscoinData(scriptPubKey, vchData, vchHash))
+	if(!GetZioncoinData(scriptPubKey, vchData, vchHash))
 		return false;
 	if(!chainActive.Tip())
 		return false;
@@ -133,7 +133,7 @@ bool IsSysServiceExpired(const uint64_t &nTime)
 	return (chainActive.Tip()->nTime >= nTime);
 
 }
-bool IsSyscoinScript(const CScript& scriptPubKey, int &op, vector<vector<unsigned char> > &vvchArgs)
+bool IsZioncoinScript(const CScript& scriptPubKey, int &op, vector<vector<unsigned char> > &vvchArgs)
 {
 	if (DecodeAliasScript(scriptPubKey, op, vvchArgs))
 		return true;
@@ -147,7 +147,7 @@ bool IsSyscoinScript(const CScript& scriptPubKey, int &op, vector<vector<unsigne
 		return true;
 	return false;
 }
-void RemoveSyscoinScript(const CScript& scriptPubKeyIn, CScript& scriptPubKeyOut)
+void RemoveZioncoinScript(const CScript& scriptPubKeyIn, CScript& scriptPubKeyOut)
 {
 	if (!RemoveAliasScriptPrefix(scriptPubKeyIn, scriptPubKeyOut))
 		if(!RemoveOfferScriptPrefix(scriptPubKeyIn, scriptPubKeyOut))
@@ -156,8 +156,8 @@ void RemoveSyscoinScript(const CScript& scriptPubKeyIn, CScript& scriptPubKeyOut
 					RemoveMessageScriptPrefix(scriptPubKeyIn, scriptPubKeyOut);					
 }
 
-// how much is 1.1 BTC in syscoin? 1 BTC = 110000 SYS for example, nPrice would be 1.1, sysPrice would be 110000
-CAmount convertCurrencyCodeToSyscoin(const vector<unsigned char> &vchAliasPeg, const vector<unsigned char> &vchCurrencyCode, const double &nPrice, const unsigned int &nHeight, int &precision)
+// how much is 1.1 BTC in Zioncoin? 1 BTC = 110000 SYS for example, nPrice would be 1.1, sysPrice would be 110000
+CAmount convertCurrencyCodeToZioncoin(const vector<unsigned char> &vchAliasPeg, const vector<unsigned char> &vchCurrencyCode, const double &nPrice, const unsigned int &nHeight, int &precision)
 {
 	CAmount sysPrice = 0;
 	double nRate = 1;
@@ -183,7 +183,7 @@ CAmount convertCurrencyCodeToSyscoin(const vector<unsigned char> &vchAliasPeg, c
 	catch(...)
 	{
 		if(fDebug)
-			LogPrintf("convertCurrencyCodeToSyscoin() Exception caught getting rate alias information\n");
+			LogPrintf("convertCurrencyCodeToZioncoin() Exception caught getting rate alias information\n");
 	}
 	if(precision > 8)
 		sysPrice = 0;
@@ -231,7 +231,7 @@ int getFeePerByte(const std::vector<unsigned char> &vchAliasPeg, const std::vect
 	return nFeePerByte;
 }
 // convert 110000*COIN SYS into 1.1*COIN BTC
-CAmount convertSyscoinToCurrencyCode(const vector<unsigned char> &vchAliasPeg, const vector<unsigned char> &vchCurrencyCode, const CAmount &nPrice, const unsigned int &nHeight, int &precision)
+CAmount convertZioncoinToCurrencyCode(const vector<unsigned char> &vchAliasPeg, const vector<unsigned char> &vchCurrencyCode, const CAmount &nPrice, const unsigned int &nHeight, int &precision)
 {
 	CAmount currencyPrice = 0;
 	double nRate = 1;
@@ -248,7 +248,7 @@ CAmount convertSyscoinToCurrencyCode(const vector<unsigned char> &vchAliasPeg, c
 	catch(...)
 	{
 		if(fDebug)
-			LogPrintf("convertSyscoinToCurrencyCode() Exception caught getting rate alias information\n");
+			LogPrintf("convertZioncoinToCurrencyCode() Exception caught getting rate alias information\n");
 	}
 	if(precision > 8)
 		currencyPrice = 0;
@@ -536,14 +536,14 @@ string aliasFromOp(int op) {
 		return "<unknown alias op>";
 	}
 }
-int GetSyscoinDataOutput(const CTransaction& tx) {
+int GetZioncoinDataOutput(const CTransaction& tx) {
    for(unsigned int i = 0; i<tx.vout.size();i++) {
-	   if(IsSyscoinDataOutput(tx.vout[i]))
+	   if(IsZioncoinDataOutput(tx.vout[i]))
 		   return i;
 	}
    return -1;
 }
-bool IsSyscoinDataOutput(const CTxOut& out) {
+bool IsZioncoinDataOutput(const CTxOut& out) {
    txnouttype whichType;
 	if (!IsStandard(out.scriptPubKey, whichType))
 		return false;
@@ -551,19 +551,19 @@ bool IsSyscoinDataOutput(const CTxOut& out) {
 		return true;
    return false;
 }
-int GetSyscoinTxVersion()
+int GetZioncoinTxVersion()
 {
-	return SYSCOIN_TX_VERSION;
+	return Zioncoin_TX_VERSION;
 }
 
 /**
- * [IsSyscoinTxMine check if this transaction is mine or not, must contain a syscoin service vout]
- * @param  tx [syscoin based transaction]
- * @param  type [the type of syscoin service you expect in this transaction]
- * @return    [if syscoin transaction is yours based on type passed in]
+ * [IsZioncoinTxMine check if this transaction is mine or not, must contain a Zioncoin service vout]
+ * @param  tx [Zioncoin based transaction]
+ * @param  type [the type of Zioncoin service you expect in this transaction]
+ * @return    [if Zioncoin transaction is yours based on type passed in]
  */
-bool IsSyscoinTxMine(const CTransaction& tx, const string &type) {
-	if (tx.nVersion != SYSCOIN_TX_VERSION)
+bool IsZioncoinTxMine(const CTransaction& tx, const string &type) {
+	if (tx.nVersion != Zioncoin_TX_VERSION)
 		return false;
 	int myNout;
 	vector<vector<unsigned char> > vvch;
@@ -653,9 +653,9 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 	int prevOp = 0;
 	vector<vector<unsigned char> > vvchPrevArgs;
 	// Make sure alias outputs are not spent by a regular transaction, or the alias would be lost
-	if (tx.nVersion != SYSCOIN_TX_VERSION) 
+	if (tx.nVersion != Zioncoin_TX_VERSION) 
 	{
-		errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5000 - " + _("Non-Syscoin transaction found");
+		errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5000 - " + _("Non-Zioncoin transaction found");
 		return true;
 	}
 	// unserialize alias from txn, check for valid
@@ -666,7 +666,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 	int nDataOut;
 	if(op != OP_ALIAS_PAYMENT)
 	{
-		bool bData = GetSyscoinData(tx, vchData, vchHash, nDataOut);
+		bool bData = GetZioncoinData(tx, vchData, vchHash, nDataOut);
 		if(bData && !theAlias.UnserializeFromData(vchData, vchHash))
 		{
 			theAlias.SetNull();
@@ -687,13 +687,13 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 		{
 			if(vvchArgs.size() != 3)
 			{
-				errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5001 - " + _("Alias arguments incorrect size");
+				errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5001 - " + _("Alias arguments incorrect size");
 				return error(errorMessage.c_str());
 			}
 		}
 		else if(vvchArgs.size() != 1)
 		{
-			errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5002 - " + _("Alias arguments incorrect size");
+			errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5002 - " + _("Alias arguments incorrect size");
 			return error(errorMessage.c_str());
 		}
 		if(op != OP_ALIAS_PAYMENT)
@@ -702,7 +702,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 			{
 				if(vvchArgs.size() <= 2 || vchHash != vvchArgs[2])
 				{
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5003 - " + _("Hash provided doesn't match the calculated hash of the data");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5003 - " + _("Hash provided doesn't match the calculated hash of the data");
 					return true;
 				}
 			}					
@@ -721,7 +721,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 			prevCoins = inputs.AccessCoins(prevOutput->hash);
 			if(prevCoins == NULL)
 				continue;
-			if(prevCoins->vout.size() <= prevOutput->n || !IsSyscoinScript(prevCoins->vout[prevOutput->n].scriptPubKey, pop, vvch) || pop == OP_ALIAS_PAYMENT)
+			if(prevCoins->vout.size() <= prevOutput->n || !IsZioncoinScript(prevCoins->vout[prevOutput->n].scriptPubKey, pop, vvch) || pop == OP_ALIAS_PAYMENT)
 				continue;
 
 			if (IsAliasOp(pop) && vvchArgs[0] == vvch[0]) {
@@ -738,32 +738,32 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 	{
 		if(vvchArgs.empty() || !IsValidAliasName(vvchArgs[0]))
 		{
-			errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5004 - " + _("Alias name does not follow the domain name specification");
+			errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5004 - " + _("Alias name does not follow the domain name specification");
 			return error(errorMessage.c_str());
 		}
 		if(theAlias.vchPublicValue.size() > MAX_VALUE_LENGTH && vvchArgs[0] != vchFromString("sysrates.peg"))
 		{
-			errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5005 - " + _("Alias public value too big");
+			errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5005 - " + _("Alias public value too big");
 			return error(errorMessage.c_str());
 		}
 		if(theAlias.vchPrivateValue.size() > MAX_ENCRYPTED_VALUE_LENGTH)
 		{
-			errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5006 - " + _("Alias private value too big");
+			errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5006 - " + _("Alias private value too big");
 			return error(errorMessage.c_str());
 		}
 		if(theAlias.vchAliasPeg.size() > MAX_GUID_LENGTH)
 		{
-			errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5007 - " + _("Alias peg too long");
+			errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5007 - " + _("Alias peg too long");
 			return error(errorMessage.c_str());
 		}
 		if(theAlias.vchPassword.size() > MAX_ENCRYPTED_NAME_LENGTH)
 		{
-			errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5008 - " + _("Alias password too long");
+			errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5008 - " + _("Alias password too long");
 			return error(errorMessage.c_str());
 		}
 		if(theAlias.nHeight > nHeight)
 		{
-			errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5009 - " + _("Bad alias height");
+			errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5009 - " + _("Bad alias height");
 			return error(errorMessage.c_str());
 		}
 
@@ -774,44 +774,44 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 				// Check GUID
 				if (vvchArgs.size() <=  1 || theAlias.vchGUID != vvchArgs[1])
 				{
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5010 - " + _("Alias input guid mismatch");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5010 - " + _("Alias input guid mismatch");
 					return error(errorMessage.c_str());
 				}
 				if(theAlias.vchAlias != vvchArgs[0])
 				{
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5011 - " + _("Guid in data output doesn't match guid in tx");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5011 - " + _("Guid in data output doesn't match guid in tx");
 					return error(errorMessage.c_str());
 				}
 				break;
 			case OP_ALIAS_UPDATE:
 				if (!IsAliasOp(prevOp))
 				{
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5012 - " + _("Alias input to this transaction not found");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5012 - " + _("Alias input to this transaction not found");
 					return error(errorMessage.c_str());
 				}
 				// Check GUID
 				if (vvchArgs.size() <= 1 || vvchPrevArgs.size() <= 1 || vvchPrevArgs[1] != vvchArgs[1])
 				{
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5013 - " + _("Alias Guid input mismatch");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5013 - " + _("Alias Guid input mismatch");
 					return error(errorMessage.c_str());
 				}
 				// Check name
 				if (vvchPrevArgs[0] != vvchArgs[0])
 				{
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5014 - " + _("Alias input mismatch");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5014 - " + _("Alias input mismatch");
 					return error(errorMessage.c_str());
 				}
 				if(!theAlias.IsNull())
 				{
 					if(theAlias.vchAlias != vvchArgs[0])
 					{
-						errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5015 - " + _("Guid in data output doesn't match guid in transaction");
+						errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5015 - " + _("Guid in data output doesn't match guid in transaction");
 						return error(errorMessage.c_str());
 					}
 				}
 				break;
 		default:
-				errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5016 - " + _("Alias transaction has unknown op");
+				errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5016 - " + _("Alias transaction has unknown op");
 				return error(errorMessage.c_str());
 		}
 
@@ -831,13 +831,13 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 			{
 				if(!isExpired && !vtxPos.empty())
 				{
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5017 - " + _("Trying to renew an alias that isn't expired");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5017 - " + _("Trying to renew an alias that isn't expired");
 					return true;
 				}
 			}
 			else if(op == OP_ALIAS_UPDATE)
 			{
-				errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5018 - " + _("Failed to read from alias DB");
+				errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5018 - " + _("Failed to read from alias DB");
 				return true;
 			}
 			else if(op == OP_ALIAS_PAYMENT && vtxPos.empty())
@@ -864,7 +864,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 			}
 			if ((fee-10000) > tx.vout[nDataOut].nValue) 
 			{
-				errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5019 - " + _("Transaction does not pay enough fees");
+				errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5019 - " + _("Transaction does not pay enough fees");
 				return true;
 			}
 		}
@@ -876,24 +876,24 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 				CTxDestination aliasDest;
 				if (vvchPrevArgs.size() <= 0 || vvchPrevArgs[0] != vvchArgs[0] || !prevCoins || prevOutput->n >= prevCoins->vout.size() || !ExtractDestination(prevCoins->vout[prevOutput->n].scriptPubKey, aliasDest))
 				{
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5020 - " + _("Cannot extract destination of alias input");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5020 - " + _("Cannot extract destination of alias input");
 					theAlias = dbAlias;
 				}
 				else
 				{
 					const CAliasIndex& destAlias = vtxPos.back();
-					CSyscoinAddress prevaddy(aliasDest);	
-					CSyscoinAddress destaddy;
+					CZioncoinAddress prevaddy(aliasDest);	
+					CZioncoinAddress destaddy;
 					GetAddress(destAlias, &destaddy);
 					if(destaddy.ToString() != prevaddy.ToString())
 					{
-						errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5021 - " + _("You are not the owner of this alias");
+						errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5021 - " + _("You are not the owner of this alias");
 						theAlias = dbAlias;
 					}
 				}
 				if(dbAlias.vchGUID != vvchArgs[1])
 				{
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5022 - " + _("Cannot edit this alias, guid mismatch");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5022 - " + _("Cannot edit this alias, guid mismatch");
 					theAlias = dbAlias;
 				}
 				if(theAlias.IsNull())
@@ -926,7 +926,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 					{
 						if(theAlias.multiSigInfo.vchAliases.size() > 3 || theAlias.multiSigInfo.nRequiredSigs > 3)
 						{
-							errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5023 - " + _("Alias multisig too big, reduce the number of signatures required for this alias and try again");
+							errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5023 - " + _("Alias multisig too big, reduce the number of signatures required for this alias and try again");
 							theAlias.multiSigInfo.SetNull();
 						}
 						std::vector<CPubKey> pubkeys; 
@@ -944,14 +944,14 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 						}	
 						if(theAlias.multiSigInfo.nRequiredSigs > pubkeys.size())
 						{
-							errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5024 - " + _("Cannot update multisig alias because required signatures is greator than the amount of signatures provided");
+							errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5024 - " + _("Cannot update multisig alias because required signatures is greator than the amount of signatures provided");
 							theAlias.multiSigInfo.SetNull();
 						}	
 						CScript inner = GetScriptForMultisig(theAlias.multiSigInfo.nRequiredSigs, pubkeys);
 						CScript redeemScript(theAlias.multiSigInfo.vchRedeemScript.begin(), theAlias.multiSigInfo.vchRedeemScript.end());
 						if(redeemScript != inner)
 						{
-							errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5025 - " + _("Invalid redeem script provided in transaction");
+							errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5025 - " + _("Invalid redeem script provided in transaction");
 							theAlias.multiSigInfo.SetNull();
 						}
 					}
@@ -961,7 +961,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 						// if transfer clear pw
 						if(!pwChange)
 							theAlias.vchPassword.clear();
-						CSyscoinAddress myAddress;
+						CZioncoinAddress myAddress;
 						GetAddress(theAlias, &myAddress);
 						const vector<unsigned char> &vchAddress = vchFromString(myAddress.ToString());
 						// make sure xfer to pubkey doesn't point to an alias already, otherwise don't assign pubkey to alias
@@ -971,7 +971,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 							vector<unsigned char> vchMyAlias;
 							if (paliasdb->ReadAddress(vchAddress, vchMyAlias) && !vchMyAlias.empty() && vchMyAlias != dbAlias.vchAlias)
 							{
-								errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5026 - " + _("An alias already exists with that address, try another public key");
+								errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5026 - " + _("An alias already exists with that address, try another public key");
 								theAlias = dbAlias;
 							}
 						}					
@@ -980,7 +980,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 			}
 			else
 			{
-				errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5027 -" + _("Alias not found when trying to update");
+				errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5027 -" + _("Alias not found when trying to update");
 				return true;
 			}
 		}
@@ -988,7 +988,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 		{
 			if(!isExpired && !vtxPos.empty())
 			{
-				errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5028 - " + _("Trying to renew an alias that isn't expired");
+				errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5028 - " + _("Trying to renew an alias that isn't expired");
 				return true;
 			}
 			theAlias.nRatingAsBuyer = 0;
@@ -1002,7 +1002,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 				if(theAlias.multiSigInfo.vchAliases.size() > 5 || theAlias.multiSigInfo.nRequiredSigs > 5)
 				{
 					theAlias.multiSigInfo.SetNull();
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5029 - " + _("Alias multisig too big, reduce the number of signatures required for this alias and try again");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5029 - " + _("Alias multisig too big, reduce the number of signatures required for this alias and try again");
 				}
 				std::vector<CPubKey> pubkeys; 
 				CPubKey pubkey(theAlias.vchPubKey);
@@ -1021,14 +1021,14 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 				if(theAlias.multiSigInfo.nRequiredSigs > pubkeys.size())
 				{
 					theAlias.multiSigInfo.SetNull();
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5030 - " + _("Cannot update multisig alias because required signatures is greator than the amount of signatures provided");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5030 - " + _("Cannot update multisig alias because required signatures is greator than the amount of signatures provided");
 				}
 				CScript inner = GetScriptForMultisig(theAlias.multiSigInfo.nRequiredSigs, pubkeys);
 				CScript redeemScript(theAlias.multiSigInfo.vchRedeemScript.begin(), theAlias.multiSigInfo.vchRedeemScript.end());
 				if(redeemScript != inner)
 				{
 					theAlias.multiSigInfo.SetNull();
-					errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5031 - " + _("Invalid redeem script provided in transaction");
+					errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5031 - " + _("Invalid redeem script provided in transaction");
 				}
 			}
 		}
@@ -1047,7 +1047,7 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 			vtxPaymentPos.push_back(payment);
 			if (!dontaddtodb && !paliasdb->WriteAliasPayment(vchAlias, vtxPaymentPos))
 			{
-				errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5034 - " + _("Failed to write payment to alias DB");
+				errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5034 - " + _("Failed to write payment to alias DB");
 				return error(errorMessage.c_str());
 			}
 			if(fDebug)
@@ -1061,14 +1061,14 @@ bool CheckAliasInputs(const CTransaction &tx, int op, int nOut, const vector<vec
 		theAlias.nHeight = nHeight;
 		theAlias.txHash = tx.GetHash();
 		PutToAliasList(vtxPos, theAlias);
-		CSyscoinAddress address;
+		CZioncoinAddress address;
 		GetAddress(theAlias, &address);
 		CAliasUnprunable aliasUnprunable;
 		aliasUnprunable.vchGUID = theAlias.vchGUID;
 		aliasUnprunable.nExpireTime = theAlias.nExpireTime;
 		if (!dontaddtodb && !paliasdb->WriteAlias(vchAlias, aliasUnprunable, vchFromString(address.ToString()), vtxPos))
 		{
-			errorMessage = "SYSCOIN_ALIAS_CONSENSUS_ERROR: ERRCODE: 5034 - " + _("Failed to write to alias DB");
+			errorMessage = "Zioncoin_ALIAS_CONSENSUS_ERROR: ERRCODE: 5034 - " + _("Failed to write to alias DB");
 			return error(errorMessage.c_str());
 		}
 
@@ -1112,20 +1112,20 @@ string stringFromVch(const vector<unsigned char> &vch) {
 	}
 	return res;
 }
-bool GetSyscoinData(const CTransaction &tx, vector<unsigned char> &vchData, vector<unsigned char> &vchHash, int& nOut)
+bool GetZioncoinData(const CTransaction &tx, vector<unsigned char> &vchData, vector<unsigned char> &vchHash, int& nOut)
 {
-	nOut = GetSyscoinDataOutput(tx);
+	nOut = GetZioncoinDataOutput(tx);
     if(nOut == -1)
 	   return false;
 
 	const CScript &scriptPubKey = tx.vout[nOut].scriptPubKey;
-	return GetSyscoinData(scriptPubKey, vchData, vchHash);
+	return GetZioncoinData(scriptPubKey, vchData, vchHash);
 }
 bool IsValidAliasName(const std::vector<unsigned char> &vchAlias)
 {
 	return (vchAlias.size() <= MAX_GUID_LENGTH && vchAlias.size() >= 3);
 }
-bool GetSyscoinData(const CScript &scriptPubKey, vector<unsigned char> &vchData, vector<unsigned char> &vchHash)
+bool GetZioncoinData(const CScript &scriptPubKey, vector<unsigned char> &vchData, vector<unsigned char> &vchHash)
 {
 	CScript::const_iterator pc = scriptPubKey.begin();
 	opcodetype opcode;
@@ -1139,33 +1139,33 @@ bool GetSyscoinData(const CScript &scriptPubKey, vector<unsigned char> &vchData,
 		return false;
 	return true;
 }
-void GetAddress(const CAliasIndex& alias, CSyscoinAddress* address,const uint32_t nPaymentOption)
+void GetAddress(const CAliasIndex& alias, CZioncoinAddress* address,const uint32_t nPaymentOption)
 {
 	if(!address)
 		return;
 	CPubKey aliasPubKey(alias.vchPubKey);
 	CChainParams::AddressType myAddressType = PaymentOptionToAddressType(nPaymentOption);
-	address[0] = CSyscoinAddress(aliasPubKey.GetID(), myAddressType);
+	address[0] = CZioncoinAddress(aliasPubKey.GetID(), myAddressType);
 	if(alias.multiSigInfo.vchAliases.size() > 0)
 	{
 		CScript inner(alias.multiSigInfo.vchRedeemScript.begin(), alias.multiSigInfo.vchRedeemScript.end());
 		CScriptID innerID(inner);
-		address[0] = CSyscoinAddress(innerID, myAddressType);
+		address[0] = CZioncoinAddress(innerID, myAddressType);
 	}
 }
-void GetAddress(const CAliasIndex& alias, CSyscoinAddress* address,CScript& script,const uint32_t nPaymentOption)
+void GetAddress(const CAliasIndex& alias, CZioncoinAddress* address,CScript& script,const uint32_t nPaymentOption)
 {
 	if(!address)
 		return;
 	CPubKey aliasPubKey(alias.vchPubKey);
 	CChainParams::AddressType myAddressType = PaymentOptionToAddressType(nPaymentOption);
-	address[0] = CSyscoinAddress(aliasPubKey.GetID(), myAddressType);
+	address[0] = CZioncoinAddress(aliasPubKey.GetID(), myAddressType);
 	script = GetScriptForDestination(address[0].Get());
 	if(alias.multiSigInfo.vchAliases.size() > 0)
 	{
 		script = CScript(alias.multiSigInfo.vchRedeemScript.begin(), alias.multiSigInfo.vchRedeemScript.end());
 		CScriptID innerID(script);
-		address[0] = CSyscoinAddress(innerID, myAddressType);
+		address[0] = CZioncoinAddress(innerID, myAddressType);
 	}
 }
 bool CAliasIndex::UnserializeFromData(const vector<unsigned char> &vchData, const vector<unsigned char> &vchHash) {
@@ -1192,7 +1192,7 @@ bool CAliasIndex::UnserializeFromTx(const CTransaction &tx) {
 	vector<unsigned char> vchData;
 	vector<unsigned char> vchHash;
 	int nOut;
-	if(!GetSyscoinData(tx, vchData, vchHash, nOut))
+	if(!GetZioncoinData(tx, vchData, vchHash, nOut))
 	{
 		SetNull();
 		return false;
@@ -1319,7 +1319,7 @@ bool CAliasDB::CleanupDatabase(int &servicesCleaned)
     }
 	return true;
 }
-void CleanupSyscoinServiceDatabases(int &numServicesCleaned)
+void CleanupZioncoinServiceDatabases(int &numServicesCleaned)
 {
 	if(pofferdb != NULL)
 		pofferdb->CleanupDatabase(numServicesCleaned);
@@ -1384,7 +1384,7 @@ bool GetTxOfAlias(const vector<unsigned char> &vchAlias,
 		}
 	}
 
-	if (!GetSyscoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
+	if (!GetZioncoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
 		return error("GetTxOfAlias() : could not read tx from disk");
 
 	return true;
@@ -1406,7 +1406,7 @@ bool GetTxAndVtxOfAlias(const vector<unsigned char> &vchAlias,
 		}
 	}
 
-	if (!GetSyscoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
+	if (!GetZioncoinTransaction(nHeight, txPos.txHash, tx, Params().GetConsensus()))
 		return error("GetTxOfAlias() : could not read tx from disk");
 	return true;
 }
@@ -1444,7 +1444,7 @@ bool GetAddressFromAlias(const std::string& strAlias, std::string& strAddress, u
 		return false;
 
 	const CAliasIndex &alias = vtxPos.back();
-	CSyscoinAddress address;
+	CZioncoinAddress address;
 	GetAddress(alias, &address);
 	strAddress = address.ToString();
 	safetyLevel = alias.safetyLevel;
@@ -1482,7 +1482,7 @@ bool GetAliasFromAddress(const std::string& strAddress, std::string& strAlias, u
 }
 int IndexOfAliasOutput(const CTransaction& tx) {
 	vector<vector<unsigned char> > vvch;
-	if (tx.nVersion != SYSCOIN_TX_VERSION)
+	if (tx.nVersion != Zioncoin_TX_VERSION)
 		return -1;
 	int op;
 	for (unsigned int i = 0; i < tx.vout.size(); i++) {
@@ -1496,7 +1496,7 @@ int IndexOfAliasOutput(const CTransaction& tx) {
 }
 
 bool GetAliasOfTx(const CTransaction& tx, vector<unsigned char>& name) {
-	if (tx.nVersion != SYSCOIN_TX_VERSION)
+	if (tx.nVersion != Zioncoin_TX_VERSION)
 		return false;
 	vector<vector<unsigned char> > vvchArgs;
 	int op;
@@ -1504,7 +1504,7 @@ bool GetAliasOfTx(const CTransaction& tx, vector<unsigned char>& name) {
 
 	bool good = DecodeAliasTx(tx, op, nOut, vvchArgs, false) || DecodeAliasTx(tx, op, nOut, vvchArgs, true);
 	if (!good)
-		return error("GetAliasOfTx() : could not decode a syscoin tx");
+		return error("GetAliasOfTx() : could not decode a Zioncoin tx");
 
 	switch (op) {
 	case OP_ALIAS_ACTIVATE:
@@ -1515,7 +1515,7 @@ bool GetAliasOfTx(const CTransaction& tx, vector<unsigned char>& name) {
 	}
 	return false;
 }
-bool DecodeAndParseSyscoinTx(const CTransaction& tx, int& op, int& nOut,
+bool DecodeAndParseZioncoinTx(const CTransaction& tx, int& op, int& nOut,
 		vector<vector<unsigned char> >& vvch)
 {
 	return  
@@ -1680,7 +1680,7 @@ UniValue aliasauthenticate(const UniValue& params, bool fHelp) {
 	CTransaction tx;
 	CAliasIndex theAlias;
 	if (!GetTxOfAlias(vchAlias, theAlias, tx, true))
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5500 - " + _("Could not find an alias with this name"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5500 - " + _("Could not find an alias with this name"));
 
 	CPubKey aliasPubKey(theAlias.vchPubKey);
 	CCrypter crypt;
@@ -1688,21 +1688,21 @@ UniValue aliasauthenticate(const UniValue& params, bool fHelp) {
 	vector<unsigned char> vchAliasHash = vchFromString(hashAliasNum.GetHex());
 	vchAliasHash.resize(WALLET_CRYPTO_SALT_SIZE);
 	if(strPassword.empty())
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5501 - " + _("Password cannot be empty"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5501 - " + _("Password cannot be empty"));
 
     if(!crypt.SetKeyFromPassphrase(strPassword, vchAliasHash, 25000, 0))
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5502 - " + _("Could not determine key from password"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5502 - " + _("Could not determine key from password"));
 
 	CKey key;
 	key.Set(crypt.chKey, crypt.chKey + (sizeof crypt.chKey), true);
 	CPubKey defaultKey = key.GetPubKey();
 	if(!defaultKey.IsFullyValid())
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5503 - " + _("Generated public key not fully valid"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5503 - " + _("Generated public key not fully valid"));
 
 	if(aliasPubKey != defaultKey)
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5504 - " + _("Password is incorrect"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5504 - " + _("Password is incorrect"));
 	UniValue res(UniValue::VOBJ);
-	res.push_back(Pair("privatekey", CSyscoinSecret(key).ToString()));
+	res.push_back(Pair("privatekey", CZioncoinSecret(key).ToString()));
 	return res;
 
 }
@@ -1719,13 +1719,13 @@ void TransferAliasBalances(const vector<unsigned char> &vchAlias, const CScript&
 	if (!GetTxOfAlias(vchAlias, theAlias, aliasTx, true))
 		return;
 
-	CSyscoinAddress addressFrom;
+	CZioncoinAddress addressFrom;
 	GetAddress(theAlias, &addressFrom);
 
 	CCoinsViewCache view(pcoinsTip);
 	const CCoins *coins;
 	CTxDestination payDest;
-	CSyscoinAddress destaddy;
+	CZioncoinAddress destaddy;
 	// get all alias inputs and transfer them to the new alias destination
     for (unsigned int i = 0;i<vtxPaymentPos.size();i++)
     {
@@ -1738,7 +1738,7 @@ void TransferAliasBalances(const vector<unsigned char> &vchAlias, const CScript&
 			continue;
 		if (!ExtractDestination(coins->vout[aliasPayment.nOut].scriptPubKey, payDest)) 
 			continue;
-		destaddy = CSyscoinAddress(payDest);
+		destaddy = CZioncoinAddress(payDest);
         if (destaddy.ToString() == addressFrom.ToString())
 		{  
 			nAmount += coins->vout[aliasPayment.nOut].nValue;
@@ -1774,7 +1774,7 @@ UniValue aliasnew(const UniValue& params, bool fHelp) {
 						"<nrequired> For multisig aliases only. The number of required signatures out of the n aliases for a multisig alias update.\n"
 						"<aliases>     For multisig aliases only. A json array of aliases which are used to sign on an update to this alias.\n"
 						"     [\n"
-						"       \"alias\"    Existing syscoin alias name\n"
+						"       \"alias\"    Existing Zioncoin alias name\n"
 						"       ,...\n"
 						"     ]\n"						
 						
@@ -1789,7 +1789,7 @@ UniValue aliasnew(const UniValue& params, bool fHelp) {
 	The domain name should be a-z | 0-9 and hyphen(-)
 	The domain name should between 3 and 63 characters long
 	Last Tld can be 2 to a maximum of 6 characters
-	The domain name should not start or end with hyphen (-) (e.g. -syscoin.org or syscoin-.org)
+	The domain name should not start or end with hyphen (-) (e.g. -Zioncoin.org or Zioncoin-.org)
 	The domain name can be a subdomain (e.g. sys.blogspot.com)*/
 
 	
@@ -1803,12 +1803,12 @@ UniValue aliasnew(const UniValue& params, bool fHelp) {
 	if(find_first(strName, "."))
 	{
 		if (!regex_search(strName, nameparts, domainwithtldregex) || string(nameparts[0]) != strName)
-			throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5505 - " + _("Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters"));	
+			throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5505 - " + _("Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters"));	
 	}
 	else
 	{
 		if (!regex_search(strName, nameparts, domainwithouttldregex)  || string(nameparts[0]) != strName)
-			throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5506 - " + _("Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes"));
+			throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5506 - " + _("Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes"));
 	}
 	
 
@@ -1818,7 +1818,7 @@ UniValue aliasnew(const UniValue& params, bool fHelp) {
 	vector<unsigned char> vchPublicValue;
 	string strPassword = params[2].get_str().c_str();
 	if(strPassword.size() < 4 && strPassword.size() > 0)
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5507 - " + _("Invalid Syscoin Identity. Please enter a password atleast 4 characters long"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5507 - " + _("Invalid Zioncoin Identity. Please enter a password atleast 4 characters long"));
 	string strPublicValue = params[3].get_str();
 	vchPublicValue = vchFromString(strPublicValue);
 
@@ -1855,7 +1855,7 @@ UniValue aliasnew(const UniValue& params, bool fHelp) {
 	bool isExpired;
 	bool aliasExists = GetVtxOfAlias(vchAlias, oldAlias, vtxPos, isExpired);
 	if(aliasExists && !isExpired)
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5508 - " + _("This alias already exists"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5508 - " + _("This alias already exists"));
 	CPubKey defaultKey;
 	if(IsMyAlias(oldAlias))
 	{
@@ -1864,7 +1864,7 @@ UniValue aliasnew(const UniValue& params, bool fHelp) {
 	else if(strPassword.empty())
 		defaultKey = pwalletMain->GenerateNewKey();
 
-	CSyscoinAddress oldAddress(defaultKey.GetID());
+	CZioncoinAddress oldAddress(defaultKey.GetID());
 	if(!strPassword.empty())
 	{
 		CCrypter crypt;
@@ -1874,23 +1874,23 @@ UniValue aliasnew(const UniValue& params, bool fHelp) {
 		string pwStr = strPassword;
 		SecureString password = pwStr.c_str();
 		if(!crypt.SetKeyFromPassphrase(password, vchAliasHash, 25000, 0))
-			throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5509 - " + _("Could not determine key from password"));
+			throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5509 - " + _("Could not determine key from password"));
 		CKey key;
 		key.Set(crypt.chKey, crypt.chKey + (sizeof crypt.chKey), true);
 		defaultKey = key.GetPubKey();
 		if(!defaultKey.IsFullyValid())
-			throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5510 - " + _("Generated public key not fully valid"));
+			throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5510 - " + _("Generated public key not fully valid"));
 		CKey keyTmp;
 		if(!pwalletMain->GetKey(defaultKey.GetID(), keyTmp) && !pwalletMain->AddKeyPubKey(key, defaultKey))	
-			throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5511 - " + _("Please choose a different password"));
+			throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5511 - " + _("Please choose a different password"));
 	}
 	CScript scriptPubKeyOrig = GetScriptForDestination(defaultKey.GetID());
 
-	CSyscoinAddress newAddress = CSyscoinAddress(CScriptID(scriptPubKeyOrig));	
+	CZioncoinAddress newAddress = CZioncoinAddress(CScriptID(scriptPubKeyOrig));	
 
 	std::vector<unsigned char> vchPubKey(defaultKey.begin(), defaultKey.end());
 	
-	vector<unsigned char> vchRandAlias = vchFromString(GenerateSyscoinGuid());
+	vector<unsigned char> vchRandAlias = vchFromString(GenerateZioncoinGuid());
 
     // build alias
     CAliasIndex newAlias;
@@ -1942,13 +1942,13 @@ UniValue aliasnew(const UniValue& params, bool fHelp) {
 		coinControl.fAllowWatchOnly = true;
 		TransferAliasBalances(vchAlias, scriptPubKeyOrig, vecSend, coinControl);
 	}
-	SendMoneySyscoin(vecSend, recipient.nAmount + fee.nAmount, false, wtx, NULL, 0, oldAlias.multiSigInfo.vchAliases.size() > 0, coinControl.HasSelected()? &coinControl: NULL);
+	SendMoneyZioncoin(vecSend, recipient.nAmount + fee.nAmount, false, wtx, NULL, 0, oldAlias.multiSigInfo.vchAliases.size() > 0, coinControl.HasSelected()? &coinControl: NULL);
 	UniValue res(UniValue::VARR);
 	if(oldAlias.multiSigInfo.vchAliases.size() > 0)
 	{
 		UniValue signParams(UniValue::VARR);
 		signParams.push_back(EncodeHexTx(wtx));
-		const UniValue &resSign = tableRPC.execute("syscoinsignrawtransaction", signParams);
+		const UniValue &resSign = tableRPC.execute("Zioncoinsignrawtransaction", signParams);
 		const UniValue& so = resSign.get_obj();
 		string hex_str = "";
 
@@ -1988,13 +1988,13 @@ UniValue aliasupdate(const UniValue& params, bool fHelp) {
 						"<private value> alias private profile data, 1024 chars max. Will be private and readable by owner only.\n"				
 						"<password> used to generate your public/private key that controls this alias. Warning: Calling this function over a public network can lead to someone reading your password in plain text. Leave empty to leave current password unchanged.\n"
 						"<safesearch> is this alias safe to search. Defaults to Yes, No for not safe and to hide in GUI search queries\n"
-						"<toalias_pubkey> receiver syscoin alias pub key, if transferring alias.\n"
+						"<toalias_pubkey> receiver Zioncoin alias pub key, if transferring alias.\n"
 						"<accept transfers> set to No if this alias should not allow a certificate to be transferred to it. Defaults to Yes.\n"		
 						"<expire> String. Time in seconds. Future time when to expire alias. It is exponentially more expensive per year, calculation is 1.5^years. FEERATE is the dynamic satoshi per byte fee set in the rate peg alias used for this alias. Defaults to 1 year.\n"		
 						"<nrequired> For multisig aliases only. The number of required signatures out of the n aliases for a multisig alias update.\n"
 						"<aliases>     For multisig aliases only. A json array of aliases which are used to sign on an update to this alias.\n"
 						"     [\n"
-						"       \"alias\"    Existing syscoin alias name\n"
+						"       \"alias\"    Existing Zioncoin alias name\n"
 						"       ,...\n"
 						"     ]\n"							
 						+ HelpRequiringPassphrase());
@@ -2031,7 +2031,7 @@ UniValue aliasupdate(const UniValue& params, bool fHelp) {
 		strPassword = params[6].get_str();
 
 	if(strPassword.size() < 4 && strPassword.size() > 0)
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5517 - " + _("Invalid Syscoin Identity. Please enter a password atleast 4 characters long"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5517 - " + _("Invalid Zioncoin Identity. Please enter a password atleast 4 characters long"));
 
 	string strAcceptCertTransfers = "Yes";
 	if(params.size() >= 8)
@@ -2054,15 +2054,15 @@ UniValue aliasupdate(const UniValue& params, bool fHelp) {
 	CTransaction tx;
 	CAliasIndex theAlias;
 	if (!GetTxOfAlias(vchAlias, theAlias, tx, true))
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5518 - " + _("Could not find an alias with this name"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5518 - " + _("Could not find an alias with this name"));
 
 	COutPoint outPoint;
 	int numResults  = aliasunspent(vchAlias, outPoint);
 	const CWalletTx* wtxIn = pwalletMain->GetWalletTx(outPoint.hash);
 	if (wtxIn == NULL)
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5519 - " + _("This alias is not in your wallet"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5519 - " + _("This alias is not in your wallet"));
 
-	CSyscoinAddress oldAddress;
+	CZioncoinAddress oldAddress;
 	GetAddress(theAlias, &oldAddress);
 	CPubKey pubKey(theAlias.vchPubKey);	
 	if(!strPassword.empty())
@@ -2074,16 +2074,16 @@ UniValue aliasupdate(const UniValue& params, bool fHelp) {
 		string pwStr = strPassword;
 		SecureString password = pwStr.c_str();
 		if(!crypt.SetKeyFromPassphrase(password, vchAliasHash, 25000, 0))
-			throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5520 - " + _("Could not determine key from password"));
+			throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5520 - " + _("Could not determine key from password"));
 		CKey key;
 		key.Set(crypt.chKey, crypt.chKey + (sizeof crypt.chKey), true);
 		pubKey = key.GetPubKey();
 		
 		if(!pubKey.IsFullyValid())
-			throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5521 - " + _("Generated public key not fully valid"));	
+			throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5521 - " + _("Generated public key not fully valid"));	
 		CKey keyTmp;
 		if(!pwalletMain->GetKey(pubKey.GetID(), keyTmp) && !pwalletMain->AddKeyPubKey(key, pubKey))	
-			throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5522 - " + _("Please choose a different password"));	
+			throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5522 - " + _("Please choose a different password"));	
 	}
 	CAliasIndex copyAlias = theAlias;
 	theAlias.ClearAlias();
@@ -2108,7 +2108,7 @@ UniValue aliasupdate(const UniValue& params, bool fHelp) {
 			CAliasIndex multiSigAlias;
 			CTransaction txMultiSigAlias;
 			if (!GetTxOfAlias( vchFromString(aliasNames[i].get_str()), multiSigAlias, txMultiSigAlias))
-				throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5528 - " + _("Could not find multisig alias with the name: ") + aliasNames[i].get_str());
+				throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5528 - " + _("Could not find multisig alias with the name: ") + aliasNames[i].get_str());
 
 			CPubKey pubkey(multiSigAlias.vchPubKey);
 			pubkeys.push_back(pubkey);
@@ -2141,7 +2141,7 @@ UniValue aliasupdate(const UniValue& params, bool fHelp) {
 	theAlias.safeSearch = strSafeSearch == "Yes"? true: false;
 	theAlias.acceptCertTransfers = strAcceptCertTransfers == "Yes"? true: false;
 	
-	CSyscoinAddress newAddress;
+	CZioncoinAddress newAddress;
 	CScript scriptPubKeyOrig;
 	GetAddress(theAlias, &newAddress, scriptPubKeyOrig);
 	vector<unsigned char> data;
@@ -2180,13 +2180,13 @@ UniValue aliasupdate(const UniValue& params, bool fHelp) {
 		TransferAliasBalances(vchAlias, scriptPubKeyOrig, vecSend, coinControl);
 	}
 	
-	SendMoneySyscoin(vecSend, recipient.nAmount+fee.nAmount, false, wtx, wtxIn, outPoint.n, copyAlias.multiSigInfo.vchAliases.size() > 0, coinControl.HasSelected()? &coinControl: NULL);
+	SendMoneyZioncoin(vecSend, recipient.nAmount+fee.nAmount, false, wtx, wtxIn, outPoint.n, copyAlias.multiSigInfo.vchAliases.size() > 0, coinControl.HasSelected()? &coinControl: NULL);
 	UniValue res(UniValue::VARR);
 	if(copyAlias.multiSigInfo.vchAliases.size() > 0)
 	{
 		UniValue signParams(UniValue::VARR);
 		signParams.push_back(EncodeHexTx(wtx));
-		const UniValue &resSign = tableRPC.execute("syscoinsignrawtransaction", signParams);
+		const UniValue &resSign = tableRPC.execute("Zioncoinsignrawtransaction", signParams);
 		const UniValue& so = resSign.get_obj();
 		string hex_str = "";
 
@@ -2209,33 +2209,33 @@ UniValue aliasupdate(const UniValue& params, bool fHelp) {
 		res.push_back(wtx.GetHash().GetHex());
 	return res;
 }
-UniValue syscoindecoderawtransaction(const UniValue& params, bool fHelp) {
+UniValue Zioncoindecoderawtransaction(const UniValue& params, bool fHelp) {
 	if (fHelp || 1 != params.size())
-		throw runtime_error("syscoindecoderawtransaction <alias> <hexstring>\n"
-		"Decode raw syscoin transaction (serialized, hex-encoded) and display information pertaining to the service that is included in the transactiion data output(OP_RETURN)\n"
+		throw runtime_error("Zioncoindecoderawtransaction <alias> <hexstring>\n"
+		"Decode raw Zioncoin transaction (serialized, hex-encoded) and display information pertaining to the service that is included in the transactiion data output(OP_RETURN)\n"
 				"<hexstring> The transaction hex string.\n");
 	string hexstring = params[0].get_str();
 	CTransaction rawTx;
 	DecodeHexTx(rawTx,hexstring);
 	if(rawTx.IsNull())
 	{
-		throw runtime_error("SYSCOIN_RPC_ERROR: ERRCODE: 5531 - " + _("Could not decode transaction"));
+		throw runtime_error("Zioncoin_RPC_ERROR: ERRCODE: 5531 - " + _("Could not decode transaction"));
 	}
 	vector<unsigned char> vchData;
 	int nOut;
 	int op;
 	vector<vector<unsigned char> > vvch;
 	vector<unsigned char> vchHash;
-	GetSyscoinData(rawTx, vchData, vchHash, nOut);	
+	GetZioncoinData(rawTx, vchData, vchHash, nOut);	
 	UniValue output(UniValue::VOBJ);
-	if(DecodeAndParseSyscoinTx(rawTx, op, nOut, vvch))
+	if(DecodeAndParseZioncoinTx(rawTx, op, nOut, vvch))
 		SysTxToJSON(op, vchData, vchHash, output);
 	
 	bool sendCoin = false;
 	for (unsigned int i = 0; i < rawTx.vout.size(); i++) {
 		int tmpOp;
 		vector<vector<unsigned char> > tmpvvch;	
-		if(!IsSyscoinDataOutput(rawTx.vout[i]) && (!IsSyscoinScript(rawTx.vout[i].scriptPubKey, tmpOp, tmpvvch) || tmpOp == OP_ALIAS_PAYMENT))
+		if(!IsZioncoinDataOutput(rawTx.vout[i]) && (!IsZioncoinScript(rawTx.vout[i].scriptPubKey, tmpOp, tmpvvch) || tmpOp == OP_ALIAS_PAYMENT))
 		{
 			if(!pwalletMain->IsMine(rawTx.vout[i]))
 			{
@@ -2303,9 +2303,9 @@ void AliasTxToJSON(const int op, const vector<unsigned char> &vchData, const vec
 	entry.push_back(Pair("password", password));
 
 
-	CSyscoinAddress address;
+	CZioncoinAddress address;
 	GetAddress(alias, &address);
-	CSyscoinAddress dbaddress;
+	CZioncoinAddress dbaddress;
 	GetAddress(dbAlias, &dbaddress);
 
 	string addressValue = noDifferentStr;
@@ -2361,9 +2361,9 @@ void AliasTxToJSON(const int op, const vector<unsigned char> &vchData, const vec
 	entry.push_back(Pair("multisiginfo", msInfo));
 
 }
-UniValue syscoinsignrawtransaction(const UniValue& params, bool fHelp) {
+UniValue Zioncoinsignrawtransaction(const UniValue& params, bool fHelp) {
 	if (fHelp || 1 != params.size())
-		throw runtime_error("syscoinsignrawtransaction <hexstring>\n"
+		throw runtime_error("Zioncoinsignrawtransaction <hexstring>\n"
 				"Sign inputs for raw transaction (serialized, hex-encoded) and sends them out to the network if signing is complete\n"
 				"<hexstring> The transaction hex string.\n");
 	string hexstring = params[0].get_str();
@@ -2377,10 +2377,10 @@ UniValue syscoinsignrawtransaction(const UniValue& params, bool fHelp) {
 	}
 	catch (UniValue& objError)
 	{
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5532 - " + _("Could not sign multisig transaction: ") + find_value(objError, "message").get_str());
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5532 - " + _("Could not sign multisig transaction: ") + find_value(objError, "message").get_str());
 	}	
 	if (!res.isObject())
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5533 - " + _("Could not sign multisig transaction: Invalid response from signrawtransaction"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5533 - " + _("Could not sign multisig transaction: Invalid response from signrawtransaction"));
 	
 	const UniValue& so = res.get_obj();
 	string hex_str = "";
@@ -2407,7 +2407,7 @@ UniValue syscoinsignrawtransaction(const UniValue& params, bool fHelp) {
 			throw runtime_error(find_value(objError, "message").get_str());
 		}
 		if (!returnRes.isStr())
-			throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5534 - " + _("Could not send raw transaction: Invalid response from sendrawtransaction"));
+			throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5534 - " + _("Could not send raw transaction: Invalid response from sendrawtransaction"));
 	}
 	return res;
 }
@@ -2415,7 +2415,7 @@ bool IsMyAlias(const CAliasIndex& alias)
 {
 
 	CPubKey aliasPubKey(alias.vchPubKey);
-	CSyscoinAddress address(aliasPubKey.GetID());
+	CZioncoinAddress address(aliasPubKey.GetID());
 	if(alias.multiSigInfo.vchAliases.size() > 0)
 	{
 		CScript inner(alias.multiSigInfo.vchRedeemScript.begin(), alias.multiSigInfo.vchRedeemScript.end());
@@ -2439,8 +2439,8 @@ UniValue aliascount(const UniValue& params, bool fHelp) {
 		// get txn hash, read txn index
 		hash = item.second.GetHash();
 		const CWalletTx &wtx = item.second;
-		// skip non-syscoin txns
-		if (wtx.nVersion != SYSCOIN_TX_VERSION)
+		// skip non-Zioncoin txns
+		if (wtx.nVersion != Zioncoin_TX_VERSION)
 			continue;
 
 		vector<CAliasIndex> vtxPos;
@@ -2497,8 +2497,8 @@ UniValue aliaslist(const UniValue& params, bool fHelp) {
 		// get txn hash, read txn index
 		hash = item.second.GetHash();
 		const CWalletTx &wtx = item.second;
-		// skip non-syscoin txns
-		if (wtx.nVersion != SYSCOIN_TX_VERSION)
+		// skip non-Zioncoin txns
+		if (wtx.nVersion != Zioncoin_TX_VERSION)
 			continue;
 
 		vector<CAliasIndex> vtxPos;
@@ -2546,8 +2546,8 @@ UniValue aliasaffiliates(const UniValue& params, bool fHelp) {
 			// get txn hash, read txn index
 			hash = item.second.GetHash();
 			const CWalletTx &wtx = item.second;
-			// skip non-syscoin txns
-			if (wtx.nVersion != SYSCOIN_TX_VERSION)
+			// skip non-Zioncoin txns
+			if (wtx.nVersion != Zioncoin_TX_VERSION)
 				continue;
 
 			// decode txn, skip non-alias txns
@@ -2557,7 +2557,7 @@ UniValue aliasaffiliates(const UniValue& params, bool fHelp) {
             	|| !IsOfferOp(op) 
             	|| (op == OP_OFFER_ACCEPT))
                 continue;
-			if(!IsSyscoinTxMine(wtx, "offer"))
+			if(!IsZioncoinTxMine(wtx, "offer"))
 					continue;
             vchOffer = vvch[0];
 
@@ -2606,7 +2606,7 @@ UniValue aliasaffiliates(const UniValue& params, bool fHelp) {
 
 	return oRes;
 }
-string GenerateSyscoinGuid()
+string GenerateZioncoinGuid()
 {
 	int64_t rand = GetRand(std::numeric_limits<int64_t>::max());
 	vector<unsigned char> vchGuidRand = CScriptNum(rand).getvch();
@@ -2619,7 +2619,7 @@ UniValue aliasbalance(const UniValue& params, bool fHelp)
             "aliasbalance \"alias\" ( minconf )\n"
             "\nReturns the total amount received by the given alias in transactions with at least minconf confirmations.\n"
             "\nArguments:\n"
-            "1. \"alias\"  (string, required) The syscoin alias for transactions.\n"
+            "1. \"alias\"  (string, required) The Zioncoin alias for transactions.\n"
             "2. minconf             (numeric, optional, default=1) Only include transactions confirmed at least this many times.\n"
        );
 	LOCK(cs_main);
@@ -2632,7 +2632,7 @@ UniValue aliasbalance(const UniValue& params, bool fHelp)
 	if (!GetTxOfAlias(vchAlias, theAlias, aliasTx, true))
 		return ValueFromAmount(nAmount);
 
-	CSyscoinAddress addressFrom;
+	CZioncoinAddress addressFrom;
 	GetAddress(theAlias, &addressFrom);
 
 	if(!paliasdb->ReadAliasPayment(vchAlias, vtxPaymentPos))
@@ -2641,7 +2641,7 @@ UniValue aliasbalance(const UniValue& params, bool fHelp)
 	CCoinsViewCache view(pcoinsTip);
 	const CCoins *coins;
 	CTxDestination payDest;
-	CSyscoinAddress destaddy;
+	CZioncoinAddress destaddy;
 	// get all alias inputs and transfer them to the new alias destination
     for (unsigned int i = 0;i<vtxPaymentPos.size();i++)
     {
@@ -2654,7 +2654,7 @@ UniValue aliasbalance(const UniValue& params, bool fHelp)
 			continue;
 		if (!ExtractDestination(coins->vout[aliasPayment.nOut].scriptPubKey, payDest)) 
 			continue;
-		destaddy = CSyscoinAddress(payDest);
+		destaddy = CZioncoinAddress(payDest);
 		if (destaddy.ToString() == addressFrom.ToString())
 		{  
 			nAmount += coins->vout[aliasPayment.nOut].nValue;
@@ -2672,10 +2672,10 @@ int aliasunspent(const vector<unsigned char> &vchAlias, COutPoint& outpoint)
 	bool isExpired = false;
 	if (!GetTxAndVtxOfAlias(vchAlias, theAlias, aliasTx, vtxPos, isExpired, true))
 		return 0;
-	CSyscoinAddress destaddy;
+	CZioncoinAddress destaddy;
 	GetAddress(theAlias, &destaddy);
 	CTxDestination aliasDest;
-	CSyscoinAddress prevaddy;
+	CZioncoinAddress prevaddy;
 	int numResults = 0;
 	CCoinsViewCache view(pcoinsTip);
 	const CCoins *coins;
@@ -2703,7 +2703,7 @@ int aliasunspent(const vector<unsigned char> &vchAlias, COutPoint& outpoint)
 				continue;
 			if (!ExtractDestination(coins->vout[j].scriptPubKey, aliasDest))
 				continue;
-			prevaddy = CSyscoinAddress(aliasDest);
+			prevaddy = CZioncoinAddress(aliasDest);
 			if(destaddy.ToString() != prevaddy.ToString())
 				continue;
 
@@ -2736,11 +2736,11 @@ UniValue aliasinfo(const UniValue& params, bool fHelp) {
 
 	vector<CAliasIndex> vtxPos;
 	if (!paliasdb->ReadAlias(vchAlias, vtxPos) || vtxPos.empty())
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5535 - " + _("Failed to read from alias DB"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5535 - " + _("Failed to read from alias DB"));
 
 	UniValue oName(UniValue::VOBJ);
 	if(!BuildAliasJson(vtxPos.back(), 0, oName))
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5536 - " + _("Could not find this alias"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5536 - " + _("Could not find this alias"));
 		
 	return oName;
 }
@@ -2762,7 +2762,7 @@ bool BuildAliasJson(const CAliasIndex& alias, const int pending, UniValue& oName
 
 
 	oName.push_back(Pair("txid", alias.txHash.GetHex()));
-	CSyscoinAddress address;
+	CZioncoinAddress address;
 	GetAddress(alias, &address);
 	if(!address.IsValid())
 		return false;
@@ -2862,7 +2862,7 @@ UniValue aliashistory(const UniValue& params, bool fHelp) {
 	
 	vector<CAliasIndex> vtxPos;
 	if (!paliasdb->ReadAlias(vchAlias, vtxPos) || vtxPos.empty())
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5537 - " + _("Failed to read from alias DB"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5537 - " + _("Failed to read from alias DB"));
 
 	CAliasIndex txPos2;
 	CTransaction tx;
@@ -2870,7 +2870,7 @@ UniValue aliashistory(const UniValue& params, bool fHelp) {
     int op, nOut;
 	string opName;
 	BOOST_FOREACH(txPos2, vtxPos) {
-		if (!GetSyscoinTransaction(txPos2.nHeight, txPos2.txHash, tx, Params().GetConsensus()))
+		if (!GetZioncoinTransaction(txPos2.nHeight, txPos2.txHash, tx, Params().GetConsensus()))
 			continue;
 
 		if(DecodeOfferTx(tx, op, nOut, vvch) )
@@ -2968,7 +2968,7 @@ UniValue aliasfilter(const UniValue& params, bool fHelp) {
 	vchAlias = vchFromString(strName);
 	CTransaction aliastx;
 	if (!paliasdb->ScanNames(vchAlias, strRegexp, safeSearch, count, nameScan))
-		throw runtime_error("SYSCOIN_ALIAS_RPC_ERROR: ERRCODE: 5538 - " + _("Scan failed"));
+		throw runtime_error("Zioncoin_ALIAS_RPC_ERROR: ERRCODE: 5538 - " + _("Scan failed"));
 
 	BOOST_FOREACH(const CAliasIndex &alias, nameScan) {
 		UniValue oName(UniValue::VOBJ);
@@ -2986,14 +2986,14 @@ void GetPrivateKeysFromScript(const CScript& script, vector<string> &strKeys)
 	txnouttype whichType;
     ExtractDestinations(script, whichType, addrs, nRequired);
 	BOOST_FOREACH(const CTxDestination& txDest, addrs) {
-		CSyscoinAddress address(txDest);
+		CZioncoinAddress address(txDest);
 		CKeyID keyID;
 		if (!address.GetKeyID(keyID))
 			continue;
 		CKey vchSecret;
 		if (!pwalletMain->GetKey(keyID, vchSecret))
 			continue;
-		strKeys.push_back(CSyscoinSecret(vchSecret).ToString());
+		strKeys.push_back(CZioncoinSecret(vchSecret).ToString());
 	}
 }
 UniValue aliaspay(const UniValue& params, bool fHelp) {
@@ -3007,7 +3007,7 @@ UniValue aliaspay(const UniValue& params, bool fHelp) {
 			"1. \"alias\"				(string, required) alias to pay from\n"
             "2. \"amounts\"             (string, required) A json object with aliases and amounts\n"
             "    {\n"
-            "      \"address\":amount   (numeric or string) The syscoin alias is the key, the numeric amount (can be string) in " + CURRENCY_UNIT + " is the value\n"
+            "      \"address\":amount   (numeric or string) The Zioncoin alias is the key, the numeric amount (can be string) in " + CURRENCY_UNIT + " is the value\n"
             "      ,...\n"
             "    }\n"
 			"3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
@@ -3037,16 +3037,16 @@ UniValue aliaspay(const UniValue& params, bool fHelp) {
     if (params.size() > 3 && !params[3].isNull() && !params[3].get_str().empty())
         wtx.mapValue["comment"] = params[3].get_str();
 
-    set<CSyscoinAddress> setAddress;
+    set<CZioncoinAddress> setAddress;
     vector<CRecipient> vecSend;
 
     CAmount totalAmount = 0;
     vector<string> keys = sendTo.getKeys();
     BOOST_FOREACH(const string& name_, keys)
     {
-        CSyscoinAddress address(name_);
+        CZioncoinAddress address(name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Syscoin address: ")+name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Zioncoin address: ")+name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+name_);

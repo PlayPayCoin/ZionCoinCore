@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Syscoin Core developers
+// Copyright (c) 2009-2014 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_UNDO_H
-#define SYSCOIN_UNDO_H
+#ifndef Zioncoin_UNDO_H
+#define Zioncoin_UNDO_H
 
 #include "compressor.h" 
 #include "primitives/transaction.h"
@@ -82,4 +82,4 @@ public:
     }
 };
 
-#endif // SYSCOIN_UNDO_H
+#endif // Zioncoin_UNDO_H

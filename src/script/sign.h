@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_SCRIPT_SIGN_H
-#define SYSCOIN_SCRIPT_SIGN_H
+#ifndef Zioncoin_SCRIPT_SIGN_H
+#define Zioncoin_SCRIPT_SIGN_H
 
 #include "script/interpreter.h"
 
@@ -81,4 +81,4 @@ SignatureData CombineSignatures(const CScript& scriptPubKey, const BaseSignature
 SignatureData DataFromTransaction(const CMutableTransaction& tx, unsigned int nIn);
 void UpdateTransaction(CMutableTransaction& tx, unsigned int nIn, const SignatureData& data);
 
-#endif // SYSCOIN_SCRIPT_SIGN_H
+#endif // Zioncoin_SCRIPT_SIGN_H

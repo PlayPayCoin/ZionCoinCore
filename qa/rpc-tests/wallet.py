@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Syscoin Core developers
+# Copyright (c) 2014-2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 from test_framework.util import *
 
-class WalletTest (SyscoinTestFramework):
+class WalletTest (ZioncoinTestFramework):
 
     def check_fee_amount(self, curr_balance, balance_with_fee, fee_per_byte, tx_size):
         """Return curr_balance after asserting the fee was in range"""
@@ -327,7 +327,7 @@ class WalletTest (SyscoinTestFramework):
             '-reindex',
             '-zapwallettxes=1',
             '-zapwallettxes=2',
-            # disabled until issue is fixed: https://github.com/syscoin/syscoin2/issues/7463
+            # disabled until issue is fixed: https://github.com/Zioncoin/Zioncoin2/issues/7463
             # '-salvagewallet',
         ]
         chainlimit = 6

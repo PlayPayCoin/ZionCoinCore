@@ -1,4 +1,4 @@
-#include "test_syscoin_services.h"
+#include "test_Zioncoin_services.h"
 #include "utiltime.h"
 #include "util.h"
 #include "amount.h"
@@ -17,7 +17,7 @@ static int node2LastBlock=0;
 static int node3LastBlock=0;
 static int node4LastBlock=0;
 
-// SYSCOIN testing setup
+// Zioncoin testing setup
 void StartNodes()
 {
 	printf("Stopping any test nodes that are running...\n");
@@ -79,7 +79,7 @@ void StartNode(const string &dataDir, bool regTest, const string& extraArgs)
 		boost::filesystem::copy_file(boost::filesystem::system_complete(dataDir + "/wallet.dat"),boost::filesystem::system_complete(dataDir + "/regtest/wallet.dat"),boost::filesystem::copy_option::overwrite_if_exists);
 		boost::filesystem::remove(boost::filesystem::system_complete(dataDir + "/wallet.dat"));
 	}
-    boost::filesystem::path fpath = boost::filesystem::system_complete("../syscoind");
+    boost::filesystem::path fpath = boost::filesystem::system_complete("../Zioncoind");
 	string nodePath = fpath.string() + string(" -datadir=") + dataDir;
 	if(regTest)
 		nodePath += string(" -regtest -debug");
@@ -183,7 +183,7 @@ void StopNode (const string &dataDir) {
 UniValue CallRPC(const string &dataDir, const string& commandWithArgs, bool regTest, bool readJson)
 {
 	UniValue val;
-	boost::filesystem::path fpath = boost::filesystem::system_complete("../syscoin-cli");
+	boost::filesystem::path fpath = boost::filesystem::system_complete("../Zioncoin-cli");
 	string path = fpath.string() + string(" -datadir=") + dataDir;
 	if(regTest)
 		path += string(" -regtest ");
@@ -1536,25 +1536,25 @@ void EscrowClaimRelease(const string& node, const string& guid)
 		BOOST_CHECK_EQUAL(balanceSellerBefore, balanceSellerAfter);
 
 }
-BasicSyscoinTestingSetup::BasicSyscoinTestingSetup()
+BasicZioncoinTestingSetup::BasicZioncoinTestingSetup()
 {
 }
-BasicSyscoinTestingSetup::~BasicSyscoinTestingSetup()
+BasicZioncoinTestingSetup::~BasicZioncoinTestingSetup()
 {
 }
-SyscoinTestingSetup::SyscoinTestingSetup()
+ZioncoinTestingSetup::ZioncoinTestingSetup()
 {
 	StartNodes();
 }
-SyscoinTestingSetup::~SyscoinTestingSetup()
+ZioncoinTestingSetup::~ZioncoinTestingSetup()
 {
 	StopNodes();
 }
-SyscoinMainNetSetup::SyscoinMainNetSetup()
+ZioncoinMainNetSetup::ZioncoinMainNetSetup()
 {
 	StartMainNetNodes();
 }
-SyscoinMainNetSetup::~SyscoinMainNetSetup()
+ZioncoinMainNetSetup::~ZioncoinMainNetSetup()
 {
 	StopMainNetNodes();
 }

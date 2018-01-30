@@ -1,9 +1,9 @@
-// Copyright (c) 2012-2015 The Syscoin Core developers
+// Copyright (c) 2012-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "netbase.h"
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 
 #include <string>
 
@@ -57,10 +57,10 @@ bool static TestSplitHost(string test, string host, int port)
 
 BOOST_AUTO_TEST_CASE(netbase_splithost)
 {
-    BOOST_CHECK(TestSplitHost("www.syscoin.org", "www.syscoin.org", -1));
-    BOOST_CHECK(TestSplitHost("[www.syscoin.org]", "www.syscoin.org", -1));
-    BOOST_CHECK(TestSplitHost("www.syscoin.org:80", "www.syscoin.org", 80));
-    BOOST_CHECK(TestSplitHost("[www.syscoin.org]:80", "www.syscoin.org", 80));
+    BOOST_CHECK(TestSplitHost("www.Zioncoin.org", "www.Zioncoin.org", -1));
+    BOOST_CHECK(TestSplitHost("[www.Zioncoin.org]", "www.Zioncoin.org", -1));
+    BOOST_CHECK(TestSplitHost("www.Zioncoin.org:80", "www.Zioncoin.org", 80));
+    BOOST_CHECK(TestSplitHost("[www.Zioncoin.org]:80", "www.Zioncoin.org", 80));
     BOOST_CHECK(TestSplitHost("127.0.0.1", "127.0.0.1", -1));
     BOOST_CHECK(TestSplitHost("127.0.0.1:8369", "127.0.0.1", 8369));
     BOOST_CHECK(TestSplitHost("[127.0.0.1]", "127.0.0.1", -1));

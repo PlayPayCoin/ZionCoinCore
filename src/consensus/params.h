@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CONSENSUS_PARAMS_H
-#define SYSCOIN_CONSENSUS_PARAMS_H
+#ifndef Zioncoin_CONSENSUS_PARAMS_H
+#define Zioncoin_CONSENSUS_PARAMS_H
 
 #include "uint256.h"
 #include <map>
@@ -62,9 +62,9 @@ struct Params {
     int64_t nPowTargetTimespan;
     int64_t DifficultyAdjustmentInterval() const { return nPowTargetTimespan / nPowTargetSpacing; }
     uint256 nMinimumChainWork;
-    // SYSCOIN: Auxpow chain ID parameter
+    // Zioncoin: Auxpow chain ID parameter
     int32_t nAuxpowChainId;
 };
 } // namespace Consensus
 
-#endif // SYSCOIN_CONSENSUS_PARAMS_H
+#endif // Zioncoin_CONSENSUS_PARAMS_H

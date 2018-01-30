@@ -1,9 +1,9 @@
 #!/bin/bash
-# Copyright (c) 2016 The Syscoin Core developers
+# Copyright (c) 2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-###   This script attempts to download the signature file SHA256SUMS.asc from syscoin.org
+###   This script attempts to download the signature file SHA256SUMS.asc from Zioncoin.org
 ###   It first checks if the signature passes, and then downloads the files specified in
 ###   the file, and checks if the hashes of these files match those that are specified
 ###   in the signature file.
@@ -17,13 +17,13 @@ function clean_up {
    done
 }
 
-WORKINGDIR="/tmp/syscoin"
+WORKINGDIR="/tmp/Zioncoin"
 TMPFILE="hashes.tmp"
 
 SIGNATUREFILENAME="SHA256SUMS.asc"
 RCSUBDIR="test/"
-BASEDIR="https://syscoin.org/bin/"
-VERSIONPREFIX="syscoin-core-"
+BASEDIR="https://Zioncoin.org/bin/"
+VERSIONPREFIX="Zioncoin-core-"
 RCVERSIONSTRING="rc"
 
 if [ ! -d "$WORKINGDIR" ]; then
@@ -34,7 +34,7 @@ cd "$WORKINGDIR"
 
 #test if a version number has been passed as an argument
 if [ -n "$1" ]; then
-   #let's also check if the version number includes the prefix 'syscoin-',
+   #let's also check if the version number includes the prefix 'Zioncoin-',
    #  and add this prefix if it doesn't
    if [[ $1 == "$VERSIONPREFIX"* ]]; then
       VERSION="$1"
@@ -83,7 +83,7 @@ if [ $RET -ne 0 ]; then
       echo "Bad signature."
    elif [ $RET -eq 2 ]; then
       #or if a gpg error has occurred
-      echo "gpg error. Do you have the Syscoin Core binary release signing key installed?"
+      echo "gpg error. Do you have the Zioncoin Core binary release signing key installed?"
    fi
 
    echo "gpg output:"

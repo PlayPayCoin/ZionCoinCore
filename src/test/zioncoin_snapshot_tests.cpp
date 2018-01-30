@@ -1,4 +1,4 @@
-#include "test/test_syscoin_services.h"
+#include "test/test_Zioncoin_services.h"
 #include "data/utxo.json.h"
 #include "utiltime.h"
 #include "rpc/server.h"
@@ -6,7 +6,7 @@
 #include <univalue.h>
 int currentTx = 0;
 extern UniValue read_json(const std::string& jsondata);
-BOOST_FIXTURE_TEST_SUITE (syscoin_snapshot_tests, SyscoinMainNetSetup)
+BOOST_FIXTURE_TEST_SUITE (Zioncoin_snapshot_tests, ZioncoinMainNetSetup)
 struct PaymentAmount
 {
 	std::string address;

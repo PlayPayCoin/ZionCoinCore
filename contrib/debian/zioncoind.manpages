@@ -1,3 +1,3 @@
-debian/manpages/syscoind.1
-debian/manpages/syscoin.conf.5
-debian/manpages/syscoin-cli.1
+debian/manpages/Zioncoind.1
+debian/manpages/Zioncoin.conf.5
+debian/manpages/Zioncoin-cli.1

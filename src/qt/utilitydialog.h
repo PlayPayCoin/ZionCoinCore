@@ -1,14 +1,14 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_UTILITYDIALOG_H
-#define SYSCOIN_QT_UTILITYDIALOG_H
+#ifndef Zioncoin_QT_UTILITYDIALOG_H
+#define Zioncoin_QT_UTILITYDIALOG_H
 
 #include <QDialog>
 #include <QObject>
 
-class SyscoinGUI;
+class ZioncoinGUI;
 class ClientModel;
 
 namespace Ui {
@@ -43,10 +43,10 @@ class ShutdownWindow : public QWidget
 
 public:
     ShutdownWindow(QWidget *parent=0, Qt::WindowFlags f=0);
-    static QWidget *showShutdownWindow(SyscoinGUI *window);
+    static QWidget *showShutdownWindow(ZioncoinGUI *window);
 
 protected:
     void closeEvent(QCloseEvent *event);
 };
 
-#endif // SYSCOIN_QT_UTILITYDIALOG_H
+#endif // Zioncoin_QT_UTILITYDIALOG_H

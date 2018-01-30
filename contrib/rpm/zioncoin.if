@@ -1,10 +1,10 @@
 
-## <summary>policy for syscoin</summary>
+## <summary>policy for Zioncoin</summary>
 
 
 ########################################
 ## <summary>
-##	Transition to syscoin.
+##	Transition to Zioncoin.
 ## </summary>
 ## <param name="domain">
 ## <summary>
@@ -12,19 +12,19 @@
 ## </summary>
 ## </param>
 #
-interface(`syscoin_domtrans',`
+interface(`Zioncoin_domtrans',`
 	gen_require(`
-		type syscoin_t, syscoin_exec_t;
+		type Zioncoin_t, Zioncoin_exec_t;
 	')
 
 	corecmd_search_bin($1)
-	domtrans_pattern($1, syscoin_exec_t, syscoin_t)
+	domtrans_pattern($1, Zioncoin_exec_t, Zioncoin_t)
 ')
 
 
 ########################################
 ## <summary>
-##	Execute syscoin server in the syscoin domain.
+##	Execute Zioncoin server in the Zioncoin domain.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -32,18 +32,18 @@ interface(`syscoin_domtrans',`
 ##	</summary>
 ## </param>
 #
-interface(`syscoin_initrc_domtrans',`
+interface(`Zioncoin_initrc_domtrans',`
 	gen_require(`
-		type syscoin_initrc_exec_t;
+		type Zioncoin_initrc_exec_t;
 	')
 
-	init_labeled_script_domtrans($1, syscoin_initrc_exec_t)
+	init_labeled_script_domtrans($1, Zioncoin_initrc_exec_t)
 ')
 
 
 ########################################
 ## <summary>
-##	Search syscoin lib directories.
+##	Search Zioncoin lib directories.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -51,18 +51,18 @@ interface(`syscoin_initrc_domtrans',`
 ##	</summary>
 ## </param>
 #
-interface(`syscoin_search_lib',`
+interface(`Zioncoin_search_lib',`
 	gen_require(`
-		type syscoin_var_lib_t;
+		type Zioncoin_var_lib_t;
 	')
 
-	allow $1 syscoin_var_lib_t:dir search_dir_perms;
+	allow $1 Zioncoin_var_lib_t:dir search_dir_perms;
 	files_search_var_lib($1)
 ')
 
 ########################################
 ## <summary>
-##	Read syscoin lib files.
+##	Read Zioncoin lib files.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -70,18 +70,18 @@ interface(`syscoin_search_lib',`
 ##	</summary>
 ## </param>
 #
-interface(`syscoin_read_lib_files',`
+interface(`Zioncoin_read_lib_files',`
 	gen_require(`
-		type syscoin_var_lib_t;
+		type Zioncoin_var_lib_t;
 	')
 
 	files_search_var_lib($1)
-	read_files_pattern($1, syscoin_var_lib_t, syscoin_var_lib_t)
+	read_files_pattern($1, Zioncoin_var_lib_t, Zioncoin_var_lib_t)
 ')
 
 ########################################
 ## <summary>
-##	Manage syscoin lib files.
+##	Manage Zioncoin lib files.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -89,18 +89,18 @@ interface(`syscoin_read_lib_files',`
 ##	</summary>
 ## </param>
 #
-interface(`syscoin_manage_lib_files',`
+interface(`Zioncoin_manage_lib_files',`
 	gen_require(`
-		type syscoin_var_lib_t;
+		type Zioncoin_var_lib_t;
 	')
 
 	files_search_var_lib($1)
-	manage_files_pattern($1, syscoin_var_lib_t, syscoin_var_lib_t)
+	manage_files_pattern($1, Zioncoin_var_lib_t, Zioncoin_var_lib_t)
 ')
 
 ########################################
 ## <summary>
-##	Manage syscoin lib directories.
+##	Manage Zioncoin lib directories.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -108,20 +108,20 @@ interface(`syscoin_manage_lib_files',`
 ##	</summary>
 ## </param>
 #
-interface(`syscoin_manage_lib_dirs',`
+interface(`Zioncoin_manage_lib_dirs',`
 	gen_require(`
-		type syscoin_var_lib_t;
+		type Zioncoin_var_lib_t;
 	')
 
 	files_search_var_lib($1)
-	manage_dirs_pattern($1, syscoin_var_lib_t, syscoin_var_lib_t)
+	manage_dirs_pattern($1, Zioncoin_var_lib_t, Zioncoin_var_lib_t)
 ')
 
 
 ########################################
 ## <summary>
 ##	All of the rules required to administrate
-##	an syscoin environment
+##	an Zioncoin environment
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -135,23 +135,23 @@ interface(`syscoin_manage_lib_dirs',`
 ## </param>
 ## <rolecap/>
 #
-interface(`syscoin_admin',`
+interface(`Zioncoin_admin',`
 	gen_require(`
-		type syscoin_t;
-		type syscoin_initrc_exec_t;
-		type syscoin_var_lib_t;
+		type Zioncoin_t;
+		type Zioncoin_initrc_exec_t;
+		type Zioncoin_var_lib_t;
 	')
 
-	allow $1 syscoin_t:process { ptrace signal_perms };
-	ps_process_pattern($1, syscoin_t)
+	allow $1 Zioncoin_t:process { ptrace signal_perms };
+	ps_process_pattern($1, Zioncoin_t)
 
-	syscoin_initrc_domtrans($1)
+	Zioncoin_initrc_domtrans($1)
 	domain_system_change_exemption($1)
-	role_transition $2 syscoin_initrc_exec_t system_r;
+	role_transition $2 Zioncoin_initrc_exec_t system_r;
 	allow $2 system_r;
 
 	files_search_var_lib($1)
-	admin_pattern($1, syscoin_var_lib_t)
+	admin_pattern($1, Zioncoin_var_lib_t)
 
 ')
 

@@ -1,5 +1,5 @@
 ---
-name: "syscoin-dmg-signer"
+name: "Zioncoin-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/syscoin/syscoin-detached-sigs.git"
+- "url": "https://github.com/Zioncoin/Zioncoin-detached-sigs.git"
   "dir": "signature"
 files:
-- "syscoin-osx-unsigned.tar.gz"
+- "Zioncoin-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=syscoin-osx-unsigned.tar.gz
-  SIGNED=syscoin-osx-signed.dmg
+  UNSIGNED=Zioncoin-osx-unsigned.tar.gz
+  SIGNED=Zioncoin-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

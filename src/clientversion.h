@@ -1,19 +1,19 @@
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CLIENTVERSION_H
-#define SYSCOIN_CLIENTVERSION_H
+#ifndef Zioncoin_CLIENTVERSION_H
+#define Zioncoin_CLIENTVERSION_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #else
 
 /**
  * client versioning and copyright year
  */
 
-//! These need to be macros, as clientversion.cpp's and syscoin*-res.rc's voodoo requires it
+//! These need to be macros, as clientversion.cpp's and Zioncoin*-res.rc's voodoo requires it
 #define CLIENT_VERSION_MAJOR 2
 #define CLIENT_VERSION_MINOR 1
 #define CLIENT_VERSION_REVISION 6
@@ -38,7 +38,7 @@
 #define BUILD_VERSION(maj, min, rev, build) \
     DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build)
 
-#define SYSCOIN_VERSION BUILD_VERSION(CLIENT_VERSION_MAJOR, CLIENT_VERSION_MINOR, CLIENT_VERSION_REVISION, CLIENT_VERSION_BUILD)
+#define Zioncoin_VERSION BUILD_VERSION(CLIENT_VERSION_MAJOR, CLIENT_VERSION_MINOR, CLIENT_VERSION_REVISION, CLIENT_VERSION_BUILD)
 #define BITCOIN_VERSION BUILD_VERSION(BITCOIN_VERSION_MAJOR, BITCOIN_VERSION_MINOR, BITCOIN_VERSION_REVISION, BITCOIN_VERSION_BUILD)
 
 
@@ -53,7 +53,7 @@
 #define COPYRIGHT_STR "2009-" STRINGIZE(COPYRIGHT_YEAR) " " COPYRIGHT_HOLDERS_FINAL
 
 /**
- * syscoind-res.rc includes this file, but it cannot cope with real c++ code.
+ * Zioncoind-res.rc includes this file, but it cannot cope with real c++ code.
  * WINDRES_PREPROC is defined to indicate that its pre-processor is running.
  * Anything other than a define should be guarded below.
  */
@@ -62,8 +62,8 @@
 
 #include <string>
 #include <vector>
-// SYSCOIN
-static const std::string SYSCOIN_CLIENT_VERSION = SYSCOIN_VERSION;
+// Zioncoin
+static const std::string Zioncoin_CLIENT_VERSION = Zioncoin_VERSION;
 static const std::string BITCOIN_CLIENT_VERSION = BITCOIN_VERSION;
 static const int CLIENT_VERSION =
                            1000000 * CLIENT_VERSION_MAJOR
@@ -81,4 +81,4 @@ std::string FormatSubVersion(const std::string& name, int nClientVersion, const 
 
 #endif // WINDRES_PREPROC
 
-#endif // SYSCOIN_CLIENTVERSION_H
+#endif // Zioncoin_CLIENTVERSION_H

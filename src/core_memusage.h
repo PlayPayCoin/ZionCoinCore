@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Syscoin Core developers
+// Copyright (c) 2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CORE_MEMUSAGE_H
-#define SYSCOIN_CORE_MEMUSAGE_H
+#ifndef Zioncoin_CORE_MEMUSAGE_H
+#define Zioncoin_CORE_MEMUSAGE_H
 
 #include "primitives/transaction.h"
 #include "primitives/block.h"
@@ -79,4 +79,4 @@ static inline size_t RecursiveDynamicUsage(const CBlockLocator& locator) {
     return memusage::DynamicUsage(locator.vHave);
 }
 
-#endif // SYSCOIN_CORE_MEMUSAGE_H
+#endif // Zioncoin_CORE_MEMUSAGE_H

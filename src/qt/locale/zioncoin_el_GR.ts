@@ -288,12 +288,12 @@
         <translation>Διευθύνσεις λήψης</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Αυτές είναι οι Syscoin διευθύνσεις σας για να λαμβάνετε πληρωμές. Δίνοντας μία ξεχωριστή διεύθυνση σε κάθε αποστολέα, θα μπορείτε να ελέγχετε ποιος σας πληρώνει.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Αυτές είναι οι Zioncoin διευθύνσεις σας για να λαμβάνετε πληρωμές. Δίνοντας μία ξεχωριστή διεύθυνση σε κάθε αποστολέα, θα μπορείτε να ελέγχετε ποιος σας πληρώνει.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Αυτές είναι οι Syscoin διευθύνσεις σας για να λαμβάνετε πληρωμές. Δίνοντας μία ξεχωριστή διεύθυνση σε κάθε αποστολέα, θα μπορείτε να ελέγχετε ποιος σας πληρώνει.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Αυτές είναι οι Zioncoin διευθύνσεις σας για να λαμβάνετε πληρωμές. Δίνοντας μία ξεχωριστή διεύθυνση σε κάθε αποστολέα, θα μπορείτε να ελέγχετε ποιος σας πληρώνει.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -370,8 +370,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>Αναζητήστε Syscoin ψευδώνυμα. Επιλέξτε Ασφαλή Αναζήτηση από τις επιλογές πορτοφόλι, αν θέλετε να παραλείψετε δυνητικά προσβλητικό Ψευδώνυμα (από προεπιλογή)</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>Αναζητήστε Zioncoin ψευδώνυμα. Επιλέξτε Ασφαλή Αναζήτηση από τις επιλογές πορτοφόλι, αν θέλετε να παραλείψετε δυνητικά προσβλητικό Ψευδώνυμα (από προεπιλογή)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Aliases starting with 'name'). Empty will search for all.</source>
@@ -467,8 +467,8 @@
         <translation>Επιβεβαίωσε την κρυπτογραφηση του πορτοφολιού</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Προσοχη: Εαν κρυπτογραφησεις το πορτοφολι σου και χάσεις τον κωδικο σου θα χάσεις &lt;b&gt; ΟΛΑ ΣΟΥ ΤΑ SYSCOINS&lt;/b&gt;!
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Προσοχη: Εαν κρυπτογραφησεις το πορτοφολι σου και χάσεις τον κωδικο σου θα χάσεις &lt;b&gt; ΟΛΑ ΣΟΥ ΤΑ ZioncoinS&lt;/b&gt;!
 Είσαι σίγουρος ότι θέλεις να κρυπτογραφησεις το πορτοφολι;</translation>
     </message>
     <message>
@@ -554,8 +554,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>Αναζήτηση για Πιστοποιητικά Syscoin. Επιλέξτε Ασφαλή Αναζήτηση από τις επιλογές πορτοφόλι, αν θέλετε να παραλείψετε δυνητικά προσβλητικό Πιστοποιητικά (από προεπιλογή)</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>Αναζήτηση για Πιστοποιητικά Zioncoin. Επιλέξτε Ασφαλή Αναζήτηση από τις επιλογές πορτοφόλι, αν θέλετε να παραλείψετε δυνητικά προσβλητικό Πιστοποιητικά (από προεπιλογή)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Certificates starting with 'name'). Empty will search for all.</source>
@@ -803,8 +803,8 @@
         <translation>Επεξεργασία διεύθυνσης αποστολής</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>Η διεύθυνση "%1" δεν είναι έγκυρη Syscoin διεύθυνση.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>Η διεύθυνση "%1" δεν είναι έγκυρη Zioncoin διεύθυνση.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1329,8 +1329,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>Αναζητήστε Syscoin escrows.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>Αναζητήστε Zioncoin escrows.</translation>
     </message>
     <message>
         <source>Enter search term. Search for arbiter/seller or escrow GUID. Empty will search for all.</source>
@@ -1425,8 +1425,8 @@
         <translation>έκδοση</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>Πελάτης Syscoin</translation>
+        <source>Zioncoin Client</source>
+        <translation>Πελάτης Zioncoin</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -1606,8 +1606,8 @@
         <translation>Η μεσεγγύησης έχει επιτυχία επιστραφεί στον αγοραστή. Η μεσεγγύησης είναι πλήρης.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>Το καθεστώς μεσεγγύησης δεν αναγνωρίστηκε. Επικοινωνήστε με την ομάδα Syscoin.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>Το καθεστώς μεσεγγύησης δεν αναγνωρίστηκε. Επικοινωνήστε με την ομάδα Zioncoin.</translation>
     </message>
     <message>
         <source>none</source>
@@ -1927,8 +1927,8 @@
         <translation>Εξαγωγή δεδομένων καρτέλας σε αρχείο</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>Αυτές είναι οι εγγεγραμμένοι σας Syscoin ψευδώνυμα. λειτουργίες Alias ​​(δημιουργία, ενημέρωση, μεταφορά) να λαμβάνουν 2-5 λεπτά για να γίνουν ενεργοί.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>Αυτές είναι οι εγγεγραμμένοι σας Zioncoin ψευδώνυμα. λειτουργίες Alias ​​(δημιουργία, ενημέρωση, μεταφορά) να λαμβάνουν 2-5 λεπτά για να γίνουν ενεργοί.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -2439,8 +2439,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Αποδοχή Syscoin Προσφορά</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Αποδοχή Zioncoin Προσφορά</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2455,8 +2455,8 @@
         <translation>Πληρώστε με BTC</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>Πληρώστε με Syscoin</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>Πληρώστε με Zioncoin</translation>
     </message>
     <message>
         <source>Use Escrow</source>
@@ -2490,8 +2490,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Αποδοχή Syscoin Προσφορά</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Αποδοχή Zioncoin Προσφορά</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2565,8 +2565,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Αποδοχή Syscoin Προσφορά</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Αποδοχή Zioncoin Προσφορά</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2864,8 +2864,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>Αναζήτηση για Syscoin Προσφορές (διπλό κλικ σε κάποιον να αγοράσει). Επιλέξτε Ασφαλή Αναζήτηση από τις επιλογές πορτοφόλι, αν θέλετε να παραλείψετε δυνητικά προσβλητικό προσφορές (από προεπιλογή)</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>Αναζήτηση για Zioncoin Προσφορές (διπλό κλικ σε κάποιον να αγοράσει). Επιλέξτε Ασφαλή Αναζήτηση από τις επιλογές πορτοφόλι, αν θέλετε να παραλείψετε δυνητικά προσβλητικό προσφορές (από προεπιλογή)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Offer's starting with 'name'). Empty will search for all.</source>
@@ -3042,8 +3042,8 @@
         <translation>Ελαχιστοποίηση αντί για έξοδο κατά το κλείσιμο του παραθύρου. Όταν αυτή η επιλογή είναι ενεργοποιημένη, η εφαρμογή θα κλείνει μόνο αν επιλεχθεί η Έξοδος στο μενού.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Η γλώσσα διεπαφής χρήστη μπορεί να οριστεί εδώ. Αυτή η ρύθμιση θα τεθεί σε ισχύ μετά την επανεκκίνηση Syscoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Η γλώσσα διεπαφής χρήστη μπορεί να οριστεί εδώ. Αυτή η ρύθμιση θα τεθεί σε ισχύ μετά την επανεκκίνηση Zioncoin Core.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -3062,8 +3062,8 @@
         <translation>User Interface Θέμα:</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Το θέμα διεπαφή χρήστη μπορεί να οριστεί εδώ. Αυτή η ρύθμιση θα τεθεί σε ισχύ μετά την επανεκκίνηση Syscoin Core.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Το θέμα διεπαφή χρήστη μπορεί να οριστεί εδώ. Αυτή η ρύθμιση θα τεθεί σε ισχύ μετά την επανεκκίνηση Zioncoin Core.</translation>
     </message>
     <message>
         <source>Default Peg Alias:</source>
@@ -3098,12 +3098,12 @@
         <translation>&amp;Δίκτυο</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>Αυτόματη εκκίνηση Syscoin πυρήνα μετά την σύνδεση με το σύστημα.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>Αυτόματη εκκίνηση Zioncoin πυρήνα μετά την σύνδεση με το σύστημα.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>&amp; Start Syscoin Πυρήνα για την είσοδο στο σύστημα</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>&amp; Start Zioncoin Πυρήνα για την είσοδο στο σύστημα</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -3130,16 +3130,16 @@
         <translation>&amp;Ξόδεμα μη επικυρωμένων ρέστων</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Αυτόματο άνοιγμα των θυρών Syscoin στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Αυτόματο άνοιγμα των θυρών Zioncoin στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Απόδοση θυρών με χρήστη &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>Σύνδεση στο Syscoin δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>Σύνδεση στο Zioncoin δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -3178,8 +3178,8 @@
         <translation>Βραχώδης κορυφή</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Συνδεθείτε στο δίκτυο Syscoin μέσα από ένα ξεχωριστό SOCKS5 μεσολάβησης για Tor κρυμμένα υπηρεσίες.</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Συνδεθείτε στο δίκτυο Zioncoin μέσα από ένα ξεχωριστό SOCKS5 μεσολάβησης για Tor κρυμμένα υπηρεσίες.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -3340,8 +3340,8 @@
         <translation>Φόρμα</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο Syscoin μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο Zioncoin μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -3415,8 +3415,8 @@
         <translation>Σφάλμα αιτήματος πληρωμής</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Δεν είναι δυνατή η εκκίνηση του Syscoin: click-to-pay handler</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Δεν είναι δυνατή η εκκίνηση του Zioncoin: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -3431,8 +3431,8 @@
         <translation>Μη έγκυρη διεύθυνση πληρωμής %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>URI δεν μπορεί να αναλυθεί! Αυτό μπορεί να προκληθεί από μια μη έγκυρη διεύθυνση Syscoin ή ακατάλληλο παραμέτρους URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>URI δεν μπορεί να αναλυθεί! Αυτό μπορεί να προκληθεί από μια μη έγκυρη διεύθυνση Zioncoin ή ακατάλληλο παραμέτρους URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -3862,8 +3862,8 @@
         <translation>Ε&amp;παναχρησιμοποίηση υπάρχουσας διεύθυνσης λήψης (δεν συνιστάται)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
-        <translation>Ένα προαιρετικό μήνυμα για να επισυνάψετε στην αίτηση πληρωμής, η οποία θα εμφανίζεται όταν η αίτηση είναι ανοικτή. Σημείωση: Το μήνυμα δεν θα σταλεί με την πληρωμή μέσω του δικτύου Syscoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
+        <translation>Ένα προαιρετικό μήνυμα για να επισυνάψετε στην αίτηση πληρωμής, η οποία θα εμφανίζεται όταν η αίτηση είναι ανοικτή. Σημείωση: Το μήνυμα δεν θα σταλεί με την πληρωμή μέσω του δικτύου Zioncoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -4110,8 +4110,8 @@
         <translation>συνολικά τουλάχιστον</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
-        <translation>Πληρώνοντας μόνο την ελάχιστη αμοιβή είναι μια χαρά για όσο διάστημα υπάρχει λιγότερο όγκο συναλλαγών από το διάστημα στα μπλοκ. Αλλά πρέπει να γνωρίζετε ότι αυτό μπορεί να καταλήξουν σε ένα ποτέ δεν επιβεβαιώνει συναλλαγή τη στιγμή που υπάρχει μεγαλύτερη ζήτηση για συναλλαγές syscoin από το δίκτυο μπορεί να επεξεργαστεί.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
+        <translation>Πληρώνοντας μόνο την ελάχιστη αμοιβή είναι μια χαρά για όσο διάστημα υπάρχει λιγότερο όγκο συναλλαγών από το διάστημα στα μπλοκ. Αλλά πρέπει να γνωρίζετε ότι αυτό μπορεί να καταλήξουν σε ένα ποτέ δεν επιβεβαιώνει συναλλαγή τη στιγμή που υπάρχει μεγαλύτερη ζήτηση για συναλλαγές Zioncoin από το δίκτυο μπορεί να επεξεργαστεί.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -4254,8 +4254,8 @@
         <translation>αίτησης πληρωμής λήξει.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Προειδοποίηση: Μη έγκυρη διεύθυνση Syscoin</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Προειδοποίηση: Μη έγκυρη διεύθυνση Zioncoin</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -4289,8 +4289,8 @@
         <translation>Αυτή είναι μια απλή πληρωμή.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
-        <translation>Η διεύθυνση Syscoin που θα σταλεί η πληρωμή</translation>
+        <source>The Zioncoin address to send the payment to</source>
+        <translation>Η διεύθυνση Zioncoin που θα σταλεί η πληρωμή</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -4309,8 +4309,8 @@
         <translation>Αφαίρεση αυτής της καταχώρησης</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Το τέλος θα αφαιρείται από το να αποσταλεί το ποσό. Ο παραλήπτης θα λάβει λιγότερα syscoins από ό, τι εισάγετε στο πεδίο ποσού. Εάν έχουν επιλεγεί πολλαπλούς παραλήπτες, η αμοιβή κατανέμεται εξίσου.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Το τέλος θα αφαιρείται από το να αποσταλεί το ποσό. Ο παραλήπτης θα λάβει λιγότερα Zioncoins από ό, τι εισάγετε στο πεδίο ποσού. Εάν έχουν επιλεγεί πολλαπλούς παραλήπτες, η αμοιβή κατανέμεται εξίσου.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -4333,8 +4333,8 @@
         <translation>Εισάγεται μία ετικέτα για αυτή την διεύθυνση για να προστεθεί στη λίστα με τις χρησιμοποιημένες διευθύνσεις</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>Ένα μήνυμα που συνδέθηκε με το syscoin: URI το οποίο θα αποθηκευτεί με τη συναλλαγή για την αναφορά σας. Σημείωση: Αυτό το μήνυμα δεν θα σταλεί μέσω του δικτύου Syscoin.</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>Ένα μήνυμα που συνδέθηκε με το Zioncoin: URI το οποίο θα αποθηκευτεί με τη συναλλαγή για την αναφορά σας. Σημείωση: Αυτό το μήνυμα δεν θα σταλεί μέσω του δικτύου Zioncoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -4389,12 +4389,12 @@
         <translation>&amp;Υπογραφή Μηνύματος</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Μπορείτε να υπογράψετε τα μηνύματα / συμφωνίες με τις διευθύνσεις σας για να αποδείξει μπορείτε να λάβετε syscoins σταλεί σε αυτούς. Να είστε προσεκτικοί για να μην υπογράψουν τίποτα ασαφείς ή τυχαία, όπως phishing επιθέσεις μπορεί να προσπαθήσει να σας ξεγελάσει και να υπογράψει την ταυτότητά σας πάνω σε αυτά. υπογράψει μόνο πλήρως λεπτομερείς δηλώσεις συμφωνείτε.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Μπορείτε να υπογράψετε τα μηνύματα / συμφωνίες με τις διευθύνσεις σας για να αποδείξει μπορείτε να λάβετε Zioncoins σταλεί σε αυτούς. Να είστε προσεκτικοί για να μην υπογράψουν τίποτα ασαφείς ή τυχαία, όπως phishing επιθέσεις μπορεί να προσπαθήσει να σας ξεγελάσει και να υπογράψει την ταυτότητά σας πάνω σε αυτά. υπογράψει μόνο πλήρως λεπτομερείς δηλώσεις συμφωνείτε.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
-        <translation>Διεύθυνση Syscoin που θα σταλεί το μήνυμα</translation>
+        <source>The Zioncoin address to sign the message with</source>
+        <translation>Διεύθυνση Zioncoin που θα σταλεί το μήνυμα</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4425,8 +4425,8 @@
         <translation>Αντέγραφη της επιλεγμενης διεύθυνσης στο πρόχειρο του συστηματος</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση Syscoin</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση Zioncoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -4449,12 +4449,12 @@
         <translation>Εισάγετε τη διεύθυνση του παραλήπτη, το μήνυμα (βεβαιωθείτε ότι έχετε αντιγράψει αλλαγές γραμμής, χώρους, καρτέλες, κλπ ακριβώς) και την υπογραφή παρακάτω για να επαληθεύσετε το μήνυμα. Να είστε προσεκτικοί για να μην διαβάσετε περισσότερα στην υπογραφή από ό, τι είναι στο ίδιο το υπογεγραμμένο μήνυμα, για να αποφύγει να εξαπατηθεί από έναν άνθρωπο-in-the-middle επίθεση. Σημειώστε ότι αυτό αποδεικνύει μόνο την υπογραφή κόμμα λαμβάνει με τη διεύθυνση, δεν μπορεί να αποδείξει sendership οποιασδήποτε συναλλαγής!</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
-        <translation>Διεύθυνση Syscoin η οποία το μήνυμα έχει υπογραφεί</translation>
+        <source>The Zioncoin address the message was signed with</source>
+        <translation>Διεύθυνση Zioncoin η οποία το μήνυμα έχει υπογραφεί</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση Syscoin</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση Zioncoin</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -4525,7 +4525,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Υπογραφή &amp;Μηνύματος...</translation>
@@ -4611,8 +4611,8 @@
         <translation>Φόρτωση ευρετηρίου μπλοκ στον σκληρο δισκο...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση syscoin</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση Zioncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -4635,8 +4635,8 @@
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -4655,12 +4655,12 @@
         <translation>Κρυπτογραφήστε τα ιδιωτικά κλειδιά που ανήκουν στο πορτοφόλι σας </translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
         <translation>Υπογράψτε ένα μήνυμα για να βεβαιώσετε πως είστε ο κάτοχος αυτής της διεύθυνσης</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση Syscoin</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση Zioncoin</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -4679,8 +4679,8 @@
         <translation>Εργαλειοθήκη καρτελών</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις syscoin: )</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις Zioncoin: )</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -4691,8 +4691,8 @@
         <translation>Προβολή της λίστας των χρησιμοποιημένων διευθύνσεων και ετικετών λήψεως</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Άνοιγμα syscoin: URI αίτησης πληρωμής</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Άνοιγμα Zioncoin: URI αίτησης πληρωμής</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -4751,8 +4751,8 @@
         <translation>Escrows με τις προσφορές</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>&amp;Σχετικά με το Syscoin Core</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>&amp;Σχετικά με το Zioncoin Core</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -5441,7 +5441,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Επιλογές:</translation>
@@ -5495,8 +5495,8 @@
         <translation>Να δέχεσαι συνδέσεις από έξω(προεπιλογή:1)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Core</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -5911,12 +5911,12 @@
         <translation>Προσφορά guid στην έξοδο δεδομένων δεν ταιριάζει με το GUID στη συναλλαγή</translation>
     </message>
     <message>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
-        <translation>Syscoin είναι λογισμικό ανοιχτού κώδικα που παράγεται από ένα παγκόσμιο δίκτυο των προγραμματιστών. Με τη λήψη, διανομή και χρήση Syscoin και το δίκτυο Syscoin αφήσετε τους προγραμματιστές που συμμετέχουν στο παρελθόν Syscoin έργου, το παρόν και το μέλλον από κάθε ευθύνη. Είστε υπεύθυνοι για τις δημιουργίες σας στο δίκτυο Syscoin. Συμφωνείτε ότι οι προγραμματιστές του Έργου Syscoin φέρει καμία ευθύνη για τις ενέργειες / δεδομένων ή οντότητες * κάθε ορισμός * δημιουργήθηκαν στο δίκτυο από τον εαυτό σας ή τους άλλους στο δίκτυο στο οποίο μπορεί να εκτεθείτε.</translation>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <translation>Zioncoin είναι λογισμικό ανοιχτού κώδικα που παράγεται από ένα παγκόσμιο δίκτυο των προγραμματιστών. Με τη λήψη, διανομή και χρήση Zioncoin και το δίκτυο Zioncoin αφήσετε τους προγραμματιστές που συμμετέχουν στο παρελθόν Zioncoin έργου, το παρόν και το μέλλον από κάθε ευθύνη. Είστε υπεύθυνοι για τις δημιουργίες σας στο δίκτυο Zioncoin. Συμφωνείτε ότι οι προγραμματιστές του Έργου Zioncoin φέρει καμία ευθύνη για τις ενέργειες / δεδομένων ή οντότητες * κάθε ορισμός * δημιουργήθηκαν στο δίκτυο από τον εαυτό σας ή τους άλλους στο δίκτυο στο οποίο μπορεί να εκτεθείτε.</translation>
     </message>
     <message>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
-        <translation>Οι προγραμματιστές του Έργου Syscoin δεν έχουν την εξουσία να τροποποιεί τα δεδομένα στο δίκτυο Syscoin, υποστηρίζεται από ένα αμετάβλητο blockchain, το οποίο μπορείτε περαιτέρω αναγνωρίζετε μέσω της χρήσης του Syscoin, το δίκτυο Syscoin και υπηρεσίες Syscoin. Εάν δεν συμφωνείτε με αυτούς τους όρους, παρακαλούμε να απέχετε από τη χρήση Syscoin και των συναφών υπηρεσιών του.</translation>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
+        <translation>Οι προγραμματιστές του Έργου Zioncoin δεν έχουν την εξουσία να τροποποιεί τα δεδομένα στο δίκτυο Zioncoin, υποστηρίζεται από ένα αμετάβλητο blockchain, το οποίο μπορείτε περαιτέρω αναγνωρίζετε μέσω της χρήσης του Zioncoin, το δίκτυο Zioncoin και υπηρεσίες Zioncoin. Εάν δεν συμφωνείτε με αυτούς τους όρους, παρακαλούμε να απέχετε από τη χρήση Zioncoin και των συναφών υπηρεσιών του.</translation>
     </message>
     <message>
         <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
@@ -5991,8 +5991,8 @@
         <translation>Αγοραστής ψευδώνυμο δεν είναι στο πορτοφόλι σας</translation>
     </message>
     <message>
-        <source>Can't determine type of alias input into syscoin service transaction</source>
-        <translation>δεν μπορεί να καθορίσει τον τύπο της εισόδου ψευδώνυμο σε συναλλαγή υπηρεσίας syscoin</translation>
+        <source>Can't determine type of alias input into Zioncoin service transaction</source>
+        <translation>δεν μπορεί να καθορίσει τον τύπο της εισόδου ψευδώνυμο σε συναλλαγή υπηρεσίας Zioncoin</translation>
     </message>
     <message>
         <source>Cannot exceed 10 arbiter feedbacks</source>
@@ -6135,8 +6135,8 @@
         <translation>συναλλαγή πιστοποιητικό έχει άγνωστη op</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
-        <translation>Πνευματικά δικαιώματα 2009-%i Οι προγραμματιστές του Syscoin Core</translation>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
+        <translation>Πνευματικά δικαιώματα 2009-%i Οι προγραμματιστές του Zioncoin Core</translation>
     </message>
     <message>
         <source>Could not create escrow transaction: Invalid response from createescrow</source>
@@ -6447,8 +6447,8 @@
         <translation>συναλλαγή μήνυμα έχει άγνωστη op</translation>
     </message>
     <message>
-        <source>Non-Syscoin transaction found</source>
-        <translation>Μη Syscoin συναλλαγή που βρέθηκαν</translation>
+        <source>Non-Zioncoin transaction found</source>
+        <translation>Μη Zioncoin συναλλαγή που βρέθηκαν</translation>
     </message>
     <message>
         <source>Not enough quantity left in this offer for this purchase</source>

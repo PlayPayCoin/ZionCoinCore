@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Syscoin Core developers
+// Copyright (c) 2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
-#define SYSCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
+#ifndef Zioncoin_ZMQ_ZMQPUBLISHNOTIFIER_H
+#define Zioncoin_ZMQ_ZMQPUBLISHNOTIFIER_H
 
 #include "zmqabstractnotifier.h"
 
@@ -52,4 +52,4 @@ public:
     bool NotifyTransaction(const CTransaction &transaction);
 };
 
-#endif // SYSCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
+#endif // Zioncoin_ZMQ_ZMQPUBLISHNOTIFIER_H

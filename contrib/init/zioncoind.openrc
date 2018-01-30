@@ -2,41 +2,41 @@
 
 # backward compatibility for existing gentoo layout 
 #
-if [ -d "/var/lib/syscoin/.syscoin" ]; then
-	SYSCOIND_DEFAULT_DATADIR="/var/lib/syscoin/.syscoin"
+if [ -d "/var/lib/Zioncoin/.Zioncoin" ]; then
+	ZioncoinD_DEFAULT_DATADIR="/var/lib/Zioncoin/.Zioncoin"
 else
-	SYSCOIND_DEFAULT_DATADIR="/var/lib/syscoind"
+	ZioncoinD_DEFAULT_DATADIR="/var/lib/Zioncoind"
 fi
 
-SYSCOIND_CONFIGFILE=${SYSCOIND_CONFIGFILE:-/etc/syscoin/syscoin.conf}
-SYSCOIND_PIDDIR=${SYSCOIND_PIDDIR:-/var/run/syscoind}
-SYSCOIND_PIDFILE=${SYSCOIND_PIDFILE:-${SYSCOIND_PIDDIR}/syscoind.pid}
-SYSCOIND_DATADIR=${SYSCOIND_DATADIR:-${SYSCOIND_DEFAULT_DATADIR}}
-SYSCOIND_USER=${SYSCOIND_USER:-${SYSCOIN_USER:-syscoin}}
-SYSCOIND_GROUP=${SYSCOIND_GROUP:-syscoin}
-SYSCOIND_BIN=${SYSCOIND_BIN:-/usr/bin/syscoind}
-SYSCOIND_NICE=${SYSCOIND_NICE:-${NICELEVEL:-0}}
-SYSCOIND_OPTS="${SYSCOIND_OPTS:-${SYSCOIN_OPTS}}"
+ZioncoinD_CONFIGFILE=${ZioncoinD_CONFIGFILE:-/etc/Zioncoin/Zioncoin.conf}
+ZioncoinD_PIDDIR=${ZioncoinD_PIDDIR:-/var/run/Zioncoind}
+ZioncoinD_PIDFILE=${ZioncoinD_PIDFILE:-${ZioncoinD_PIDDIR}/Zioncoind.pid}
+ZioncoinD_DATADIR=${ZioncoinD_DATADIR:-${ZioncoinD_DEFAULT_DATADIR}}
+ZioncoinD_USER=${ZioncoinD_USER:-${Zioncoin_USER:-Zioncoin}}
+ZioncoinD_GROUP=${ZioncoinD_GROUP:-Zioncoin}
+ZioncoinD_BIN=${ZioncoinD_BIN:-/usr/bin/Zioncoind}
+ZioncoinD_NICE=${ZioncoinD_NICE:-${NICELEVEL:-0}}
+ZioncoinD_OPTS="${ZioncoinD_OPTS:-${Zioncoin_OPTS}}"
 
-name="Syscoin Core Daemon"
-description="Syscoin cryptocurrency P2P network daemon"
+name="Zioncoin Core Daemon"
+description="Zioncoin cryptocurrency P2P network daemon"
 
-command="/usr/bin/syscoind"
-command_args="-pid=\"${SYSCOIND_PIDFILE}\" \
-		-conf=\"${SYSCOIND_CONFIGFILE}\" \
-		-datadir=\"${SYSCOIND_DATADIR}\" \
+command="/usr/bin/Zioncoind"
+command_args="-pid=\"${ZioncoinD_PIDFILE}\" \
+		-conf=\"${ZioncoinD_CONFIGFILE}\" \
+		-datadir=\"${ZioncoinD_DATADIR}\" \
 		-daemon \
-		${SYSCOIND_OPTS}"
+		${ZioncoinD_OPTS}"
 
-required_files="${SYSCOIND_CONFIGFILE}"
-start_stop_daemon_args="-u ${SYSCOIND_USER} \
-			-N ${SYSCOIND_NICE} -w 2000"
-pidfile="${SYSCOIND_PIDFILE}"
+required_files="${ZioncoinD_CONFIGFILE}"
+start_stop_daemon_args="-u ${ZioncoinD_USER} \
+			-N ${ZioncoinD_NICE} -w 2000"
+pidfile="${ZioncoinD_PIDFILE}"
 
 # The retry schedule to use when stopping the daemon. Could be either
 # a timeout in seconds or multiple signal/timeout pairs (like
 # "SIGKILL/180 SIGTERM/300")
-retry="${SYSCOIND_SIGTERM_TIMEOUT}"
+retry="${ZioncoinD_SIGTERM_TIMEOUT}"
 
 depend() {
 	need localmount net
@@ -50,29 +50,29 @@ start_pre() {
 	checkpath \
 	-d \
 	--mode 0750 \
-	--owner "${SYSCOIND_USER}:${SYSCOIND_GROUP}" \
-	"${SYSCOIND_DATADIR}"
+	--owner "${ZioncoinD_USER}:${ZioncoinD_GROUP}" \
+	"${ZioncoinD_DATADIR}"
 
 	checkpath \
 	-d \
 	--mode 0755 \
-	--owner "${SYSCOIND_USER}:${SYSCOIND_GROUP}" \
-	"${SYSCOIND_PIDDIR}"
+	--owner "${ZioncoinD_USER}:${ZioncoinD_GROUP}" \
+	"${ZioncoinD_PIDDIR}"
 
 	checkpath -f \
-	-o ${SYSCOIND_USER}:${SYSCOIND_GROUP} \
+	-o ${ZioncoinD_USER}:${ZioncoinD_GROUP} \
 	-m 0660 \
-	${SYSCOIND_CONFIGFILE}
+	${ZioncoinD_CONFIGFILE}
 
 	checkconfig || return 1
 }
 
 checkconfig()
 {
-	if ! grep -qs '^rpcpassword=' "${SYSCOIND_CONFIGFILE}" ; then
+	if ! grep -qs '^rpcpassword=' "${ZioncoinD_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run syscoind."
-		eerror "The setting must appear in ${SYSCOIND_CONFIGFILE}"
+		eerror "ERROR: You must set a secure rpcpassword to run Zioncoind."
+		eerror "The setting must appear in ${ZioncoinD_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
 		eerror "and must not be the same as the rpcuser setting."
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Syscoin Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Zioncoin Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

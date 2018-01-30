@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -187,7 +187,7 @@ void WalletModel::updateWatchOnlyFlag(bool fHaveWatchonly)
 
 bool WalletModel::validateAddress(const QString &address)
 {
-    CSyscoinAddress addressParsed(address.toStdString());
+    CZioncoinAddress addressParsed(address.toStdString());
     return addressParsed.IsValid();
 }
 
@@ -233,7 +233,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
             total += subtotal;
         }
         else
-        {   // User-entered syscoin address / amount:
+        {   // User-entered Zioncoin address / amount:
             if(!validateAddress(rcp.address))
             {
                 return InvalidAddress;
@@ -245,7 +245,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
             setAddress.insert(rcp.address);
             ++nAddresses;
 
-            CScript scriptPubKey = GetScriptForDestination(CSyscoinAddress(rcp.address.toStdString()).Get());
+            CScript scriptPubKey = GetScriptForDestination(CZioncoinAddress(rcp.address.toStdString()).Get());
             CRecipient recipient = {scriptPubKey, rcp.amount, rcp.fSubtractFeeFromAmount};
             vecSend.push_back(recipient);
 
@@ -259,7 +259,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
 
     CAmount nBalance = getBalance(coinControl);
 
-	// SYSCOIN
+	// Zioncoin
 	/*
     if(total > nBalance)
     {
@@ -277,7 +277,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
 
         CWalletTx *newTx = transaction.getTransaction();
         CReserveKey *keyChange = transaction.getPossibleKeyChange();
-		// SYSCOIN pass in false to not sign
+		// Zioncoin pass in false to not sign
         bool fCreated = wallet->CreateTransaction(vecSend, *newTx, *keyChange, nFeeRequired, nChangePosRet, strFailReason, coinControl, false);
         transaction.setTransactionFee(nFeeRequired);
         if (fSubtractFeeFromAmount && fCreated)
@@ -300,7 +300,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
         if (nFeeRequired > maxTxFee)
             return AbsurdFee;
 
-		// SYSCOIN
+		// Zioncoin
 		UniValue resSign;
 		UniValue signParams(UniValue::VARR);
 		signParams.push_back(EncodeHexTx(*newTx));
@@ -377,7 +377,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction &tran
                 rcp.paymentRequest.SerializeToString(&value);
                 newTx->vOrderForm.push_back(make_pair(key, value));
             }
-            else if (!rcp.message.isEmpty()) // Message from normal syscoin:URI (syscoin:123...?message=example)
+            else if (!rcp.message.isEmpty()) // Message from normal Zioncoin:URI (Zioncoin:123...?message=example)
                 newTx->vOrderForm.push_back(make_pair("Message", rcp.message.toStdString()));
         }
 
@@ -399,7 +399,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction &tran
         if (!rcp.paymentRequest.IsInitialized())
         {
             std::string strAddress = rcp.address.toStdString();
-            CTxDestination dest = CSyscoinAddress(strAddress).Get();
+            CTxDestination dest = CZioncoinAddress(strAddress).Get();
             std::string strLabel = rcp.label.toStdString();
             {
                 LOCK(wallet->cs_wallet);
@@ -514,7 +514,7 @@ static void NotifyAddressBookChanged(WalletModel *walletmodel, CWallet *wallet,
         const CTxDestination &address, const std::string &label, bool isMine,
         const std::string &purpose, ChangeType status)
 {
-    QString strAddress = QString::fromStdString(CSyscoinAddress(address).ToString());
+    QString strAddress = QString::fromStdString(CZioncoinAddress(address).ToString());
     QString strLabel = QString::fromStdString(label);
     QString strPurpose = QString::fromStdString(purpose);
 
@@ -581,7 +581,7 @@ WalletModel::UnlockContext WalletModel::requestUnlock()
     // If wallet is still locked, unlock was failed or cancelled, mark context as invalid
     bool valid = getEncryptionStatus() != Locked;
 
-	// SYSCOIN
+	// Zioncoin
     return UnlockContext(this, valid, false/*was_locked*/);
 }
 
@@ -667,25 +667,25 @@ void WalletModel::listCoins(std::map<QString, std::vector<COutput> >& mapCoins) 
             if (!wallet->mapWallet.count(cout.tx->vin[0].prevout.hash)) break;
             cout = COutput(&wallet->mapWallet[cout.tx->vin[0].prevout.hash], cout.tx->vin[0].prevout.n, 0, true, true);
         }
-		// SYSCOIN txs are unspendable unless input to another syscoin tx (passed into createtransaction)
-		if(out.tx->nVersion == GetSyscoinTxVersion())
+		// Zioncoin txs are unspendable unless input to another Zioncoin tx (passed into createtransaction)
+		if(out.tx->nVersion == GetZioncoinTxVersion())
 		{
 			int op;
 			vector<vector<unsigned char> > vvchArgs;
 			// any sys tx thats not an alias payment shouldnt show up in listCoins (used by coin control)
-			if (out.tx->vout.size() >= out.i && IsSyscoinScript(out.tx->vout[out.i].scriptPubKey, op, vvchArgs) && op != OP_ALIAS_PAYMENT)
+			if (out.tx->vout.size() >= out.i && IsZioncoinScript(out.tx->vout[out.i].scriptPubKey, op, vvchArgs) && op != OP_ALIAS_PAYMENT)
 				continue;
 		}
         CTxDestination address;
-		// SYSCOIN
+		// Zioncoin
         if(/*!out.fSpendable || */!ExtractDestination(cout.tx->vout[cout.i].scriptPubKey, address))
             continue;
-		// SYSCOIN
-		CSyscoinAddress syscoinAddress = CSyscoinAddress(address);
-		syscoinAddress = CSyscoinAddress(syscoinAddress.ToString());
-		QString qStrAddress = QString::fromStdString(syscoinAddress.ToString());
-		if(syscoinAddress.isAlias)
-			qStrAddress = QString::fromStdString(syscoinAddress.aliasName);
+		// Zioncoin
+		CZioncoinAddress ZioncoinAddress = CZioncoinAddress(address);
+		ZioncoinAddress = CZioncoinAddress(ZioncoinAddress.ToString());
+		QString qStrAddress = QString::fromStdString(ZioncoinAddress.ToString());
+		if(ZioncoinAddress.isAlias)
+			qStrAddress = QString::fromStdString(ZioncoinAddress.aliasName);
         mapCoins[qStrAddress].push_back(out);
     }
 }
@@ -725,7 +725,7 @@ void WalletModel::loadReceiveRequests(std::vector<std::string>& vReceiveRequests
 
 bool WalletModel::saveReceiveRequest(const std::string &sAddress, const int64_t nId, const std::string &sRequest)
 {
-    CTxDestination dest = CSyscoinAddress(sAddress).Get();
+    CTxDestination dest = CZioncoinAddress(sAddress).Get();
 
     std::stringstream ss;
     ss << nId;

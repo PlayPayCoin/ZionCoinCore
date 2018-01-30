@@ -68,8 +68,8 @@
         <translation>V&amp;ali</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu Syscoini aadressid maksete saatmiseks. Müntide saatmisel kontrolli alati summat ning saaja aadressi.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu Zioncoini aadressid maksete saatmiseks. Müntide saatmisel kontrolli alati summat ning saaja aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -167,8 +167,8 @@
         <translation>Kinnita rahakoti krüpteering</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Hoiatus: Kui sa kaotad oma, rahakoti krüpteerimisel kasutatud, salafraasi, siis &lt;b&gt;KAOTAD KA KÕIK OMA SYSCOINID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Hoiatus: Kui sa kaotad oma, rahakoti krüpteerimisel kasutatud, salafraasi, siis &lt;b&gt;KAOTAD KA KÕIK OMA ZioncoinID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -325,8 +325,8 @@
         <translation>Väljaminevate aadresside muutmine</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>Sisestatud aadress "%1" ei ole Syscoinis kehtiv.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>Sisestatud aadress "%1" ei ole Zioncoinis kehtiv.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -744,8 +744,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Syscoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Zioncoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -849,7 +849,7 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -868,8 +868,8 @@
 <context>
     <name>PaymentServer</name>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Syscoin ei käivitu: vajuta-maksa toiming</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Zioncoin ei käivitu: vajuta-maksa toiming</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1298,8 +1298,8 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Allkirjasta sõnum Syscoini aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Allkirjasta sõnum Zioncoini aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1318,8 +1318,8 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Syscoini aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Zioncoini aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1390,7 +1390,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signeeri &amp;sõnum</translation>
@@ -1452,8 +1452,8 @@
         <translation>Kettal olevate blokkide re-indekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Saada münte Syscoini aadressile</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Saada münte Zioncoini aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1476,8 +1476,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1496,12 +1496,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Syscoini aadressiga</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Zioncoini aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Syscoini aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Zioncoini aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1552,8 +1552,8 @@
         <translation>Ajakohane</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>Kirjeldus Syscoini Tuumast</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>Kirjeldus Zioncoini Tuumast</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -1974,7 +1974,7 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Valikud:</translation>
@@ -2004,8 +2004,8 @@
         <translation>Luba välisühendusi (vaikeväärtus: 1 kui puudub -proxy või -connect)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoini tuumik</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoini tuumik</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

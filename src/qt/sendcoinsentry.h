@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_SENDCOINSENTRY_H
-#define SYSCOIN_QT_SENDCOINSENTRY_H
+#ifndef Zioncoin_QT_SENDCOINSENTRY_H
+#define Zioncoin_QT_SENDCOINSENTRY_H
 
 #include "walletmodel.h"
 
@@ -17,7 +17,7 @@ namespace Ui {
 }
 
 /**
- * A single entry in the dialog for sending syscoins.
+ * A single entry in the dialog for sending Zioncoins.
  * Stacked widget, with different UIs for payment requests
  * with a strong payee identity.
  */
@@ -70,4 +70,4 @@ private:
     bool updateLabel(const QString &address);
 };
 
-#endif // SYSCOIN_QT_SENDCOINSENTRY_H
+#endif // Zioncoin_QT_SENDCOINSENTRY_H

@@ -1,35 +1,35 @@
-// Copyright (c) 2011-2014 The Syscoin Core developers
+// Copyright (c) 2011-2014 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_SYSCOINADDRESSVALIDATOR_H
-#define SYSCOIN_QT_SYSCOINADDRESSVALIDATOR_H
+#ifndef Zioncoin_QT_ZioncoinADDRESSVALIDATOR_H
+#define Zioncoin_QT_ZioncoinADDRESSVALIDATOR_H
 
 #include <QValidator>
 
 /** Base58 entry widget validator, checks for valid characters and
  * removes some whitespace.
  */
-class SyscoinAddressEntryValidator : public QValidator
+class ZioncoinAddressEntryValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit SyscoinAddressEntryValidator(QObject *parent);
+    explicit ZioncoinAddressEntryValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const;
 };
 
-/** Syscoin address widget validator, checks for a valid syscoin address.
+/** Zioncoin address widget validator, checks for a valid Zioncoin address.
  */
-class SyscoinAddressCheckValidator : public QValidator
+class ZioncoinAddressCheckValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit SyscoinAddressCheckValidator(QObject *parent);
+    explicit ZioncoinAddressCheckValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const;
 };
 
-#endif // SYSCOIN_QT_SYSCOINADDRESSVALIDATOR_H
+#endif // Zioncoin_QT_ZioncoinADDRESSVALIDATOR_H

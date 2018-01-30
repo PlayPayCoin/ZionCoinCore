@@ -233,12 +233,12 @@
         <translation>Adresses de réception</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ce sont vos adresses Syscoin pour envoyer les paiements. Veuillez toujours vérifier le montant et les adresses de réception avant d'envoyer les pièces.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ce sont vos adresses Zioncoin pour envoyer les paiements. Veuillez toujours vérifier le montant et les adresses de réception avant d'envoyer les pièces.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ce sont vos adresses Syscoin pour recevoir les paiements. Veuillez toujours vérifier le montant et les adresses de réception avant d'envoyer les pièces.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ce sont vos adresses Zioncoin pour recevoir les paiements. Veuillez toujours vérifier le montant et les adresses de réception avant d'envoyer les pièces.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -1161,8 +1161,8 @@
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ouvrir le port du client Syscoin automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ouvrir le port du client Zioncoin automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1967,7 +1967,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signer &amp;message...</translation>
@@ -2049,8 +2049,8 @@
         <translation>Réindexer les blocs sur le disque...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Envoyer des pièces à une adresse Syscoin</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Envoyer des pièces à une adresse Zioncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -2073,8 +2073,8 @@
         <translation>&amp;Vérification du message</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2093,8 +2093,8 @@
         <translation>Crypter les clé privées qui appartiennent votre portefeuille</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Signer vos messages avec vos adresses Syscoin pour prouver que vous les détenez</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Signer vos messages avec vos adresses Zioncoin pour prouver que vous les détenez</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -2113,24 +2113,24 @@
         <translation>Barre d'outils des onglets</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Demander des paiements (générer QR codes et syscoin: URIs)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Demander des paiements (générer QR codes et Zioncoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
         <translation>Montrer la liste des adresses d'envois utilisées et les étiquettes</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Ouvrir un syscoin: URI ou demande de paiement</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Ouvrir un Zioncoin: URI ou demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Options de ligne de commande</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
-        <translation><numerusform>%n connexion active au réseau Syscoin</numerusform><numerusform>%n connexions actives au réseau Syscoin</numerusform></translation>
+        <source>%n active connection(s) to Zioncoin network</source>
+        <translation><numerusform>%n connexion active au réseau Zioncoin</numerusform><numerusform>%n connexions actives au réseau Zioncoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -2511,7 +2511,7 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Options :</translation>
@@ -2537,8 +2537,8 @@
         <translation>Impossible de démarrer le serveur HTTP. Voir le journal de débogage pour plus de détails.</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Core</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Core</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_SCRIPT_SCRIPT_H
-#define SYSCOIN_SCRIPT_SCRIPT_H
+#ifndef Zioncoin_SCRIPT_SCRIPT_H
+#define Zioncoin_SCRIPT_SCRIPT_H
 
 #include "crypto/common.h"
 #include "prevector.h"
@@ -45,7 +45,7 @@ enum opcodetype
 {
     // push value
     OP_0 = 0x00,
-   // SYSCOIN aliases
+   // Zioncoin aliases
     OP_ALIAS_PAYMENT = 0x01,
     OP_ALIAS_ACTIVATE=0x02,
     OP_ALIAS_UPDATE=0x03,
@@ -70,8 +70,8 @@ enum opcodetype
 	// encrypted messaging
 	OP_MESSAGE_ACTIVATE=0x0f,
 
-     // syscoin extended reserved 
-    OP_SYSCOIN_EXTENDED=0x10,
+     // Zioncoin extended reserved 
+    OP_Zioncoin_EXTENDED=0x10,
     OP_FALSE = OP_0,
     OP_PUSHDATA1 = 0x4c,
     OP_PUSHDATA2 = 0x4d,
@@ -633,7 +633,7 @@ public:
     }
 
     /**
-     * Pre-version-0.6, Syscoin always counted CHECKMULTISIGs
+     * Pre-version-0.6, Zioncoin always counted CHECKMULTISIGs
      * as 20 sigops. With pay-to-script-hash, that changed:
      * CHECKMULTISIGs serialized in scriptSigs are
      * counted more accurately, assuming they are of the form
@@ -695,4 +695,4 @@ public:
     virtual ~CReserveScript() {}
 };
 
-#endif // SYSCOIN_SCRIPT_SCRIPT_H
+#endif // Zioncoin_SCRIPT_SCRIPT_H

@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_WALLETMODEL_H
-#define SYSCOIN_QT_WALLETMODEL_H
+#ifndef Zioncoin_QT_WALLETMODEL_H
+#define Zioncoin_QT_WALLETMODEL_H
 
 #include "paymentrequestplus.h"
 #include "walletmodeltransaction.h"
@@ -29,7 +29,7 @@ class COutput;
 class CPubKey;
 class CWallet;
 class uint256;
-// SYSCOIN
+// Zioncoin
 class UniValue;
 
 QT_BEGIN_NAMESPACE
@@ -97,7 +97,7 @@ public:
     }
 };
 
-/** Interface to Syscoin wallet from Qt view code. */
+/** Interface to Zioncoin wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT
@@ -118,7 +118,7 @@ public:
         TransactionCommitFailed,
         AbsurdFee,
         PaymentRequestExpired,
-		// SYSCOIN
+		// Zioncoin
 		OKMultisig,
 		InvalidMultisig
     };
@@ -275,4 +275,4 @@ public Q_SLOTS:
     /* Current, immature or unconfirmed balance might have changed - emit 'balanceChanged' if so */
     void pollBalanceChanged();
 };
-#endif // SYSCOIN_QT_WALLETMODEL_H
+#endif // Zioncoin_QT_WALLETMODEL_H

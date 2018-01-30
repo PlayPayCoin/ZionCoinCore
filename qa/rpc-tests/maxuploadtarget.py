@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2016 The Syscoin Core developers
+# Copyright (c) 2015-2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 from test_framework.mininode import *
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 from test_framework.util import *
 import time
 
@@ -79,12 +79,12 @@ class TestNode(NodeConnCB):
         self.ping_counter += 1
         return success
 
-class MaxUploadTest(SyscoinTestFramework):
+class MaxUploadTest(ZioncoinTestFramework):
  
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("SYSCOIND", "syscoind"),
-                          help="syscoind binary to test")
+                          default=os.getenv("ZioncoinD", "Zioncoind"),
+                          help="Zioncoind binary to test")
 
     def __init__(self):
         super().__init__()

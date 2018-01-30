@@ -314,7 +314,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Netwerk-sinkronisasie...</translation>
@@ -368,8 +368,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Stuur munte na 'n Syscoin adres</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Stuur munte na 'n Zioncoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -380,8 +380,8 @@
         <translation>Verander die wagwoord wat ek vir kodifikasie van my beursie gebruik</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -396,20 +396,20 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u Syscoin adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u Zioncoin adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Syscoin adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Zioncoin adresse</translation>
     </message>
     <message>
         <source>&amp;Help</source>
         <translation>&amp;Help</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en syscoin: URI's)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en Zioncoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -420,8 +420,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Skep 'n syscoin: URI of betalingsversoek</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Skep 'n Zioncoin: URI of betalingsversoek</translation>
     </message>
     </context>
 <context>
@@ -456,10 +456,10 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Kern</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Kern</translation>
     </message>
     <message>
         <source>Do not keep transactions in the mempool longer than &lt;n&gt; hours (default: %u)</source>

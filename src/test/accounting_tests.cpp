@@ -1,11 +1,11 @@
-// Copyright (c) 2012-2015 The Syscoin Core developers
+// Copyright (c) 2012-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "wallet/wallet.h"
 #include "wallet/walletdb.h"
 
-#include "test/test_syscoin.h"
+#include "test/test_Zioncoin.h"
 
 #include <stdint.h>
 

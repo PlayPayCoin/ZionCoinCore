@@ -1,27 +1,27 @@
-Syscoin Core version 0.9.0 is now available from:
+Zioncoin Core version 0.9.0 is now available from:
 
-  https://syscoin.org/bin/0.9.0/
+  https://Zioncoin.org/bin/0.9.0/
 
 This is a new major version release, bringing both new features and
 bug fixes.
 
 Please report bugs using the issue tracker at github:
 
-  https://github.com/syscoin/syscoin2/issues
+  https://github.com/Zioncoin/Zioncoin2/issues
 
 How to Upgrade
 --------------
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), uninstall all
-earlier versions of Syscoin, then run the installer (on Windows) or just copy
-over /Applications/Syscoin-Qt (on Mac) or syscoind/syscoin-qt (on Linux).
+earlier versions of Zioncoin, then run the installer (on Windows) or just copy
+over /Applications/Zioncoin-Qt (on Mac) or Zioncoind/Zioncoin-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
 0.9.0 your blockchain files will be re-indexed, which will take anywhere from 
 30 minutes to several hours, depending on the speed of your machine.
 
-On Windows, do not forget to uninstall all earlier versions of the Syscoin
+On Windows, do not forget to uninstall all earlier versions of the Zioncoin
 client first, especially if you are switching to the 64-bit version.
 
 Windows 64-bit installer
@@ -59,11 +59,11 @@ Also, the first time you run a 0.8.x release on a 0.9 wallet it will rescan
 the blockchain for missing spent coins, which will take a long time (tens
 of minutes on a typical machine).
 
-Rebranding to Syscoin Core
+Rebranding to Zioncoin Core
 ---------------------------
 
-To reduce confusion between Syscoin-the-network and Syscoin-the-software we
-have renamed the reference client to Syscoin Core.
+To reduce confusion between Zioncoin-the-network and Zioncoin-the-software we
+have renamed the reference client to Zioncoin Core.
 
 
 OP_RETURN and data in the block chain
@@ -74,7 +74,7 @@ blockchain.  This change is not an endorsement of storing data in the
 blockchain.  The OP_RETURN change creates a provably-prunable output,
 to avoid data storage schemes -- some of which were already deployed --
 that were storing arbitrary data such as images as forever-unspendable
-TX outputs, bloating syscoin's UTXO database.
+TX outputs, bloating Zioncoin's UTXO database.
 
 Storing arbitrary data in the blockchain is still a bad idea; it is less
 costly and far more efficient to store non-currency data elsewhere.
@@ -85,20 +85,20 @@ Autotools build system
 For 0.9.0 we switched to an autotools-based build system instead of individual
 (q)makefiles.
 
-Using the standard "./autogen.sh; ./configure; make" to build Syscoin-Qt and
-syscoind makes it easier for experienced open source developers to contribute 
+Using the standard "./autogen.sh; ./configure; make" to build Zioncoin-Qt and
+Zioncoind makes it easier for experienced open source developers to contribute 
 to the project.
 
 Be sure to check doc/build-*.md for your platform before building from source.
 
-Syscoin-cli
+Zioncoin-cli
 -------------
 
-Another change in the 0.9 release is moving away from the syscoind executable
+Another change in the 0.9 release is moving away from the Zioncoind executable
 functioning both as a server and as a RPC client. The RPC client functionality
-("tell the running syscoin daemon to do THIS") was split into a separate
-executable, 'syscoin-cli'. The RPC client code will eventually be removed from
-syscoind, but will be kept for backwards compatibility for a release or two.
+("tell the running Zioncoin daemon to do THIS") was split into a separate
+executable, 'Zioncoin-cli'. The RPC client code will eventually be removed from
+Zioncoind, but will be kept for backwards compatibility for a release or two.
 
 `walletpassphrase` RPC
 -----------------------
@@ -197,13 +197,13 @@ Command-line options:
 - New option: -nospendzeroconfchange to never spend unconfirmed change outputs
 - New option: -zapwallettxes to rebuild the wallet's transaction information
 - Rename option '-tor' to '-onion' to better reflect what it does
-- Add '-disablewallet' mode to let syscoind run entirely without wallet (when
+- Add '-disablewallet' mode to let Zioncoind run entirely without wallet (when
   built with wallet)
 - Update default '-rpcsslciphers' to include TLSv1.2
 - make '-logtimestamps' default on and rework help-message
 - RPC client option: '-rpcwait', to wait for server start
 - Remove '-logtodebugger'
-- Allow `-noserver` with syscoind
+- Allow `-noserver` with Zioncoind
 
 Block-chain handling and storage:
 
@@ -254,7 +254,7 @@ Protocol and network:
 - Improve logging of failed connections
 - Bump protocol version to 70002
 - Add some additional logging to give extra network insight
-- Added new DNS seed from syscoinstats.com
+- Added new DNS seed from Zioncoinstats.com
 
 Validation:
 
@@ -295,18 +295,18 @@ GUI:
 - Add Coin Control Features
 - Improve receive coins workflow: make the 'Receive' tab into a form to request
   payments, and move historical address list functionality to File menu.
-- Rebrand to `Syscoin Core`
+- Rebrand to `Zioncoin Core`
 - Move initialization/shutdown to a thread. This prevents "Not responding"
   messages during startup. Also show a window during shutdown.
 - Don't regenerate autostart link on every client startup
-- Show and store message of normal syscoin:URI
+- Show and store message of normal Zioncoin:URI
 - Fix richtext detection hang issue on very old Qt versions
 - OS X: Make use of the 10.8+ user notification center to display Growl-like 
   notifications
 - OS X: Added NSHighResolutionCapable flag to Info.plist for better font
   rendering on Retina displays.
-- OS X: Fix syscoin-qt startup crash when clicking dock icon
-- Linux: Fix Gnome syscoin: URI handler
+- OS X: Fix Zioncoin-qt startup crash when clicking dock icon
+- Linux: Fix Gnome Zioncoin: URI handler
 
 Miscellaneous:
 
@@ -314,7 +314,7 @@ Miscellaneous:
 - Add '-regtest' mode, similar to testnet but private with instant block
   generation with 'setgenerate' RPC.
 - Add 'linearize.py' script to contrib, for creating bootstrap.dat
-- Add separate syscoin-cli client
+- Add separate Zioncoin-cli client
 
 Credits
 --------

@@ -1,10 +1,10 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "syscoinamountfield.h"
+#include "Zioncoinamountfield.h"
 
-#include "syscoinunits.h"
+#include "Zioncoinunits.h"
 #include "guiconstants.h"
 #include "qvaluecombobox.h"
 
@@ -24,7 +24,7 @@ class AmountSpinBox: public QAbstractSpinBox
 public:
     explicit AmountSpinBox(QWidget *parent):
         QAbstractSpinBox(parent),
-        currentUnit(SyscoinUnits::SYS),
+        currentUnit(ZioncoinUnits::SYS),
         singleStep(100000) // satoshis
     {
         setAlignment(Qt::AlignRight);
@@ -48,7 +48,7 @@ public:
         CAmount val = parse(input, &valid);
         if(valid)
         {
-            input = SyscoinUnits::format(currentUnit, val, false, SyscoinUnits::separatorAlways);
+            input = ZioncoinUnits::format(currentUnit, val, false, ZioncoinUnits::separatorAlways);
             lineEdit()->setText(input);
         }
     }
@@ -60,7 +60,7 @@ public:
 
     void setValue(const CAmount& value)
     {
-        lineEdit()->setText(SyscoinUnits::format(currentUnit, value, false, SyscoinUnits::separatorAlways));
+        lineEdit()->setText(ZioncoinUnits::format(currentUnit, value, false, ZioncoinUnits::separatorAlways));
         Q_EMIT valueChanged();
     }
 
@@ -69,7 +69,7 @@ public:
         bool valid = false;
         CAmount val = value(&valid);
         val = val + steps * singleStep;
-        val = qMin(qMax(val, CAmount(0)), SyscoinUnits::maxMoney());
+        val = qMin(qMax(val, CAmount(0)), ZioncoinUnits::maxMoney());
         setValue(val);
     }
 
@@ -99,7 +99,7 @@ public:
 
             const QFontMetrics fm(fontMetrics());
             int h = lineEdit()->minimumSizeHint().height();
-            int w = fm.width(SyscoinUnits::format(SyscoinUnits::SYS, SyscoinUnits::maxMoney(), false, SyscoinUnits::separatorAlways));
+            int w = fm.width(ZioncoinUnits::format(ZioncoinUnits::SYS, ZioncoinUnits::maxMoney(), false, ZioncoinUnits::separatorAlways));
             w += 2; // cursor blinking space
 
             QStyleOptionSpinBox opt;
@@ -137,10 +137,10 @@ private:
     CAmount parse(const QString &text, bool *valid_out=0) const
     {
         CAmount val = 0;
-        bool valid = SyscoinUnits::parse(currentUnit, text, &val);
+        bool valid = ZioncoinUnits::parse(currentUnit, text, &val);
         if(valid)
         {
-            if(val < 0 || val > SyscoinUnits::maxMoney())
+            if(val < 0 || val > ZioncoinUnits::maxMoney())
                 valid = false;
         }
         if(valid_out)
@@ -178,7 +178,7 @@ protected:
         {
             if(val > 0)
                 rv |= StepDownEnabled;
-            if(val < SyscoinUnits::maxMoney())
+            if(val < ZioncoinUnits::maxMoney())
                 rv |= StepUpEnabled;
         }
         return rv;
@@ -188,9 +188,9 @@ Q_SIGNALS:
     void valueChanged();
 };
 
-#include "syscoinamountfield.moc"
+#include "Zioncoinamountfield.moc"
 
-SyscoinAmountField::SyscoinAmountField(QWidget *parent) :
+ZioncoinAmountField::ZioncoinAmountField(QWidget *parent) :
     QWidget(parent),
     amount(0)
 {
@@ -202,7 +202,7 @@ SyscoinAmountField::SyscoinAmountField(QWidget *parent) :
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
-    unit->setModel(new SyscoinUnits(this));
+    unit->setModel(new ZioncoinUnits(this));
     layout->addWidget(unit);
     layout->addStretch(1);
     layout->setContentsMargins(0,0,0,0);
@@ -220,19 +220,19 @@ SyscoinAmountField::SyscoinAmountField(QWidget *parent) :
     unitChanged(unit->currentIndex());
 }
 
-void SyscoinAmountField::clear()
+void ZioncoinAmountField::clear()
 {
     amount->clear();
     unit->setCurrentIndex(0);
 }
 
-void SyscoinAmountField::setEnabled(bool fEnabled)
+void ZioncoinAmountField::setEnabled(bool fEnabled)
 {
     amount->setEnabled(fEnabled);
     unit->setEnabled(fEnabled);
 }
 
-bool SyscoinAmountField::validate()
+bool ZioncoinAmountField::validate()
 {
     bool valid = false;
     value(&valid);
@@ -240,7 +240,7 @@ bool SyscoinAmountField::validate()
     return valid;
 }
 
-void SyscoinAmountField::setValid(bool valid)
+void ZioncoinAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -248,7 +248,7 @@ void SyscoinAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-bool SyscoinAmountField::eventFilter(QObject *object, QEvent *event)
+bool ZioncoinAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -258,45 +258,45 @@ bool SyscoinAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *SyscoinAmountField::setupTabChain(QWidget *prev)
+QWidget *ZioncoinAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     QWidget::setTabOrder(amount, unit);
     return unit;
 }
 
-CAmount SyscoinAmountField::value(bool *valid_out) const
+CAmount ZioncoinAmountField::value(bool *valid_out) const
 {
     return amount->value(valid_out);
 }
 
-void SyscoinAmountField::setValue(const CAmount& value)
+void ZioncoinAmountField::setValue(const CAmount& value)
 {
     amount->setValue(value);
 }
 
-void SyscoinAmountField::setReadOnly(bool fReadOnly)
+void ZioncoinAmountField::setReadOnly(bool fReadOnly)
 {
     amount->setReadOnly(fReadOnly);
 }
 
-void SyscoinAmountField::unitChanged(int idx)
+void ZioncoinAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
 
     // Determine new unit ID
-    int newUnit = unit->itemData(idx, SyscoinUnits::UnitRole).toInt();
+    int newUnit = unit->itemData(idx, ZioncoinUnits::UnitRole).toInt();
 
     amount->setDisplayUnit(newUnit);
 }
 
-void SyscoinAmountField::setDisplayUnit(int newUnit)
+void ZioncoinAmountField::setDisplayUnit(int newUnit)
 {
     unit->setValue(newUnit);
 }
 
-void SyscoinAmountField::setSingleStep(const CAmount& step)
+void ZioncoinAmountField::setSingleStep(const CAmount& step)
 {
     amount->setSingleStep(step);
 }

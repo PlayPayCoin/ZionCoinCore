@@ -5,11 +5,11 @@ that were changed this year.
 
 For example:
 
-// Copyright (c) 2009-2012 The Syscoin Core developers
+// Copyright (c) 2009-2012 The Zioncoin Core developers
 
 it will change it to
 
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 '''
 import os
 import time
@@ -17,8 +17,8 @@ import re
 
 year = time.gmtime()[0]
 CMD_GIT_DATE = 'git log --format=%%ad --date=short -1 %s | cut -d"-" -f 1'
-CMD_REGEX= "perl -pi -e 's/(20\d\d)(?:-20\d\d)? The Syscoin/$1-%s The Syscoin/' %s"
-REGEX_CURRENT= re.compile("%s The Syscoin" % year)
+CMD_REGEX= "perl -pi -e 's/(20\d\d)(?:-20\d\d)? The Zioncoin/$1-%s The Zioncoin/' %s"
+REGEX_CURRENT= re.compile("%s The Zioncoin" % year)
 CMD_LIST_FILES= "find %s | grep %s"
 
 FOLDERS = ["./qa", "./src"]

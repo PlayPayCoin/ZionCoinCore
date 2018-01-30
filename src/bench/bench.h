@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Syscoin Core developers
+// Copyright (c) 2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_BENCH_BENCH_H
-#define SYSCOIN_BENCH_BENCH_H
+#ifndef Zioncoin_BENCH_BENCH_H
+#define Zioncoin_BENCH_BENCH_H
 
 #include <map>
 #include <string>
@@ -70,4 +70,4 @@ namespace benchmark {
 #define BENCHMARK(n) \
     benchmark::BenchRunner BOOST_PP_CAT(bench_, BOOST_PP_CAT(__LINE__, n))(BOOST_PP_STRINGIZE(n), n);
 
-#endif // SYSCOIN_BENCH_BENCH_H
+#endif // Zioncoin_BENCH_BENCH_H

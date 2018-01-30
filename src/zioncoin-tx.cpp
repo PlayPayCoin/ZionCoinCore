@@ -1,9 +1,9 @@
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
 #include "base58.h"
@@ -56,10 +56,10 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-h") || mapArgs.count("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = strprintf(_("%s syscoin-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = strprintf(_("%s Zioncoin-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  syscoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded syscoin transaction") + "\n" +
-              "  syscoin-tx [options] -create [commands]   " + _("Create hex-encoded syscoin transaction") + "\n" +
+              "  Zioncoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded Zioncoin transaction") + "\n" +
+              "  Zioncoin-tx [options] -create [commands]   " + _("Create hex-encoded Zioncoin transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());
@@ -239,10 +239,10 @@ static void MutateTxAddOutAddr(CMutableTransaction& tx, const string& strInput)
 
     // extract and validate ADDRESS
     string strAddr = strInput.substr(pos + 1, string::npos);
-    CSyscoinAddress addr(strAddr);
+    CZioncoinAddress addr(strAddr);
     if (!addr.IsValid())
         throw runtime_error("invalid TX output address");
-	// SYSCOIN
+	// Zioncoin
 	CScript scriptPubKey =  GetScriptForDestination(addr.Get());
 	if(!addr.vchRedeemScript.empty())
 		scriptPubKey = CScript(addr.vchRedeemScript.begin(), addr.vchRedeemScript.end());
@@ -372,7 +372,7 @@ vector<unsigned char> ParseHexUO(map<string,UniValue>& o, string strKey)
     }
     return ParseHexUV(o[strKey], strKey);
 }
-// SYSCOIN
+// Zioncoin
 /*
 static CAmount AmountFromValue(const UniValue& value)
 {
@@ -414,7 +414,7 @@ static void MutateTxSign(CMutableTransaction& tx, const string& flagStr)
     for (unsigned int kidx = 0; kidx < keysObj.size(); kidx++) {
         if (!keysObj[kidx].isStr())
             throw runtime_error("privatekey not a string");
-        CSyscoinSecret vchSecret;
+        CZioncoinSecret vchSecret;
         bool fGood = vchSecret.SetString(keysObj[kidx].getValStr());
         if (!fGood)
             throw runtime_error("privatekey not valid");
@@ -637,7 +637,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw runtime_error("too few parameters");
 
-            // param: hex-encoded syscoin transaction
+            // param: hex-encoded Zioncoin transaction
             string strHexTx(argv[1]);
             if (strHexTx == "-")                 // "-" implies standard input
                 strHexTx = readStdin();

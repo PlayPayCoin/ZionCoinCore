@@ -1,10 +1,10 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_RPCCLIENT_H
-#define SYSCOIN_RPCCLIENT_H
+#ifndef Zioncoin_RPCCLIENT_H
+#define Zioncoin_RPCCLIENT_H
 
 #include <univalue.h>
 
@@ -14,4 +14,4 @@ UniValue RPCConvertValues(const std::string& strMethod, const std::vector<std::s
  */
 UniValue ParseNonRFCJSONValue(const std::string& strVal);
 
-#endif // SYSCOIN_RPCCLIENT_H
+#endif // Zioncoin_RPCCLIENT_H

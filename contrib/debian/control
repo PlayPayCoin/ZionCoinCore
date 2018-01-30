@@ -1,4 +1,4 @@
-Source: syscoin
+Source: Zioncoin
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk>
@@ -23,45 +23,45 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler,
  python
 Standards-Version: 3.9.2
-Homepage: https://syscoincore.org/
-Vcs-Git: git://github.com/syscoin/syscoin.git
-Vcs-Browser: https://github.com/syscoin/syscoin2
+Homepage: https://Zioncoincore.org/
+Vcs-Git: git://github.com/Zioncoin/Zioncoin.git
+Vcs-Browser: https://github.com/Zioncoin/Zioncoin2
 
-Package: syscoind
+Package: Zioncoind
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Syscoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Syscoin uses peer-to-peer
+ Zioncoin is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Zioncoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Syscoin Core
+ and issuing money are carried out collectively by the network. Zioncoin Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides the daemon, syscoind, and the CLI tool
- syscoin-cli to interact with the daemon.
+ This package provides the daemon, Zioncoind, and the CLI tool
+ Zioncoin-cli to interact with the daemon.
 
-Package: syscoin-qt
+Package: Zioncoin-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Syscoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Syscoin uses peer-to-peer
+ Zioncoin is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Zioncoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Syscoin Core
+ and issuing money are carried out collectively by the network. Zioncoin Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides Syscoin-Qt, a GUI for Syscoin based on Qt.
+ This package provides Zioncoin-Qt, a GUI for Zioncoin based on Qt.
 
-Package: syscoin-tx
+Package: Zioncoin-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
- Syscoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Syscoin uses peer-to-peer
+ Zioncoin is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Zioncoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Syscoin Core
+ and issuing money are carried out collectively by the network. Zioncoin Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides syscoin-tx, a command-line transaction creation
- tool which can be used without a syscoin daemon.  Some means of
+ This package provides Zioncoin-tx, a command-line transaction creation
+ tool which can be used without a Zioncoin daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

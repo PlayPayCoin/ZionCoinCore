@@ -384,11 +384,11 @@
         <translation>내 계좌 주소목록</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>비트코인을 받는 계좌 주소입니다. 코인을 보내기 전에 잔고와 받는 주소를 항상 확인하세요.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>비트코인을 받을 수 있는 계좌 주소입니다. 매 거래마다 새로운 주소 사용을 권장합니다. </translation>
     </message>
     <message>
@@ -478,8 +478,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>Syscoin 별칭을 검색합니다. 당신은 (기본적으로) 잠재적으로 모욕적 인 별명을 생략하고자하는 경우 지갑 옵션에서 안전 검색을 선택합니다</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>Zioncoin 별칭을 검색합니다. 당신은 (기본적으로) 잠재적으로 모욕적 인 별명을 생략하고자하는 경우 지갑 옵션에서 안전 검색을 선택합니다</translation>
     </message>
     <message>
         <source>Error searching alias: </source>
@@ -599,7 +599,7 @@
         <translation>지갑 암호화 승인</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
         <translation>경고: 만약 암호화 된 지갑의 비밀번호를 잃어버릴 경우, &lt;b&gt;모든 비트코인들을 잃어버릴 수 있습니다&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -611,8 +611,8 @@
         <translation>지갑 암호화 완료</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your syscoins from being stolen by malware infecting your computer.</source>
-        <translation>%1은 암호화 프로세스를 완료하려면 지금 닫습니다. 당신의 지갑을 암호화하여 완벽하게 컴퓨터를 감염시키는 악성 코드에 의해 도난되지 않도록 syscoins을 보호 할 수 있다는 것을 기억하십시오.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Zioncoins from being stolen by malware infecting your computer.</source>
+        <translation>%1은 암호화 프로세스를 완료하려면 지금 닫습니다. 당신의 지갑을 암호화하여 완벽하게 컴퓨터를 감염시키는 악성 코드에 의해 도난되지 않도록 Zioncoins을 보호 할 수 있다는 것을 기억하십시오.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -693,8 +693,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>Syscoin 인증서를 검색합니다. 당신은 (기본적으로) 불쾌감을 줄 수있는 인증서를 생략하고자하는 경우 지갑 옵션에서 안전 검색을 선택합니다</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>Zioncoin 인증서를 검색합니다. 당신은 (기본적으로) 불쾌감을 줄 수있는 인증서를 생략하고자하는 경우 지갑 옵션에서 안전 검색을 선택합니다</translation>
     </message>
     <message>
         <source>Copy Value</source>
@@ -961,7 +961,7 @@
         <translation>보내는 주소 편집</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
         <translation>입력한 "%1" 주소는 올바른 비트코인 주소가 아닙니다.</translation>
     </message>
     <message>
@@ -1076,8 +1076,8 @@
         <translation>1 ~ 5 년에서이 별칭 (UTC)에 표준 만료 시간을 선택하거나 확인 만료 타임 스탬프를 입력 확인란 '시간 만료 사용자 사용'을. 그것은 매년 기하 급수적으로 더 비싼, 계산 FEERATE * (2.88 ^ 년)입니다. FEERATE이 별칭에 사용되는 속도 못 별명에 설정된 바이트 수수료 당 동적 사토시입니다.</translation>
     </message>
     <message>
-        <source>Warning: transferring your alias will transfer ownership all of your syscoin services that use this alias.</source>
-        <translation>경고 : 당신의 별명을 전송하면이 별칭을 사용하여 syscoin 서비스의 모든 소유권을 이전합니다.</translation>
+        <source>Warning: transferring your alias will transfer ownership all of your Zioncoin services that use this alias.</source>
+        <translation>경고 : 당신의 별명을 전송하면이 별칭을 사용하여 Zioncoin 서비스의 모든 소유권을 이전합니다.</translation>
     </message>
     <message>
         <source>Is this alias safe to search? Anything that can be considered offensive to someone should be set to 'No' here. If you do create an alias that is offensive and do not set this option to 'No' your alias will be banned!</source>
@@ -1164,8 +1164,8 @@
         <translation>별칭을 전송 오류 :</translation>
     </message>
     <message>
-        <source>The entered alias is not a valid Syscoin alias. Alias: </source>
-        <translation>입력 된 별명은 유효한 Syscoin 별명이 아니다. 별명:</translation>
+        <source>The entered alias is not a valid Zioncoin alias. Alias: </source>
+        <translation>입력 된 별명은 유효한 Zioncoin 별명이 아니다. 별명:</translation>
     </message>
     <message>
         <source>New Alias</source>
@@ -1351,8 +1351,8 @@
         <translation>쿠폰 전송 오류 :</translation>
     </message>
     <message>
-        <source>The entered cert is not a valid Syscoin cert.</source>
-        <translation>입력 한 인증서가 유효한 Syscoin의 인증서가 아닙니다.</translation>
+        <source>The entered cert is not a valid Zioncoin cert.</source>
+        <translation>입력 한 인증서가 유효한 Zioncoin의 인증서가 아닙니다.</translation>
     </message>
     <message>
         <source>General exception creating new Cert</source>
@@ -1510,12 +1510,12 @@
         <translation>당신은 당신이 트랙 운송 요금과 물류 정보를 돕기 위해 판매자 위치 정보 (위도와 경도 좌표)를 입력 할 수 있습니다하고자하는 경우</translation>
     </message>
     <message>
-        <source>You will receive payment in Syscoin equivalent to the Market-value of the currency you have selected</source>
-        <translation>당신은 당신이 선택한 통화의 시장 가치에 해당 Syscoin 지불을받을 것이다</translation>
+        <source>You will receive payment in Zioncoin equivalent to the Market-value of the currency you have selected</source>
+        <translation>당신은 당신이 선택한 통화의 시장 가치에 해당 Zioncoin 지불을받을 것이다</translation>
     </message>
     <message>
-        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Syscoin Marketplace, you will need to import your Syscoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
-        <translation>이 제안에 대한 결제 수단으로 허용 할 암호 통화를 선택합니다. 당신의 선택은 SYS, BTC 또는 ZEC의 조합입니다. 세 가지 설정을 예 : 'SYS + BTC + ZEC'. 'SYS + ZEC'SYS와 ZEC하십시오. Syscoin 마켓 플레이스를 통해 귀하에게 지불 동전을 보내고 위해, 당신은 BTC 또는 ZEC이 선택되는 경우 외부 지갑 (들)에 Syscoin 개인 키를 가져올 필요가 있습니다.</translation>
+        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Zioncoin Marketplace, you will need to import your Zioncoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
+        <translation>이 제안에 대한 결제 수단으로 허용 할 암호 통화를 선택합니다. 당신의 선택은 SYS, BTC 또는 ZEC의 조합입니다. 세 가지 설정을 예 : 'SYS + BTC + ZEC'. 'SYS + ZEC'SYS와 ZEC하십시오. Zioncoin 마켓 플레이스를 통해 귀하에게 지불 동전을 보내고 위해, 당신은 BTC 또는 ZEC이 선택되는 경우 외부 지갑 (들)에 Zioncoin 개인 키를 가져올 필요가 있습니다.</translation>
     </message>
     <message>
         <source>Enter the 'percentage' amount(without the % sign) that you would like to mark-up the price to</source>
@@ -1602,8 +1602,8 @@
         <translation>일반 예외 업데이트 제공 :</translation>
     </message>
     <message>
-        <source>The entered offer is not a valid Syscoin offer</source>
-        <translation>입력 된 제안은 유효한 Syscoin 제공되지 않습니다</translation>
+        <source>The entered offer is not a valid Zioncoin offer</source>
+        <translation>입력 된 제안은 유효한 Zioncoin 제공되지 않습니다</translation>
     </message>
     <message>
         <source>This transaction requires more signatures. Transaction hex has been copied to your clipboard for your reference. Please provide it to a signee that has not yet signed.</source>
@@ -1919,8 +1919,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>Syscoin 에스크로를 검색합니다.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>Zioncoin 에스크로를 검색합니다.</translation>
     </message>
     <message>
         <source>Copy Offer ID</source>
@@ -1935,8 +1935,8 @@
         <translation>에스크로 승인 확인</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>경고 : 당신은 구매자의 결제를 인정하려고합니다. 당신이 항목을 출하하는 경우 Syscoin 메시지를 통해 구매자에게 추적 번호를 알려 주시기 바랍니다.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>경고 : 당신은 구매자의 결제를 인정하려고합니다. 당신이 항목을 출하하는 경우 Zioncoin 메시지를 통해 구매자에게 추적 번호를 알려 주시기 바랍니다.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2055,8 +2055,8 @@
         <translation>버전</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>Syscoin 클라이언트</translation>
+        <source>Zioncoin Client</source>
+        <translation>Zioncoin 클라이언트</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -2110,8 +2110,8 @@
 <context>
     <name>InMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>이들은 당신이받은 Syscoin 메시지입니다. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 메시지를 볼 수 별칭을 선택할 수 있습니다.</translation>
+        <source>These are Zioncoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>이들은 당신이받은 Zioncoin 메시지입니다. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 메시지를 볼 수 별칭을 선택할 수 있습니다.</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -2189,8 +2189,8 @@
         <translation>이 프로그램이 시작됩니다 처음으로 %1의 데이터를 저장할 위치를 선택할 수 있습니다.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Syscoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 다운로드하고 Syscoin 블록 사슬의 복사본을 저장한다. 적어도 로 데이터 %2GB의 디렉토리에 저장 될 것이며, 이는 시간이 지남에 따라 증가 할 것이다. 지갑도이 디렉토리에 저장됩니다.</translation>
+        <source>%1 will download and store a copy of the Zioncoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 다운로드하고 Zioncoin 블록 사슬의 복사본을 저장한다. 적어도 로 데이터 %2GB의 디렉토리에 저장 될 것이며, 이는 시간이 지남에 따라 증가 할 것이다. 지갑도이 디렉토리에 저장됩니다.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -2300,12 +2300,12 @@
         <translation>당신은 에스크로에서 개최 제안의 '상인', 다시 구매자에게 동전을 환불 할 수 있습니다.</translation>
     </message>
     <message>
-        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Syscoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
-        <translation>당신은 당신이 판매자가 제안 항목을 제공하는 계약을 준수하지 않은 증거가있는 경우 에스크로에서 개최 제안의 '중재'가, 다시 구매자에게 동전을 환불 할 수 있습니다. 구매자가 적절한 매너에 출시되지 않은 경우 당신은 또한 상인에게 동전을 해제 할 수있다. 당신은 당신의 결정에 대한 충분한 증거가 확인하기 위해 구매자와 판매자와 통신 할 수 Syscoin 메시지를 사용할 수 있습니다.</translation>
+        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Zioncoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
+        <translation>당신은 당신이 판매자가 제안 항목을 제공하는 계약을 준수하지 않은 증거가있는 경우 에스크로에서 개최 제안의 '중재'가, 다시 구매자에게 동전을 환불 할 수 있습니다. 구매자가 적절한 매너에 출시되지 않은 경우 당신은 또한 상인에게 동전을 해제 할 수있다. 당신은 당신의 결정에 대한 충분한 증거가 확인하기 위해 구매자와 판매자와 통신 할 수 Zioncoin 메시지를 사용할 수 있습니다.</translation>
     </message>
     <message>
-        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Syscoin messages. You may leave feedback after the money is claimed by the merchant.</source>
-        <translation>당신은 에스크로에서 개최 제안의 '구매자'이다. 에스크로는 상인에 출시되었습니다. 당신은 Syscoin 메시지를 통해 중재 또는 상인과 통신 할 수있다. 돈이 판매자가 주장 후에 의견을 남길 수 있습니다.</translation>
+        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Zioncoin messages. You may leave feedback after the money is claimed by the merchant.</source>
+        <translation>당신은 에스크로에서 개최 제안의 '구매자'이다. 에스크로는 상인에 출시되었습니다. 당신은 Zioncoin 메시지를 통해 중재 또는 상인과 통신 할 수있다. 돈이 판매자가 주장 후에 의견을 남길 수 있습니다.</translation>
     </message>
     <message>
         <source>You are the 'merchant' of the offer held in escrow. The payment of coins have been released to you, you may claim them now. After claiming, please return to this dialog and provide feedback for this escrow transaction.</source>
@@ -2344,8 +2344,8 @@
         <translation>에스크로가 성공적으로 구매자에게 환불되었습니다. 에스크로가 완료됩니다.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>에스크로 상태를 인식 할 수 없습니다. Syscoin 팀에 문의하시기 바랍니다.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>에스크로 상태를 인식 할 수 없습니다. Zioncoin 팀에 문의하시기 바랍니다.</translation>
     </message>
     <message>
         <source>arbiter</source>
@@ -2619,12 +2619,12 @@
         <translation>유형</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
-        <translation>표시된 정보는 최신이 될 수있다. 연결이 설정된 후 지갑이 자동으로 Syscoin 네트워크와 동기화하지만,이 프로세스는 아직 완료되지 않았습니다. 이것은 최근의 트랜잭션이 표시되지 않습니다, 그리고 균형이 프로세스가 완료 - - 날짜까지 수 없음을 의미한다.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
+        <translation>표시된 정보는 최신이 될 수있다. 연결이 설정된 후 지갑이 자동으로 Zioncoin 네트워크와 동기화하지만,이 프로세스는 아직 완료되지 않았습니다. 이것은 최근의 트랜잭션이 표시되지 않습니다, 그리고 균형이 프로세스가 완료 - - 날짜까지 수 없음을 의미한다.</translation>
     </message>
     <message>
-        <source>Spending syscoins may not be possible during that phase!</source>
-        <translation>지출 syscoins 그 단계에서 가능하지 않을 수 있습니다!</translation>
+        <source>Spending Zioncoins may not be possible during that phase!</source>
+        <translation>지출 Zioncoins 그 단계에서 가능하지 않을 수 있습니다!</translation>
     </message>
     <message>
         <source>Amount of blocks left</source>
@@ -2778,8 +2778,8 @@
         <translation>결제 승인 확인</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>경고 : 당신은 구매자의 결제를 인정하려고합니다. 당신이 항목을 출하하는 경우 Syscoin 메시지를 통해 구매자에게 추적 번호를 알려 주시기 바랍니다.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>경고 : 당신은 구매자의 결제를 인정하려고합니다. 당신이 항목을 출하하는 경우 Zioncoin 메시지를 통해 구매자에게 추적 번호를 알려 주시기 바랍니다.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2973,8 +2973,8 @@
         <translation>수출</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>다음은 등록 된 Syscoin 별칭입니다. 별칭 작업 (업데이트, 전송 작성) 2-5분을 활성화합니다.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>다음은 등록 된 Zioncoin 별칭입니다. 별칭 작업 (업데이트, 전송 작성) 2-5분을 활성화합니다.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -3108,8 +3108,8 @@
         <translation>수출</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
-        <translation>다음은 등록 된 Syscoin 인증서입니다. 인증서 작업 (업데이트 전송을 만들 수) 활성화 2 ~ 5 분 정도 걸립니다. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 인증서를 볼 수 별칭을 선택할 수 있습니다.</translation>
+        <source>These are your registered Zioncoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
+        <translation>다음은 등록 된 Zioncoin 인증서입니다. 인증서 작업 (업데이트 전송을 만들 수) 활성화 2 ~ 5 분 정도 걸립니다. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 인증서를 볼 수 별칭을 선택할 수 있습니다.</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3259,8 +3259,8 @@
         <translation>수출</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
-        <translation>다음은 등록 된 Syscoin 에스크로 있습니다. 작업 (완료, 릴리스, 환불, 생성) 활성화 2-5 분 정도 걸릴 에스크로. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 에스크로를 볼 수 별칭을 선택할 수 있습니다.</translation>
+        <source>These are your registered Zioncoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
+        <translation>다음은 등록 된 Zioncoin 에스크로 있습니다. 작업 (완료, 릴리스, 환불, 생성) 활성화 2-5 분 정도 걸릴 에스크로. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 에스크로를 볼 수 별칭을 선택할 수 있습니다.</translation>
     </message>
     <message>
         <source>All</source>
@@ -3323,8 +3323,8 @@
         <translation>에스크로 승인 확인</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>경고 : 당신은 구매자의 결제를 인정하려고합니다. 당신이 항목을 출하하는 경우 Syscoin 메시지를 통해 구매자에게 추적 번호를 알려 주시기 바랍니다.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>경고 : 당신은 구매자의 결제를 인정하려고합니다. 당신이 항목을 출하하는 경우 Zioncoin 메시지를 통해 구매자에게 추적 번호를 알려 주시기 바랍니다.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -3418,8 +3418,8 @@
         <translation>현재 탭에 있는 데이터를 파일로 내보내기</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
-        <translation>다음은 등록 된 Syscoin의 상품입니다. 제안 작업 (작성, 업데이트) 활성화 2 ~ 5 분 정도 걸립니다. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 이벤트를 볼 수 별칭을 선택할 수 있습니다.</translation>
+        <source>These are your registered Zioncoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
+        <translation>다음은 등록 된 Zioncoin의 상품입니다. 제안 작업 (작성, 업데이트) 활성화 2 ~ 5 분 정도 걸립니다. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 이벤트를 볼 수 별칭을 선택할 수 있습니다.</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3683,8 +3683,8 @@
         <translation>메시지에 회신 오류 :</translation>
     </message>
     <message>
-        <source>The entered message is not a valid Syscoin message</source>
-        <translation>입력 한 메시지가 유효한 Syscoin 메시지가 없습니다</translation>
+        <source>The entered message is not a valid Zioncoin message</source>
+        <translation>입력 한 메시지가 유효한 Zioncoin 메시지가 없습니다</translation>
     </message>
     <message>
         <source>General exception creating new message</source>
@@ -3749,8 +3749,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Syscoin의 제공에 동의</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Zioncoin의 제공에 동의</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3769,8 +3769,8 @@
         <translation>BTC로 결제</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>Syscoin로 결제</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>Zioncoin로 결제</translation>
     </message>
     <message>
         <source>Pay with SYS</source>
@@ -3785,8 +3785,8 @@
         <translation>비율이 높은 제안을 말뚝에 통화를 찾을 수 없습니다. 통화:</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant</source>
-        <translation>mutally 자신과 상인 사이에 신뢰할 수있는 Syscoin 중재를 입력</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant</source>
+        <translation>mutally 자신과 상인 사이에 신뢰할 수있는 Zioncoin 중재를 입력</translation>
     </message>
     <message>
         <source>Are you sure you want to purchase</source>
@@ -3844,8 +3844,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Syscoin의 제공에 동의</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Zioncoin의 제공에 동의</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3900,12 +3900,12 @@
         <translation>JSON 결과를 구문 분석 할 수 없습니다</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>mutally 자신과 상인 사이에 신뢰할 수있는 Syscoin 중재를 입력합니다. 그런 다음 '사용 에스크로'확인란을 활성화</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>mutally 자신과 상인 사이에 신뢰할 수있는 Zioncoin 중재를 입력합니다. 그런 다음 '사용 에스크로'확인란을 활성화</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>Syscoin 분산 마켓 플레이스에 지불. 모집 ID :</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>Zioncoin 분산 마켓 플레이스에 지불. 모집 ID :</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4019,8 +4019,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Syscoin의 제공에 동의</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Zioncoin의 제공에 동의</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -4083,12 +4083,12 @@
         <translation>JSON 결과를 구문 분석 할 수 없습니다</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>mutally 자신과 상인 사이에 신뢰할 수있는 Syscoin 중재를 입력합니다. 그런 다음 '사용 에스크로'확인란을 활성화</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>mutally 자신과 상인 사이에 신뢰할 수있는 Zioncoin 중재를 입력합니다. 그런 다음 '사용 에스크로'확인란을 활성화</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>Syscoin 분산 마켓 플레이스에 지불. 모집 ID :</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>Zioncoin 분산 마켓 플레이스에 지불. 모집 ID :</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4598,8 +4598,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>Syscoin의 상품 검색 (구입 한 더블 클릭). 당신은 (기본적으로) 불쾌감을 줄 수있는 상품을 생략하고자하는 경우 지갑 옵션에서 안전 검색을 선택합니다</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>Zioncoin의 상품 검색 (구입 한 더블 클릭). 당신은 (기본적으로) 불쾌감을 줄 수있는 상품을 생략하고자하는 경우 지갑 옵션에서 안전 검색을 선택합니다</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -4844,8 +4844,8 @@
         <translation>창을 닫으면 종료 대신 트레이로 보내기. 이 옵션을 활성화하면 메뉴에서 종료를 선택한 후에만 어플리케이션이 종료됩니다.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>사용자 인터페이스 언어는 여기에서 설정 될 수있다. 이 설정은 Syscoin 코어를 다시 시작한 후에 적용됩니다.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>사용자 인터페이스 언어는 여기에서 설정 될 수있다. 이 설정은 Zioncoin 코어를 다시 시작한 후에 적용됩니다.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -4864,8 +4864,8 @@
         <translation>사용자 인터페이스 테마 :</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>사용자 인터페이스 주제는 여기에서 설정 될 수있다. 이 설정은 Syscoin 코어를 다시 시작한 후에 적용됩니다.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>사용자 인터페이스 주제는 여기에서 설정 될 수있다. 이 설정은 Zioncoin 코어를 다시 시작한 후에 적용됩니다.</translation>
     </message>
     <message>
         <source>Default Alias:</source>
@@ -4940,12 +4940,12 @@
         <translation>네트워크(&amp;N)</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>자동으로 시스템에 로그인 한 후 Syscoin 코어를 시작합니다.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>자동으로 시스템에 로그인 한 후 Zioncoin 코어를 시작합니다.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>시스템 로그인에  시작 Syscoin 코어</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>시스템 로그인에  시작 Zioncoin 코어</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -4972,15 +4972,15 @@
         <translation>검증되지 않은 잔돈 쓰기 (&amp;S)</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>라우터에서 Syscoin 클라이언트 포트를 자동적으로 엽니다. 라우터에서 UPnP를 지원하고 활성화 했을 경우에만 동작합니다.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>라우터에서 Zioncoin 클라이언트 포트를 자동적으로 엽니다. 라우터에서 UPnP를 지원하고 활성화 했을 경우에만 동작합니다.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>사용중인 &amp;UPnP 포트 매핑</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
         <translation>SOCKS5 프록시를 통해 비트코인 네트워크 연결</translation>
     </message>
     <message>
@@ -5020,7 +5020,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Tor 서비스를 경유하여 비트코인 네트워크에 연결하기 위해 분리된 SOCKS5 프록시를 사용.</translation>
     </message>
     <message>
@@ -5142,8 +5142,8 @@
 <context>
     <name>OutMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>이들은 당신이 보낸 Syscoin 메시지입니다. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 메시지를 볼 수 별칭을 선택할 수 있습니다.</translation>
+        <source>These are Zioncoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>이들은 당신이 보낸 Zioncoin 메시지입니다. 당신은 오른쪽에있는 드롭 다운 메뉴를 사용하여 관련 메시지를 볼 수 별칭을 선택할 수 있습니다.</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -5209,7 +5209,7 @@
         <translation>유형</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
         <translation>표시된 정보가 오래된 것 같습니다. 비트코인 네트워크에 연결하고 난 다음에 지갑을 자동으로 동기화 하지만, 아직 과정이 끝나지는 않았습니다.</translation>
     </message>
     <message>
@@ -5284,7 +5284,7 @@
         <translation>지불 요청 애러</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
         <translation>비트코인을 시작할 수 없습니다: 지급제어기를 클릭하시오</translation>
     </message>
     <message>
@@ -5300,8 +5300,8 @@
         <translation>잘못된 지불 주소입니다 %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>URI는 구문 분석 할 수 없습니다! 이것은 잘못된 Syscoin 주소 또는 잘못된 URI 매개 변수에 의해 발생할 수 있습니다.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>URI는 구문 분석 할 수 없습니다! 이것은 잘못된 Zioncoin 주소 또는 잘못된 URI 매개 변수에 의해 발생할 수 있습니다.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -5394,8 +5394,8 @@
         <translation>거래액</translation>
     </message>
     <message>
-        <source>Enter a Syscoin address e.g. johnsmith or </source>
-        <translation>예를 들어, Syscoin 주소를 입력 홍길동 또는</translation>
+        <source>Enter a Zioncoin address e.g. johnsmith or </source>
+        <translation>예를 들어, Zioncoin 주소를 입력 홍길동 또는</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -5791,7 +5791,7 @@
         <translation>현재의 수취용 주소를 재사용하기(&amp;E) (권장하지 않습니다)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
         <translation>지불 요청에 첨부되는 선택가능한 메시지 입니다. 이 메세지는 요청이 열릴 때 표시될 것 입니다. 메모: 이 메시지는 비트코인 네트워크로 전송되지 않습니다.</translation>
     </message>
     <message>
@@ -6071,7 +6071,7 @@
         <translation>최소 수수료</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
         <translation>블록의 용량보다 트랜잭션의 용량이 작은 경우에는 최소한의 수수료만으로도 충분합니다. 그러나 비트코인 네트워크의 처리량보다 더 많은 트랜잭션 요구는 영원히 검증이 안 될 수도 있습니다.</translation>
     </message>
     <message>
@@ -6231,7 +6231,7 @@
         <translation><numerusform>%n 개의 블록 (들)에서 확인을 시작하기 위해 예상.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
+        <source>Warning: Invalid Zioncoin address</source>
         <translation>경고: 잘못된 비트코인주소입니다</translation>
     </message>
     <message>
@@ -6266,7 +6266,7 @@
         <translation>이것은 정상적인 지불입니다.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
+        <source>The Zioncoin address to send the payment to</source>
         <translation>이 비트코인 주소로 송금됩니다</translation>
     </message>
     <message>
@@ -6286,7 +6286,7 @@
         <translation>항목을 지웁니다</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>수수료가 송금되는 금액에서 공제됩니다. 수령자는 금액 필드에서 입력한 금액보다 적은 금액을 전송받게 됩니다. 받는 사람이 여러 명인 경우 수수료는 균등하게 나누어집니다.</translation>
     </message>
     <message>
@@ -6310,7 +6310,7 @@
         <translation>사용된 주소 목록에 새 주소를 추가하기 위해 라벨 이름을 입력해 주세요. </translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
         <translation>비트코인에 첨부된 메시지: 참고용으로 거래와 함께 저장될 URI. 메모: 이 메시지는 비트코인 네트워크로 전송되지 않습니다.</translation>
     </message>
     <message>
@@ -6371,32 +6371,32 @@
         <translation>일반 예외 디코딩 원시 트랜잭션</translation>
     </message>
     <message>
-        <source>Sign a raw syscoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
-        <translation>원시 syscoin 거래에 서명하고 필요한 모든 서명이 완료되면 네트워크에 전송할 수 있습니다. 아래의 원시 진수 인코딩 거래를 입력</translation>
+        <source>Sign a raw Zioncoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
+        <translation>원시 Zioncoin 거래에 서명하고 필요한 모든 서명이 완료되면 네트워크에 전송할 수 있습니다. 아래의 원시 진수 인코딩 거래를 입력</translation>
     </message>
     <message>
-        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any syscoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
-        <translation>당신이 일반 섹션에서 유효한 원시 트랜잭션을 입력하면 트랜잭션이 네트워크로 전송 잠재적으로 로그인하고 전에 무엇을하고 있는지 알 수 있도록이 지역은 syscoin 관련 서비스 정보를 포함하는 원료 거래 정보와 인구가 될 것입니다.</translation>
+        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any Zioncoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
+        <translation>당신이 일반 섹션에서 유효한 원시 트랜잭션을 입력하면 트랜잭션이 네트워크로 전송 잠재적으로 로그인하고 전에 무엇을하고 있는지 알 수 있도록이 지역은 Zioncoin 관련 서비스 정보를 포함하는 원료 거래 정보와 인구가 될 것입니다.</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction. Currently there is nothing to display</source>
-        <translation>아래 부분은이 거래에 관한 syscoin 특정 정보를 표시하는 것입니다. 현재 표시 아무것도 없다</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction. Currently there is nothing to display</source>
+        <translation>아래 부분은이 거래에 관한 Zioncoin 특정 정보를 표시하는 것입니다. 현재 표시 아무것도 없다</translation>
     </message>
     <message>
         <source>Error creating decoding raw transaction: </source>
         <translation>원시 트랜잭션을 디코딩 생성 오류 :</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction</source>
-        <translation>아래 부분은이 거래에 관한 syscoin 특정 정보를 표시하는 것입니다</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction</source>
+        <translation>아래 부분은이 거래에 관한 Zioncoin 특정 정보를 표시하는 것입니다</translation>
     </message>
     <message>
-        <source>Error creating decoding raw syscoin transaction: </source>
-        <translation>원시 syscoin 거래를 디코딩 생성 오류 :</translation>
+        <source>Error creating decoding raw Zioncoin transaction: </source>
+        <translation>원시 Zioncoin 거래를 디코딩 생성 오류 :</translation>
     </message>
     <message>
-        <source>General exception decoding raw syscoin transaction</source>
-        <translation>일반 예외 디코딩 원시 syscoin 거래</translation>
+        <source>General exception decoding raw Zioncoin transaction</source>
+        <translation>일반 예외 디코딩 원시 Zioncoin 거래</translation>
     </message>
     <message>
         <source>Transaction was completed successfully!</source>
@@ -6426,11 +6426,11 @@
         <translation>메시지 서명(&amp;S)</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>여러분 자신을 증명하기 위해 주소를 첨가하고 서명할 수 있습니다. 피싱 공격으로 말미암아 여러분의 서명을 통해 속아 넘어가게 할 수 있으므로, 서명하지 않은 모든 모호한 요소를 주의하십시오. 조항들이 완전 무결한지 확인 후 동의하는 경우에만 서명하십시오.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
+        <source>The Zioncoin address to sign the message with</source>
         <translation>메세지를 서명한 비트코인 주소</translation>
     </message>
     <message>
@@ -6462,7 +6462,7 @@
         <translation>현재 서명을 시스템 클립보드에 복사</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
+        <source>Sign the message to prove you own this Zioncoin address</source>
         <translation>여러분의 비트코인 주소를 증명하려면 메시지 서명하십시오</translation>
     </message>
     <message>
@@ -6486,11 +6486,11 @@
         <translation>메시지를 검증하기 위해 아래 칸에 각각 지갑 주소와 메시지, 전자서명을 입력하세요. (메시지 원본의 띄어쓰기, 들여쓰기, 행 나눔 등이 정확하게 입력되어야 하므로 원본을 복사해서 입력하세요) 이 기능은 메시지 검증이 주 목적이며, 네트워크 침입자에 의해 변조되지 않도록 전자서명 해독에 불필요한 시간을 소모하지 마세요. </translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
+        <source>The Zioncoin address the message was signed with</source>
         <translation>메세지의 서명에 사용된 비트코인 주소</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
         <translation>정확한 비트코인주소가 입력됬는지 메시지를 확인하시오</translation>
     </message>
     <message>
@@ -6562,7 +6562,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>메시지 서명(&amp;M)...</translation>
@@ -6672,7 +6672,7 @@
         <translation>디스크에서 블록 다시 색인중...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
+        <source>Send coins to a Zioncoin address</source>
         <translation>비트코인 주소로 코인 전송</translation>
     </message>
     <message>
@@ -6696,7 +6696,7 @@
         <translation>메시지 확인(&amp;V)...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
+        <source>Zioncoin</source>
         <translation>비트코인</translation>
     </message>
     <message>
@@ -6716,11 +6716,11 @@
         <translation>지갑에 포함된 개인키 암호화하기</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
         <translation>지갑 주소가 본인 소유인지 증명하기 위해 비트코인 주소에 서명할 수 있습니다.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
         <translation>비트코인 주소의 전자 서명 확인을 위해 첨부된 메시지가 있을 경우 이를 검증할 수 있습니다.</translation>
     </message>
     <message>
@@ -6740,7 +6740,7 @@
         <translation>툴바 색인표</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
         <translation>지불 요청하기 (QR코드와 비트코인이 생성됩니다: URIs)</translation>
     </message>
     <message>
@@ -6752,15 +6752,15 @@
         <translation>한번 이상 사용된 받는 주소와 주소 제목의 목록을 보여줍니다.</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>syscoin: URI 또는 지불요청 열기</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Zioncoin: URI 또는 지불요청 열기</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>명령줄 옵션(&amp;C)</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
+        <source>%n active connection(s) to Zioncoin network</source>
         <translation><numerusform>비트코인 네트워크에 %n개의 연결이 활성화되어 있습니다.</numerusform></translation>
     </message>
     <message>
@@ -6828,12 +6828,12 @@
         <translation>이벤트와 에스크로</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
+        <source>&amp;About Zioncoin Core</source>
         <translation>&amp;비트코인 코어 소개</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Syscoin command-line options</source>
-        <translation>가능한 Syscoin 명령 줄 옵션 목록을 가져올 %1 도움말 메시지를 표시</translation>
+        <source>Show the %1 help message to get a list with possible Zioncoin command-line options</source>
+        <translation>가능한 Zioncoin 명령 줄 옵션 목록을 가져올 %1 도움말 메시지를 표시</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -7666,7 +7666,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>옵션:</translation>
@@ -7732,7 +7732,7 @@
         <translation>외부 접속을 승인합니다</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
+        <source>Zioncoin Core</source>
         <translation>비트코인 코어</translation>
     </message>
     <message>
@@ -8464,16 +8464,16 @@
         <translation>-checkblocks을 통한 블록 점검 (0-4, 기본값: %u)</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
-        <translation>잘못된 Syscoin 신원. 어떤 선행 또는 후행 대시 3 ~ 64 문자의 도메인 이름 스펙과 2 ~ 6 문자의 TLD를 수행해야합니다</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
+        <translation>잘못된 Zioncoin 신원. 어떤 선행 또는 후행 대시 3 ~ 64 문자의 도메인 이름 스펙과 2 ~ 6 문자의 TLD를 수행해야합니다</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
-        <translation>잘못된 Syscoin 신원. 어떤 선행 또는 후행 대시로 3 ~ 64 문자의 도메인 이름 스펙을 준수해야합니다</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
+        <translation>잘못된 Zioncoin 신원. 어떤 선행 또는 후행 대시로 3 ~ 64 문자의 도메인 이름 스펙을 준수해야합니다</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Please enter a password atleast 4 characters long</source>
-        <translation>잘못된 Syscoin 신원. 4 자 암호이어야를 입력하세요</translation>
+        <source>Invalid Zioncoin Identity. Please enter a password atleast 4 characters long</source>
+        <translation>잘못된 Zioncoin 신원. 4 자 암호이어야를 입력하세요</translation>
     </message>
     <message>
         <source>Invalid price and/or quantity values. Quantity must be less than 4294967296 and greater than or equal to -1</source>
@@ -8512,16 +8512,16 @@
         <translation>블룸필터를 통해 블록과 트랜잭션 필터링 지원 (기본값: %u)</translation>
     </message>
     <message>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
-        <translation>Syscoin 개발자의 글로벌 네트워크에 의해 생성 된 오픈 소스 소프트웨어입니다. 다운로드, 배포 및 Syscoin와 Syscoin 네트워크를 사용해서 당신은 어떠한 책임에서 Syscoin 프로젝트의 과거, 현재, 미래에 관련된 개발자를 놓습니다. 당신은 Syscoin 네트워크에서의 창조물에 대한 책임이 있습니다. 당신은 Syscoin 프로젝트의 개발자가 작업 / 데이터 또는 네트워크에 자신이나 다른 사람에 의해 네트워크에서 생성 된 * 정의가있는 당신이 노출 될 수하는 *의 실체에 대한 책임을 가지고도지지 않음에 동의합니다.</translation>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <translation>Zioncoin 개발자의 글로벌 네트워크에 의해 생성 된 오픈 소스 소프트웨어입니다. 다운로드, 배포 및 Zioncoin와 Zioncoin 네트워크를 사용해서 당신은 어떠한 책임에서 Zioncoin 프로젝트의 과거, 현재, 미래에 관련된 개발자를 놓습니다. 당신은 Zioncoin 네트워크에서의 창조물에 대한 책임이 있습니다. 당신은 Zioncoin 프로젝트의 개발자가 작업 / 데이터 또는 네트워크에 자신이나 다른 사람에 의해 네트워크에서 생성 된 * 정의가있는 당신이 노출 될 수하는 *의 실체에 대한 책임을 가지고도지지 않음에 동의합니다.</translation>
     </message>
     <message>
-        <source>The Syscoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
-        <translation>이 거래에 사용하려고하는 Syscoin 별칭이 잘못되었거나 업데이트되었습니다 아직 확인되지! 블록을 기다렸다가 다시 시도하십시오 ...</translation>
+        <source>The Zioncoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
+        <translation>이 거래에 사용하려고하는 Zioncoin 별칭이 잘못되었거나 업데이트되었습니다 아직 확인되지! 블록을 기다렸다가 다시 시도하십시오 ...</translation>
     </message>
     <message>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
-        <translation>Syscoin 프로젝트의 개발자가 Syscoin 네트워크에서 데이터를 수정할 수있는 능력이없는, 그것은 당신이 더 Syscoin의 Syscoin 네트워크 및 Syscoin 서비스의 사용을 통해 인정 불변의 blockchain에 의해 백업됩니다. 이러한 조항에 동의하지 않는 경우, Syscoin 및 관련 서비스 이용을 삼가 주시기 바랍니다.</translation>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
+        <translation>Zioncoin 프로젝트의 개발자가 Zioncoin 네트워크에서 데이터를 수정할 수있는 능력이없는, 그것은 당신이 더 Zioncoin의 Zioncoin 네트워크 및 Zioncoin 서비스의 사용을 통해 인정 불변의 blockchain에 의해 백업됩니다. 이러한 조항에 동의하지 않는 경우, Zioncoin 및 관련 서비스 이용을 삼가 주시기 바랍니다.</translation>
     </message>
     <message>
         <source>This resold offer must be of higher price than the original offer including any discount</source>
@@ -8680,8 +8680,8 @@
         <translation>만 활성 에스크로를 해제 할 수 있습니다</translation>
     </message>
     <message>
-        <source>Can't determine type of alias input into syscoin service transaction</source>
-        <translation>syscoin 서비스 거래에 별명 입력의 유형을 결정할 수 없습니다</translation>
+        <source>Can't determine type of alias input into Zioncoin service transaction</source>
+        <translation>Zioncoin 서비스 거래에 별명 입력의 유형을 결정할 수 없습니다</translation>
     </message>
     <message>
         <source>Cannot change category to wanted</source>
@@ -8884,8 +8884,8 @@
         <translation>위원회는 -90에서 100 사이해야</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Syscoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i The Zioncoin Core Developers</translation>
     </message>
     <message>
         <source>Could not create escrow transaction: Invalid response from createescrow</source>
@@ -9448,8 +9448,8 @@
         <translation>어떤 개인 키는이 에스크로에 포함되지 발견</translation>
     </message>
     <message>
-        <source>Non-Syscoin transaction found</source>
-        <translation>비 Syscoin 트랜잭션 발견</translation>
+        <source>Non-Zioncoin transaction found</source>
+        <translation>비 Zioncoin 트랜잭션 발견</translation>
     </message>
     <message>
         <source>Not enough quantity left in this offer for this purchase</source>

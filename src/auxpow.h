@@ -1,11 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Syscoin developers
+// Copyright (c) 2009-2014 The Zioncoin developers
 // Copyright (c) 2014-2015 Daniel Kraft
 // Distributed under the MIT/X11 software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_AUXPOW_H
-#define SYSCOIN_AUXPOW_H
+#ifndef Zioncoin_AUXPOW_H
+#define Zioncoin_AUXPOW_H
 
 #include "consensus/params.h"
 #include "primitives/pureheader.h"
@@ -200,4 +200,4 @@ public:
 
 };
 
-#endif // SYSCOIN_AUXPOW_H
+#endif // Zioncoin_AUXPOW_H

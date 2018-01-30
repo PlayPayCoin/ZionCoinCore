@@ -1,9 +1,9 @@
-// Copyright (c) 2009-2016 The Syscoin Core developers
+// Copyright (c) 2009-2016 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_RPCREGISTER_H
-#define SYSCOIN_RPCREGISTER_H
+#ifndef Zioncoin_RPCREGISTER_H
+#define Zioncoin_RPCREGISTER_H
 
 /** These are in one header file to avoid creating tons of single-function
  * headers for everything under src/rpc/ */

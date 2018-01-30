@@ -288,11 +288,11 @@
         <translation>Alamat-alamat menerima</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Alamat-alamat Anda supaya mengirim pembayaran. Periksalah jumlah dan alamat penerima setiap kali Anda mengirim Syscoin.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Alamat-alamat Anda supaya mengirim pembayaran. Periksalah jumlah dan alamat penerima setiap kali Anda mengirim Zioncoin.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Alamat-alamat Anda supaya menerima pembayaran. Dianjurkan agar Anda menggunakan alamat menerima yang baru untuk setiap transaksi.</translation>
     </message>
     <message>
@@ -370,8 +370,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>Mencari Syscoin Alias. Pilih Cari Aman dari pilihan dompet jika Anda ingin menghilangkan Alias ​​berpotensi ofensif (On secara default)</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>Mencari Zioncoin Alias. Pilih Cari Aman dari pilihan dompet jika Anda ingin menghilangkan Alias ​​berpotensi ofensif (On secara default)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Aliases starting with 'name'). Empty will search for all.</source>
@@ -467,8 +467,8 @@
         <translation>Konfirmasi enkripsi dompet</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Perhatian: Jika anda mengenkripsi dompet anda dan lupa kata kuncinya, anda pasti &lt;b&gt;KEHILANGAN SELURUH SYSCOIN ANDA&lt;/B&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Perhatian: Jika anda mengenkripsi dompet anda dan lupa kata kuncinya, anda pasti &lt;b&gt;KEHILANGAN SELURUH Zioncoin ANDA&lt;/B&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -553,8 +553,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>Mencari Sertifikat Syscoin. Pilih Cari Aman dari pilihan dompet jika Anda ingin menghilangkan Sertifikat berpotensi ofensif (On secara default)</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>Mencari Sertifikat Zioncoin. Pilih Cari Aman dari pilihan dompet jika Anda ingin menghilangkan Sertifikat berpotensi ofensif (On secara default)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Certificates starting with 'name'). Empty will search for all.</source>
@@ -797,8 +797,8 @@
         <translation>Ubah alamat mengirim</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>Alamat yang dimasukkan "%1" bukan alamat Syscoin yang benar.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>Alamat yang dimasukkan "%1" bukan alamat Zioncoin yang benar.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1323,8 +1323,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>Mencari Syscoin escrows.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>Mencari Zioncoin escrows.</translation>
     </message>
     <message>
         <source>Enter search term. Search for arbiter/seller or escrow GUID. Empty will search for all.</source>
@@ -1419,8 +1419,8 @@
         <translation>versi</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>Syscoin Client</translation>
+        <source>Zioncoin Client</source>
+        <translation>Zioncoin Client</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -1608,8 +1608,8 @@
         <translation>escrow telah berhasil dikembalikan kepada pembeli. escrow selesai.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>Status escrow tidak diakui. Hubungi tim Syscoin.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>Status escrow tidak diakui. Hubungi tim Zioncoin.</translation>
     </message>
     <message>
         <source>none</source>
@@ -1929,8 +1929,8 @@
         <translation>Ekspor data dalam tab sekarang ke sebuah berkas</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>Ini adalah anda Syscoin Alias. operasi alias (membuat, memperbarui, transfer) mengambil 2-5 menit untuk menjadi aktif.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>Ini adalah anda Zioncoin Alias. operasi alias (membuat, memperbarui, transfer) mengambil 2-5 menit untuk menjadi aktif.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -2441,8 +2441,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Terima Syscoin Penawaran</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Terima Zioncoin Penawaran</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2457,8 +2457,8 @@
         <translation>Bayar dengan BTC</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>Bayar dengan Syscoin</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>Bayar dengan Zioncoin</translation>
     </message>
     <message>
         <source>Use Escrow</source>
@@ -2492,8 +2492,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Terima Syscoin Penawaran</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Terima Zioncoin Penawaran</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2567,8 +2567,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Terima Syscoin Penawaran</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Terima Zioncoin Penawaran</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2866,8 +2866,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>Cari Penawaran Syscoin (klik dua kali pada satu untuk membeli). Pilih Cari Aman dari pilihan dompet jika Anda ingin menghilangkan Penawaran berpotensi ofensif (On secara default)</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>Cari Penawaran Zioncoin (klik dua kali pada satu untuk membeli). Pilih Cari Aman dari pilihan dompet jika Anda ingin menghilangkan Penawaran berpotensi ofensif (On secara default)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Offer's starting with 'name'). Empty will search for all.</source>
@@ -3044,8 +3044,8 @@
         <translation>Minimalisasi aplikasi ketika jendela ditutup. Ketika pilihan ini dipilih, aplikasi akan menutup seluruhnya jika anda memilih Keluar di menu yang tersedia.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Bahasa antarmuka pengguna dapat diatur di sini. Pengaturan ini akan berlaku setelah restart Syscoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Bahasa antarmuka pengguna dapat diatur di sini. Pengaturan ini akan berlaku setelah restart Zioncoin Core.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -3064,8 +3064,8 @@
         <translation>User Interface Tema:</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Tema antarmuka pengguna dapat diatur di sini. Pengaturan ini akan berlaku setelah restart Syscoin Core.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Tema antarmuka pengguna dapat diatur di sini. Pengaturan ini akan berlaku setelah restart Zioncoin Core.</translation>
     </message>
     <message>
         <source>Default Peg Alias:</source>
@@ -3100,12 +3100,12 @@
         <translation>&amp;Jaringan</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>dimulai secara otomatis Syscoin Inti setelah log in ke sistem.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>dimulai secara otomatis Zioncoin Inti setelah log in ke sistem.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>&amp; Mulai Syscoin Core pada sistem login</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>&amp; Mulai Zioncoin Core pada sistem login</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -3132,16 +3132,16 @@
         <translation>&amp;Perubahan saldo untuk transaksi yang belum dikonfirmasi</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Otomatis membuka port client Syscoin di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Otomatis membuka port client Zioncoin di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Petakan port dengan &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>Hubungkan ke jaringan Syscoin melalui SOCKS5 proxy.</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>Hubungkan ke jaringan Zioncoin melalui SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -3180,8 +3180,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Terhubung ke jaringan Syscoin melalui proxy Socks5 terpisah untuk layanan Tor tersembunyi.</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Terhubung ke jaringan Zioncoin melalui proxy Socks5 terpisah untuk layanan Tor tersembunyi.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -3341,8 +3341,8 @@
         <translation>Formulir</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Syscoin ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Zioncoin ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -3416,8 +3416,8 @@
         <translation>Gagalan permintaan pembayaran</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Tidak dapat memulai syscoin: klik-to-pay handler</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Tidak dapat memulai Zioncoin: klik-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -3428,8 +3428,8 @@
         <translation>Alamat pembayaran salah %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>URI tidak bisa diurai! Hal ini dapat disebabkan oleh alamat Syscoin valid atau parameter URI cacat.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>URI tidak bisa diurai! Hal ini dapat disebabkan oleh alamat Zioncoin valid atau parameter URI cacat.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -3845,8 +3845,8 @@
         <translation>Gunakan lagi alamat penerima yang ada (tidak disarankan)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
-        <translation>Pesan opsional untuk melampirkan permintaan pembayaran, yang akan ditampilkan ketika permintaan dibuka. Catatan: Pesan tidak akan dikirim dengan pembayaran melalui jaringan Syscoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
+        <translation>Pesan opsional untuk melampirkan permintaan pembayaran, yang akan ditampilkan ketika permintaan dibuka. Catatan: Pesan tidak akan dikirim dengan pembayaran melalui jaringan Zioncoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -4093,8 +4093,8 @@
         <translation>Total setidaknya</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
-        <translation>Membayar hanya biaya minimum baik-baik saja asalkan ada volume transaksi kurang dari ruang di blok. Tapi menyadari bahwa ini dapat berakhir dalam transaksi tidak pernah menegaskan sekali ada lebih banyak permintaan untuk transaksi syscoin dari jaringan dapat memproses.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
+        <translation>Membayar hanya biaya minimum baik-baik saja asalkan ada volume transaksi kurang dari ruang di blok. Tapi menyadari bahwa ini dapat berakhir dalam transaksi tidak pernah menegaskan sekali ada lebih banyak permintaan untuk transaksi Zioncoin dari jaringan dapat memproses.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -4245,8 +4245,8 @@
         <translation>Permintaan pembayaran telah kadaluarsa</translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Awas: Alamat Syscoin tidak sah</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Awas: Alamat Zioncoin tidak sah</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -4280,8 +4280,8 @@
         <translation>Ini adalah pembayaran normal</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
-        <translation>Alamat Syscoin untuk mengirim pembayaran ke</translation>
+        <source>The Zioncoin address to send the payment to</source>
+        <translation>Alamat Zioncoin untuk mengirim pembayaran ke</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -4300,8 +4300,8 @@
         <translation>Hapus masukan ini</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Biaya yang akan dipotong dari jumlah yang dikirim. penerima akan menerima kurang syscoins dari Anda masukkan di kolom jumlah. Jika beberapa penerima yang dipilih, biaya dibagi sama.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Biaya yang akan dipotong dari jumlah yang dikirim. penerima akan menerima kurang Zioncoins dari Anda masukkan di kolom jumlah. Jika beberapa penerima yang dipilih, biaya dibagi sama.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -4324,8 +4324,8 @@
         <translation>Masukkan label untuk alamat ini untuk dimasukan dalam daftar alamat yang pernah digunakan</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>Sebuah pesan yang melekat syscoin yang: URI yang akan disimpan dengan transaksi untuk referensi Anda. Catatan: Pesan ini tidak akan dikirim melalui jaringan Syscoin.</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>Sebuah pesan yang melekat Zioncoin yang: URI yang akan disimpan dengan transaksi untuk referensi Anda. Catatan: Pesan ini tidak akan dikirim melalui jaringan Zioncoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -4380,12 +4380,12 @@
         <translation>&amp;Tandakan Pesan</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Anda dapat menandatangani pesan / perjanjian dengan alamat Anda untuk membuktikan bahwa Anda dapat menerima syscoins dikirim kepada mereka. Hati-hati untuk tidak menandatangani apa pun samar-samar atau acak, sebagai serangan phishing mungkin mencoba untuk menipu Anda agar menandatangani identitas Anda kepada mereka. Hanya menandatangani pernyataan sepenuhnya rinci Anda menyetujui.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Anda dapat menandatangani pesan / perjanjian dengan alamat Anda untuk membuktikan bahwa Anda dapat menerima Zioncoins dikirim kepada mereka. Hati-hati untuk tidak menandatangani apa pun samar-samar atau acak, sebagai serangan phishing mungkin mencoba untuk menipu Anda agar menandatangani identitas Anda kepada mereka. Hanya menandatangani pernyataan sepenuhnya rinci Anda menyetujui.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
-        <translation>Alamat Syscoin untuk menandatangani pesan dengan</translation>
+        <source>The Zioncoin address to sign the message with</source>
+        <translation>Alamat Zioncoin untuk menandatangani pesan dengan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4416,8 +4416,8 @@
         <translation>Salin tanda tangan terpilih ke sistem klipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Syscoin ini</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Zioncoin ini</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -4440,12 +4440,12 @@
         <translation>Masukkan alamat penerima, pesan (pastikan Anda menyalin jeda baris, spasi, tab, dll persis) dan tanda tangan di bawah ini untuk memverifikasi pesan. Hati-hati untuk tidak membaca lebih ke tanda tangan dari apa yang ada dalam pesan yang ditandatangani sendiri, untuk menghindari ditipu oleh serangan man-in-the-middle. Catatan bahwa ini hanya membuktikan partai menandatangani menerima dengan alamat, tidak dapat membuktikan sendership transaksi apapun!</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
-        <translation>Alamat Syscoin pesan ditandatangani dengan</translation>
+        <source>The Zioncoin address the message was signed with</source>
+        <translation>Alamat Zioncoin pesan ditandatangani dengan</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Verifikasi pesan untuk memastikan itu ditandatangani dengan alamat Syscoin yang ditentukan</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Verifikasi pesan untuk memastikan itu ditandatangani dengan alamat Zioncoin yang ditentukan</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -4516,7 +4516,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Pesan &amp;penanda...</translation>
@@ -4602,8 +4602,8 @@
         <translation>Mengindex ulang blok di dalam disk...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Kirim koin ke alamat Syscoin</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Kirim koin ke alamat Zioncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -4626,8 +4626,8 @@
         <translation>&amp;Verifikasi pesan...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -4646,12 +4646,12 @@
         <translation>Enkripsi private key yang dimiliki dompet Anda</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Tanda tangani sebuah pesan menggunakan alamat Syscoin Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Tanda tangani sebuah pesan menggunakan alamat Zioncoin Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Syscoin tertentu</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Zioncoin tertentu</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -4670,8 +4670,8 @@
         <translation>Baris tab</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Permintaan pembayaran (membuat kode QR dan syscoin: URIs)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Permintaan pembayaran (membuat kode QR dan Zioncoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -4682,16 +4682,16 @@
         <translation>Tampilkan daftar alamat dan label yang diterima</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Buka URI syscoin: atau permintaan pembayaran</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Buka URI Zioncoin: atau permintaan pembayaran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;pilihan Command-line</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
-        <translation><numerusform>%n koneksi aktif ke jaringan Syscoin</numerusform></translation>
+        <source>%n active connection(s) to Zioncoin network</source>
+        <translation><numerusform>%n koneksi aktif ke jaringan Zioncoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -4750,8 +4750,8 @@
         <translation>Escrows dengan penawaran</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>&amp;Mengenai Syscoin Core</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>&amp;Mengenai Zioncoin Core</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -5436,7 +5436,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Pilihan:</translation>
@@ -5490,8 +5490,8 @@
         <translation>Terima hubungan dari luar (standar: 1 kalau -proxy atau -connect tidak dipilih)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Core</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -5894,12 +5894,12 @@
         <translation>Penawaran guid dalam output data yang tidak sesuai acuan dalam transaksi</translation>
     </message>
     <message>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
-        <translation>Syscoin adalah perangkat lunak open source yang diproduksi oleh jaringan global pengembang. Dengan men-download, mendistribusikan dan menggunakan Syscoin dan jaringan Syscoin Anda melepaskan pengembang yang terlibat dalam Syscoin Proyek masa lalu, sekarang, dan masa depan dari setiap dan semua tanggung jawab. Anda bertanggung jawab untuk kreasi Anda pada jaringan Syscoin. Anda setuju bahwa pengembang Proyek Syscoin tidak membawa tanggung jawab atas tindakan / data atau entitas * setiap * definisi yang dibuat pada jaringan sendiri atau orang lain pada jaringan yang Anda mungkin terkena.</translation>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <translation>Zioncoin adalah perangkat lunak open source yang diproduksi oleh jaringan global pengembang. Dengan men-download, mendistribusikan dan menggunakan Zioncoin dan jaringan Zioncoin Anda melepaskan pengembang yang terlibat dalam Zioncoin Proyek masa lalu, sekarang, dan masa depan dari setiap dan semua tanggung jawab. Anda bertanggung jawab untuk kreasi Anda pada jaringan Zioncoin. Anda setuju bahwa pengembang Proyek Zioncoin tidak membawa tanggung jawab atas tindakan / data atau entitas * setiap * definisi yang dibuat pada jaringan sendiri atau orang lain pada jaringan yang Anda mungkin terkena.</translation>
     </message>
     <message>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
-        <translation>Para pengembang proyek Syscoin tidak memiliki kekuatan untuk mengubah data pada jaringan Syscoin, itu didukung oleh blockchain berubah, yang selanjutnya Anda mengakui melalui penggunaan Syscoin, jaringan Syscoin, dan layanan Syscoin. Jika Anda tidak menyetujui ketentuan ini, harap menahan diri dari menggunakan Syscoin dan layanan yang terkait.</translation>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
+        <translation>Para pengembang proyek Zioncoin tidak memiliki kekuatan untuk mengubah data pada jaringan Zioncoin, itu didukung oleh blockchain berubah, yang selanjutnya Anda mengakui melalui penggunaan Zioncoin, jaringan Zioncoin, dan layanan Zioncoin. Jika Anda tidak menyetujui ketentuan ini, harap menahan diri dari menggunakan Zioncoin dan layanan yang terkait.</translation>
     </message>
     <message>
         <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
@@ -5974,8 +5974,8 @@
         <translation>Pembeli alias tidak dalam dompet Anda</translation>
     </message>
     <message>
-        <source>Can't determine type of alias input into syscoin service transaction</source>
-        <translation>tidak dapat menentukan jenis masukan alias menjadi transaksi layanan syscoin</translation>
+        <source>Can't determine type of alias input into Zioncoin service transaction</source>
+        <translation>tidak dapat menentukan jenis masukan alias menjadi transaksi layanan Zioncoin</translation>
     </message>
     <message>
         <source>Cannot exceed 10 arbiter feedbacks</source>
@@ -6414,8 +6414,8 @@
         <translation>transaksi pesan memiliki op yang tidak diketahui</translation>
     </message>
     <message>
-        <source>Non-Syscoin transaction found</source>
-        <translation>transaksi non-Syscoin ditemukan</translation>
+        <source>Non-Zioncoin transaction found</source>
+        <translation>transaksi non-Zioncoin ditemukan</translation>
     </message>
     <message>
         <source>Not enough quantity left in this offer for this purchase</source>

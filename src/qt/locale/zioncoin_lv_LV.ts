@@ -65,11 +65,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Izvēlies adresi uz kuru sūtīt syscoins</translation>
+        <translation>Izvēlies adresi uz kuru sūtīt Zioncoins</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Izvēlies adresi ar kuru saņemt syscoins</translation>
+        <translation>Izvēlies adresi ar kuru saņemt Zioncoins</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -84,12 +84,12 @@
         <translation>Saņemšanas adreses</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Šīs ir jūsu Syscoin adreses maksājumu sūtīšanai. Vienmēr  pārbaudiet summu un saņēmēja adresi pirms monētu sūtīšanas.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Šīs ir jūsu Zioncoin adreses maksājumu sūtīšanai. Vienmēr  pārbaudiet summu un saņēmēja adresi pirms monētu sūtīšanas.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Šīs ir jūsu Syscoin adreses maksājumu saņemšanai. Ir ieteicams katram darījumam izmantot jaunu saņemšanas adresi.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Šīs ir jūsu Zioncoin adreses maksājumu saņemšanai. Ir ieteicams katram darījumam izmantot jaunu saņemšanas adresi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -195,8 +195,8 @@
         <translation>Apstiprināt maciņa šifrēšanu</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Brīdinājums: Ja tu nošifrē savu maciņu un pazaudē paroli, tu &lt;b&gt;PAZAUDĒSI VISAS SAVAS SYSCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Brīdinājums: Ja tu nošifrē savu maciņu un pazaudē paroli, tu &lt;b&gt;PAZAUDĒSI VISAS SAVAS ZioncoinS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -413,8 +413,8 @@
         <translation>Mainīt nosūtīšanas adresi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>Ierakstītā adrese "%1" nav derīga Syscoin adrese.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>Ierakstītā adrese "%1" nav derīga Zioncoin adrese.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -905,15 +905,15 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt syscoin &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt Zioncoin &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
         <translation>&amp;Tērēt neapstiprinātu atlikumu</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Uz rūtera automātiski atvērt Syscoin klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Uz rūtera automātiski atvērt Zioncoin klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -965,7 +965,7 @@
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
-        <translation>Vai rādīt Syscoin kontroles funkcijas vai nē.</translation>
+        <translation>Vai rādīt Zioncoin kontroles funkcijas vai nē.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -1025,8 +1025,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar Syscoin tīklu, taču šis process vēl nav beidzies.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar Zioncoin tīklu, taču šis process vēl nav beidzies.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1064,8 +1064,8 @@
         <translation>Maksājumu pieprasījuma kļūda</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Nevar palaist Syscoin: nospied-lai-maksātu apstrādātāju</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Nevar palaist Zioncoin: nospied-lai-maksātu apstrādātāju</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1408,7 +1408,7 @@
     </message>
     <message>
         <source>Coin Control Features</source>
-        <translation>Syscoin Kontroles Funkcijas</translation>
+        <translation>Zioncoin Kontroles Funkcijas</translation>
     </message>
     <message>
         <source>Inputs...</source>
@@ -1539,8 +1539,8 @@
         <translation>Transakcijas izveidošana neizdevās!</translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Brīdinājums: Nederīga Syscoin adrese</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Brīdinājums: Nederīga Zioncoin adrese</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1662,8 +1662,8 @@
         <translation>Kopēt parakstu uz sistēmas starpliktuvi</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Syscoin adreses īpašnieks.</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Zioncoin adreses īpašnieks.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1750,7 +1750,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Parakstīt &amp;ziņojumu...</translation>
@@ -1824,8 +1824,8 @@
         <translation>Bloku reindeksēšana no diska...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Nosūtīt bitkoinus uz Syscoin adresi</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Nosūtīt bitkoinus uz Zioncoin adresi</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1848,8 +1848,8 @@
         <translation>&amp;Pārbaudīt ziņojumu...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1868,12 +1868,12 @@
         <translation>Šifrēt privātās atslēgas kuras pieder tavam maciņam</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Parakstīt ziņojumus ar savām Syscoin adresēm lai pierādītu ka tās pieder tev</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Parakstīt ziņojumus ar savām Zioncoin adresēm lai pierādītu ka tās pieder tev</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Syscoin adresēm</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Zioncoin adresēm</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1892,12 +1892,12 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un syscoin: URIs)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un Zioncoin: URIs)</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Atvērt syscoin URI vai maksājuma pieprasījumu</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Atvērt Zioncoin URI vai maksājuma pieprasījumu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1932,8 +1932,8 @@
         <translation>Sinhronizēts</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>Par &amp;Syscoin Core</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>Par &amp;Zioncoin Core</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -2364,7 +2364,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Iespējas:</translation>
@@ -2390,8 +2390,8 @@
         <translation>Darbināt fonā kā servisu un pieņemt komandas</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Core</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Core</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

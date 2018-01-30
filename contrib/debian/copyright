@@ -1,13 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Syscoin
+Upstream-Name: Zioncoin
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
- irc://#syscoin@freenode.net
-Source: https://github.com/syscoin/syscoin2
+ irc://#Zioncoin@freenode.net
+Source: https://github.com/Zioncoin/Zioncoin2
 
 Files: *
-Copyright: 2009-2016, Syscoin Core Developers
+Copyright: 2009-2016, Zioncoin Core Developers
 License: Expat
-Comment: The Syscoin Core Developers encompasses the current developers listed on syscoin.org,
+Comment: The Zioncoin Core Developers encompasses the current developers listed on Zioncoin.org,
          as well as the numerous contributors to the project.
 
 Files: debian/*
@@ -75,12 +75,12 @@ License: Expat
 Comment: Modifications of Stephan Hutchings Typicons
 
 Files: src/qt/res/icons/about.png
-       src/qt/res/icons/syscoin.*
-       share/pixmaps/syscoin*
-       src/qt/res/src/syscoin.svg
+       src/qt/res/icons/Zioncoin.*
+       share/pixmaps/Zioncoin*
+       src/qt/res/src/Zioncoin.svg
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
-Comment: Site: https://syscointalk.org/?topic=1756.0
+Comment: Site: https://Zioncointalk.org/?topic=1756.0
 
 
 License: Expat

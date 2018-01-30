@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_INIT_H
-#define SYSCOIN_INIT_H
+#ifndef Zioncoin_INIT_H
+#define Zioncoin_INIT_H
 
 #include <string>
 
@@ -29,8 +29,8 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler);
 
 /** The help message mode determines what help message to show */
 enum HelpMessageMode {
-    HMM_SYSCOIND,
-    HMM_SYSCOIN_QT
+    HMM_ZioncoinD,
+    HMM_Zioncoin_QT
 };
 
 /** Help for options shared between UI and daemon (for -help) */
@@ -38,4 +38,4 @@ std::string HelpMessage(HelpMessageMode mode);
 /** Returns licensing information (for -version) */
 std::string LicenseInfo();
 
-#endif // SYSCOIN_INIT_H
+#endif // Zioncoin_INIT_H

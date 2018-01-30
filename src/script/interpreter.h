@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2016 The Syscoin Core developers
+// Copyright (c) 2009-2016 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_SCRIPT_INTERPRETER_H
-#define SYSCOIN_SCRIPT_INTERPRETER_H
+#ifndef Zioncoin_SCRIPT_INTERPRETER_H
+#define Zioncoin_SCRIPT_INTERPRETER_H
 
 #include "script_error.h"
 #include "primitives/transaction.h"
@@ -179,4 +179,4 @@ bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, const C
 
 size_t CountWitnessSigOps(const CScript& scriptSig, const CScript& scriptPubKey, const CScriptWitness* witness, unsigned int flags);
 
-#endif // SYSCOIN_SCRIPT_INTERPRETER_H
+#endif // Zioncoin_SCRIPT_INTERPRETER_H

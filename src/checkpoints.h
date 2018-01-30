@@ -1,9 +1,9 @@
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CHECKPOINTS_H
-#define SYSCOIN_CHECKPOINTS_H
+#ifndef Zioncoin_CHECKPOINTS_H
+#define Zioncoin_CHECKPOINTS_H
 
 #include "uint256.h"
 
@@ -26,4 +26,4 @@ double GuessVerificationProgress(const CCheckpointData& data, CBlockIndex* pinde
 
 } //namespace Checkpoints
 
-#endif // SYSCOIN_CHECKPOINTS_H
+#endif // Zioncoin_CHECKPOINTS_H

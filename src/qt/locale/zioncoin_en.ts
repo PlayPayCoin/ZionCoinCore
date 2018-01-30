@@ -485,12 +485,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -602,7 +602,7 @@
     </message>
     <message>
         <location filename="../aliaslistpage.cpp" line="-4"/>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -751,7 +751,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -767,7 +767,7 @@
     </message>
     <message>
         <location line="-56"/>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your syscoins from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Zioncoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -877,7 +877,7 @@
     </message>
     <message>
         <location filename="../certlistpage.cpp" line="-248"/>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1302,7 +1302,7 @@
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Syscoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Zioncoin address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1454,7 +1454,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: transferring your alias will transfer ownership all of your syscoin services that use this alias.</source>
+        <source>Warning: transferring your alias will transfer ownership all of your Zioncoin services that use this alias.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1620,7 +1620,7 @@
     </message>
     <message>
         <location line="+26"/>
-        <source>The entered alias is not a valid Syscoin alias. Alias: </source>
+        <source>The entered alias is not a valid Zioncoin alias. Alias: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1821,7 +1821,7 @@
     </message>
     <message>
         <location line="+26"/>
-        <source>The entered cert is not a valid Syscoin cert.</source>
+        <source>The entered cert is not a valid Zioncoin cert.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1967,12 +1967,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>You will receive payment in Syscoin equivalent to the Market-value of the currency you have selected</source>
+        <source>You will receive payment in Zioncoin equivalent to the Market-value of the currency you have selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: &apos;SYS+BTC+ZEC&apos;. For SYS and ZEC: &apos;SYS+ZEC&apos;. Please note that in order spend coins paid to you via Syscoin Marketplace, you will need to import your Syscoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
+        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: &apos;SYS+BTC+ZEC&apos;. For SYS and ZEC: &apos;SYS+ZEC&apos;. Please note that in order spend coins paid to you via Zioncoin Marketplace, you will need to import your Zioncoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2136,7 +2136,7 @@
     </message>
     <message>
         <location line="+34"/>
-        <source>The entered offer is not a valid Syscoin offer</source>
+        <source>The entered offer is not a valid Zioncoin offer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2537,7 +2537,7 @@
     </message>
     <message>
         <location filename="../escrowlistpage.cpp" line="-7"/>
-        <source>Search for Syscoin Escrows.</source>
+        <source>Search for Zioncoin Escrows.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2557,7 +2557,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2705,7 +2705,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Syscoin Client</source>
+        <source>Zioncoin Client</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2774,7 +2774,7 @@
     <name>InMessageListPage</name>
     <message>
         <location filename="../inmessagelistpage.cpp" line="+47"/>
-        <source>These are Syscoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <source>These are Zioncoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2872,7 +2872,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>%1 will download and store a copy of the Syscoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>%1 will download and store a copy of the Zioncoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3002,12 +3002,12 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>You are the &apos;arbiter&apos; of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Syscoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
+        <source>You are the &apos;arbiter&apos; of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Zioncoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>You are the &apos;buyer&apos; of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Syscoin messages. You may leave feedback after the money is claimed by the merchant.</source>
+        <source>You are the &apos;buyer&apos; of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Zioncoin messages. You may leave feedback after the money is claimed by the merchant.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3090,7 +3090,7 @@
     </message>
     <message>
         <location line="+29"/>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3575,7 +3575,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3822,7 +3822,7 @@
     </message>
     <message>
         <location filename="../myaliaslistpage.cpp" line="-6"/>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3994,7 +3994,7 @@
     </message>
     <message>
         <location filename="../mycertlistpage.cpp" line="-8"/>
-        <source>These are your registered Syscoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
+        <source>These are your registered Zioncoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4189,7 +4189,7 @@
     </message>
     <message>
         <location filename="../myescrowlistpage.cpp" line="-12"/>
-        <source>These are your registered Syscoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
+        <source>These are your registered Zioncoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4271,7 +4271,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4396,7 +4396,7 @@
     </message>
     <message>
         <location filename="../myofferlistpage.cpp" line="-8"/>
-        <source>These are your registered Syscoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
+        <source>These are your registered Zioncoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4733,7 +4733,7 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>The entered message is not a valid Syscoin message</source>
+        <source>The entered message is not a valid Zioncoin message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4804,7 +4804,7 @@
     <name>OfferAcceptDialog</name>
     <message>
         <location filename="../forms/offeracceptdialog.ui" line="+14"/>
-        <source>Accept Syscoin Offer</source>
+        <source>Accept Zioncoin Offer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4829,7 +4829,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Pay with Syscoin</source>
+        <source>Pay with Zioncoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4849,7 +4849,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant</source>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4923,7 +4923,7 @@
     <name>OfferAcceptDialogBTC</name>
     <message>
         <location filename="../forms/offeracceptdialogbtc.ui" line="+14"/>
-        <source>Accept Syscoin Offer</source>
+        <source>Accept Zioncoin Offer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4974,13 +4974,13 @@
     <message>
         <location line="+2"/>
         <location line="+143"/>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the &apos;Use Escrow&apos; checkbox</source>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the &apos;Use Escrow&apos; checkbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-111"/>
         <location line="+411"/>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5154,7 +5154,7 @@
     <name>OfferAcceptDialogZEC</name>
     <message>
         <location filename="../forms/offeracceptdialogzec.ui" line="+14"/>
-        <source>Accept Syscoin Offer</source>
+        <source>Accept Zioncoin Offer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5205,13 +5205,13 @@
     <message>
         <location line="+2"/>
         <location line="+144"/>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the &apos;Use Escrow&apos; checkbox</source>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the &apos;Use Escrow&apos; checkbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-111"/>
         <location line="+433"/>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5891,7 +5891,7 @@
     </message>
     <message>
         <location filename="../offerlistpage.cpp" line="-7"/>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6196,7 +6196,7 @@
     </message>
     <message>
         <location line="+45"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6222,7 +6222,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6320,12 +6320,12 @@
     </message>
     <message>
         <location line="-153"/>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Syscoin Core on system login</source>
+        <source>&amp;Start Zioncoin Core on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6360,8 +6360,8 @@
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6370,7 +6370,7 @@
     </message>
     <message>
         <location line="+17"/>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6425,7 +6425,7 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6578,7 +6578,7 @@
     <name>OutMessageListPage</name>
     <message>
         <location filename="../outmessagelistpage.cpp" line="+48"/>
-        <source>These are Syscoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <source>These are Zioncoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6662,8 +6662,8 @@
     <message>
         <location line="+59"/>
         <location line="+374"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-132"/>
@@ -6760,7 +6760,7 @@
     </message>
     <message>
         <location line="-402"/>
-        <source>Cannot start syscoin: click-to-pay handler</source>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6782,7 +6782,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6893,13 +6893,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../syscoinunits.cpp" line="+176"/>
+        <location filename="../Zioncoinunits.cpp" line="+176"/>
         <source>Amount</source>
         <translation type="unfinished">Amount</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+136"/>
-        <source>Enter a Syscoin address e.g. johnsmith or </source>
+        <source>Enter a Zioncoin address e.g. johnsmith or </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7397,7 +7397,7 @@
     <message>
         <location line="+14"/>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7754,7 +7754,7 @@
     <message>
         <location line="+30"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7965,7 +7965,7 @@
     </message>
     <message>
         <location line="+106"/>
-        <source>Warning: Invalid Syscoin address</source>
+        <source>Warning: Invalid Zioncoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8010,7 +8010,7 @@
     </message>
     <message>
         <location line="+39"/>
-        <source>The Syscoin address to send the payment to</source>
+        <source>The Zioncoin address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8037,7 +8037,7 @@
     </message>
     <message>
         <location line="-1017"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8067,7 +8067,7 @@
     </message>
     <message>
         <location line="+47"/>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8139,18 +8139,18 @@
     </message>
     <message>
         <location filename="../signrawtxdialog.cpp" line="+20"/>
-        <source>Sign a raw syscoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
+        <source>Sign a raw Zioncoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any syscoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
+        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any Zioncoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+63"/>
-        <source>The area below is to display syscoin specific information regarding this transaction. Currently there is nothing to display</source>
+        <source>The area below is to display Zioncoin specific information regarding this transaction. Currently there is nothing to display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8165,17 +8165,17 @@
     </message>
     <message>
         <location line="+22"/>
-        <source>The area below is to display syscoin specific information regarding this transaction</source>
+        <source>The area below is to display Zioncoin specific information regarding this transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Error creating decoding raw syscoin transaction: </source>
+        <source>Error creating decoding raw Zioncoin transaction: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>General exception decoding raw syscoin transaction</source>
+        <source>General exception decoding raw Zioncoin transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8213,12 +8213,12 @@
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Syscoin address to sign the message with</source>
+        <source>The Zioncoin address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8260,8 +8260,8 @@
     </message>
     <message>
         <location line="+17"/>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Sign the message to prove you own this Syscoin address</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Sign the message to prove you own this Zioncoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8291,13 +8291,13 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>The Syscoin address the message was signed with</source>
+        <source>The Zioncoin address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Verify the message to ensure it was signed with the specified Syscoin address</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Verify the message to ensure it was signed with the specified Zioncoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8390,9 +8390,9 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
-        <location filename="../syscoingui.cpp" line="+411"/>
+        <location filename="../Zioncoingui.cpp" line="+411"/>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message...</translation>
     </message>
@@ -8493,8 +8493,8 @@
     </message>
     <message>
         <location line="-572"/>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Send coins to a Syscoin address</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Send coins to a Zioncoin address</translation>
     </message>
     <message>
         <location line="+131"/>
@@ -8523,8 +8523,8 @@
     </message>
     <message>
         <location line="+532"/>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <location line="-813"/>
@@ -8548,13 +8548,13 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Sign messages with your Syscoin addresses to prove you own them</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Sign messages with your Zioncoin addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Syscoin addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Zioncoin addresses</translation>
     </message>
     <message>
         <location line="+63"/>
@@ -8578,7 +8578,7 @@
     </message>
     <message>
         <location line="-228"/>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8644,7 +8644,7 @@
     </message>
     <message>
         <location line="+46"/>
-        <source>&amp;About Syscoin Core</source>
+        <source>&amp;About Zioncoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8659,7 +8659,7 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Open a syscoin: URI or payment request</source>
+        <source>Open a Zioncoin: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8669,10 +8669,10 @@
     </message>
     <message numerus="yes">
         <location line="+384"/>
-        <source>%n active connection(s) to Syscoin network</source>
+        <source>%n active connection(s) to Zioncoin network</source>
         <translation>
-            <numerusform>%n active connection to Syscoin network</numerusform>
-            <numerusform>%n active connections to Syscoin network</numerusform>
+            <numerusform>%n active connection to Zioncoin network</numerusform>
+            <numerusform>%n active connections to Zioncoin network</numerusform>
         </translation>
     </message>
     <message>
@@ -8773,7 +8773,7 @@
     </message>
     <message>
         <location line="-433"/>
-        <source>Show the %1 help message to get a list with possible Syscoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Zioncoin command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9732,7 +9732,7 @@
 <context>
     <name>UnitDisplayStatusBarControl</name>
     <message>
-        <location filename="../syscoingui.cpp" line="+116"/>
+        <location filename="../Zioncoingui.cpp" line="+116"/>
         <source>Unit to show amounts in. Click to select another unit.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9817,9 +9817,9 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
-        <location filename="../syscoinstrings.cpp" line="+657"/>
+        <location filename="../Zioncoinstrings.cpp" line="+657"/>
         <source>Options:</source>
         <translation>Options:</translation>
     </message>
@@ -9900,8 +9900,8 @@
     </message>
     <message>
         <location line="-319"/>
-        <source>Syscoin Core</source>
-        <translation type="unfinished">Syscoin Core</translation>
+        <source>Zioncoin Core</source>
+        <translation type="unfinished">Zioncoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10695,7 +10695,7 @@
     </message>
     <message>
         <location line="+17"/>
-        <source>Can&apos;t determine type of linked alias input into syscoin service transaction</source>
+        <source>Can&apos;t determine type of linked alias input into Zioncoin service transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -10815,17 +10815,17 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Invalid Syscoin Identity. Please enter a password atleast 4 characters long</source>
+        <source>Invalid Zioncoin Identity. Please enter a password atleast 4 characters long</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -10880,17 +10880,17 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>The Syscoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
+        <source>The Zioncoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11100,7 +11100,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Can&apos;t determine type of alias input into syscoin service transaction</source>
+        <source>Can&apos;t determine type of alias input into Zioncoin service transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11355,7 +11355,7 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -12070,7 +12070,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>Non-Syscoin transaction found</source>
+        <source>Non-Zioncoin transaction found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

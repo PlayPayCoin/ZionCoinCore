@@ -1,23 +1,23 @@
-Syscoin version 0.7.1 is now available from:
-  http://sourceforge.net/projects/syscoin/files/Syscoin/syscoin-0.7.1/
+Zioncoin version 0.7.1 is now available from:
+  http://sourceforge.net/projects/Zioncoin/files/Zioncoin/Zioncoin-0.7.1/
 
 This is a bug-fix minor release.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/syscoin/syscoin2/issues
+  https://github.com/Zioncoin/Zioncoin2/issues
 
 Project source code is hosted at github; you can get
 source-only tarballs/zipballs directly from there:
-  https://github.com/syscoin/syscoin2/tarball/v0.7.1  # .tar.gz
-  https://github.com/syscoin/syscoin2/zipball/v0.7.1  # .zip
+  https://github.com/Zioncoin/Zioncoin2/tarball/v0.7.1  # .tar.gz
+  https://github.com/Zioncoin/Zioncoin2/zipball/v0.7.1  # .zip
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
 up-to-date.  Just type:
-  sudo apt-add-repository ppa:syscoin/syscoin
+  sudo apt-add-repository ppa:Zioncoin/Zioncoin
   sudo apt-get update
-in your terminal, then install the syscoin-qt package:
-  sudo apt-get install syscoin-qt
+in your terminal, then install the Zioncoin-qt package:
+  sudo apt-get install Zioncoin-qt
 
 KNOWN ISSUES
 ------------
@@ -30,7 +30,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/Syscoin-Qt (on Mac) or syscoind/syscoin-qt (on Linux).
+/Applications/Zioncoin-Qt (on Mac) or Zioncoind/Zioncoin-qt (on Linux).
 
 If you were running on Linux with a version that might have been compiled
 with a different version of Berkeley DB (for example, if you were using an
@@ -75,7 +75,7 @@ Dependency changes
 Bug fixes
 ---------
 
-* Clicking on a syscoin: URI on Windows should now launch Syscoin-Qt properly.
+* Clicking on a Zioncoin: URI on Windows should now launch Zioncoin-Qt properly.
 
 * When running -testnet, use RPC port 18370 by default.
 

@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +7,7 @@
 
 #include "addressbookpage.h"
 #include "addresstablemodel.h"
-#include "syscoinunits.h"
+#include "Zioncoinunits.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
 #include "platformstyle.h"
@@ -30,7 +30,7 @@ ReceiveCoinsDialog::ReceiveCoinsDialog(const PlatformStyle *platformStyle, QWidg
     platformStyle(platformStyle)
 {
     ui->setupUi(this);
-	// SYSCOIN
+	// Zioncoin
 	QString theme = GUIUtil::getThemeName();
 
     if (!platformStyle->getImagesOnButtons()) {

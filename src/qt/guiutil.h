@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_GUIUTIL_H
-#define SYSCOIN_QT_GUIUTIL_H
+#ifndef Zioncoin_QT_GUIUTIL_H
+#define Zioncoin_QT_GUIUTIL_H
 
 #include "amount.h"
 
@@ -29,7 +29,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the Syscoin Qt UI.
+/** Utility functions used by the Zioncoin Qt UI.
  */
 namespace GUIUtil
 {
@@ -44,13 +44,13 @@ namespace GUIUtil
     void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "syscoin:" URI into recipient object, return true on successful parsing
-    bool parseSyscoinURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseSyscoinURI(QString uri, SendCoinsRecipient *out);
-	// SYSCOIN
+    // Parse "Zioncoin:" URI into recipient object, return true on successful parsing
+    bool parseZioncoinURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseZioncoinURI(QString uri, SendCoinsRecipient *out);
+	// Zioncoin
 	QString formatBitcoinURI(const SendCoinsRecipient &info);
 	QString formatZCashURI(const SendCoinsRecipient &info);
-    QString formatSyscoinURI(const SendCoinsRecipient &info);
+    QString formatZioncoinURI(const SendCoinsRecipient &info);
 
     // Returns true if given address+amount meets "dust" definition
     bool isDust(const QString& address, const CAmount& amount);
@@ -58,7 +58,7 @@ namespace GUIUtil
     // HTML escaping for rich text controls
     QString HtmlEscape(const QString& str, bool fMultiLine=false);
     QString HtmlEscape(const std::string& str, bool fMultiLine=false);
-	// SYSCOIN
+	// Zioncoin
     /** Load global CSS theme */
     QString loadStyleSheet();
     QString getThemeName();
@@ -222,4 +222,4 @@ namespace GUIUtil
 
 } // namespace GUIUtil
 
-#endif // SYSCOIN_QT_GUIUTIL_H
+#endif // Zioncoin_QT_GUIUTIL_H

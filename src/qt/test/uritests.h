@@ -1,9 +1,9 @@
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_TEST_URITESTS_H
-#define SYSCOIN_QT_TEST_URITESTS_H
+#ifndef Zioncoin_QT_TEST_URITESTS_H
+#define Zioncoin_QT_TEST_URITESTS_H
 
 #include <QObject>
 #include <QTest>
@@ -16,4 +16,4 @@ private Q_SLOTS:
     void uriTests();
 };
 
-#endif // SYSCOIN_QT_TEST_URITESTS_H
+#endif // Zioncoin_QT_TEST_URITESTS_H

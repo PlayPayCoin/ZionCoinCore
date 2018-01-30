@@ -1,11 +1,11 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_TRANSACTIONTABLEMODEL_H
-#define SYSCOIN_QT_TRANSACTIONTABLEMODEL_H
+#ifndef Zioncoin_QT_TRANSACTIONTABLEMODEL_H
+#define Zioncoin_QT_TRANSACTIONTABLEMODEL_H
 
-#include "syscoinunits.h"
+#include "Zioncoinunits.h"
 
 #include <QAbstractTableModel>
 #include <QStringList>
@@ -98,7 +98,7 @@ private:
     QString formatTxDate(const TransactionRecord *wtx) const;
     QString formatTxType(const TransactionRecord *wtx) const;
     QString formatTxToAddress(const TransactionRecord *wtx, bool tooltip) const;
-    QString formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed=true, SyscoinUnits::SeparatorStyle separators=SyscoinUnits::separatorStandard) const;
+    QString formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed=true, ZioncoinUnits::SeparatorStyle separators=ZioncoinUnits::separatorStandard) const;
     QString formatTooltip(const TransactionRecord *rec) const;
     QVariant txStatusDecoration(const TransactionRecord *wtx) const;
     QVariant txWatchonlyDecoration(const TransactionRecord *wtx) const;
@@ -117,4 +117,4 @@ public Q_SLOTS:
     friend class TransactionTablePriv;
 };
 
-#endif // SYSCOIN_QT_TRANSACTIONTABLEMODEL_H
+#endif // Zioncoin_QT_TRANSACTIONTABLEMODEL_H

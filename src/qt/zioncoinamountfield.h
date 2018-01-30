@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_SYSCOINAMOUNTFIELD_H
-#define SYSCOIN_QT_SYSCOINAMOUNTFIELD_H
+#ifndef Zioncoin_QT_ZioncoinAMOUNTFIELD_H
+#define Zioncoin_QT_ZioncoinAMOUNTFIELD_H
 
 #include "amount.h"
 
@@ -15,18 +15,18 @@ QT_BEGIN_NAMESPACE
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering syscoin amounts.
+/** Widget for entering Zioncoin amounts.
   */
-class SyscoinAmountField: public QWidget
+class ZioncoinAmountField: public QWidget
 {
     Q_OBJECT
 
     // ugly hack: for some unknown reason CAmount (instead of qint64) does not work here as expected
-    // discussion: https://github.com/syscoin/syscoin2/pull/5117
+    // discussion: https://github.com/Zioncoin/Zioncoin2/pull/5117
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
 
 public:
-    explicit SyscoinAmountField(QWidget *parent = 0);
+    explicit ZioncoinAmountField(QWidget *parent = 0);
 
     CAmount value(bool *value=0) const;
     void setValue(const CAmount& value);
@@ -72,4 +72,4 @@ private Q_SLOTS:
 
 };
 
-#endif // SYSCOIN_QT_SYSCOINAMOUNTFIELD_H
+#endif // Zioncoin_QT_ZioncoinAMOUNTFIELD_H

@@ -322,7 +322,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>簽署訊息... &amp;m</translation>
@@ -396,8 +396,8 @@
         <translation>正在為磁碟區塊重建索引...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>付款至一個 Syscoin 位址</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>付款至一個 Zioncoin 位址</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -420,8 +420,8 @@
         <translation>驗證訊息... &amp;V</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -468,6 +468,6 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     </context>
 </TS>

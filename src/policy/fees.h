@@ -1,9 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin developers
+// Copyright (c) 2009-2015 The Zioncoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef SYSCOIN_POLICYESTIMATOR_H
-#define SYSCOIN_POLICYESTIMATOR_H
+#ifndef Zioncoin_POLICYESTIMATOR_H
+#define Zioncoin_POLICYESTIMATOR_H
 
 #include "amount.h"
 #include "uint256.h"
@@ -299,4 +299,4 @@ public:
 private:
     std::set<double> feeset;
 };
-#endif /*SYSCOIN_POLICYESTIMATOR_H */
+#endif /*Zioncoin_POLICYESTIMATOR_H */

@@ -327,8 +327,8 @@
         <translation>Potvrďte zašifrování peněženky</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Varování: Pokud svoji peněženku zašifrujete a ztratíte heslo &lt;b&gt;PŘIJDETE O VŠECHNY SYSCOINY&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Varování: Pokud svoji peněženku zašifrujete a ztratíte heslo &lt;b&gt;PŘIJDETE O VŠECHNY ZioncoinY&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -1323,8 +1323,8 @@
         <translation>Částka přesahuje zůstatek na účtu.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Varování: Neplatná Syscoin adresa</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Varování: Neplatná Zioncoin adresa</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1410,7 +1410,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Podepsat &amp;zprávu...</translation>
@@ -1452,8 +1452,8 @@
         <translation>Změnit heslo k šifrování peněženky</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1736,7 +1736,7 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Možnosti:</translation>

@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2016 The Syscoin Core developers
+# Copyright (c) 2015-2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 import socket
 
 from test_framework.socks5 import Socks5Configuration, Socks5Command, Socks5Server, AddressType
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 from test_framework.util import *
 from test_framework.netutil import test_ipv6_local
 '''
 Test plan:
-- Start syscoind's with different proxy configurations
+- Start Zioncoind's with different proxy configurations
 - Use addnode to initiate connections
 - Verify that proxies are connected to, and the right connection command is given
-- Proxy configurations to test on syscoind side:
+- Proxy configurations to test on Zioncoind side:
     - `-proxy` (proxy everything)
     - `-onion` (proxy just onions)
     - `-proxyrandomize` Circuit randomization
@@ -24,8 +24,8 @@ Test plan:
     - proxy on IPv6
 
 - Create various proxies (as threads)
-- Create syscoinds that connect to them
-- Manipulate the syscoinds using addnode (onetry) an observe effects
+- Create Zioncoinds that connect to them
+- Manipulate the Zioncoinds using addnode (onetry) an observe effects
 
 addnode connect to IPv4
 addnode connect to IPv6
@@ -34,7 +34,7 @@ addnode connect to generic DNS name
 '''
 
 
-class ProxyTest(SyscoinTestFramework):
+class ProxyTest(ZioncoinTestFramework):
     def __init__(self):
         super().__init__()
         self.num_nodes = 4
@@ -89,7 +89,7 @@ class ProxyTest(SyscoinTestFramework):
         node.addnode("15.61.23.23:1234", "onetry")
         cmd = proxies[0].queue.get()
         assert(isinstance(cmd, Socks5Command))
-        # Note: syscoind's SOCKS5 implementation only sends atyp DOMAINNAME, even if connecting directly to IPv4/IPv6
+        # Note: Zioncoind's SOCKS5 implementation only sends atyp DOMAINNAME, even if connecting directly to IPv4/IPv6
         assert_equal(cmd.atyp, AddressType.DOMAINNAME)
         assert_equal(cmd.addr, b"15.61.23.23")
         assert_equal(cmd.port, 1234)
@@ -103,7 +103,7 @@ class ProxyTest(SyscoinTestFramework):
             node.addnode("[1233:3432:2434:2343:3234:2345:6546:4534]:5443", "onetry")
             cmd = proxies[1].queue.get()
             assert(isinstance(cmd, Socks5Command))
-            # Note: syscoind's SOCKS5 implementation only sends atyp DOMAINNAME, even if connecting directly to IPv4/IPv6
+            # Note: Zioncoind's SOCKS5 implementation only sends atyp DOMAINNAME, even if connecting directly to IPv4/IPv6
             assert_equal(cmd.atyp, AddressType.DOMAINNAME)
             assert_equal(cmd.addr, b"1233:3432:2434:2343:3234:2345:6546:4534")
             assert_equal(cmd.port, 5443)
@@ -114,11 +114,11 @@ class ProxyTest(SyscoinTestFramework):
 
         if test_onion:
             # Test: outgoing onion connection through node
-            node.addnode("syscoinostk4e4re.onion:8369", "onetry")
+            node.addnode("Zioncoinostk4e4re.onion:8369", "onetry")
             cmd = proxies[2].queue.get()
             assert(isinstance(cmd, Socks5Command))
             assert_equal(cmd.atyp, AddressType.DOMAINNAME)
-            assert_equal(cmd.addr, b"syscoinostk4e4re.onion")
+            assert_equal(cmd.addr, b"Zioncoinostk4e4re.onion")
             assert_equal(cmd.port, 8369)
             if not auth:
                 assert_equal(cmd.username, None)

@@ -76,12 +76,12 @@
         <translation>Recepción de direcciones</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones Syscoin para realizar pagos. Siempre checa el monto y la dirección de recepción antes de enviar monedas.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones Zioncoin para realizar pagos. Siempre checa el monto y la dirección de recepción antes de enviar monedas.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son tus direcciones Syscoin para recibir pagos. Es recomendable usar una nueva dirección para cada transacción.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son tus direcciones Zioncoin para recibir pagos. Es recomendable usar una nueva dirección para cada transacción.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -187,8 +187,8 @@
         <translation>Confirmar encriptación de billetera</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Aviso: Si encriptas tu billetera y pierdes tu frase secreta, ¡PERDERÁS TODOS TUS SYSCOINS!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Aviso: Si encriptas tu billetera y pierdes tu frase secreta, ¡PERDERÁS TODOS TUS ZioncoinS!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -425,8 +425,8 @@
         <translation>Editar dirección de envío</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>La dirección introducida "%1" no es una dirección Syscoin válida.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>La dirección introducida "%1" no es una dirección Zioncoin válida.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -958,7 +958,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -1004,8 +1004,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Enviar monedas a una dirección Syscoin</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Enviar monedas a una dirección Zioncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1020,8 +1020,8 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1040,12 +1040,12 @@
         <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones Syscoin para probar que eres dueño de ellas</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones Zioncoin para probar que eres dueño de ellas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Syscoin especificas</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Zioncoin especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1088,8 +1088,8 @@
         <translation>Al día</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>Acerca de Syscoin Core</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>Acerca de Zioncoin Core</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -1224,7 +1224,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opciones:</translation>
@@ -1250,8 +1250,8 @@
         <translation>Correr en segundo plano como daemon y aceptar comandos</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Core</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

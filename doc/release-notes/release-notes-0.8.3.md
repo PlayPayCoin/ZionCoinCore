@@ -1,11 +1,11 @@
-Syscoin-Qt version 0.8.3 is now available from:
-  http://sourceforge.net/projects/syscoin/files/Syscoin/syscoin-0.8.3/
+Zioncoin-Qt version 0.8.3 is now available from:
+  http://sourceforge.net/projects/Zioncoin/files/Zioncoin/Zioncoin-0.8.3/
 
 This is a maintenance release to fix a denial-of-service attack that
 can cause nodes to crash.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/syscoin/syscoin2/issues
+  https://github.com/Zioncoin/Zioncoin2/issues
 
 0.8.3 Release notes
 

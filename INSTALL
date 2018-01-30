@@ -1,5 +1,5 @@
-Building Syscoin
+Building Zioncoin
 
-See doc/build-*.md for instructions on building syscoind,
+See doc/build-*.md for instructions on building Zioncoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of Syscoin.
+implementation of Zioncoin.

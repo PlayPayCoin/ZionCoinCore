@@ -365,11 +365,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Vælg adresse at sende syscoins til</translation>
+        <translation>Vælg adresse at sende Zioncoins til</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Vælg adresse at modtage syscoins med</translation>
+        <translation>Vælg adresse at modtage Zioncoins med</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -384,12 +384,12 @@
         <translation>Modtagelsesadresser</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Disse er dine Syscoin-adresser for at sende betalinger. Tjek altid beløb og modtageradresse, inden du sender syscoins.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Disse er dine Zioncoin-adresser for at sende betalinger. Tjek altid beløb og modtageradresse, inden du sender Zioncoins.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dette er dine Syscoin-adresser til at modtage betalinger med. Det anbefales are bruge en ny modtagelsesadresse for hver transaktion.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dette er dine Zioncoin-adresser til at modtage betalinger med. Det anbefales are bruge en ny modtagelsesadresse for hver transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -478,8 +478,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>Søg efter Syscoin Aliases. Vælg Safe Search fra pung muligheder, hvis du ønsker at udelade potentielt stødende Aliases (til som standard)</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>Søg efter Zioncoin Aliases. Vælg Safe Search fra pung muligheder, hvis du ønsker at udelade potentielt stødende Aliases (til som standard)</translation>
     </message>
     <message>
         <source>Error searching alias: </source>
@@ -599,8 +599,8 @@
         <translation>Bekræft tegnebogskryptering</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE SYSCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE ZioncoinS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -611,8 +611,8 @@
         <translation>Tegnebog krypteret</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your syscoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 vil lukke nu at afslutte krypteringen. Husk, at kryptere din tegnebog ikke fuldt ud kan beskytte dine syscoins fra at blive stjålet af malware inficere din computer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Zioncoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 vil lukke nu at afslutte krypteringen. Husk, at kryptere din tegnebog ikke fuldt ud kan beskytte dine Zioncoins fra at blive stjålet af malware inficere din computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -693,8 +693,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>Søg efter Syscoin certifikater. Vælg Safe Search fra pung muligheder, hvis du ønsker at udelade potentielt stødende Certifikater (til som standard)</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>Søg efter Zioncoin certifikater. Vælg Safe Search fra pung muligheder, hvis du ønsker at udelade potentielt stødende Certifikater (til som standard)</translation>
     </message>
     <message>
         <source>Copy Value</source>
@@ -961,8 +961,8 @@
         <translation>Redigér afsendelsesadresse</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>Den indtastede adresse "%1" er ikke en gyldig Syscoin-adresse.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>Den indtastede adresse "%1" er ikke en gyldig Zioncoin-adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1076,8 +1076,8 @@
         <translation>Vælg en standard udløbstid (UTC) for denne alias fra 1 til 5 år, eller kontrollere 'Brug Brugerdefineret udløbe Time' afkrydsningsfeltet for at indtaste en udløbsdato tidsstempel. Det er eksponentielt dyrere om året, beregning er FEERATE * (2,88 ^ år). FEERATE er den dynamiske Satoshi pr byte gebyr sat i sats pind alias anvendes til dette alias.</translation>
     </message>
     <message>
-        <source>Warning: transferring your alias will transfer ownership all of your syscoin services that use this alias.</source>
-        <translation>Advarsel: overføre dine alias vil overføre ejerskabet alle dine syscoin tjenester, der anvender dette alias.</translation>
+        <source>Warning: transferring your alias will transfer ownership all of your Zioncoin services that use this alias.</source>
+        <translation>Advarsel: overføre dine alias vil overføre ejerskabet alle dine Zioncoin tjenester, der anvender dette alias.</translation>
     </message>
     <message>
         <source>Is this alias safe to search? Anything that can be considered offensive to someone should be set to 'No' here. If you do create an alias that is offensive and do not set this option to 'No' your alias will be banned!</source>
@@ -1164,8 +1164,8 @@
         <translation>Fejl overføre Alias:</translation>
     </message>
     <message>
-        <source>The entered alias is not a valid Syscoin alias. Alias: </source>
-        <translation>Den indtastede alias er ikke et gyldigt Syscoin alias. Alias:</translation>
+        <source>The entered alias is not a valid Zioncoin alias. Alias: </source>
+        <translation>Den indtastede alias er ikke et gyldigt Zioncoin alias. Alias:</translation>
     </message>
     <message>
         <source>New Alias</source>
@@ -1351,8 +1351,8 @@
         <translation>Fejl overføre Cert:</translation>
     </message>
     <message>
-        <source>The entered cert is not a valid Syscoin cert.</source>
-        <translation>Den indtastede cert er ikke et gyldigt Syscoin cert.</translation>
+        <source>The entered cert is not a valid Zioncoin cert.</source>
+        <translation>Den indtastede cert er ikke et gyldigt Zioncoin cert.</translation>
     </message>
     <message>
         <source>General exception creating new Cert</source>
@@ -1510,12 +1510,12 @@
         <translation>Hvis du ønsker, kan du indtaste din købmand geolocation (bredde- og længdegrader) for at hjælpe spore fragtpriser og anden logistik information</translation>
     </message>
     <message>
-        <source>You will receive payment in Syscoin equivalent to the Market-value of the currency you have selected</source>
-        <translation>Du vil modtage betaling i Syscoin svarende til Marked-værdien af ​​den valuta, du har valgt</translation>
+        <source>You will receive payment in Zioncoin equivalent to the Market-value of the currency you have selected</source>
+        <translation>Du vil modtage betaling i Zioncoin svarende til Marked-værdien af ​​den valuta, du har valgt</translation>
     </message>
     <message>
-        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Syscoin Marketplace, you will need to import your Syscoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
-        <translation>Vælg hvilken krypto-valuta, du vil tillade som betalingsmiddel til dette tilbud. Dine valg er en kombination af SYS, BTC eller ZEC. Et eksempel indstilling for alle tre: "SYS + BTC + ZEC '. For SYS og ZEC: "SYS + ZEC '. Bemærk, at for at bruge mønter udbetalt til dig via Syscoin Marketplace, skal du importere din Syscoin private nøgle i ekstern pung (r), hvis BTC eller ZEC vælges.</translation>
+        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Zioncoin Marketplace, you will need to import your Zioncoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
+        <translation>Vælg hvilken krypto-valuta, du vil tillade som betalingsmiddel til dette tilbud. Dine valg er en kombination af SYS, BTC eller ZEC. Et eksempel indstilling for alle tre: "SYS + BTC + ZEC '. For SYS og ZEC: "SYS + ZEC '. Bemærk, at for at bruge mønter udbetalt til dig via Zioncoin Marketplace, skal du importere din Zioncoin private nøgle i ekstern pung (r), hvis BTC eller ZEC vælges.</translation>
     </message>
     <message>
         <source>Enter the 'percentage' amount(without the % sign) that you would like to mark-up the price to</source>
@@ -1602,8 +1602,8 @@
         <translation>Generel undtagelse opdatering Tilbud:</translation>
     </message>
     <message>
-        <source>The entered offer is not a valid Syscoin offer</source>
-        <translation>Den indtastede tilbud er ikke et gyldigt Syscoin tilbud</translation>
+        <source>The entered offer is not a valid Zioncoin offer</source>
+        <translation>Den indtastede tilbud er ikke et gyldigt Zioncoin tilbud</translation>
     </message>
     <message>
         <source>This transaction requires more signatures. Transaction hex has been copied to your clipboard for your reference. Please provide it to a signee that has not yet signed.</source>
@@ -1919,8 +1919,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>Søg efter Syscoin escrows.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>Søg efter Zioncoin escrows.</translation>
     </message>
     <message>
         <source>Copy Offer ID</source>
@@ -1935,8 +1935,8 @@
         <translation>Bekræft Escrow Kvittering</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Advarsel: Du er ved at erkende denne betaling fra køberen. Hvis du sender en vare, bedes du kommunikere et tracking nummer til køberen via en Syscoin besked.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Advarsel: Du er ved at erkende denne betaling fra køberen. Hvis du sender en vare, bedes du kommunikere et tracking nummer til køberen via en Zioncoin besked.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2055,8 +2055,8 @@
         <translation>version</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>Syscoin Client</translation>
+        <source>Zioncoin Client</source>
+        <translation>Zioncoin Client</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -2110,8 +2110,8 @@
 <context>
     <name>InMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>Disse er Syscoin beskeder, du har modtaget. Du kan vælge, hvilke aliasser for at se relaterede meddelelser ved hjælp af dropdown til højre.</translation>
+        <source>These are Zioncoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>Disse er Zioncoin beskeder, du har modtaget. Du kan vælge, hvilke aliasser for at se relaterede meddelelser ved hjælp af dropdown til højre.</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -2189,8 +2189,8 @@
         <translation>Siden dette er første gang, programmet startes, kan du vælge, hvor %1 skal gemme sin data.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Syscoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 vil downloade og gemme et kopi af Syscoin-blokkæden. Mindst %2 GB data vil blive gemt i denne mappe, og den vil vokse over tid. Tegnebogen vil også blive gemt i denne mappe.</translation>
+        <source>%1 will download and store a copy of the Zioncoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 vil downloade og gemme et kopi af Zioncoin-blokkæden. Mindst %2 GB data vil blive gemt i denne mappe, og den vil vokse over tid. Tegnebogen vil også blive gemt i denne mappe.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -2300,12 +2300,12 @@
         <translation>Du er den "købmand" af tilbuddet holdes i depot, kan du refunderer mønterne tilbage til køber.</translation>
     </message>
     <message>
-        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Syscoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
-        <translation>Du er den "dommer" af tilbuddet holdes i depot, kan du refunderer mønterne tilbage til køber, hvis du har dokumentation for, at den handlende ikke ære aftalen om at sende tilbuddet element. Du kan også frigive mønterne til den handlende, hvis køberen ikke har udgivet i rette herregård. Du kan bruge Syscoin beskeder til at kommunikere med køberen og handlende til at sikre, at du har tilstrækkelig dokumentation for din beslutning.</translation>
+        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Zioncoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
+        <translation>Du er den "dommer" af tilbuddet holdes i depot, kan du refunderer mønterne tilbage til køber, hvis du har dokumentation for, at den handlende ikke ære aftalen om at sende tilbuddet element. Du kan også frigive mønterne til den handlende, hvis køberen ikke har udgivet i rette herregård. Du kan bruge Zioncoin beskeder til at kommunikere med køberen og handlende til at sikre, at du har tilstrækkelig dokumentation for din beslutning.</translation>
     </message>
     <message>
-        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Syscoin messages. You may leave feedback after the money is claimed by the merchant.</source>
-        <translation>Du er den »køber« af tilbuddet holdes i depot. Den spærrede er blevet frigivet til den handlende. Du kan kommunikere med din dommer eller købmand via Syscoin beskeder. Du kan lade feedback efter pengene er hævdet af den handlende.</translation>
+        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Zioncoin messages. You may leave feedback after the money is claimed by the merchant.</source>
+        <translation>Du er den »køber« af tilbuddet holdes i depot. Den spærrede er blevet frigivet til den handlende. Du kan kommunikere med din dommer eller købmand via Zioncoin beskeder. Du kan lade feedback efter pengene er hævdet af den handlende.</translation>
     </message>
     <message>
         <source>You are the 'merchant' of the offer held in escrow. The payment of coins have been released to you, you may claim them now. After claiming, please return to this dialog and provide feedback for this escrow transaction.</source>
@@ -2344,8 +2344,8 @@
         <translation>Den spærrede er blevet refunderet til køberen. Den spærrede er færdig.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>Den spærrede status blev ikke anerkendt. Kontakt venligst Syscoin teamet.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>Den spærrede status blev ikke anerkendt. Kontakt venligst Zioncoin teamet.</translation>
     </message>
     <message>
         <source>arbiter</source>
@@ -2619,12 +2619,12 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
-        <translation>De viste oplysninger kan være forældet. Din tegnebog synkroniserer automatisk med Syscoin netværket efter en forbindelse er etableret, men denne proces er ikke afsluttet endnu. Det betyder, at nylige transaktioner ikke vil være synlige, og restbeløbet vil ikke være up-to-date, før denne proces er afsluttet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
+        <translation>De viste oplysninger kan være forældet. Din tegnebog synkroniserer automatisk med Zioncoin netværket efter en forbindelse er etableret, men denne proces er ikke afsluttet endnu. Det betyder, at nylige transaktioner ikke vil være synlige, og restbeløbet vil ikke være up-to-date, før denne proces er afsluttet.</translation>
     </message>
     <message>
-        <source>Spending syscoins may not be possible during that phase!</source>
-        <translation>Udgifterne syscoins måske ikke muligt i denne fase!</translation>
+        <source>Spending Zioncoins may not be possible during that phase!</source>
+        <translation>Udgifterne Zioncoins måske ikke muligt i denne fase!</translation>
     </message>
     <message>
         <source>Amount of blocks left</source>
@@ -2778,8 +2778,8 @@
         <translation>Bekræft Betaling Kvittering</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Advarsel: Du er ved at erkende denne betaling fra køberen. Hvis du sender en vare, bedes du kommunikere et tracking nummer til køberen via en Syscoin besked.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Advarsel: Du er ved at erkende denne betaling fra køberen. Hvis du sender en vare, bedes du kommunikere et tracking nummer til køberen via en Zioncoin besked.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2973,8 +2973,8 @@
         <translation>Eksport</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>Disse er dine registrerede Syscoin Aliases. Alias ​​operationer (oprette, opdatere, overførsel) tage 2-5 minutter til at blive aktive.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>Disse er dine registrerede Zioncoin Aliases. Alias ​​operationer (oprette, opdatere, overførsel) tage 2-5 minutter til at blive aktive.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -3108,8 +3108,8 @@
         <translation>Eksport</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
-        <translation>Disse er dine registrerede Syscoin certifikater. Certifikat operationer (oprette, opdatere, overførsel) tage 2-5 minutter til at blive aktive. Du kan vælge, hvilke aliasser for at se relaterede certifikater ved hjælp af dropdown til højre.</translation>
+        <source>These are your registered Zioncoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
+        <translation>Disse er dine registrerede Zioncoin certifikater. Certifikat operationer (oprette, opdatere, overførsel) tage 2-5 minutter til at blive aktive. Du kan vælge, hvilke aliasser for at se relaterede certifikater ved hjælp af dropdown til højre.</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3259,8 +3259,8 @@
         <translation>Eksport</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
-        <translation>Disse er dine registrerede Syscoin escrows. Spærrede operationer (oprette, frigivelse, refusion, komplet) tage 2-5 minutter til at blive aktive. Du kan vælge, hvilke aliasser for at se relaterede escrows hjælp af dropdown til højre.</translation>
+        <source>These are your registered Zioncoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
+        <translation>Disse er dine registrerede Zioncoin escrows. Spærrede operationer (oprette, frigivelse, refusion, komplet) tage 2-5 minutter til at blive aktive. Du kan vælge, hvilke aliasser for at se relaterede escrows hjælp af dropdown til højre.</translation>
     </message>
     <message>
         <source>All</source>
@@ -3323,8 +3323,8 @@
         <translation>Bekræft Escrow Kvittering</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Advarsel: Du er ved at erkende denne betaling fra køberen. Hvis du sender en vare, bedes du kommunikere et tracking nummer til køberen via en Syscoin besked.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Advarsel: Du er ved at erkende denne betaling fra køberen. Hvis du sender en vare, bedes du kommunikere et tracking nummer til køberen via en Zioncoin besked.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -3418,8 +3418,8 @@
         <translation>Eksportér den aktuelle visning til en fil</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
-        <translation>Disse er dine registrerede Syscoin Tilbud. Tilbyd operationer (oprette, opdatere) tager 2-5 minutter til at blive aktive. Du kan vælge, hvilke aliasser for at se relaterede tilbud ved hjælp af dropdown til højre.</translation>
+        <source>These are your registered Zioncoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
+        <translation>Disse er dine registrerede Zioncoin Tilbud. Tilbyd operationer (oprette, opdatere) tager 2-5 minutter til at blive aktive. Du kan vælge, hvilke aliasser for at se relaterede tilbud ved hjælp af dropdown til højre.</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3683,8 +3683,8 @@
         <translation>Fejl besvarelse besked:</translation>
     </message>
     <message>
-        <source>The entered message is not a valid Syscoin message</source>
-        <translation>Den indtastede budskab er ikke en gyldig Syscoin besked</translation>
+        <source>The entered message is not a valid Zioncoin message</source>
+        <translation>Den indtastede budskab er ikke en gyldig Zioncoin besked</translation>
     </message>
     <message>
         <source>General exception creating new message</source>
@@ -3749,8 +3749,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Accepter Syscoin tilbud</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Accepter Zioncoin tilbud</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3769,8 +3769,8 @@
         <translation>Betal med BTC</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>Betal med Syscoin</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>Betal med Zioncoin</translation>
     </message>
     <message>
         <source>Pay with SYS</source>
@@ -3785,8 +3785,8 @@
         <translation>Kunne ikke finde valuta i satserne pind til dette tilbud. Valuta:</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant</source>
-        <translation>Indtast en Syscoin dommer, der mutally tillid mellem dig og den handlende</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant</source>
+        <translation>Indtast en Zioncoin dommer, der mutally tillid mellem dig og den handlende</translation>
     </message>
     <message>
         <source>Are you sure you want to purchase</source>
@@ -3844,8 +3844,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Accepter Syscoin tilbud</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Accepter Zioncoin tilbud</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3900,12 +3900,12 @@
         <translation>Kan ikke parse JSON resultater</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>Indtast en Syscoin dommer, der mutally tillid mellem dig og den handlende. Derefter aktivere afkrydsningsfeltet "Brug Escrow '</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>Indtast en Zioncoin dommer, der mutally tillid mellem dig og den handlende. Derefter aktivere afkrydsningsfeltet "Brug Escrow '</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>Betaling ved Syscoin Decentral Marketplace. Offer ID:</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>Betaling ved Zioncoin Decentral Marketplace. Offer ID:</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4019,8 +4019,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Accepter Syscoin tilbud</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Accepter Zioncoin tilbud</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -4083,12 +4083,12 @@
         <translation>Kan ikke parse JSON resultater</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>Indtast en Syscoin dommer, der mutally tillid mellem dig og den handlende. Derefter aktivere afkrydsningsfeltet "Brug Escrow '</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>Indtast en Zioncoin dommer, der mutally tillid mellem dig og den handlende. Derefter aktivere afkrydsningsfeltet "Brug Escrow '</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>Betaling ved Syscoin Decentral Marketplace. Offer ID:</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>Betaling ved Zioncoin Decentral Marketplace. Offer ID:</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4598,8 +4598,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>Søgning efter Syscoin Tilbud (dobbeltklik på en til at købe). Vælg Safe Search fra pung muligheder, hvis du ønsker at udelade potentielt stødende Tilbud (til som standard)</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>Søgning efter Zioncoin Tilbud (dobbeltklik på en til at købe). Vælg Safe Search fra pung muligheder, hvis du ønsker at udelade potentielt stødende Tilbud (til som standard)</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -4844,8 +4844,8 @@
         <translation>Minimér i stedet for at lukke applikationen, når vinduet lukkes. Når denne indstilling er aktiveret, vil applikationen først blive lukket, når Afslut vælges i menuen.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Sproget for brugerfladen kan vælges her. Denne indstilling vil træde i kraft efter genstart af Syscoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Sproget for brugerfladen kan vælges her. Denne indstilling vil træde i kraft efter genstart af Zioncoin Core.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -4864,8 +4864,8 @@
         <translation>User Interface tema:</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Brugerfladen tema kan indstilles her. Denne indstilling træder i kraft efter genstart Syscoin Core.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Brugerfladen tema kan indstilles her. Denne indstilling træder i kraft efter genstart Zioncoin Core.</translation>
     </message>
     <message>
         <source>Default Alias:</source>
@@ -4940,12 +4940,12 @@
         <translation>&amp;Netværk</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>Start Syscoin Core automatisk efter der logges ind på systemet.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>Start Zioncoin Core automatisk efter der logges ind på systemet.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>&amp;Start Syscoin Core ved system-login</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>&amp;Start Zioncoin Core ved system-login</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -4972,16 +4972,16 @@
         <translation>&amp;Brug ubekræftede byttepenge</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åbn automatisk Syscoin-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åbn automatisk Zioncoin-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Konfigurér port vha. &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>Forbind til Syscoin-netværket gennem en SOCKS5-proxy.</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>Forbind til Zioncoin-netværket gennem en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -5020,8 +5020,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Forbind til Syscoin-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Forbind til Zioncoin-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -5065,7 +5065,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af syscoins.</translation>
+        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af Zioncoins.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -5142,8 +5142,8 @@
 <context>
     <name>OutMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>Disse er Syscoin beskeder, du har sendt. Du kan vælge, hvilke aliasser for at se relaterede meddelelser ved hjælp af dropdown til højre.</translation>
+        <source>These are Zioncoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>Disse er Zioncoin beskeder, du har sendt. Du kan vælge, hvilke aliasser for at se relaterede meddelelser ved hjælp af dropdown til højre.</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -5209,8 +5209,8 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Syscoin-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Zioncoin-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -5284,8 +5284,8 @@
         <translation>Fejl i betalingsanmodning</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Kan ikke starte syscoin: click-to-pay-håndtering</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Kan ikke starte Zioncoin: click-to-pay-håndtering</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -5300,8 +5300,8 @@
         <translation>Ugyldig betalingsadresse %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Syscoin-adresse eller forkert udformede URL-parametre.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Zioncoin-adresse eller forkert udformede URL-parametre.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -5394,8 +5394,8 @@
         <translation>Beløb</translation>
     </message>
     <message>
-        <source>Enter a Syscoin address e.g. johnsmith or </source>
-        <translation>Indtast en Syscoin adresse f.eks johnsmith eller</translation>
+        <source>Enter a Zioncoin address e.g. johnsmith or </source>
+        <translation>Indtast en Zioncoin adresse f.eks johnsmith eller</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -5791,8 +5791,8 @@
         <translation>&amp;Genbrug en eksisterende modtagelsesadresse (anbefales ikke)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
-        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Syscoin-netværket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
+        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Zioncoin-netværket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -5992,7 +5992,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send syscoins</translation>
+        <translation>Send Zioncoins</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -6071,8 +6071,8 @@
         <translation>total mindst</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
-        <translation>Det er helt fint kun at betale det minimale gebyr, så længe den totale transaktionsvolumen er mindre end den plads, der er tilgængelig i blokkene. Men vær opmærksom på, at dette kan ende ud i transaktioner, der aldrig bliver bekræftet, når der bliver større forespørgsel efter syscoin-transaktioner, end hvad netværket kan bearbejde.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
+        <translation>Det er helt fint kun at betale det minimale gebyr, så længe den totale transaktionsvolumen er mindre end den plads, der er tilgængelig i blokkene. Men vær opmærksom på, at dette kan ende ud i transaktioner, der aldrig bliver bekræftet, når der bliver større forespørgsel efter Zioncoin-transaktioner, end hvad netværket kan bearbejde.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -6184,7 +6184,7 @@
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Bekræft afsendelse af syscoins</translation>
+        <translation>Bekræft afsendelse af Zioncoins</translation>
     </message>
     <message>
         <source>The recipient address is not valid. Please recheck.</source>
@@ -6212,7 +6212,7 @@
     </message>
     <message>
         <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Transaktionen blev afvist! Dette kan ske, hvis nogle af dine syscoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine syscoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
+        <translation>Transaktionen blev afvist! Dette kan ske, hvis nogle af dine Zioncoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine Zioncoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
     </message>
     <message>
         <source>A fee higher than %1 is considered an absurdly high fee.</source>
@@ -6231,8 +6231,8 @@
         <translation><numerusform>Anslået til at begynde bekræftelse inden for %n blok (r).</numerusform><numerusform>Anslået til at begynde bekræftelse inden for %n blok (r).</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Advarsel: Ugyldig Syscoin-adresse</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Advarsel: Ugyldig Zioncoin-adresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -6266,8 +6266,8 @@
         <translation>Dette er en normal betaling.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
-        <translation>Syscoin-adresse, som betalingen skal sendes til</translation>
+        <source>The Zioncoin address to send the payment to</source>
+        <translation>Zioncoin-adresse, som betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -6286,8 +6286,8 @@
         <translation>Fjern denne indgang</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Gebyret vil blive trukket fra det sendte beløb. Modtageren vil modtage færre syscoin, end du indtaster i beløbfeltet. Hvis flere modtagere vælges, vil gebyret deles ligeligt.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Gebyret vil blive trukket fra det sendte beløb. Modtageren vil modtage færre Zioncoin, end du indtaster i beløbfeltet. Hvis flere modtagere vælges, vil gebyret deles ligeligt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -6310,8 +6310,8 @@
         <translation>Indtast et mærkat for denne adresse for at føje den til listen over brugte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>En besked, som blev føjet til "bitcon:"-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Syscoin-netværket.</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>En besked, som blev føjet til "bitcon:"-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Zioncoin-netværket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -6371,32 +6371,32 @@
         <translation>Generel undtagelse afkodning rå transaktion</translation>
     </message>
     <message>
-        <source>Sign a raw syscoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
-        <translation>Underskrive en rå syscoin transaktion, og sende den til netværket, hvis det er komplet med alle nødvendige underskrifter. Indtast den rå hex kodet transaktion nedenfor</translation>
+        <source>Sign a raw Zioncoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
+        <translation>Underskrive en rå Zioncoin transaktion, og sende den til netværket, hvis det er komplet med alle nødvendige underskrifter. Indtast den rå hex kodet transaktion nedenfor</translation>
     </message>
     <message>
-        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any syscoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
-        <translation>Når du indtaster et gyldigt rå transaktion i det generelle afsnit dette område vil blive befolket med den rå oplysninger om transaktioner, herunder eventuelle syscoin relaterede serviceinformationer, så du vil vide, hvad transaktionen gør før undertegnelsen og potentielt sende den til netværket.</translation>
+        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any Zioncoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
+        <translation>Når du indtaster et gyldigt rå transaktion i det generelle afsnit dette område vil blive befolket med den rå oplysninger om transaktioner, herunder eventuelle Zioncoin relaterede serviceinformationer, så du vil vide, hvad transaktionen gør før undertegnelsen og potentielt sende den til netværket.</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction. Currently there is nothing to display</source>
-        <translation>Området nedenfor er at vise syscoin specifikke oplysninger vedrørende denne transaktion. I øjeblikket er der intet at vise</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction. Currently there is nothing to display</source>
+        <translation>Området nedenfor er at vise Zioncoin specifikke oplysninger vedrørende denne transaktion. I øjeblikket er der intet at vise</translation>
     </message>
     <message>
         <source>Error creating decoding raw transaction: </source>
         <translation>Fejl ved oprettelse afkode rå transaktion:</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction</source>
-        <translation>Området nedenfor er at vise syscoin specifikke oplysninger vedrørende denne transaktion</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction</source>
+        <translation>Området nedenfor er at vise Zioncoin specifikke oplysninger vedrørende denne transaktion</translation>
     </message>
     <message>
-        <source>Error creating decoding raw syscoin transaction: </source>
-        <translation>Fejl ved oprettelse afkode rå syscoin transaktion:</translation>
+        <source>Error creating decoding raw Zioncoin transaction: </source>
+        <translation>Fejl ved oprettelse afkode rå Zioncoin transaktion:</translation>
     </message>
     <message>
-        <source>General exception decoding raw syscoin transaction</source>
-        <translation>Generel undtagelse afkodning rå syscoin transaktion</translation>
+        <source>General exception decoding raw Zioncoin transaction</source>
+        <translation>Generel undtagelse afkodning rå Zioncoin transaktion</translation>
     </message>
     <message>
         <source>Transaction was completed successfully!</source>
@@ -6426,12 +6426,12 @@
         <translation>&amp;Underskriv besked</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage syscoin, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage Zioncoin, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
-        <translation>Syscoin-adresse, som beskeden skal signeres med</translation>
+        <source>The Zioncoin address to sign the message with</source>
+        <translation>Zioncoin-adresse, som beskeden skal signeres med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -6462,8 +6462,8 @@
         <translation>Kopiér den nuværende underskrift til systemets udklipsholder</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Underskriv denne besked for at bevise, at Syscoin-adressen tilhører dig</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Underskriv denne besked for at bevise, at Zioncoin-adressen tilhører dig</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -6486,12 +6486,12 @@
         <translation>Indtast modtagerens adresse, besked (vær sikker på at kopiere linjeskift, mellemrum, tabuleringer, etc. præcist) og signatur herunder for at verificere beskeden. Vær forsigtig med ikke at læse noget ud fra signaturen, som ikke står i selve beskeden, for at undgå at blive snydt af et eventuelt man-in-the-middle-angreb. Bemærk, at dette kun beviser, at den signerende person kan modtage med adressen; det kan ikke bevise hvem der har sendt en given transaktion!</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
-        <translation>Syscoin-adressen, som beskeden blev signeret med</translation>
+        <source>The Zioncoin address the message was signed with</source>
+        <translation>Zioncoin-adressen, som beskeden blev signeret med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Verificér beskeden for at sikre, at den er underskrevet med den angivne Syscoin-adresse</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Verificér beskeden for at sikre, at den er underskrevet med den angivne Zioncoin-adresse</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -6562,7 +6562,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Underskriv &amp;besked…</translation>
@@ -6672,8 +6672,8 @@
         <translation>Genindekserer blokke på disken…</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Send syscoins til en Syscoin-adresse</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Send Zioncoins til en Zioncoin-adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -6696,8 +6696,8 @@
         <translation>&amp;Verificér besked…</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -6716,12 +6716,12 @@
         <translation>Kryptér de private nøgler, der hører til din tegnebog</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Underskriv beskeder med dine Syscoin-adresser for at bevise, at de tilhører dig</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Underskriv beskeder med dine Zioncoin-adresser for at bevise, at de tilhører dig</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Verificér beskeder for at sikre, at de er underskrevet med de angivne Syscoin-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Verificér beskeder for at sikre, at de er underskrevet med de angivne Zioncoin-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -6740,8 +6740,8 @@
         <translation>Faneværktøjslinje</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Anmod om betalinger (genererer QR-koder og "syscoin:"-URI'er)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Anmod om betalinger (genererer QR-koder og "Zioncoin:"-URI'er)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -6752,16 +6752,16 @@
         <translation>Vis listen over brugte modtagelsesadresser og -mærkater</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Åbn en "syscoin:"-URI eller betalingsanmodning</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Åbn en "Zioncoin:"-URI eller betalingsanmodning</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Tilvalg for &amp;kommandolinje</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
-        <translation><numerusform>%n aktiv forbindelse til Syscoin-netværket</numerusform><numerusform>%n aktive forbindelser til Syscoin-netværket</numerusform></translation>
+        <source>%n active connection(s) to Zioncoin network</source>
+        <translation><numerusform>%n aktiv forbindelse til Zioncoin-netværket</numerusform><numerusform>%n aktive forbindelser til Zioncoin-netværket</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -6828,12 +6828,12 @@
         <translation>Escrows med tilbud</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>&amp;Om Syscoin Core</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>&amp;Om Zioncoin Core</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Syscoin command-line options</source>
-        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Syscoin kommandolinje</translation>
+        <source>Show the %1 help message to get a list with possible Zioncoin command-line options</source>
+        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Zioncoin kommandolinje</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -7053,7 +7053,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Minede syscoins skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til "ikke accepteret", og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
+        <translation>Minede Zioncoins skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til "ikke accepteret", og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -7615,7 +7615,7 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send syscoins</translation>
+        <translation>Send Zioncoins</translation>
     </message>
     <message>
         <source>Could not sign multisig transaction: Invalid response from signrawtransaction</source>
@@ -7666,7 +7666,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Indstillinger:</translation>
@@ -7732,8 +7732,8 @@
         <translation>Acceptér forbindelser udefra (standard: 1 hvis hverken -proxy eller -connect)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Core</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -8464,16 +8464,16 @@
         <translation>Hvor gennemarbejdet blokverificeringen for -checkblocks er (0-4; standard: %u)</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
-        <translation>Ugyldig Syscoin Identity. Skal følge domænenavnet spec på 3 til 64 tegn med nogen forudgående eller efterstillede bindestreger og et TLD på 2 til 6 tegn</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
+        <translation>Ugyldig Zioncoin Identity. Skal følge domænenavnet spec på 3 til 64 tegn med nogen forudgående eller efterstillede bindestreger og et TLD på 2 til 6 tegn</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
-        <translation>Ugyldig Syscoin Identity. Skal følge domænenavnet spec på 3 til 64 tegn med nogen forudgående eller efterstillede tankestreger</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
+        <translation>Ugyldig Zioncoin Identity. Skal følge domænenavnet spec på 3 til 64 tegn med nogen forudgående eller efterstillede tankestreger</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Please enter a password atleast 4 characters long</source>
-        <translation>Ugyldig Syscoin Identity. Indtast venligst et kodeord mindst 4 tegn lang</translation>
+        <source>Invalid Zioncoin Identity. Please enter a password atleast 4 characters long</source>
+        <translation>Ugyldig Zioncoin Identity. Indtast venligst et kodeord mindst 4 tegn lang</translation>
     </message>
     <message>
         <source>Invalid price and/or quantity values. Quantity must be less than 4294967296 and greater than or equal to -1</source>
@@ -8512,16 +8512,16 @@
         <translation>Understøt filtrering af blokke og transaktioner med Bloom-filtre (standard: %u)</translation>
     </message>
     <message>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
-        <translation>Syscoin er open source software produceret af et globalt netværk af udviklere. Ved at downloade, distribuere og bruge Syscoin og Syscoin netværk du slipper udviklerne involveret i Syscoin Project fortid, nutid og fremtid fra ethvert ansvar. Du er ansvarlig for dine kreationer på Syscoin netværket. Du accepterer, at udviklerne af Syscoin Project bærer intet ansvar for de handlinger / data eller enheder * enhver * definition skabt på netværket ved dig selv eller andre på nettet, som du kan blive udsat for.</translation>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <translation>Zioncoin er open source software produceret af et globalt netværk af udviklere. Ved at downloade, distribuere og bruge Zioncoin og Zioncoin netværk du slipper udviklerne involveret i Zioncoin Project fortid, nutid og fremtid fra ethvert ansvar. Du er ansvarlig for dine kreationer på Zioncoin netværket. Du accepterer, at udviklerne af Zioncoin Project bærer intet ansvar for de handlinger / data eller enheder * enhver * definition skabt på netværket ved dig selv eller andre på nettet, som du kan blive udsat for.</translation>
     </message>
     <message>
-        <source>The Syscoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
-        <translation>Den Syscoin alias du forsøger at bruge til denne transaktion er ugyldig eller er blevet opdateret og ikke bekræftet endnu! Vent en blok, og prøv igen ...</translation>
+        <source>The Zioncoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
+        <translation>Den Zioncoin alias du forsøger at bruge til denne transaktion er ugyldig eller er blevet opdateret og ikke bekræftet endnu! Vent en blok, og prøv igen ...</translation>
     </message>
     <message>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
-        <translation>Udviklerne af den Syscoin Project ikke har magt til at ændre data på Syscoin netværket, er det bakkes op af en uforanderlig blockchain, som du anerkender endvidere ved brug af Syscoin, den Syscoin netværket, og Syscoin tjenester. Hvis du ikke kan acceptere disse vilkår, skal du undlade at bruge Syscoin og dens relaterede tjenester.</translation>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
+        <translation>Udviklerne af den Zioncoin Project ikke har magt til at ændre data på Zioncoin netværket, er det bakkes op af en uforanderlig blockchain, som du anerkender endvidere ved brug af Zioncoin, den Zioncoin netværket, og Zioncoin tjenester. Hvis du ikke kan acceptere disse vilkår, skal du undlade at bruge Zioncoin og dens relaterede tjenester.</translation>
     </message>
     <message>
         <source>This resold offer must be of higher price than the original offer including any discount</source>
@@ -8680,8 +8680,8 @@
         <translation>Kan kun frigive en aktiv spærret</translation>
     </message>
     <message>
-        <source>Can't determine type of alias input into syscoin service transaction</source>
-        <translation>Kan ikke bestemme type alias input til syscoin tjeneste transaktion</translation>
+        <source>Can't determine type of alias input into Zioncoin service transaction</source>
+        <translation>Kan ikke bestemme type alias input til Zioncoin tjeneste transaktion</translation>
     </message>
     <message>
         <source>Cannot change category to wanted</source>
@@ -8884,8 +8884,8 @@
         <translation>Kommissionen skal mellem -90 og 100</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
-        <translation>Ophavsret © 2009-%i Udviklerne af Syscoin Core</translation>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
+        <translation>Ophavsret © 2009-%i Udviklerne af Zioncoin Core</translation>
     </message>
     <message>
         <source>Could not create escrow transaction: Invalid response from createescrow</source>
@@ -9448,8 +9448,8 @@
         <translation>Ingen private nøgler fundet involveret i dette depot</translation>
     </message>
     <message>
-        <source>Non-Syscoin transaction found</source>
-        <translation>Ikke-Syscoin transaktion fundet</translation>
+        <source>Non-Zioncoin transaction found</source>
+        <translation>Ikke-Zioncoin transaktion fundet</translation>
     </message>
     <message>
         <source>Not enough quantity left in this offer for this purchase</source>

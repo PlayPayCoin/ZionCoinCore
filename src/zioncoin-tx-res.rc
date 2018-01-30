@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Syscoin"
-            VALUE "FileDescription",    "syscoin-tx (CLI Syscoin transaction editor utility)"
+            VALUE "CompanyName",        "Zioncoin"
+            VALUE "FileDescription",    "Zioncoin-tx (CLI Zioncoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "syscoin-tx"
+            VALUE "InternalName",       "Zioncoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "syscoin-tx.exe"
-            VALUE "ProductName",        "syscoin-tx"
+            VALUE "OriginalFilename",   "Zioncoin-tx.exe"
+            VALUE "ProductName",        "Zioncoin-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

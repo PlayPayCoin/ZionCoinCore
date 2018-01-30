@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin developers
+// Copyright (c) 2011-2015 The Zioncoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_PAYMENTREQUESTPLUS_H
-#define SYSCOIN_QT_PAYMENTREQUESTPLUS_H
+#ifndef Zioncoin_QT_PAYMENTREQUESTPLUS_H
+#define Zioncoin_QT_PAYMENTREQUESTPLUS_H
 
 #include "paymentrequest.pb.h"
 
@@ -45,4 +45,4 @@ private:
     payments::PaymentDetails details;
 };
 
-#endif // SYSCOIN_QT_PAYMENTREQUESTPLUS_H
+#endif // Zioncoin_QT_PAYMENTREQUESTPLUS_H

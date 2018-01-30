@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_CLIENTMODEL_H
-#define SYSCOIN_QT_CLIENTMODEL_H
+#ifndef Zioncoin_QT_CLIENTMODEL_H
+#define Zioncoin_QT_CLIENTMODEL_H
 
 #include <QObject>
 #include <QDateTime>
@@ -35,7 +35,7 @@ enum NumConnections {
     CONNECTIONS_ALL  = (CONNECTIONS_IN | CONNECTIONS_OUT),
 };
 
-/** Model for Syscoin network client. */
+/** Model for Zioncoin network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT
@@ -106,4 +106,4 @@ public Q_SLOTS:
     void updateBanlist();
 };
 
-#endif // SYSCOIN_QT_CLIENTMODEL_H
+#endif // Zioncoin_QT_CLIENTMODEL_H

@@ -1,14 +1,14 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
 #include "optionsmodel.h"
 
-#include "syscoinunits.h"
+#include "Zioncoinunits.h"
 #include "guiutil.h"
 
 #include "amount.h"
@@ -69,7 +69,7 @@ void OptionsModel::Init(bool resetSettings)
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", SyscoinUnits::SYS);
+        settings.setValue("nDisplayUnit", ZioncoinUnits::SYS);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
     if (!settings.contains("strThirdPartyTxUrls"))
@@ -142,7 +142,7 @@ void OptionsModel::Init(bool resetSettings)
         addOverriddenOption("-onion");
 
     // Display
-	// SYSCOIN
+	// Zioncoin
     if (!settings.contains("theme"))
         settings.setValue("theme", "");
     if (!settings.contains("defaultAlias"))
@@ -154,9 +154,9 @@ void OptionsModel::Init(bool resetSettings)
     if (!settings.contains("safesearch"))
         settings.setValue("safesearch", "Yes");
     if (!settings.contains("zecEndPoint"))
-		settings.setValue("zecEndPoint", "http://zec.syscoin.org:8080/");
+		settings.setValue("zecEndPoint", "http://zec.Zioncoin.org:8080/");
     if (!settings.contains("btcEndPoint"))
-        settings.setValue("btcEndPoint", "http://btc.syscoin.org:8080/");
+        settings.setValue("btcEndPoint", "http://btc.Zioncoin.org:8080/");
     if (!settings.contains("zecRPCLogin"))
         settings.setValue("zecRPCLogin", "sysuser");
     if (!settings.contains("btcRPCLogin"))
@@ -269,7 +269,7 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return settings.value("nThreadsScriptVerif");
         case Listen:
             return settings.value("fListen");
-        // SYSCOIN
+        // Zioncoin
 		case Theme:
             return settings.value("theme");  
         case DefaultAlias:
@@ -415,7 +415,7 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
                 setRestartRequired(true);
             }
             break;
-		// SYSCOIN
+		// Zioncoin
         case Theme:
             if (settings.value("theme") != value) {
                 settings.setValue("theme", value);
@@ -555,7 +555,7 @@ void OptionsModel::checkAndMigrate()
     if (settingsVersion < CLIENT_VERSION)
     {
         // -dbcache was bumped from 100 to 300 in 0.13
-        // see https://github.com/syscoin/syscoin2/pull/8273
+        // see https://github.com/Zioncoin/Zioncoin2/pull/8273
         // force people to upgrade to the new value if they are using 100MB
         if (settingsVersion < 130000 && settings.contains("nDatabaseCache") && settings.value("nDatabaseCache").toLongLong() == 100)
             settings.setValue("nDatabaseCache", (qint64)nDefaultDbCache);

@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-# Copyright (c) 2016 The Syscoin Core developers
+# Copyright (c) 2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #
 # Helper script to create the cache
-# (see SyscoinTestFramework.setup_chain)
+# (see ZioncoinTestFramework.setup_chain)
 #
 
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 
-class CreateCache(SyscoinTestFramework):
+class CreateCache(ZioncoinTestFramework):
 
     def __init__(self):
         super().__init__()

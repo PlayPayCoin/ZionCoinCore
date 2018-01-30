@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_OPTIONSDIALOG_H
-#define SYSCOIN_QT_OPTIONSDIALOG_H
+#ifndef Zioncoin_QT_OPTIONSDIALOG_H
+#define Zioncoin_QT_OPTIONSDIALOG_H
 
 #include <QDialog>
 #include <QValidator>
@@ -13,7 +13,7 @@ class QValidatedLineEdit;
 
 QT_BEGIN_NAMESPACE
 class QDataWidgetMapper;
-// SYSCOIN
+// Zioncoin
 class QNetworkReply;
 QT_END_NAMESPACE
 
@@ -69,4 +69,4 @@ private:
     QDataWidgetMapper *mapper;
 };
 
-#endif // SYSCOIN_QT_OPTIONSDIALOG_H
+#endif // Zioncoin_QT_OPTIONSDIALOG_H

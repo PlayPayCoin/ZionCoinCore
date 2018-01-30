@@ -1,5 +1,5 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -34,8 +34,8 @@
 #include <univalue.h>
 
 using namespace std;
-// SYSCOIN
-extern int GetSyscoinTxVersion();
+// Zioncoin
+extern int GetZioncoinTxVersion();
 void ScriptPubKeyToJSON(const CScript& scriptPubKey, UniValue& out, bool fIncludeHex)
 {
     txnouttype type;
@@ -56,7 +56,7 @@ void ScriptPubKeyToJSON(const CScript& scriptPubKey, UniValue& out, bool fInclud
 
     UniValue a(UniValue::VARR);
     BOOST_FOREACH(const CTxDestination& addr, addresses)
-        a.push_back(CSyscoinAddress(addr).ToString());
+        a.push_back(CZioncoinAddress(addr).ToString());
     out.push_back(Pair("addresses", a));
 }
 
@@ -178,7 +178,7 @@ UniValue getrawtransaction(const UniValue& params, bool fHelp)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"syscoinaddress\"        (string) syscoin address\n"
+            "           \"Zioncoinaddress\"        (string) Zioncoin address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -337,7 +337,7 @@ UniValue verifytxoutproof(const UniValue& params, bool fHelp)
 }
 UniValue createrawtransaction(const UniValue& params, bool fHelp)
 {
-	// SYSCOIN 4 params
+	// Zioncoin 4 params
     if (fHelp || params.size() < 2 || params.size() > 4)
         throw runtime_error(
             "createrawtransaction [{\"txid\":\"id\",\"vout\":n},...] {\"address\":amount,\"data\":\"hex\",...} ( locktime )\n"
@@ -359,13 +359,13 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
             "     ]\n"
             "2. \"outputs\"             (string, required) a json object with outputs\n"
             "    {\n"
-            "      \"address\": x.xxx   (numeric or string, required) The key is the syscoin address, the numeric value (can be string) is the " + CURRENCY_UNIT + " amount\n"
+            "      \"address\": x.xxx   (numeric or string, required) The key is the Zioncoin address, the numeric value (can be string) is the " + CURRENCY_UNIT + " amount\n"
             "      \"data\": \"hex\",     (string, required) The key is \"data\", the value is hex encoded data\n"
             "      ...\n"
             "    }\n"
             "3. locktime                (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs\n"
-			// SYSCOIN
-			"4. syscointx          (boolean, optional, default=true) Syscoin transaction flag. Boolean value which will set the transaction version to syscoin if alias payments were found, set to 'true'. Set to 'false' if creating extern blockchain transaction.\n"
+			// Zioncoin
+			"4. Zioncointx          (boolean, optional, default=true) Zioncoin transaction flag. Boolean value which will set the transaction version to Zioncoin if alias payments were found, set to 'true'. Set to 'false' if creating extern blockchain transaction.\n"
             "\nResult:\n"
             "\"transaction\"            (string) hex string of the transaction\n"
 
@@ -391,10 +391,10 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
             throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, locktime out of range");
         rawTx.nLockTime = nLockTime;
     }
-	// SYSCOIN
-	bool bSyscoinBlockchainTx = true;
+	// Zioncoin
+	bool bZioncoinBlockchainTx = true;
     if (params.size() > 3 && !params[3].isNull()) {
-		bSyscoinBlockchainTx = params[3].get_bool();
+		bZioncoinBlockchainTx = params[3].get_bool();
     }
     for (unsigned int idx = 0; idx < inputs.size(); idx++) {
         const UniValue& input = inputs[idx];
@@ -426,7 +426,7 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
         rawTx.vin.push_back(in);
     }
 
-    set<CSyscoinAddress> setAddress;
+    set<CZioncoinAddress> setAddress;
     vector<string> addrList = sendTo.getKeys();
     BOOST_FOREACH(const string& name_, addrList) {
 
@@ -436,25 +436,25 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
             CTxOut out(0, CScript() << OP_RETURN << data);
             rawTx.vout.push_back(out);
         } else {
-            CSyscoinAddress address(name_);
+            CZioncoinAddress address(name_);
             if (!address.IsValid())
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Syscoin address: ")+name_);
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Zioncoin address: ")+name_);
 
             if (setAddress.count(address))
                 throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+name_);
             setAddress.insert(address);
 
-			// SYSCOIN
+			// Zioncoin
 			CScript scriptPubKey =  GetScriptForDestination(address.Get());
 			if(!address.vchRedeemScript.empty())
 				scriptPubKey = CScript(address.vchRedeemScript.begin(), address.vchRedeemScript.end());
-			if(address.isAlias && bSyscoinBlockchainTx)
+			if(address.isAlias && bZioncoinBlockchainTx)
 			{
 				CScript scriptPubKeyOrig;
 				scriptPubKeyOrig << CScript::EncodeOP_N(OP_ALIAS_PAYMENT) << vchFromString(address.aliasName) << OP_2DROP;
 				scriptPubKeyOrig += scriptPubKey;
 				scriptPubKey = scriptPubKeyOrig;
-				rawTx.nVersion = GetSyscoinTxVersion();		
+				rawTx.nVersion = GetZioncoinTxVersion();		
 			}
 			
             CAmount nAmount = AmountFromValue(sendTo[name_]);
@@ -507,7 +507,7 @@ UniValue decoderawtransaction(const UniValue& params, bool fHelp)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"12tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc\"   (string) syscoin address\n"
+            "           \"12tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc\"   (string) Zioncoin address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -550,7 +550,7 @@ UniValue decodescript(const UniValue& params, bool fHelp)
             "  \"type\":\"type\", (string) The output type\n"
             "  \"reqSigs\": n,    (numeric) The required signatures\n"
             "  \"addresses\": [   (json array of string)\n"
-            "     \"address\"     (string) syscoin address\n"
+            "     \"address\"     (string) Zioncoin address\n"
             "     ,...\n"
             "  ],\n"
             "  \"p2sh\",\"address\" (string) address of P2SH script wrapping this redeem script (not returned if the script is already a P2SH).\n"
@@ -578,7 +578,7 @@ UniValue decodescript(const UniValue& params, bool fHelp)
     if (type.isStr() && type.get_str() != "scripthash") {
         // P2SH cannot be wrapped in a P2SH. If this script is already a P2SH,
         // don't return the address for a P2SH of the P2SH.
-        r.push_back(Pair("p2sh", CSyscoinAddress(CScriptID(script)).ToString()));
+        r.push_back(Pair("p2sh", CZioncoinAddress(CScriptID(script)).ToString()));
     }
 
     return r;
@@ -710,7 +710,7 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
         UniValue keys = params[2].get_array();
         for (unsigned int idx = 0; idx < keys.size(); idx++) {
             UniValue k = keys[idx];
-            CSyscoinSecret vchSecret;
+            CZioncoinSecret vchSecret;
             bool fGood = vchSecret.SetString(k.get_str());
             if (!fGood)
                 throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key");

@@ -288,12 +288,12 @@
         <translation>Sumens oratio</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Hae sunt inscriptiones mittendi pensitationes.  Semper inspice quantitatem et inscriptionem accipiendi antequam nummos mittis.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hi sunt Syscoin oratio ad recipiendum pretium. Commendatur ut oratio pro re nova assumptio.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Hi sunt Zioncoin oratio ad recipiendum pretium. Commendatur ut oratio pro re nova assumptio.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -370,8 +370,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>Search for Syscoin aliases. Select a Tutus Quaerere peram, si vis bene omittit ad inferrent potentia Aliases (in per default)</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>Search for Zioncoin aliases. Select a Tutus Quaerere peram, si vis bene omittit ad inferrent potentia Aliases (in per default)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Aliases starting with 'name'). Empty will search for all.</source>
@@ -467,7 +467,7 @@
         <translation>Confirma cifrationem cassidilis</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
         <translation>Monitio: Si cassidile tuum cifras et tesseram amittis, tu &lt;b&gt;AMITTES OMNES TUOS NUMMOS BITOS&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -553,8 +553,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>Syscoin Us Search for. Select a Tutus Quaerere peram, si vis bene omittit ad inferrent potentia Us (in per default)</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>Zioncoin Us Search for. Select a Tutus Quaerere peram, si vis bene omittit ad inferrent potentia Us (in per default)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Certificates starting with 'name'). Empty will search for all.</source>
@@ -789,8 +789,8 @@
         <translation>Muta inscriptionem mittendi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>Inscriptio inserta "%1" non valida inscriptio Syscoin est.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>Inscriptio inserta "%1" non valida inscriptio Zioncoin est.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1315,8 +1315,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>Search for Syscoin Escrows.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>Search for Zioncoin Escrows.</translation>
     </message>
     <message>
         <source>Enter search term. Search for arbiter/seller or escrow GUID. Empty will search for all.</source>
@@ -1407,8 +1407,8 @@
         <translation>versio</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>Syscoin Client</translation>
+        <source>Zioncoin Client</source>
+        <translation>Zioncoin Client</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1572,8 +1572,8 @@
         <translation>Escrow emptori dictum tincidunt diam. Escrow completum est.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>Escrow status non agnita est. Commodo contactus quadrigis Syscoin.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>Escrow status non agnita est. Commodo contactus quadrigis Zioncoin.</translation>
     </message>
     <message>
         <source>none</source>
@@ -1893,8 +1893,8 @@
         <translation>Exporta data in hac tabella in plicam</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>Isti sunt numerati Syscoin aliases. Alias ​​operationes (creare, update, transitus) 2-5 minutes ad active accipere.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>Isti sunt numerati Zioncoin aliases. Alias ​​operationes (creare, update, transitus) 2-5 minutes ad active accipere.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -2405,8 +2405,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Accipite Syscoin Prices</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Accipite Zioncoin Prices</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2421,8 +2421,8 @@
         <translation>Redde in BTC</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>Redde cum Syscoin</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>Redde cum Zioncoin</translation>
     </message>
     <message>
         <source>Use Escrow</source>
@@ -2456,8 +2456,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Accipite Syscoin Prices</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Accipite Zioncoin Prices</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2527,8 +2527,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Accipite Syscoin Prices</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Accipite Zioncoin Prices</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2822,8 +2822,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>Search for Syscoin Offers (emere unam bis). Select a Tutus Quaerere peram, si vis bene omittit ad inferrent potentia Offers (in per default)</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>Search for Zioncoin Offers (emere unam bis). Select a Tutus Quaerere peram, si vis bene omittit ad inferrent potentia Offers (in per default)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Offer's starting with 'name'). Empty will search for all.</source>
@@ -3000,8 +3000,8 @@
         <translation>Minimize et, exitum potius, cum application est propinquus fenestra. Nam cum possit applicatio tantum claudantur Exit in eligendo menu.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Pone hic user interface potest oratio. Hoc effectum post occasum erit restarting Syscoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Pone hic user interface potest oratio. Hoc effectum post occasum erit restarting Zioncoin Core.</translation>
     </message>
     <message>
         <source>Third party transaction URLs</source>
@@ -3016,8 +3016,8 @@
         <translation>User interface Theme:</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>User interface posse propositum est. Hoc effectum post occasum erit restarting Syscoin Core.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>User interface posse propositum est. Hoc effectum post occasum erit restarting Zioncoin Core.</translation>
     </message>
     <message>
         <source>Default Peg Alias:</source>
@@ -3052,12 +3052,12 @@
         <translation>&amp;Rete</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>Duorum autem Core Syscoin colligationem ad satus ratio.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>Duorum autem Core Zioncoin colligationem ad satus ratio.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>&amp; Ratio ex login Start Syscoin Core</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>&amp; Ratio ex login Start Zioncoin Core</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -3084,16 +3084,16 @@
         <translation>&amp; Confirmatum mutatio manere</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Aperi per se portam clientis Syscoin in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aperi per se portam clientis Zioncoin in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Designa portam utendo &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>Ad coniungere network Syscoin SOCKS5 per procuratorem.</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>Ad coniungere network Zioncoin SOCKS5 per procuratorem.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -3132,8 +3132,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Syscoin network ad coniungere singulis per procuratorem SOCKS5 Tor in abscondito servicia.</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Zioncoin network ad coniungere singulis per procuratorem SOCKS5 Tor in abscondito servicia.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -3289,8 +3289,8 @@
         <translation>Schema</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete Syscoin postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete Zioncoin postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -3364,16 +3364,16 @@
         <translation>Payment postulo erroris</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Syscoin incipere non potest: cliccare-ad-pensandum handler</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Zioncoin incipere non potest: cliccare-ad-pensandum handler</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>Tractatio URI</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>URI non parsed! Haec oratio possit ex infirmitate vel Syscoin malformed URI parametri.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>URI non parsed! Haec oratio possit ex infirmitate vel Zioncoin malformed URI parametri.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -3743,8 +3743,8 @@
         <translation>R &amp; Euse an sit perceptio (non commendatur)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
-        <translation>De solutione apponere ad libitum petentium precibus que emergit dum aperitur. Nota: non misit nuntium in solutione Syscoin elit.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
+        <translation>De solutione apponere ad libitum petentium precibus que emergit dum aperitur. Nota: non misit nuntium in solutione Zioncoin elit.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -3987,8 +3987,8 @@
         <translation>totalis saltem</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
-        <translation>Reddens solum quoad minimum pretium est denique mole quamquam spatio minus impedit. Sed esse conscius quod hoc non potest terminus sursum in a magis confirmantia, quamquam iam est, quam res postulat pro syscoin network, potest procedere.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
+        <translation>Reddens solum quoad minimum pretium est denique mole quamquam spatio minus impedit. Sed esse conscius quod hoc non potest terminus sursum in a magis confirmantia, quamquam iam est, quam res postulat pro Zioncoin network, potest procedere.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -4127,8 +4127,8 @@
         <translation>Payment solvetur instantia.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Warning: Invalid Syscoin oratio</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Warning: Invalid Zioncoin oratio</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -4162,8 +4162,8 @@
         <translation>Hoc est Northmanni pretium.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
-        <translation>Et oratio ut in solutione ad Syscoin</translation>
+        <source>The Zioncoin address to send the payment to</source>
+        <translation>Et oratio ut in solutione ad Zioncoin</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -4182,8 +4182,8 @@
         <translation>Remove this entry</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Et tolletur de feodo tantum missus. Et recipiens est quantum non recipiunt, minus syscoins quam vos ingredimini in agro. Si plures sunt electi possint, pariter conciderunt in feodo.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Et tolletur de feodo tantum missus. Et recipiens est quantum non recipiunt, minus Zioncoins quam vos ingredimini in agro. Si plures sunt electi possint, pariter conciderunt in feodo.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -4206,8 +4206,8 @@
         <translation>Intra hoc pittacium usus oratione compellat numero addere illud</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>Nuntius syscoin coniunctum: URI condi quae cum re pro referunt. Nota: Haec non Syscoin mitti in elit.</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>Nuntius Zioncoin coniunctum: URI condi quae cum re pro referunt. Nota: Haec non Zioncoin mitti in elit.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -4262,12 +4262,12 @@
         <translation>&amp;Signa Nuntium</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Vos can subscribere nuntiis / syscoins dera cum oratio ad ea probare poteris consequi. Cave ne vagum aut incertum aliquid in signum, ut darem te in phishing impetus potest experiri ad eos ad identitatem laudem tuam. Plenius, solum signum vos singula dicta conveniunt.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Vos can subscribere nuntiis / Zioncoins dera cum oratio ad ea probare poteris consequi. Cave ne vagum aut incertum aliquid in signum, ut darem te in phishing impetus potest experiri ad eos ad identitatem laudem tuam. Plenius, solum signum vos singula dicta conveniunt.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
-        <translation>Quod verbum cum Syscoin oratio ad signum</translation>
+        <source>The Zioncoin address to sign the message with</source>
+        <translation>Quod verbum cum Zioncoin oratio ad signum</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4298,8 +4298,8 @@
         <translation>Copia signationem in latibulum systematis</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Signa nuntium ut demonstres hanc inscriptionem Syscoin a te possessa esse</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Signa nuntium ut demonstres hanc inscriptionem Zioncoin a te possessa esse</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -4322,12 +4322,12 @@
         <translation>Enter accipientis s calliditatisque Nuntius (ut vos effingo line breaks, spatia, tabs, aliter etc.) et subscriptione subter nuntium ad verificare. Cave ne subscriptio quam in more est sermo ipso sodale subscriptis, ne homo in-medio impetus ars deluditur arte. Nota quod in hoc probat solum volo parte cum in oratione accipit, quod non possit de aliqua re sendership!</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
-        <translation>Et oratio ad Syscoin Nuntius subscripta</translation>
+        <source>The Zioncoin address the message was signed with</source>
+        <translation>Et oratio ad Zioncoin Nuntius subscripta</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione Syscoin</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione Zioncoin</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -4398,7 +4398,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signa &amp;nuntium...</translation>
@@ -4484,8 +4484,8 @@
         <translation>Recreans indicem frustorum in disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Mitte nummos ad inscriptionem Syscoin</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Mitte nummos ad inscriptionem Zioncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -4508,8 +4508,8 @@
         <translation>&amp;Verifica nuntium...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -4528,12 +4528,12 @@
         <translation>Cifra claves privatas quae cassidili tui sunt</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Signa nuntios cum tuis inscriptionibus Syscoin ut demonstres te eas possidere</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Signa nuntios cum tuis inscriptionibus Zioncoin ut demonstres te eas possidere</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus Syscoin</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus Zioncoin</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -4552,8 +4552,8 @@
         <translation>Tabella instrumentorum "Tabs"</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Request praestationibus (generat, et QR codes syscoin: URIs)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Request praestationibus (generat, et QR codes Zioncoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -4564,8 +4564,8 @@
         <translation>Show recipiat oratio, et utendum est titulus album</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Aperi syscoin est: et solutionem petitionem URI</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Aperi Zioncoin est: et solutionem petitionem URI</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -4624,8 +4624,8 @@
         <translation>Escrows promittentes</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>&amp; De Syscoin Core</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>&amp; De Zioncoin Core</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -5024,7 +5024,7 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Optiones:</translation>
@@ -5054,8 +5054,8 @@
         <translation>Accipe conexiones externas (praedefinitum: 1 nisi -proxy neque -connect)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Nucleus</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Nucleus</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

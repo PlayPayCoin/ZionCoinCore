@@ -1,5 +1,5 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2016 The Syscoin Core developers
+// Copyright (c) 2009-2016 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -26,7 +26,7 @@
 #include <univalue.h>
 
 using namespace std;
-// SYSCOIN
+// Zioncoin
 #include "offer.h"
 #include "escrow.h"
 extern bool DecodeAliasTx(const CTransaction& tx, int& op, int& nOut, vector<vector<unsigned char> >& vvch, bool payment);
@@ -123,13 +123,13 @@ UniValue getnewaddress(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getnewaddress ( \"account\" )\n"
-            "\nReturns a new Syscoin address for receiving payments.\n"
+            "\nReturns a new Zioncoin address for receiving payments.\n"
             "If 'account' is specified (DEPRECATED), it is added to the address book \n"
             "so payments received with the address will be credited to 'account'.\n"
             "\nArguments:\n"
             "1. \"account\"        (string, optional) DEPRECATED. The account name for the address to be linked to. If not provided, the default account \"\" is used. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created if there is no account by the given name.\n"
             "\nResult:\n"
-            "\"syscoinaddress\"    (string) The new syscoin address\n"
+            "\"Zioncoinaddress\"    (string) The new Zioncoin address\n"
             "\nExamples:\n"
             + HelpExampleCli("getnewaddress", "")
             + HelpExampleRpc("getnewaddress", "")
@@ -152,10 +152,10 @@ UniValue getnewaddress(const UniValue& params, bool fHelp)
     CKeyID keyID = newKey.GetID();
 
     pwalletMain->SetAddressBook(keyID, strAccount, "receive");
-	// SYSCOIN to send v1 address by default
-    return CSyscoinAddress(keyID, CChainParams::ADDRESS_OLDSYS).ToString();
+	// Zioncoin to send v1 address by default
+    return CZioncoinAddress(keyID, CChainParams::ADDRESS_OLDSYS).ToString();
 }
-// SYSCOIN
+// Zioncoin
 UniValue getv2address(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp))
@@ -164,13 +164,13 @@ UniValue getv2address(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getv2address ( \"account\" )\n"
-			"\nReturns a new Syscoin (starts with 1) address for receiving payments.\n"
+			"\nReturns a new Zioncoin (starts with 1) address for receiving payments.\n"
             "If 'account' is specified (DEPRECATED), it is added to the address book \n"
             "so payments received with the address will be credited to 'account'.\n"
             "\nArguments:\n"
             "1. \"account\"        (string, optional) DEPRECATED. The account name for the address to be linked to. If not provided, the default account \"\" is used. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created if there is no account by the given name.\n"
             "\nResult:\n"
-            "\"syscoinaddress\"    (string) The new syscoin address\n"
+            "\"Zioncoinaddress\"    (string) The new Zioncoin address\n"
             "\nExamples:\n"
             + HelpExampleCli("getv2address", "")
             + HelpExampleRpc("getv2address", "")
@@ -194,7 +194,7 @@ UniValue getv2address(const UniValue& params, bool fHelp)
 
     pwalletMain->SetAddressBook(keyID, strAccount, "receive");
 
-    return CSyscoinAddress(keyID).ToString();
+    return CZioncoinAddress(keyID).ToString();
 }
 UniValue getzaddress(const UniValue& params, bool fHelp)
 {
@@ -207,7 +207,7 @@ UniValue getzaddress(const UniValue& params, bool fHelp)
 			"\nReturns a new ZCash address for receiving payments in ZCash transaparent tokens.\n"
             "so payments received with the address will be credited to 'account'.\n"
             "\nArguments:\n"
-            "1. \"address\"        (string) Syscoin alias or address to convert to ZCash address.\n"
+            "1. \"address\"        (string) Zioncoin alias or address to convert to ZCash address.\n"
             "\nResult:\n"
             "\"zaddress\"    (string) The new zcash address\n"
             "\nExamples:\n"
@@ -216,7 +216,7 @@ UniValue getzaddress(const UniValue& params, bool fHelp)
         );
 
     string strAddress = params[0].get_str();
-    CSyscoinAddress sysAddress(strAddress);
+    CZioncoinAddress sysAddress(strAddress);
 
 	if(!sysAddress.isAlias)
 		throw JSONRPCError(RPC_INVALID_PARAMS, "Error: Please provide an alias or an address belonging to an alias");
@@ -225,23 +225,23 @@ UniValue getzaddress(const UniValue& params, bool fHelp)
 	{
 		CScript inner(sysAddress.vchRedeemScript.begin(), sysAddress.vchRedeemScript.end());
 		CScriptID innerID(inner);
-		sysAddress = CSyscoinAddress(innerID, CChainParams::ADDRESS_ZEC);
+		sysAddress = CZioncoinAddress(innerID, CChainParams::ADDRESS_ZEC);
 		return sysAddress.ToString();
 	}
 	else
 	{
 		CPubKey pubkey(sysAddress.vchPubKey);
-		return CSyscoinAddress(pubkey.GetID(), CChainParams::ADDRESS_ZEC).ToString();
+		return CZioncoinAddress(pubkey.GetID(), CChainParams::ADDRESS_ZEC).ToString();
 	}
 }
-CSyscoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
+CZioncoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
 {
     CPubKey pubKey;
     if (!pwalletMain->GetAccountPubkey(pubKey, strAccount, bForceNew)) {
         throw JSONRPCError(RPC_WALLET_KEYPOOL_RAN_OUT, "Error: Keypool ran out, please call keypoolrefill first");
     }
 
-    return CSyscoinAddress(pubKey.GetID());
+    return CZioncoinAddress(pubKey.GetID());
 }
 
 UniValue getaccountaddress(const UniValue& params, bool fHelp)
@@ -252,11 +252,11 @@ UniValue getaccountaddress(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "getaccountaddress \"account\"\n"
-            "\nDEPRECATED. Returns the current Syscoin address for receiving payments to this account.\n"
+            "\nDEPRECATED. Returns the current Zioncoin address for receiving payments to this account.\n"
             "\nArguments:\n"
             "1. \"account\"       (string, required) The account name for the address. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created and a new address created  if there is no account by the given name.\n"
             "\nResult:\n"
-            "\"syscoinaddress\"   (string) The account syscoin address\n"
+            "\"Zioncoinaddress\"   (string) The account Zioncoin address\n"
             "\nExamples:\n"
             + HelpExampleCli("getaccountaddress", "")
             + HelpExampleCli("getaccountaddress", "\"\"")
@@ -284,7 +284,7 @@ UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getrawchangeaddress\n"
-            "\nReturns a new Syscoin address, for receiving change.\n"
+            "\nReturns a new Zioncoin address, for receiving change.\n"
             "This is for use with raw transactions, NOT normal use.\n"
             "\nResult:\n"
             "\"address\"    (string) The address\n"
@@ -307,7 +307,7 @@ UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
 
     CKeyID keyID = vchPubKey.GetID();
 
-    return CSyscoinAddress(keyID).ToString();
+    return CZioncoinAddress(keyID).ToString();
 }
 
 
@@ -318,10 +318,10 @@ UniValue setaccount(const UniValue& params, bool fHelp)
 
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "setaccount \"syscoinaddress\" \"account\"\n"
+            "setaccount \"Zioncoinaddress\" \"account\"\n"
             "\nDEPRECATED. Sets the account associated with the given address.\n"
             "\nArguments:\n"
-            "1. \"syscoinaddress\"  (string, required) The syscoin address to be associated with an account.\n"
+            "1. \"Zioncoinaddress\"  (string, required) The Zioncoin address to be associated with an account.\n"
             "2. \"account\"         (string, required) The account to assign the address to.\n"
             "\nExamples:\n"
             + HelpExampleCli("setaccount", "\"1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ\" \"tabby\"")
@@ -330,9 +330,9 @@ UniValue setaccount(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CSyscoinAddress address(params[0].get_str());
+    CZioncoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Syscoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Zioncoin address");
 
     string strAccount;
     if (params.size() > 1)
@@ -364,10 +364,10 @@ UniValue getaccount(const UniValue& params, bool fHelp)
 
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "getaccount \"syscoinaddress\"\n"
+            "getaccount \"Zioncoinaddress\"\n"
             "\nDEPRECATED. Returns the account associated with the given address.\n"
             "\nArguments:\n"
-            "1. \"syscoinaddress\"  (string, required) The syscoin address for account lookup.\n"
+            "1. \"Zioncoinaddress\"  (string, required) The Zioncoin address for account lookup.\n"
             "\nResult:\n"
             "\"accountname\"        (string) the account address\n"
             "\nExamples:\n"
@@ -377,9 +377,9 @@ UniValue getaccount(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CSyscoinAddress address(params[0].get_str());
+    CZioncoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Syscoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Zioncoin address");
 
     string strAccount;
     map<CTxDestination, CAddressBookData>::iterator mi = pwalletMain->mapAddressBook.find(address.Get());
@@ -402,7 +402,7 @@ UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
             "1. \"account\"  (string, required) The account name.\n"
             "\nResult:\n"
             "[                     (json array of string)\n"
-            "  \"syscoinaddress\"  (string) a syscoin address associated with the given account\n"
+            "  \"Zioncoinaddress\"  (string) a Zioncoin address associated with the given account\n"
             "  ,...\n"
             "]\n"
             "\nExamples:\n"
@@ -416,17 +416,17 @@ UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
 
     // Find all addresses that have the given account
     UniValue ret(UniValue::VARR);
-    BOOST_FOREACH(const PAIRTYPE(CSyscoinAddress, CAddressBookData)& item, pwalletMain->mapAddressBook)
+    BOOST_FOREACH(const PAIRTYPE(CZioncoinAddress, CAddressBookData)& item, pwalletMain->mapAddressBook)
     {
-        const CSyscoinAddress& address = item.first;
+        const CZioncoinAddress& address = item.first;
         const string& strName = item.second.name;
         if (strName == strAccount)
             ret.push_back(address.ToString());
     }
     return ret;
 }
-// SYSCOIN: Send service transactions
-void SendMoneySyscoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CWalletTx* wtxAliasIn=NULL, int nTxOutAlias = 0, bool syscoinMultiSigTx=false, const CCoinControl* coinControl=NULL, const CWalletTx* wtxLinkAliasIn=NULL, int nTxOutLinkAlias = 0)
+// Zioncoin: Send service transactions
+void SendMoneyZioncoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CWalletTx* wtxAliasIn=NULL, int nTxOutAlias = 0, bool ZioncoinMultiSigTx=false, const CCoinControl* coinControl=NULL, const CWalletTx* wtxLinkAliasIn=NULL, int nTxOutLinkAlias = 0)
 {
     CAmount curBalance = pwalletMain->GetBalance();
 
@@ -442,7 +442,7 @@ void SendMoneySyscoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fS
     CAmount nFeeRequired;
     std::string strError;
     int nChangePosRet = -1;
-    if (!pwalletMain->CreateTransaction(vecSend, wtxNew, reservekey, nFeeRequired, nChangePosRet, strError, coinControl, !syscoinMultiSigTx, wtxAliasIn, nTxOutAlias, true, wtxLinkAliasIn, nTxOutLinkAlias)) {
+    if (!pwalletMain->CreateTransaction(vecSend, wtxNew, reservekey, nFeeRequired, nChangePosRet, strError, coinControl, !ZioncoinMultiSigTx, wtxAliasIn, nTxOutAlias, true, wtxLinkAliasIn, nTxOutLinkAlias)) {
         if (!fSubtractFeeFromAmount && nValue + nFeeRequired > pwalletMain->GetBalance())
             strError = strprintf("Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!", FormatMoney(nFeeRequired));
         throw runtime_error(strError);
@@ -503,8 +503,8 @@ void SendMoneySyscoin(const vector<CRecipient> &vecSend, CAmount nValue, bool fS
 			throw runtime_error(errorMessage.c_str());
 	}
 	
-    if (!syscoinMultiSigTx && !pwalletMain->CommitTransaction(wtxNew, reservekey))
-        throw runtime_error("SYSCOIN_RPC_ERROR ERRCODE: 9000 - " + _("The Syscoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again..."));
+    if (!ZioncoinMultiSigTx && !pwalletMain->CommitTransaction(wtxNew, reservekey))
+        throw runtime_error("Zioncoin_RPC_ERROR ERRCODE: 9000 - " + _("The Zioncoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again..."));
 }
 static void SendMoney(const CTxDestination &address, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew)
 {
@@ -517,7 +517,7 @@ static void SendMoney(const CTxDestination &address, CAmount nValue, bool fSubtr
     if (nValue > curBalance)
         throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, "Insufficient funds");
 
-    // Parse Syscoin address
+    // Parse Zioncoin address
     CScript scriptPubKey = GetScriptForDestination(address);
 
     // Create and send the transaction
@@ -544,11 +544,11 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 
     if (fHelp || params.size() < 2 || params.size() > 5)
         throw runtime_error(
-            "sendtoaddress \"syscoinaddress\" amount ( \"comment\" \"comment-to\" subtractfeefromamount )\n"
+            "sendtoaddress \"Zioncoinaddress\" amount ( \"comment\" \"comment-to\" subtractfeefromamount )\n"
             "\nSend an amount to a given address.\n"
             + HelpRequiringPassphrase() +
             "\nArguments:\n"
-            "1. \"syscoinaddress\"  (string, required) The syscoin address to send to.\n"
+            "1. \"Zioncoinaddress\"  (string, required) The Zioncoin address to send to.\n"
             "2. \"amount\"      (numeric or string, required) The amount in " + CURRENCY_UNIT + " to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
@@ -556,7 +556,7 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
             "                             to which you're sending the transaction. This is not part of the \n"
             "                             transaction, just kept in your wallet.\n"
             "5. subtractfeefromamount  (boolean, optional, default=false) The fee will be deducted from the amount being sent.\n"
-            "                             The recipient will receive less syscoins than you enter in the amount field.\n"
+            "                             The recipient will receive less Zioncoins than you enter in the amount field.\n"
             "\nResult:\n"
             "\"transactionid\"  (string) The transaction id.\n"
             "\nExamples:\n"
@@ -568,9 +568,9 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CSyscoinAddress address(params[0].get_str());
+    CZioncoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Syscoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Zioncoin address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -610,7 +610,7 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp)
             "[\n"
             "  [\n"
             "    [\n"
-            "      \"syscoinaddress\",     (string) The syscoin address\n"
+            "      \"Zioncoinaddress\",     (string) The Zioncoin address\n"
             "      amount,                 (numeric) The amount in " + CURRENCY_UNIT + "\n"
             "      \"account\"             (string, optional) The account (DEPRECATED)\n"
             "    ]\n"
@@ -633,11 +633,11 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp)
         BOOST_FOREACH(CTxDestination address, grouping)
         {
             UniValue addressInfo(UniValue::VARR);
-            addressInfo.push_back(CSyscoinAddress(address).ToString());
+            addressInfo.push_back(CZioncoinAddress(address).ToString());
             addressInfo.push_back(ValueFromAmount(balances[address]));
             {
-                if (pwalletMain->mapAddressBook.find(CSyscoinAddress(address).Get()) != pwalletMain->mapAddressBook.end())
-                    addressInfo.push_back(pwalletMain->mapAddressBook.find(CSyscoinAddress(address).Get())->second.name);
+                if (pwalletMain->mapAddressBook.find(CZioncoinAddress(address).Get()) != pwalletMain->mapAddressBook.end())
+                    addressInfo.push_back(pwalletMain->mapAddressBook.find(CZioncoinAddress(address).Get())->second.name);
             }
             jsonGrouping.push_back(addressInfo);
         }
@@ -653,11 +653,11 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "signmessage \"syscoinaddress\" \"message\"\n"
+            "signmessage \"Zioncoinaddress\" \"message\"\n"
             "\nSign a message with the private key of an address"
             + HelpRequiringPassphrase() + "\n"
             "\nArguments:\n"
-            "1. \"syscoinaddress\"  (string, required) The syscoin address to use for the private key.\n"
+            "1. \"Zioncoinaddress\"  (string, required) The Zioncoin address to use for the private key.\n"
             "2. \"message\"         (string, required) The message to create a signature of.\n"
             "\nResult:\n"
             "\"signature\"          (string) The signature of the message encoded in base 64\n"
@@ -679,7 +679,7 @@ UniValue signmessage(const UniValue& params, bool fHelp)
     string strAddress = params[0].get_str();
     string strMessage = params[1].get_str();
 
-    CSyscoinAddress addr(strAddress);
+    CZioncoinAddress addr(strAddress);
     if (!addr.IsValid())
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid address");
 
@@ -709,10 +709,10 @@ UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
 
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "getreceivedbyaddress \"syscoinaddress\" ( minconf )\n"
-            "\nReturns the total amount received by the given syscoinaddress in transactions with at least minconf confirmations.\n"
+            "getreceivedbyaddress \"Zioncoinaddress\" ( minconf )\n"
+            "\nReturns the total amount received by the given Zioncoinaddress in transactions with at least minconf confirmations.\n"
             "\nArguments:\n"
-            "1. \"syscoinaddress\"  (string, required) The syscoin address for transactions.\n"
+            "1. \"Zioncoinaddress\"  (string, required) The Zioncoin address for transactions.\n"
             "2. minconf             (numeric, optional, default=1) Only include transactions confirmed at least this many times.\n"
             "\nResult:\n"
             "amount   (numeric) The total amount in " + CURRENCY_UNIT + " received at this address.\n"
@@ -729,11 +729,11 @@ UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    // Syscoin address
-    CSyscoinAddress address = CSyscoinAddress(params[0].get_str());
+    // Zioncoin address
+    CZioncoinAddress address = CZioncoinAddress(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Syscoin address");
-	// SYSCOIN
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Zioncoin address");
+	// Zioncoin
 	CScript scriptPubKey =  GetScriptForDestination(address.Get());
 	if(!address.vchRedeemScript.empty())
 		scriptPubKey = CScript(address.vchRedeemScript.begin(), address.vchRedeemScript.end());
@@ -983,12 +983,12 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 
     if (fHelp || params.size() < 3 || params.size() > 6)
         throw runtime_error(
-            "sendfrom \"fromaccount\" \"tosyscoinaddress\" amount ( minconf \"comment\" \"comment-to\" )\n"
-            "\nDEPRECATED (use sendtoaddress). Sent an amount from an account to a syscoin address."
+            "sendfrom \"fromaccount\" \"toZioncoinaddress\" amount ( minconf \"comment\" \"comment-to\" )\n"
+            "\nDEPRECATED (use sendtoaddress). Sent an amount from an account to a Zioncoin address."
             + HelpRequiringPassphrase() + "\n"
             "\nArguments:\n"
             "1. \"fromaccount\"       (string, required) The name of the account to send funds from. May be the default account using \"\".\n"
-            "2. \"tosyscoinaddress\"  (string, required) The syscoin address to send funds to.\n"
+            "2. \"toZioncoinaddress\"  (string, required) The Zioncoin address to send funds to.\n"
             "3. amount                (numeric or string, required) The amount in " + CURRENCY_UNIT + " (transaction fee is added on top).\n"
             "4. minconf               (numeric, optional, default=1) Only use funds with at least this many confirmations.\n"
             "5. \"comment\"           (string, optional) A comment used to store what the transaction is for. \n"
@@ -1010,9 +1010,9 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     string strAccount = AccountFromValue(params[0]);
-    CSyscoinAddress address(params[1].get_str());
+    CZioncoinAddress address(params[1].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Syscoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Zioncoin address");
     CAmount nAmount = AmountFromValue(params[2]);
     if (nAmount <= 0)
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount for send");
@@ -1054,14 +1054,14 @@ UniValue sendmany(const UniValue& params, bool fHelp)
             "1. \"fromaccount\"         (string, required) DEPRECATED. The account to send the funds from. Should be \"\" for the default account\n"
             "2. \"amounts\"             (string, required) A json object with addresses and amounts\n"
             "    {\n"
-            "      \"address\":amount   (numeric or string) The syscoin address is the key, the numeric amount (can be string) in " + CURRENCY_UNIT + " is the value\n"
+            "      \"address\":amount   (numeric or string) The Zioncoin address is the key, the numeric amount (can be string) in " + CURRENCY_UNIT + " is the value\n"
             "      ,...\n"
             "    }\n"
             "3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
             "4. \"comment\"             (string, optional) A comment\n"
             "5. subtractfeefromamount   (string, optional) A json array with addresses.\n"
             "                           The fee will be equally deducted from the amount of each selected address.\n"
-            "                           Those recipients will receive less syscoins than you enter in their corresponding amount field.\n"
+            "                           Those recipients will receive less Zioncoins than you enter in their corresponding amount field.\n"
             "                           If no addresses are specified here, the sender pays the fee.\n"
             "    [\n"
             "      \"address\"            (string) Subtract fee from this address\n"
@@ -1098,16 +1098,16 @@ UniValue sendmany(const UniValue& params, bool fHelp)
     if (params.size() > 4)
         subtractFeeFromAmount = params[4].get_array();
 
-    set<CSyscoinAddress> setAddress;
+    set<CZioncoinAddress> setAddress;
     vector<CRecipient> vecSend;
 
     CAmount totalAmount = 0;
     vector<string> keys = sendTo.getKeys();
     BOOST_FOREACH(const string& name_, keys)
     {
-        CSyscoinAddress address(name_);
+        CZioncoinAddress address(name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Syscoin address: ")+name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Zioncoin address: ")+name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+name_);
@@ -1163,20 +1163,20 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
     {
         string msg = "addmultisigaddress nrequired [\"key\",...] ( \"account\" )\n"
             "\nAdd a nrequired-to-sign multisignature address to the wallet.\n"
-            "Each key is a Syscoin address or hex-encoded public key.\n"
+            "Each key is a Zioncoin address or hex-encoded public key.\n"
             "If 'account' is specified (DEPRECATED), assign address to that account.\n"
 
             "\nArguments:\n"
             "1. nrequired        (numeric, required) The number of required signatures out of the n keys or addresses.\n"
-            "2. \"keysobject\"   (string, required) A json array of syscoin addresses or hex-encoded public keys\n"
+            "2. \"keysobject\"   (string, required) A json array of Zioncoin addresses or hex-encoded public keys\n"
             "     [\n"
-            "       \"address\"  (string) syscoin address or hex-encoded public key\n"
+            "       \"address\"  (string) Zioncoin address or hex-encoded public key\n"
             "       ...,\n"
             "     ]\n"
             "3. \"account\"      (string, optional) DEPRECATED. An account to assign the addresses to.\n"
 
             "\nResult:\n"
-            "\"syscoinaddress\"  (string) A syscoin address associated with the keys.\n"
+            "\"Zioncoinaddress\"  (string) A Zioncoin address associated with the keys.\n"
 
             "\nExamples:\n"
             "\nAdd a multisig address from 2 addresses\n"
@@ -1199,7 +1199,7 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
     pwalletMain->AddCScript(inner);
 
     pwalletMain->SetAddressBook(innerID, strAccount, "send");
-    return CSyscoinAddress(innerID).ToString();
+    return CZioncoinAddress(innerID).ToString();
 }
 
 class Witnessifier : public boost::static_visitor<bool>
@@ -1275,9 +1275,9 @@ UniValue addwitnessaddress(const UniValue& params, bool fHelp)
         }
     }
 
-    CSyscoinAddress address(params[0].get_str());
+    CZioncoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Syscoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Zioncoin address");
 
     Witnessifier w;
     CTxDestination dest = address.Get();
@@ -1288,7 +1288,7 @@ UniValue addwitnessaddress(const UniValue& params, bool fHelp)
 
     pwalletMain->SetAddressBook(w.result, "", "receive");
 
-    return CSyscoinAddress(w.result).ToString();
+    return CZioncoinAddress(w.result).ToString();
 }
 
 struct tallyitem
@@ -1323,7 +1323,7 @@ UniValue ListReceived(const UniValue& params, bool fByAccounts)
             filter = filter | ISMINE_WATCH_ONLY;
 
     // Tally
-    map<CSyscoinAddress, tallyitem> mapTally;
+    map<CZioncoinAddress, tallyitem> mapTally;
     for (map<uint256, CWalletTx>::iterator it = pwalletMain->mapWallet.begin(); it != pwalletMain->mapWallet.end(); ++it)
     {
         const CWalletTx& wtx = (*it).second;
@@ -1357,11 +1357,11 @@ UniValue ListReceived(const UniValue& params, bool fByAccounts)
     // Reply
     UniValue ret(UniValue::VARR);
     map<string, tallyitem> mapAccountTally;
-    BOOST_FOREACH(const PAIRTYPE(CSyscoinAddress, CAddressBookData)& item, pwalletMain->mapAddressBook)
+    BOOST_FOREACH(const PAIRTYPE(CZioncoinAddress, CAddressBookData)& item, pwalletMain->mapAddressBook)
     {
-        const CSyscoinAddress& address = item.first;
+        const CZioncoinAddress& address = item.first;
         const string& strAccount = item.second.name;
-        map<CSyscoinAddress, tallyitem>::iterator it = mapTally.find(address);
+        map<CZioncoinAddress, tallyitem>::iterator it = mapTally.find(address);
         if (it == mapTally.end() && !fIncludeEmpty)
             continue;
 
@@ -1384,9 +1384,9 @@ UniValue ListReceived(const UniValue& params, bool fByAccounts)
         }
         else
         {
-			// SYSCOIN v1 addy by default
+			// Zioncoin v1 addy by default
 			CTxDestination dest = address.Get();
-			CSyscoinAddress v1addr;
+			CZioncoinAddress v1addr;
 			v1addr.Set(dest, CChainParams::ADDRESS_OLDSYS);
             UniValue obj(UniValue::VOBJ);
             if(fIsWatchonly)
@@ -1396,7 +1396,7 @@ UniValue ListReceived(const UniValue& params, bool fByAccounts)
             obj.push_back(Pair("account",       strAccount));
             obj.push_back(Pair("amount",        ValueFromAmount(nAmount)));
             obj.push_back(Pair("confirmations", (nConf == std::numeric_limits<int>::max() ? 0 : nConf)));
-			// SYSCOIN
+			// Zioncoin
 			isminefilter mine = IsMine(*pwalletMain, address.Get());
 			obj.push_back(Pair("ismine", (mine & filter)? true: false));
             if (!fByAccounts)
@@ -1456,7 +1456,7 @@ UniValue listreceivedbyaddress(const UniValue& params, bool fHelp)
             "    \"amount\" : x.xxx,                  (numeric) The total amount in " + CURRENCY_UNIT + " received by the address\n"
             "    \"confirmations\" : n,               (numeric) The number of confirmations of the most recent transaction included\n"
             "    \"label\" : \"label\"                (string) A comment for the address/transaction, if any\n"
-			// SYSCOIN
+			// Zioncoin
 			"  \"ismine\" : true|false,        (boolean) If the address is yours or not\n"
             "  }\n"
             "  ,...\n"
@@ -1512,15 +1512,15 @@ UniValue listreceivedbyaccount(const UniValue& params, bool fHelp)
 
 static void MaybePushAddress(UniValue & entry, const CTxDestination &dest)
 {
-	// SYSCOIN address is v1 address by default for backward compatibility, v2 address is new scheme
-    CSyscoinAddress addr;
+	// Zioncoin address is v1 address by default for backward compatibility, v2 address is new scheme
+    CZioncoinAddress addr;
     if (addr.Set(dest, CChainParams::ADDRESS_OLDSYS))
         entry.push_back(Pair("address", addr.ToString()));
     if (addr.Set(dest))
         entry.push_back(Pair("v2address", addr.ToString()));
 }
-// SYSCOIN
-string GetSyscoinTransactionDescription(const int op, const vector<vector<unsigned char> > &vvchArgs, const string &type, const CWalletTx& wtx, string& responseEnglish, string& responseGUID, string& responseGUID1)
+// Zioncoin
+string GetZioncoinTransactionDescription(const int op, const vector<vector<unsigned char> > &vvchArgs, const string &type, const CWalletTx& wtx, string& responseEnglish, string& responseGUID, string& responseGUID1)
 {
 	responseGUID = stringFromVch(vvchArgs[0]);
 	string strResponse = "";
@@ -1716,7 +1716,7 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
 
     bool fAllAccounts = (strAccount == string("*"));
     bool involvesWatchonly = wtx.IsFromMe(ISMINE_WATCH_ONLY);
-	// SYSCOIN
+	// Zioncoin
     vector<vector<unsigned char> > vvchArgs;
     int op, nOut;
 	string strResponse = "";
@@ -1739,8 +1739,8 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
             if (fLong)
                 WalletTxToJSON(wtx, entry);
             entry.push_back(Pair("abandoned", wtx.isAbandoned()));
-			// SYSCOIN
-			if(wtx.nVersion == GetSyscoinTxVersion() && (IsSyscoinScript(wtx.vout[s.vout].scriptPubKey, op, vvchArgs) || (wtx.vout[s.vout].scriptPubKey[0] == OP_RETURN && DecodeAndParseSyscoinTx(wtx, op, nOut, vvchArgs))))
+			// Zioncoin
+			if(wtx.nVersion == GetZioncoinTxVersion() && (IsZioncoinScript(wtx.vout[s.vout].scriptPubKey, op, vvchArgs) || (wtx.vout[s.vout].scriptPubKey[0] == OP_RETURN && DecodeAndParseZioncoinTx(wtx, op, nOut, vvchArgs))))
 			{
 				if (mapSysTx[wtx.GetHash()])
 					continue;
@@ -1748,7 +1748,7 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
 				string strResponseEnglish = "";
 				string strResponseGUID = "";
 				string strResponseGUID1 = "";
-				strResponse = GetSyscoinTransactionDescription(op, vvchArgs, "send", wtx, strResponseEnglish, strResponseGUID, strResponseGUID1);
+				strResponse = GetZioncoinTransactionDescription(op, vvchArgs, "send", wtx, strResponseEnglish, strResponseGUID, strResponseGUID1);
 				entry.push_back(Pair("systx", strResponse));
 				entry.push_back(Pair("systype", strResponseEnglish));
 				entry.push_back(Pair("sysguid", strResponseGUID));
@@ -1793,8 +1793,8 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
                 entry.push_back(Pair("vout", r.vout));
                 if (fLong)
                     WalletTxToJSON(wtx, entry);
-				// SYSCOIN
-				if(wtx.nVersion == GetSyscoinTxVersion() && (IsSyscoinScript(wtx.vout[r.vout].scriptPubKey, op, vvchArgs) || (wtx.vout[r.vout].scriptPubKey[0] == OP_RETURN && DecodeAndParseSyscoinTx(wtx, op, nOut, vvchArgs))))
+				// Zioncoin
+				if(wtx.nVersion == GetZioncoinTxVersion() && (IsZioncoinScript(wtx.vout[r.vout].scriptPubKey, op, vvchArgs) || (wtx.vout[r.vout].scriptPubKey[0] == OP_RETURN && DecodeAndParseZioncoinTx(wtx, op, nOut, vvchArgs))))
 				{
 					if (mapSysTx[wtx.GetHash()])
 						continue;
@@ -1802,7 +1802,7 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
 					string strResponseEnglish = "";
 					string strResponseGUID = "";
 					string strResponseGUID1 = "";
-					strResponse = GetSyscoinTransactionDescription(op, vvchArgs, "recv", wtx, strResponseEnglish, strResponseGUID, strResponseGUID1);
+					strResponse = GetZioncoinTransactionDescription(op, vvchArgs, "recv", wtx, strResponseEnglish, strResponseGUID, strResponseGUID1);
 					entry.push_back(Pair("systx", strResponse));
 					entry.push_back(Pair("systype", strResponseEnglish));
 					entry.push_back(Pair("sysguid", strResponseGUID));
@@ -1851,7 +1851,7 @@ UniValue listtransactions(const UniValue& params, bool fHelp)
             "  {\n"
             "    \"account\":\"accountname\",       (string) DEPRECATED. The account name associated with the transaction. \n"
             "                                                It will be \"\" for the default account.\n"
-            "    \"address\":\"syscoinaddress\",    (string) The syscoin address of the transaction. Not present for \n"
+            "    \"address\":\"Zioncoinaddress\",    (string) The Zioncoin address of the transaction. Not present for \n"
             "                                                move transactions (category = move).\n"
             "    \"category\":\"send|receive|move\", (string) The transaction category. 'move' is a local (off blockchain)\n"
             "                                                transaction between accounts, and not associated with an address,\n"
@@ -2055,7 +2055,7 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
             "{\n"
             "  \"transactions\": [\n"
             "    \"account\":\"accountname\",       (string) DEPRECATED. The account name associated with the transaction. Will be \"\" for the default account.\n"
-            "    \"address\":\"syscoinaddress\",    (string) The syscoin address of the transaction. Not present for move transactions (category = move).\n"
+            "    \"address\":\"Zioncoinaddress\",    (string) The Zioncoin address of the transaction. Not present for move transactions (category = move).\n"
             "    \"category\":\"send|receive\",     (string) The transaction category. 'send' has negative amounts, 'receive' has positive amounts.\n"
             "    \"amount\": x.xxx,          (numeric) The amount in " + CURRENCY_UNIT + ". This is negative for the 'send' category, and for the 'move' category for moves \n"
             "                                          outbound. It is positive for the 'receive' category, and for the 'move' category for inbound funds.\n"
@@ -2157,7 +2157,7 @@ UniValue gettransaction(const UniValue& params, bool fHelp)
             "  \"details\" : [\n"
             "    {\n"
             "      \"account\" : \"accountname\",  (string) DEPRECATED. The account name involved in the transaction, can be \"\" for the default account.\n"
-            "      \"address\" : \"syscoinaddress\",   (string) The syscoin address involved in the transaction\n"
+            "      \"address\" : \"Zioncoinaddress\",   (string) The Zioncoin address involved in the transaction\n"
             "      \"category\" : \"send|receive\",    (string) The category, either 'send' or 'receive'\n"
             "      \"amount\" : x.xxx,                 (numeric) The amount in " + CURRENCY_UNIT + "\n"
             "      \"label\" : \"label\",              (string) A comment for the address/transaction, if any\n"
@@ -2324,7 +2324,7 @@ UniValue walletpassphrase(const UniValue& params, bool fHelp)
         throw runtime_error(
             "walletpassphrase \"passphrase\" timeout\n"
             "\nStores the wallet decryption key in memory for 'timeout' seconds.\n"
-            "This is needed prior to performing transactions related to private keys such as sending syscoins\n"
+            "This is needed prior to performing transactions related to private keys such as sending Zioncoins\n"
             "\nArguments:\n"
             "1. \"passphrase\"     (string, required) The wallet passphrase\n"
             "2. timeout            (numeric, required) The time to keep the decryption key in seconds.\n"
@@ -2479,10 +2479,10 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             "\nEncrypt you wallet\n"
             + HelpExampleCli("encryptwallet", "\"my pass phrase\"") +
-            "\nNow set the passphrase to use the wallet, such as for signing or sending syscoin\n"
+            "\nNow set the passphrase to use the wallet, such as for signing or sending Zioncoin\n"
             + HelpExampleCli("walletpassphrase", "\"my pass phrase\"") +
             "\nNow we can so something like sign\n"
-            + HelpExampleCli("signmessage", "\"syscoinaddress\" \"test message\"") +
+            + HelpExampleCli("signmessage", "\"Zioncoinaddress\" \"test message\"") +
             "\nNow lock the wallet again by removing the passphrase\n"
             + HelpExampleCli("walletlock", "") +
             "\nAs a json rpc call\n"
@@ -2514,7 +2514,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys. So:
     StartShutdown();
-    return "wallet encrypted; Syscoin server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.";
+    return "wallet encrypted; Zioncoin server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.";
 }
 
 UniValue lockunspent(const UniValue& params, bool fHelp)
@@ -2528,7 +2528,7 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
             "\nUpdates list of temporarily unspendable outputs.\n"
             "Temporarily lock (unlock=false) or unlock (unlock=true) specified transaction outputs.\n"
             "If no transaction outputs are specified when unlocking then all current locked transaction outputs are unlocked.\n"
-            "A locked transaction output will not be chosen by automatic coin selection, when spending syscoins.\n"
+            "A locked transaction output will not be chosen by automatic coin selection, when spending Zioncoins.\n"
             "Locks are stored in memory only. Nodes start with zero locked outputs, and the locked output list\n"
             "is always cleared (by virtue of process exit) when a node stops or fails.\n"
             "Also see the listunspent call\n"
@@ -2767,9 +2767,9 @@ UniValue listunspent(const UniValue& params, bool fHelp)
             "\nArguments:\n"
             "1. minconf          (numeric, optional, default=1) The minimum confirmations to filter\n"
             "2. maxconf          (numeric, optional, default=9999999) The maximum confirmations to filter\n"
-            "3. \"addresses\"    (string) A json array of syscoin addresses to filter\n"
+            "3. \"addresses\"    (string) A json array of Zioncoin addresses to filter\n"
             "    [\n"
-            "      \"address\"   (string) syscoin address\n"
+            "      \"address\"   (string) Zioncoin address\n"
             "      ,...\n"
             "    ]\n"
             "\nResult\n"
@@ -2777,7 +2777,7 @@ UniValue listunspent(const UniValue& params, bool fHelp)
             "  {\n"
             "    \"txid\" : \"txid\",          (string) the transaction id \n"
             "    \"vout\" : n,               (numeric) the vout value\n"
-            "    \"address\" : \"address\",    (string) the syscoin address\n"
+            "    \"address\" : \"address\",    (string) the Zioncoin address\n"
             "    \"account\" : \"account\",    (string) DEPRECATED. The associated account, or \"\" for the default account\n"
             "    \"scriptPubKey\" : \"key\",   (string) the script key\n"
             "    \"amount\" : x.xxx,         (numeric) the transaction amount in " + CURRENCY_UNIT + "\n"
@@ -2805,14 +2805,14 @@ UniValue listunspent(const UniValue& params, bool fHelp)
     if (params.size() > 1)
         nMaxDepth = params[1].get_int();
 
-    set<CSyscoinAddress> setAddress;
+    set<CZioncoinAddress> setAddress;
     if (params.size() > 2) {
         UniValue inputs = params[2].get_array();
         for (unsigned int idx = 0; idx < inputs.size(); idx++) {
             const UniValue& input = inputs[idx];
-            CSyscoinAddress address(input.get_str());
+            CZioncoinAddress address(input.get_str());
             if (!address.IsValid())
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Syscoin address: ")+input.get_str());
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Zioncoin address: ")+input.get_str());
             if (setAddress.count(address))
                 throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+input.get_str());
            setAddress.insert(address);
@@ -2840,11 +2840,11 @@ UniValue listunspent(const UniValue& params, bool fHelp)
         entry.push_back(Pair("vout", out.i));
 
         if (fValidAddress) {
-			// SYSCOIN v1 addy by default
-			CSyscoinAddress v1addr;
+			// Zioncoin v1 addy by default
+			CZioncoinAddress v1addr;
 			v1addr.Set(address, CChainParams::ADDRESS_OLDSYS);
             entry.push_back(Pair("address", v1addr.ToString()));
-			entry.push_back(Pair("v2address", CSyscoinAddress(address).ToString()));
+			entry.push_back(Pair("v2address", CZioncoinAddress(address).ToString()));
 
             if (pwalletMain->mapAddressBook.count(address))
                 entry.push_back(Pair("account", pwalletMain->mapAddressBook[address].name));
@@ -2889,7 +2889,7 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
                             "1. \"hexstring\"           (string, required) The hex string of the raw transaction\n"
                             "2. options               (object, optional)\n"
                             "   {\n"
-                            "     \"changeAddress\"     (string, optional, default pool address) The syscoin address to receive the change\n"
+                            "     \"changeAddress\"     (string, optional, default pool address) The Zioncoin address to receive the change\n"
                             "     \"changePosition\"    (numeric, optional, default random) The index of the change output\n"
                             "     \"includeWatching\"   (boolean, optional, default false) Also select inputs which are watch only\n"
                             "     \"lockUnspents\"      (boolean, optional, default false) Lock selected unspent outputs\n"
@@ -2944,10 +2944,10 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
             true, true);
 
         if (options.exists("changeAddress")) {
-            CSyscoinAddress address(options["changeAddress"].get_str());
+            CZioncoinAddress address(options["changeAddress"].get_str());
 
             if (!address.IsValid())
-                throw JSONRPCError(RPC_INVALID_PARAMETER, "changeAddress must be a valid syscoin address");
+                throw JSONRPCError(RPC_INVALID_PARAMETER, "changeAddress must be a valid Zioncoin address");
 
             changeAddress = address.Get();
         }
@@ -3003,7 +3003,7 @@ extern UniValue dumpwallet(const UniValue& params, bool fHelp);
 extern UniValue importwallet(const UniValue& params, bool fHelp);
 extern UniValue importprunedfunds(const UniValue& params, bool fHelp);
 extern UniValue removeprunedfunds(const UniValue& params, bool fHelp);
-// SYSCOIN service rpc functions
+// Zioncoin service rpc functions
 extern UniValue aliasnew(const UniValue& params, bool fHelp);
 extern UniValue aliasauthenticate(const UniValue& params, bool fHelp);
 extern UniValue aliasupdate(const UniValue& params, bool fHelp);
@@ -3016,8 +3016,8 @@ extern UniValue aliashistory(const UniValue& params, bool fHelp);
 extern UniValue aliasfilter(const UniValue& params, bool fHelp);
 extern UniValue aliaspay(const UniValue& params, bool fHelp);
 extern UniValue generatepublickey(const UniValue& params, bool fHelp);
-extern UniValue syscoinsignrawtransaction(const UniValue& params, bool fHelp);
-extern UniValue syscoindecoderawtransaction(const UniValue& params, bool fHelp);
+extern UniValue Zioncoinsignrawtransaction(const UniValue& params, bool fHelp);
+extern UniValue Zioncoindecoderawtransaction(const UniValue& params, bool fHelp);
 
 extern UniValue offernew(const UniValue& params, bool fHelp);
 extern UniValue offerupdate(const UniValue& params, bool fHelp);
@@ -3117,10 +3117,10 @@ static const CRPCCommand commands[] =
     { "wallet",             "walletpassphrasechange",   &walletpassphrasechange,   true  },
     { "wallet",             "walletpassphrase",         &walletpassphrase,         true  },
     { "wallet",             "removeprunedfunds",        &removeprunedfunds,        true  },
-	// SYSCOIN support old/new sys and zec
+	// Zioncoin support old/new sys and zec
 	{ "wallet",             "getv2address",           &getv2address,          true  },
 	{ "wallet",             "getzaddress",            &getzaddress,           true  },
-	// SYSCOIN rpc functions
+	// Zioncoin rpc functions
 	{ "wallet", "aliasnew",          &aliasnew,          false },
 	{ "wallet", "aliasauthenticate", &aliasauthenticate,          false },
     { "wallet", "aliasupdate",       &aliasupdate,       false },
@@ -3133,8 +3133,8 @@ static const CRPCCommand commands[] =
     { "wallet", "aliasfilter",       &aliasfilter,       false },
 	{ "wallet", "aliaspay",       &aliaspay,       false },
 	{ "wallet", "generatepublickey", &generatepublickey, false },
-	{ "wallet", "syscoinsignrawtransaction",		 &syscoinsignrawtransaction,	false },
-	{ "wallet", "syscoindecoderawtransaction",		 &syscoindecoderawtransaction,	false },
+	{ "wallet", "Zioncoinsignrawtransaction",		 &Zioncoinsignrawtransaction,	false },
+	{ "wallet", "Zioncoindecoderawtransaction",		 &Zioncoindecoderawtransaction,	false },
 
     // use the blockchain as a distributed marketplace
     { "wallet", "offernew",             &offernew,             false },

@@ -1,9 +1,9 @@
-// Copyright (c) 2016 The Syscoin Core developers
+// Copyright (c) 2016 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CONSENSUS_VERSIONBITS
-#define SYSCOIN_CONSENSUS_VERSIONBITS
+#ifndef Zioncoin_CONSENSUS_VERSIONBITS
+#define Zioncoin_CONSENSUS_VERSIONBITS
 
 #include "chain.h"
 #include <map>

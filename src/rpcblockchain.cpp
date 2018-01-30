@@ -1,5 +1,5 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +9,7 @@
 #include "checkpoints.h"
 #include "coins.h"
 #include "consensus/validation.h"
-// SYSCOIN for hexencode
+// Zioncoin for hexencode
 #include "core_io.h"
 #include "main.h"
 #include "policy/policy.h"
@@ -60,7 +60,7 @@ double GetDifficulty(const CBlockIndex* blockindex)
 
     return dDiff;
 }
-// SYSCOIN auxpow
+// Zioncoin auxpow
 static UniValue AuxpowToJSON(const CAuxPow& auxpow)
 {
     UniValue tx(UniValue::VOBJ);
@@ -138,7 +138,7 @@ UniValue blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool tx
     result.push_back(Pair("confirmations", confirmations));
     result.push_back(Pair("size", (int)::GetSerializeSize(block, SER_NETWORK, PROTOCOL_VERSION)));
     result.push_back(Pair("height", blockindex->nHeight));
-	// SYSCOIN getfullversion
+	// Zioncoin getfullversion
     result.push_back(Pair("version", block.nVersion.GetFullVersion()));
     result.push_back(Pair("merkleroot", block.hashMerkleRoot.GetHex()));
     UniValue txs(UniValue::VARR);
@@ -160,7 +160,7 @@ UniValue blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool tx
     result.push_back(Pair("bits", strprintf("%08x", block.nBits)));
     result.push_back(Pair("difficulty", GetDifficulty(blockindex)));
     result.push_back(Pair("chainwork", blockindex->nChainWork.GetHex()));
-	// SYSCOIN auxpow info
+	// Zioncoin auxpow info
     if (block.auxpow)
         result.push_back(Pair("auxpow", AuxpowToJSON(*block.auxpow)));
 
@@ -394,7 +394,7 @@ UniValue getblockheader(const UniValue& params, bool fHelp)
     if (!fVerbose)
     {
         CDataStream ssBlock(SER_NETWORK, PROTOCOL_VERSION);
-		// SYSCOIN pass consensus into getblockheader for auxpow
+		// Zioncoin pass consensus into getblockheader for auxpow
         ssBlock << pblockindex->GetBlockHeader(Params().GetConsensus());
         std::string strHex = HexStr(ssBlock.begin(), ssBlock.end());
         return strHex;
@@ -530,8 +530,8 @@ UniValue gettxout(const UniValue& params, bool fHelp)
             "     \"hex\" : \"hex\",        (string) \n"
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
-            "     \"addresses\" : [          (array of string) array of syscoin addresses\n"
-            "        \"syscoinaddress\"     (string) syscoin address\n"
+            "     \"addresses\" : [          (array of string) array of Zioncoin addresses\n"
+            "        \"Zioncoinaddress\"     (string) Zioncoin address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"
@@ -624,7 +624,7 @@ static UniValue SoftForkMajorityDesc(int minVersion, CBlockIndex* pindex, int nR
     CBlockIndex* pstart = pindex;
     for (int i = 0; i < consensusParams.nMajorityWindow && pstart != NULL; i++)
     {
-		// SYSCOIN getbaseversion
+		// Zioncoin getbaseversion
         if (pstart->nVersion.GetBaseVersion() >= minVersion)
             ++nFound;
         pstart = pstart->pprev;

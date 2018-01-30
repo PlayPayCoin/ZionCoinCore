@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Syscoin Core developers
+# Copyright (c) 2014-2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 from test_framework.util import *
 
 
@@ -14,7 +14,7 @@ def get_unspent(listunspent, amount):
     raise AssertionError('Could not find unspent with amount={}'.format(amount))
 
 
-class RawTransactionsTest(SyscoinTestFramework):
+class RawTransactionsTest(ZioncoinTestFramework):
 
     def __init__(self):
         super().__init__()
@@ -201,9 +201,9 @@ class RawTransactionsTest(SyscoinTestFramework):
 
         try:
             self.nodes[2].fundrawtransaction(rawtx, {'changeAddress': 'foobar'})
-            raise AssertionError("Accepted invalid syscoin address")
+            raise AssertionError("Accepted invalid Zioncoin address")
         except JSONRPCException as e:
-            assert("changeAddress must be a valid syscoin address" in e.error['message'])
+            assert("changeAddress must be a valid Zioncoin address" in e.error['message'])
 
 
         ############################################################

@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -33,10 +33,10 @@
 #include <boost/thread.hpp>
 
 using namespace std;
-// SYSCOIN services
+// Zioncoin services
 extern int IndexOfAliasOutput(const CTransaction& tx);
-extern bool IsSyscoinScript(const CScript& scriptPubKey, int &op, vector<vector<unsigned char> > &vvchArgs);
-extern int GetSyscoinTxVersion();
+extern bool IsZioncoinScript(const CScript& scriptPubKey, int &op, vector<vector<unsigned char> > &vvchArgs);
+extern int GetZioncoinTxVersion();
 extern vector<unsigned char> vchFromString(const string &str);
 CWallet* pwalletMain = NULL;
 /** Transaction fee set by the user */
@@ -237,7 +237,7 @@ bool CWallet::LoadCScript(const CScript& redeemScript)
      * these. Do not add them to the wallet and warn. */
     if (redeemScript.size() > MAX_SCRIPT_ELEMENT_SIZE)
     {
-        std::string strAddr = CSyscoinAddress(CScriptID(redeemScript)).ToString();
+        std::string strAddr = CZioncoinAddress(CScriptID(redeemScript)).ToString();
         LogPrintf("%s: Warning: This wallet contains a redeemScript of size %i which exceeds maximum size %i thus can never be redeemed. Do not use address %s.\n",
             __func__, redeemScript.size(), MAX_SCRIPT_ELEMENT_SIZE, strAddr);
         return true;
@@ -1954,12 +1954,12 @@ bool CWallet::SelectCoinsMinConf(const CAmount& nTargetValue, const int nConfMin
 
         int i = output.i;
         CAmount n = pcoin->vout[i].nValue;
-		// SYSCOIN txs are unspendable unless input to another syscoin tx (passed into createtransaction)
-		if(pcoin->nVersion == GetSyscoinTxVersion())
+		// Zioncoin txs are unspendable unless input to another Zioncoin tx (passed into createtransaction)
+		if(pcoin->nVersion == GetZioncoinTxVersion())
 		{
 			int op;
 			vector<vector<unsigned char> > vvchArgs;
-			if (pcoin->vout.size() >= i && IsSyscoinScript(pcoin->vout[i].scriptPubKey, op, vvchArgs) && op != OP_ALIAS_PAYMENT)
+			if (pcoin->vout.size() >= i && IsZioncoinScript(pcoin->vout[i].scriptPubKey, op, vvchArgs) && op != OP_ALIAS_PAYMENT)
 				continue;
 		}
         pair<CAmount,pair<const CWalletTx*,unsigned int> > coin = make_pair(n,make_pair(pcoin, i));
@@ -2045,7 +2045,7 @@ bool CWallet::SelectCoins(const vector<COutput>& vAvailableCoins, const CAmount&
     {
         BOOST_FOREACH(const COutput& out, vCoins)
         {
-			// SYSCOIN
+			// Zioncoin
             //if (!out.fSpendable)
               //   continue;
             nValueRet += out.tx->vout[out.i].nValue;
@@ -2067,12 +2067,12 @@ bool CWallet::SelectCoins(const vector<COutput>& vAvailableCoins, const CAmount&
         if (it != mapWallet.end())
         {
             const CWalletTx* pcoin = &it->second;
-			// SYSCOIN txs are unspendable unless input to another syscoin tx (passed into createtransaction)
-			if(pcoin->nVersion == GetSyscoinTxVersion())
+			// Zioncoin txs are unspendable unless input to another Zioncoin tx (passed into createtransaction)
+			if(pcoin->nVersion == GetZioncoinTxVersion())
 			{
 				int op;
 				vector<vector<unsigned char> > vvchArgs;
-				if (pcoin->vout.size() >= outpoint.n && IsSyscoinScript(pcoin->vout[outpoint.n].scriptPubKey, op, vvchArgs) && op != OP_ALIAS_PAYMENT)
+				if (pcoin->vout.size() >= outpoint.n && IsZioncoinScript(pcoin->vout[outpoint.n].scriptPubKey, op, vvchArgs) && op != OP_ALIAS_PAYMENT)
 					continue;
 			}
             // Clearly invalid input, fail
@@ -2161,17 +2161,17 @@ bool CWallet::FundTransaction(CMutableTransaction& tx, CAmount& nFeeRet, bool ov
     return true;
 }
 
-// SYSCOIN
+// Zioncoin
 bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet,
                                 int& nChangePosInOut, std::string& strFailReason, const CCoinControl* coinControl, bool sign, const CWalletTx* wtxInAlias, int nTxOutAlias, bool sysTx, const CWalletTx* wtxInLinkAlias, int nTxOutLinkAlias, bool bAliasPay)
 {
     CAmount nValue = 0;
-	// SYSCOIN: get output amount of input transactions for syscoin service calls
+	// Zioncoin: get output amount of input transactions for Zioncoin service calls
 	if(wtxInAlias != NULL)
 	{
 		if (nTxOutAlias < 0)
 		{
-			strFailReason = _("Can't determine type of alias input into syscoin service transaction");
+			strFailReason = _("Can't determine type of alias input into Zioncoin service transaction");
             return false;
 		}
 	}
@@ -2179,7 +2179,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 	{
 		if (nTxOutLinkAlias < 0)
 		{
-			strFailReason = _("Can't determine type of linked alias input into syscoin service transaction");
+			strFailReason = _("Can't determine type of linked alias input into Zioncoin service transaction");
             return false;
 		}
 	}
@@ -2207,9 +2207,9 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
     wtxNew.fTimeReceivedIsTxTime = true;
     wtxNew.BindWallet(this);
     CMutableTransaction txNew;
-	// SYSCOIN: set syscoin tx version if its a syscoin service call
+	// Zioncoin: set Zioncoin tx version if its a Zioncoin service call
 	if(sysTx)
-		txNew.nVersion = GetSyscoinTxVersion();
+		txNew.nVersion = GetZioncoinTxVersion();
     // Discourage fee sniping.
     //
     // For a large miner the value of the transactions in the best block and
@@ -2266,16 +2266,16 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                 // vouts to the payees
                 BOOST_FOREACH (const CRecipient& recipient, vecSend)
                 {
-					// SYSCOIN pay to alias
+					// Zioncoin pay to alias
 					CRecipient myrecipient = recipient;
 					CTxDestination payDest;
 					int op;
 					vector<vector<unsigned char> > vvchArgs;
-					if (!myrecipient.scriptPubKey.IsUnspendable() && !IsSyscoinScript(myrecipient.scriptPubKey, op, vvchArgs)) {
+					if (!myrecipient.scriptPubKey.IsUnspendable() && !IsZioncoinScript(myrecipient.scriptPubKey, op, vvchArgs)) {
 						if (ExtractDestination(myrecipient.scriptPubKey, payDest)) 
 						{
-							CSyscoinAddress address = CSyscoinAddress(payDest);
-							address = CSyscoinAddress(address.ToString());
+							CZioncoinAddress address = CZioncoinAddress(payDest);
+							address = CZioncoinAddress(address.ToString());
 							if(address.isAlias)
 							{
 								myrecipient.scriptPubKey = GetScriptForDestination(payDest);
@@ -2285,7 +2285,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 								scriptPubKey << CScript::EncodeOP_N(OP_ALIAS_PAYMENT) << vchFromString(address.aliasName) << OP_2DROP;
 								scriptPubKey += myrecipient.scriptPubKey;
 								myrecipient = {scriptPubKey, myrecipient.nAmount, false/*myrecipient.fSubtractFeeFromAmount*/};
-								txNew.nVersion = GetSyscoinTxVersion();				
+								txNew.nVersion = GetZioncoinTxVersion();				
 							}
 						}
 					}
@@ -2294,7 +2294,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 
                     if (txout.IsDust(::minRelayTxFee))
                     {
-						// SYSCOIN
+						// Zioncoin
                         if (myrecipient.fSubtractFeeFromAmount && nFeeRet > 0)
                         {
                             if (txout.nValue < 0)
@@ -2308,7 +2308,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     }
                     txNew.vout.push_back(txout);
                 }
-				// SYSCOIN input credit from input tx
+				// Zioncoin input credit from input tx
 				int64_t nWtxinCredit = 0;
 				if(wtxInAlias != NULL)
 					nWtxinCredit += wtxInAlias->vout[nTxOutAlias].nValue;
@@ -2317,13 +2317,13 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                 // Choose coins to use
                 set<pair<const CWalletTx*,unsigned int> > setCoins;
                 CAmount nValueIn = 0;
-				// SYSCOIN add input credit to current coin selection
+				// Zioncoin add input credit to current coin selection
                 if ((nValueToSelect-nWtxinCredit) > 0 && !SelectCoins(vAvailableCoins, nValueToSelect-nWtxinCredit, setCoins, nValueIn, coinControl, bAliasPay))
                 {
                     strFailReason = _("Insufficient funds");
                     return false;
                 }
-				// SYSCOIN attach input TX
+				// Zioncoin attach input TX
 				nValueIn += nWtxinCredit;
 				vector<pair<const CWalletTx*, unsigned int> > vecCoins(
 					setCoins.begin(), setCoins.end());
@@ -2331,7 +2331,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 					vecCoins.insert(vecCoins.begin(), make_pair(wtxInAlias, nTxOutAlias));
 				if(wtxInLinkAlias != NULL)
 					vecCoins.insert(vecCoins.begin(), make_pair(wtxInLinkAlias, nTxOutLinkAlias));
-				// SYSCOIN
+				// Zioncoin
                 BOOST_FOREACH(PAIRTYPE(const CWalletTx*, unsigned int) pcoin, vecCoins)
                 {
                     CAmount nCredit = pcoin.first->vout[pcoin.second].nValue;
@@ -2351,15 +2351,15 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                 {
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-syscoin-address
+                    // change transaction isn't always pay-to-Zioncoin-address
                     CScript scriptChange;
-					// SYSCOIN
-					CSyscoinAddress address;
+					// Zioncoin
+					CZioncoinAddress address;
                     if (coinControl && !boost::get<CNoDestination>(&coinControl->destChange))
 					{
                         scriptChange = GetScriptForDestination(coinControl->destChange);
-						address = CSyscoinAddress(coinControl->destChange);
-						address = CSyscoinAddress(address.ToString());
+						address = CZioncoinAddress(coinControl->destChange);
+						address = CZioncoinAddress(address.ToString());
 						if(!address.vchRedeemScript.empty())
 							scriptChange = CScript(address.vchRedeemScript.begin(), address.vchRedeemScript.end());
 					}
@@ -2375,7 +2375,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                         //  post-backup change.
 
                         // Reserve a new key pair from key pool
-						// SYSCOIN pay to input destination as change
+						// Zioncoin pay to input destination as change
 						CTxDestination payDest;
 						// the last input is always the one that gets the change since it wasn't fully spent
 						int nLastIndex = vecCoins.size()-1;
@@ -2384,8 +2384,8 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 						if (ExtractDestination(vecCoins[nLastIndex].first->vout[vecCoins[nLastIndex].second].scriptPubKey, payDest)) 
 						{
 							scriptChange = GetScriptForDestination(payDest);
-							address = CSyscoinAddress(payDest);
-							address = CSyscoinAddress(address.ToString());
+							address = CZioncoinAddress(payDest);
+							address = CZioncoinAddress(address.ToString());
 							// if paying from an alias then send change back to sender
 							if(address.isAlias)
 							{
@@ -2412,14 +2412,14 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 							scriptChange = GetScriptForDestination(vchPubKey.GetID());
 						}
                     }
-					// SYSCOIN change as a alias payment				
+					// Zioncoin change as a alias payment				
 					if(address.isAlias && (wtxInAlias == NULL || vecCoins.size() > 1))
 					{
 						CScript scriptChangeOrig;
 						scriptChangeOrig << CScript::EncodeOP_N(OP_ALIAS_PAYMENT) << vchFromString(address.aliasName) << OP_2DROP;
 						scriptChangeOrig += scriptChange;
 						scriptChange = scriptChangeOrig;
-						txNew.nVersion = GetSyscoinTxVersion();				
+						txNew.nVersion = GetZioncoinTxVersion();				
 					}
 
                     CTxOut newTxOut(nChange, scriptChange);
@@ -2474,7 +2474,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                 else
                     reservekey.ReturnKey();
 
-				// SYSCOIN use max-2 because we want RBF replacement to be on by default on this wallet
+				// Zioncoin use max-2 because we want RBF replacement to be on by default on this wallet
                 // Fill vin
                 //
                 // Note how the sequence number is set to max()-2 so that the
@@ -2487,7 +2487,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                 // Sign
                 int nIn = 0;
                 CTransaction txNewConst(txNew);
-				// SYSCOIN
+				// Zioncoin
                 BOOST_FOREACH(const PAIRTYPE(const CWalletTx*,unsigned int)& coin, vecCoins)
                 {
                     bool signSuccess;
@@ -2767,9 +2767,9 @@ bool CWallet::SetAddressBook(const CTxDestination& address, const string& strNam
                              strPurpose, (fUpdated ? CT_UPDATED : CT_NEW) );
     if (!fFileBacked)
         return false;
-    if (!strPurpose.empty() && !CWalletDB(strWalletFile).WritePurpose(CSyscoinAddress(address).ToString(), strPurpose))
+    if (!strPurpose.empty() && !CWalletDB(strWalletFile).WritePurpose(CZioncoinAddress(address).ToString(), strPurpose))
         return false;
-    return CWalletDB(strWalletFile).WriteName(CSyscoinAddress(address).ToString(), strName);
+    return CWalletDB(strWalletFile).WriteName(CZioncoinAddress(address).ToString(), strName);
 }
 
 bool CWallet::DelAddressBook(const CTxDestination& address)
@@ -2780,7 +2780,7 @@ bool CWallet::DelAddressBook(const CTxDestination& address)
         if(fFileBacked)
         {
             // Delete destdata tuples associated with address
-            std::string strAddress = CSyscoinAddress(address).ToString();
+            std::string strAddress = CZioncoinAddress(address).ToString();
             BOOST_FOREACH(const PAIRTYPE(string, string) &item, mapAddressBook[address].destdata)
             {
                 CWalletDB(strWalletFile).EraseDestData(strAddress, item.first);
@@ -2793,8 +2793,8 @@ bool CWallet::DelAddressBook(const CTxDestination& address)
 
     if (!fFileBacked)
         return false;
-    CWalletDB(strWalletFile).ErasePurpose(CSyscoinAddress(address).ToString());
-    return CWalletDB(strWalletFile).EraseName(CSyscoinAddress(address).ToString());
+    CWalletDB(strWalletFile).ErasePurpose(CZioncoinAddress(address).ToString());
+    return CWalletDB(strWalletFile).EraseName(CZioncoinAddress(address).ToString());
 }
 
 bool CWallet::SetDefaultKey(const CPubKey &vchPubKey)
@@ -3335,7 +3335,7 @@ bool CWallet::AddDestData(const CTxDestination &dest, const std::string &key, co
     mapAddressBook[dest].destdata.insert(std::make_pair(key, value));
     if (!fFileBacked)
         return true;
-    return CWalletDB(strWalletFile).WriteDestData(CSyscoinAddress(dest).ToString(), key, value);
+    return CWalletDB(strWalletFile).WriteDestData(CZioncoinAddress(dest).ToString(), key, value);
 }
 
 bool CWallet::EraseDestData(const CTxDestination &dest, const std::string &key)
@@ -3344,7 +3344,7 @@ bool CWallet::EraseDestData(const CTxDestination &dest, const std::string &key)
         return false;
     if (!fFileBacked)
         return true;
-    return CWalletDB(strWalletFile).EraseDestData(CSyscoinAddress(dest).ToString(), key);
+    return CWalletDB(strWalletFile).EraseDestData(CZioncoinAddress(dest).ToString(), key);
 }
 
 bool CWallet::LoadDestData(const CTxDestination &dest, const std::string &key, const std::string &value)
@@ -3678,7 +3678,7 @@ CWalletKey::CWalletKey(int64_t nExpires)
     nTimeCreated = (nExpires ? GetTime() : 0);
     nTimeExpires = nExpires;
 }
-// SYSCOIN
+// Zioncoin
 /*
 int CMerkleTx::SetMerkleBranch(const CBlock& block)
 {

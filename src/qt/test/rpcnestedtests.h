@@ -1,9 +1,9 @@
-// Copyright (c) 2016 The Syscoin Core developers
+// Copyright (c) 2016 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_TEST_RPC_NESTED_TESTS_H
-#define SYSCOIN_QT_TEST_RPC_NESTED_TESTS_H
+#ifndef Zioncoin_QT_TEST_RPC_NESTED_TESTS_H
+#define Zioncoin_QT_TEST_RPC_NESTED_TESTS_H
 
 #include <QObject>
 #include <QTest>
@@ -22,4 +22,4 @@ private:
     CCoinsViewDB *pcoinsdbview;
 };
 
-#endif // SYSCOIN_QT_TEST_RPC_NESTED_TESTS_H
+#endif // Zioncoin_QT_TEST_RPC_NESTED_TESTS_H

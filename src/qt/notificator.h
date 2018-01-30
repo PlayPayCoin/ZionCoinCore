@@ -1,12 +1,12 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_NOTIFICATOR_H
-#define SYSCOIN_QT_NOTIFICATOR_H
+#ifndef Zioncoin_QT_NOTIFICATOR_H
+#define Zioncoin_QT_NOTIFICATOR_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
 #include <QIcon>
@@ -77,4 +77,4 @@ private:
 #endif
 };
 
-#endif // SYSCOIN_QT_NOTIFICATOR_H
+#endif // Zioncoin_QT_NOTIFICATOR_H

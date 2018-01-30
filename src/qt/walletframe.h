@@ -1,14 +1,14 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_WALLETFRAME_H
-#define SYSCOIN_QT_WALLETFRAME_H
+#ifndef Zioncoin_QT_WALLETFRAME_H
+#define Zioncoin_QT_WALLETFRAME_H
 
 #include <QFrame>
 #include <QMap>
 
-class SyscoinGUI;
+class ZioncoinGUI;
 class ClientModel;
 class PlatformStyle;
 class SendCoinsRecipient;
@@ -24,7 +24,7 @@ class WalletFrame : public QFrame
     Q_OBJECT
 
 public:
-    explicit WalletFrame(const PlatformStyle *platformStyle, SyscoinGUI *_gui = 0);
+    explicit WalletFrame(const PlatformStyle *platformStyle, ZioncoinGUI *_gui = 0);
     ~WalletFrame();
 
     void setClientModel(ClientModel *clientModel);
@@ -41,7 +41,7 @@ public:
 
 private:
     QStackedWidget *walletStack;
-    SyscoinGUI *gui;
+    ZioncoinGUI *gui;
     ClientModel *clientModel;
     QMap<QString, WalletView*> mapWalletViews;
 
@@ -80,4 +80,4 @@ public Q_SLOTS:
     void usedReceivingAddresses();
 };
 
-#endif // SYSCOIN_QT_WALLETFRAME_H
+#endif // Zioncoin_QT_WALLETFRAME_H

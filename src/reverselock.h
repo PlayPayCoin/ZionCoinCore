@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Syscoin Core developers
+// Copyright (c) 2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_REVERSELOCK_H
-#define SYSCOIN_REVERSELOCK_H
+#ifndef Zioncoin_REVERSELOCK_H
+#define Zioncoin_REVERSELOCK_H
 
 /**
  * An RAII-style reverse lock. Unlocks on construction and locks on destruction.
@@ -31,4 +31,4 @@ private:
     Lock templock;
 };
 
-#endif // SYSCOIN_REVERSELOCK_H
+#endif // Zioncoin_REVERSELOCK_H

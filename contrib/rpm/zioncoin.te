@@ -1,81 +1,81 @@
-policy_module(syscoin, 1.100.1)
+policy_module(Zioncoin, 1.100.1)
 
 ########################################
 #
 # Declarations
 #
 
-type syscoin_t;
-type syscoin_exec_t;
-init_daemon_domain(syscoin_t, syscoin_exec_t)
+type Zioncoin_t;
+type Zioncoin_exec_t;
+init_daemon_domain(Zioncoin_t, Zioncoin_exec_t)
 
-permissive syscoin_t;
+permissive Zioncoin_t;
 
-type syscoin_initrc_exec_t;
-init_script_file(syscoin_initrc_exec_t)
+type Zioncoin_initrc_exec_t;
+init_script_file(Zioncoin_initrc_exec_t)
 
-type syscoin_conf_t;
-files_type(syscoin_conf_t)
+type Zioncoin_conf_t;
+files_type(Zioncoin_conf_t)
 
-type syscoin_var_lib_t;
-files_type(syscoin_var_lib_t)
+type Zioncoin_var_lib_t;
+files_type(Zioncoin_var_lib_t)
 
-type syscoin_var_run_t;
-files_type(syscoin_var_run_t)
+type Zioncoin_var_run_t;
+files_type(Zioncoin_var_run_t)
 
-type syscoin_port_t;
-corenet_port(syscoin_port_t)
+type Zioncoin_port_t;
+corenet_port(Zioncoin_port_t)
 
 ########################################
 #
-# syscoin local policy
+# Zioncoin local policy
 #
-allow syscoin_t self:process { fork };
+allow Zioncoin_t self:process { fork };
 
-allow syscoin_t self:fifo_file rw_fifo_file_perms;
-allow syscoin_t self:unix_stream_socket create_stream_socket_perms;
+allow Zioncoin_t self:fifo_file rw_fifo_file_perms;
+allow Zioncoin_t self:unix_stream_socket create_stream_socket_perms;
 
-manage_dirs_pattern(syscoin_t, syscoin_conf_t, syscoin_conf_t)
-manage_files_pattern(syscoin_t, syscoin_conf_t, syscoin_conf_t)
+manage_dirs_pattern(Zioncoin_t, Zioncoin_conf_t, Zioncoin_conf_t)
+manage_files_pattern(Zioncoin_t, Zioncoin_conf_t, Zioncoin_conf_t)
 
-manage_dirs_pattern(syscoin_t, syscoin_var_lib_t, syscoin_var_lib_t)
-manage_files_pattern(syscoin_t, syscoin_var_lib_t, syscoin_var_lib_t)
-files_var_lib_filetrans(syscoin_t, syscoin_var_lib_t, { dir file })
+manage_dirs_pattern(Zioncoin_t, Zioncoin_var_lib_t, Zioncoin_var_lib_t)
+manage_files_pattern(Zioncoin_t, Zioncoin_var_lib_t, Zioncoin_var_lib_t)
+files_var_lib_filetrans(Zioncoin_t, Zioncoin_var_lib_t, { dir file })
 
-manage_dirs_pattern(syscoin_t, syscoin_var_run_t, syscoin_var_run_t)
-manage_files_pattern(syscoin_t, syscoin_var_run_t, syscoin_var_run_t)
+manage_dirs_pattern(Zioncoin_t, Zioncoin_var_run_t, Zioncoin_var_run_t)
+manage_files_pattern(Zioncoin_t, Zioncoin_var_run_t, Zioncoin_var_run_t)
 
-sysnet_dns_name_resolve(syscoin_t)
-corenet_all_recvfrom_unlabeled(syscoin_t)
+sysnet_dns_name_resolve(Zioncoin_t)
+corenet_all_recvfrom_unlabeled(Zioncoin_t)
 
-allow syscoin_t self:tcp_socket create_stream_socket_perms;
-corenet_tcp_sendrecv_generic_if(syscoin_t)
-corenet_tcp_sendrecv_generic_node(syscoin_t)
-corenet_tcp_sendrecv_all_ports(syscoin_t)
-corenet_tcp_bind_generic_node(syscoin_t)
-
-gen_require(`
-    type syscoin_port_t;
-')
-allow syscoin_t syscoin_port_t:tcp_socket name_bind;
+allow Zioncoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(Zioncoin_t)
+corenet_tcp_sendrecv_generic_node(Zioncoin_t)
+corenet_tcp_sendrecv_all_ports(Zioncoin_t)
+corenet_tcp_bind_generic_node(Zioncoin_t)
 
 gen_require(`
-    type syscoin_port_t;
+    type Zioncoin_port_t;
 ')
-allow syscoin_t syscoin_port_t:tcp_socket name_connect;
+allow Zioncoin_t Zioncoin_port_t:tcp_socket name_bind;
 
-domain_use_interactive_fds(syscoin_t)
+gen_require(`
+    type Zioncoin_port_t;
+')
+allow Zioncoin_t Zioncoin_port_t:tcp_socket name_connect;
 
-files_read_etc_files(syscoin_t)
+domain_use_interactive_fds(Zioncoin_t)
 
-miscfiles_read_localization(syscoin_t)
+files_read_etc_files(Zioncoin_t)
 
-sysnet_dns_name_resolve(syscoin_t)
+miscfiles_read_localization(Zioncoin_t)
 
-allow syscoin_t syscoin_exec_t:file execute_no_trans;
-allow syscoin_t self:process setsched;
-corecmd_exec_ls(syscoin_t)
-corenet_tcp_connect_http_port(syscoin_t)
-dev_read_urand(syscoin_t)
-fs_getattr_xattr_fs(syscoin_t)
-kernel_read_system_state(syscoin_t)
+sysnet_dns_name_resolve(Zioncoin_t)
+
+allow Zioncoin_t Zioncoin_exec_t:file execute_no_trans;
+allow Zioncoin_t self:process setsched;
+corecmd_exec_ls(Zioncoin_t)
+corenet_tcp_connect_http_port(Zioncoin_t)
+dev_read_urand(Zioncoin_t)
+fs_getattr_xattr_fs(Zioncoin_t)
+kernel_read_system_state(Zioncoin_t)

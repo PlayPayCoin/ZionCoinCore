@@ -1,12 +1,12 @@
-// Copyright (c) 2014-2015 The Syscoin developers
+// Copyright (c) 2014-2015 The Zioncoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_COMPAT_ENDIAN_H
-#define SYSCOIN_COMPAT_ENDIAN_H
+#ifndef Zioncoin_COMPAT_ENDIAN_H
+#define Zioncoin_COMPAT_ENDIAN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/syscoin-config.h"
+#include "config/Zioncoin-config.h"
 #endif
 
 #include <stdint.h>
@@ -193,4 +193,4 @@ inline uint64_t le64toh(uint64_t little_endian_64bits)
 
 #endif // WORDS_BIGENDIAN
 
-#endif // SYSCOIN_COMPAT_ENDIAN_H
+#endif // Zioncoin_COMPAT_ENDIAN_H

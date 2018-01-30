@@ -1,11 +1,11 @@
 Benchmarking
 ============
 
-Syscoin Core has an internal benchmarking framework, with benchmarks
+Zioncoin Core has an internal benchmarking framework, with benchmarks
 for cryptographic algorithms such as SHA1, SHA256, SHA512 and RIPEMD160. As well as the rolling bloom filter.
 
-After compiling syscoin-core, the benchmarks can be run with:
-`src/bench/bench_syscoin`
+After compiling Zioncoin-core, the benchmarks can be run with:
+`src/bench/bench_Zioncoin`
 
 The output will look similar to:
 ```

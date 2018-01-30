@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CHAIN_H
-#define SYSCOIN_CHAIN_H
+#ifndef Zioncoin_CHAIN_H
+#define Zioncoin_CHAIN_H
 
 #include "arith_uint256.h"
 #include "primitives/block.h"
@@ -259,7 +259,7 @@ public:
         return ret;
     }
 
-	// SYSCOIN defined in chain.cpp
+	// Zioncoin defined in chain.cpp
     CBlockHeader GetBlockHeader(const Consensus::Params& consensusParams) const;
 
     uint256 GetBlockHash() const
@@ -325,7 +325,7 @@ public:
     //! Efficiently find an ancestor of this block.
     CBlockIndex* GetAncestor(int height);
     const CBlockIndex* GetAncestor(int height) const;
-    // SYSCOIN
+    // Zioncoin
     inline int GetBaseVersion() const
     {
         return CPureBlockHeader::GetBaseVersion(nVersion);
@@ -457,4 +457,4 @@ public:
     const CBlockIndex *FindFork(const CBlockIndex *pindex) const;
 };
 
-#endif // SYSCOIN_CHAIN_H
+#endif // Zioncoin_CHAIN_H

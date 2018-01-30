@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Syscoin Core developers
+# Copyright (c) 2014-2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 # Test mempool limiting together/eviction with the wallet
 
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 from test_framework.util import *
 
-class MempoolLimitTest(SyscoinTestFramework):
+class MempoolLimitTest(ZioncoinTestFramework):
 
     def setup_network(self):
         self.nodes = []

@@ -1,4 +1,4 @@
-package org.syscoin;
+package org.Zioncoin;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

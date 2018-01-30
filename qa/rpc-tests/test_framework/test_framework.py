@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Syscoin Core developers
+# Copyright (c) 2014-2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,7 +29,7 @@ from .util import (
 from .authproxy import JSONRPCException
 
 
-class SyscoinTestFramework(object):
+class ZioncoinTestFramework(object):
 
     def __init__(self):
         self.num_nodes = 4
@@ -104,11 +104,11 @@ class SyscoinTestFramework(object):
 
         parser = optparse.OptionParser(usage="%prog [options]")
         parser.add_option("--nocleanup", dest="nocleanup", default=False, action="store_true",
-                          help="Leave syscoinds and test.* datadir on exit or error")
+                          help="Leave Zioncoinds and test.* datadir on exit or error")
         parser.add_option("--noshutdown", dest="noshutdown", default=False, action="store_true",
-                          help="Don't stop syscoinds after the test execution")
+                          help="Don't stop Zioncoinds after the test execution")
         parser.add_option("--srcdir", dest="srcdir", default=os.path.normpath(os.path.dirname(os.path.realpath(__file__))+"/../../../src"),
-                          help="Source directory containing syscoind/syscoin-cli (default: %default)")
+                          help="Source directory containing Zioncoind/Zioncoin-cli (default: %default)")
         parser.add_option("--tmpdir", dest="tmpdir", default=tempfile.mkdtemp(prefix="test"),
                           help="Root directory for datadirs")
         parser.add_option("--tracerpc", dest="trace_rpc", default=False, action="store_true",
@@ -161,7 +161,7 @@ class SyscoinTestFramework(object):
             print("Stopping nodes")
             stop_nodes(self.nodes)
         else:
-            print("Note: syscoinds were not stopped and may still be running")
+            print("Note: Zioncoinds were not stopped and may still be running")
 
         if not self.options.nocleanup and not self.options.noshutdown and success:
             print("Cleaning up")
@@ -179,13 +179,13 @@ class SyscoinTestFramework(object):
             sys.exit(1)
 
 
-# Test framework for doing p2p comparison testing, which sets up some syscoind
+# Test framework for doing p2p comparison testing, which sets up some Zioncoind
 # binaries:
 # 1 binary: test binary
 # 2 binaries: 1 test binary, 1 ref binary
 # n>2 binaries: 1 test binary, n-1 ref binaries
 
-class ComparisonTestFramework(SyscoinTestFramework):
+class ComparisonTestFramework(ZioncoinTestFramework):
 
     def __init__(self):
         super().__init__()
@@ -194,11 +194,11 @@ class ComparisonTestFramework(SyscoinTestFramework):
 
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("SYSCOIND", "syscoind"),
-                          help="syscoind binary to test")
+                          default=os.getenv("ZioncoinD", "Zioncoind"),
+                          help="Zioncoind binary to test")
         parser.add_option("--refbinary", dest="refbinary",
-                          default=os.getenv("SYSCOIND", "syscoind"),
-                          help="syscoind binary to use for reference nodes (if any)")
+                          default=os.getenv("ZioncoinD", "Zioncoind"),
+                          help="Zioncoind binary to use for reference nodes (if any)")
 
     def setup_network(self):
         self.nodes = start_nodes(

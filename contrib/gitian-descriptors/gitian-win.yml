@@ -1,5 +1,5 @@
 ---
-name: "syscoin-win-2.1.6"
+name: "Zioncoin-win-2.1.6"
 enable_cache: true
 suites:
 - "trusty"
@@ -22,8 +22,8 @@ packages:
 - "python"
 - "zip"
 remotes:
-- "url": "https://github.com/syscoin/syscoin2.git"
-  "dir": "syscoin"
+- "url": "https://github.com/Zioncoin/Zioncoin2.git"
+  "dir": "Zioncoin"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped
@@ -72,7 +72,7 @@ script: |
 
   function create_per-host_linker_wrapper {
   # This is only needed for trusty, as the mingw linker leaks a few bytes of
-  # heap, causing non-determinism. See discussion in https://github.com/syscoin/syscoin2/pull/6900
+  # heap, causing non-determinism. See discussion in https://github.com/Zioncoin/Zioncoin2/pull/6900
   for i in $HOSTS; do
     mkdir -p ${WRAP_DIR}/${i}
     for prog in collect2; do
@@ -101,7 +101,7 @@ script: |
   create_per-host_linker_wrapper "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd syscoin
+  cd Zioncoin
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
@@ -119,14 +119,14 @@ script: |
   ./autogen.sh
   CONFIG_SITE=${BASEPREFIX}/`echo "${HOSTS}" | awk '{print $1;}'`/share/config.site ./configure --prefix=/
   make dist
-  SOURCEDIST=`echo syscoin-*.tar.gz`
+  SOURCEDIST=`echo Zioncoin-*.tar.gz`
   DISTNAME=`echo ${SOURCEDIST} | sed 's/.tar.*//'`
 
   # Correct tar file order
   mkdir -p temp
   pushd temp
   tar xf ../$SOURCEDIST
-  find syscoin-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
+  find Zioncoin-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
   mkdir -p $OUTDIR/src
   cp ../$SOURCEDIST $OUTDIR/src
   popd
@@ -146,7 +146,7 @@ script: |
     make ${MAKEOPTS} -C src check-security
     make deploy
     make install DESTDIR=${INSTALLPATH}
-    cp -f syscoin-*setup*.exe $OUTDIR/
+    cp -f Zioncoin-*setup*.exe $OUTDIR/
     cd installed
     find . -name "lib*.la" -delete
     find . -name "lib*.a" -delete

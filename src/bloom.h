@@ -1,9 +1,9 @@
-// Copyright (c) 2012-2015 The Syscoin Core developers
+// Copyright (c) 2012-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_BLOOM_H
-#define SYSCOIN_BLOOM_H
+#ifndef Zioncoin_BLOOM_H
+#define Zioncoin_BLOOM_H
 
 #include "serialize.h"
 
@@ -140,4 +140,4 @@ private:
     int nHashFuncs;
 };
 
-#endif // SYSCOIN_BLOOM_H
+#endif // Zioncoin_BLOOM_H

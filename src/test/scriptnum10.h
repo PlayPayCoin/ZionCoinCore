@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_TEST_SCRIPTNUM10_H
-#define SYSCOIN_TEST_SCRIPTNUM10_H
+#ifndef Zioncoin_TEST_SCRIPTNUM10_H
+#define Zioncoin_TEST_SCRIPTNUM10_H
 
 #include <algorithm>
 #include <limits>
@@ -23,7 +23,7 @@ public:
 class CScriptNum10
 {
 /**
- * The ScriptNum implementation from Syscoin Core 0.10.0, for cross-comparison.
+ * The ScriptNum implementation from Zioncoin Core 0.10.0, for cross-comparison.
  */
 public:
 
@@ -180,4 +180,4 @@ private:
 };
 
 
-#endif // SYSCOIN_TEST_BIGNUM_H
+#endif // Zioncoin_TEST_BIGNUM_H

@@ -1,33 +1,33 @@
-# /etc/conf.d/syscoind: config file for /etc/init.d/syscoind
+# /etc/conf.d/Zioncoind: config file for /etc/init.d/Zioncoind
 
 # Config file location
-#SYSCOIND_CONFIGFILE="/etc/syscoin/syscoin.conf"
+#ZioncoinD_CONFIGFILE="/etc/Zioncoin/Zioncoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $SYSCOIND_USER)
-#SYSCOIND_PIDDIR="/var/run/syscoind"
+# What directory to write pidfile to?  (created and owned by $ZioncoinD_USER)
+#ZioncoinD_PIDDIR="/var/run/Zioncoind"
 
 # What filename to give the pidfile
-#SYSCOIND_PIDFILE="${SYSCOIND_PIDDIR}/syscoind.pid"
+#ZioncoinD_PIDFILE="${ZioncoinD_PIDDIR}/Zioncoind.pid"
 
-# Where to write syscoind data (be mindful that the blockchain is large)
-#SYSCOIND_DATADIR="/var/lib/syscoind"
+# Where to write Zioncoind data (be mindful that the blockchain is large)
+#ZioncoinD_DATADIR="/var/lib/Zioncoind"
 
-# User and group to own syscoind process
-#SYSCOIND_USER="syscoin"
-#SYSCOIND_GROUP="syscoin"
+# User and group to own Zioncoind process
+#ZioncoinD_USER="Zioncoin"
+#ZioncoinD_GROUP="Zioncoin"
 
-# Path to syscoind executable
-#SYSCOIND_BIN="/usr/bin/syscoind"
+# Path to Zioncoind executable
+#ZioncoinD_BIN="/usr/bin/Zioncoind"
 
-# Nice value to run syscoind under
-#SYSCOIND_NICE=0
+# Nice value to run Zioncoind under
+#ZioncoinD_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-SYSCOIND_OPTS="-disablewallet"
+ZioncoinD_OPTS="-disablewallet"
 
-# The timeout in seconds OpenRC will wait for syscoind to terminate
+# The timeout in seconds OpenRC will wait for Zioncoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-SYSCOIND_SIGTERM_TIMEOUT=60
+ZioncoinD_SIGTERM_TIMEOUT=60

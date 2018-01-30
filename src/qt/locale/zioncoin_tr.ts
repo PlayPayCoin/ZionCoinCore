@@ -301,11 +301,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Syscoin yollanacak adresi seç</translation>
+        <translation>Zioncoin yollanacak adresi seç</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Syscoin alınacak adresi seç</translation>
+        <translation>Zioncoin alınacak adresi seç</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -320,12 +320,12 @@
         <translation>Alım adresleri</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödemeleri göndermek için kullanacağınız Syscoin adreslerinizdir. Syscoin yollamadan önce miktarı ve alıcının alım adresini daima kontrol ediniz.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödemeleri göndermek için kullanacağınız Zioncoin adreslerinizdir. Zioncoin yollamadan önce miktarı ve alıcının alım adresini daima kontrol ediniz.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödemeleri almak için kullanacağınız Syscoin adreslerinizdir. Her işlem için yeni bir alım adresi kullanmanız tavsiye edilir.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödemeleri almak için kullanacağınız Zioncoin adreslerinizdir. Her işlem için yeni bir alım adresi kullanmanız tavsiye edilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -406,8 +406,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>Syscoin Aliases arayın. (varsayılan olarak açık) potansiyel olarak saldırgan Aliases atlamak istiyorsanız cüzdan seçenekleri Güvenli Arama seçin</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>Zioncoin Aliases arayın. (varsayılan olarak açık) potansiyel olarak saldırgan Aliases atlamak istiyorsanız cüzdan seçenekleri Güvenli Arama seçin</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Aliases starting with 'name'). Empty will search for all.</source>
@@ -515,7 +515,7 @@
         <translation>Cüzdanın şifrelemesini teyit eder</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
         <translation>Uyarı: Eğer cüzdanınızı şifrelerseniz ve parolanızı kaybederseniz, &lt;b&gt;TÜM BİTCOİNLERİNİZİ KAYBEDERSİNİZ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -527,8 +527,8 @@
         <translation>Cüzdan şifrelendi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your syscoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 şifreleme işlemini bitirmek için şimdi kapanacak. cüzdanınızı şifreleyerek tam bilgisayarınıza bulaşmasını kötü amaçlı yazılım tarafından çalınmasını syscoins koruyamaz unutmayın.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Zioncoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 şifreleme işlemini bitirmek için şimdi kapanacak. cüzdanınızı şifreleyerek tam bilgisayarınıza bulaşmasını kötü amaçlı yazılım tarafından çalınmasını Zioncoins koruyamaz unutmayın.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -605,8 +605,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>Syscoin Belgeleri arayın. (varsayılan olarak açık) potansiyel olarak saldırgan Sertifikaları atlamak istiyorsanız cüzdan seçenekleri Güvenli Arama seçin</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>Zioncoin Belgeleri arayın. (varsayılan olarak açık) potansiyel olarak saldırgan Sertifikaları atlamak istiyorsanız cüzdan seçenekleri Güvenli Arama seçin</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Certificates starting with 'name'). Empty will search for all.</source>
@@ -667,7 +667,7 @@
     <name>CoinControlDialog</name>
     <message>
         <source>Coin Selection</source>
-        <translation>Syscoin Seçimi</translation>
+        <translation>Zioncoin Seçimi</translation>
     </message>
     <message>
         <source>Quantity:</source>
@@ -853,8 +853,8 @@
         <translation>Gönderi adresini düzenle</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>Girilen "%1" adresi geçerli bir Syscoin adresi değildir.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>Girilen "%1" adresi geçerli bir Zioncoin adresi değildir.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1527,8 +1527,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>Syscoin escrows arayın.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>Zioncoin escrows arayın.</translation>
     </message>
     <message>
         <source>Enter search term. Search for arbiter/seller or escrow GUID. Empty will search for all.</source>
@@ -1539,8 +1539,8 @@
         <translation>Emanet onaylama Var Onayla</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Uyarı: Bu alıcıdan bu ödemeyi kabul etmek üzeresiniz. Bir öğeyi gönderiyorsanız, bir Syscoin mesaj yoluyla alıcıya bir takip numarası iletiniz.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Uyarı: Bu alıcıdan bu ödemeyi kabul etmek üzeresiniz. Bir öğeyi gönderiyorsanız, bir Zioncoin mesaj yoluyla alıcıya bir takip numarası iletiniz.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -1643,8 +1643,8 @@
         <translation>sürüm</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>Syscoin Müşteri</translation>
+        <source>Zioncoin Client</source>
+        <translation>Zioncoin Müşteri</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -1698,8 +1698,8 @@
 <context>
     <name>InMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>Bunlar aldığınız Syscoin mesajlardır. Sen sağa açılan kullanarak ilgili mesajları görüntülemek için takma ad seçebilirsiniz.</translation>
+        <source>These are Zioncoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>Bunlar aldığınız Zioncoin mesajlardır. Sen sağa açılan kullanarak ilgili mesajları görüntülemek için takma ad seçebilirsiniz.</translation>
     </message>
     <message>
         <source>New Msg</source>
@@ -1761,8 +1761,8 @@
         <translation>Bu programın ilk kez başlatılmasından dolayı %1 yazılımının verilerini nerede saklayacağını seçebilirsiniz.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Syscoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1, Syscoin blok zincirinin bir kopyasını indirecek ve saklayacaktır. Bu klasörde en az %2GB veri saklanacak ve bu zamanla artacaktır. Cüzdan da bu klasörde saklanacaktır.</translation>
+        <source>%1 will download and store a copy of the Zioncoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1, Zioncoin blok zincirinin bir kopyasını indirecek ve saklayacaktır. Bu klasörde en az %2GB veri saklanacak ve bu zamanla artacaktır. Cüzdan da bu klasörde saklanacaktır.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1860,8 +1860,8 @@
         <translation>emanet başarıyla alıcıya iade edilmiştir. emanet tamamlandı.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>emanet durumu tanınmadı. Syscoin ekibine başvurun.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>emanet durumu tanınmadı. Zioncoin ekibine başvurun.</translation>
     </message>
     <message>
         <source>arbiter</source>
@@ -2063,12 +2063,12 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
-        <translation>Görüntülenen bilgiler güncel olabilir. Bağlantı kurulduktan sonra cüzdan otomatik olarak Syscoin ağı ile eşitler, ancak bu süreç henüz tamamlanmış değil. Bu son işlemler görünür olmayacak ve denge Bu işlem tamamlandıktan up-to-date kadar olmayacak anlamına gelir.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
+        <translation>Görüntülenen bilgiler güncel olabilir. Bağlantı kurulduktan sonra cüzdan otomatik olarak Zioncoin ağı ile eşitler, ancak bu süreç henüz tamamlanmış değil. Bu son işlemler görünür olmayacak ve denge Bu işlem tamamlandıktan up-to-date kadar olmayacak anlamına gelir.</translation>
     </message>
     <message>
-        <source>Spending syscoins may not be possible during that phase!</source>
-        <translation>Harcama syscoins o aşamasında mümkün olmayabilir!</translation>
+        <source>Spending Zioncoins may not be possible during that phase!</source>
+        <translation>Harcama Zioncoins o aşamasında mümkün olmayabilir!</translation>
     </message>
     <message>
         <source>Amount of blocks left</source>
@@ -2210,8 +2210,8 @@
         <translation>Ödeme Takdir ödülünü onayla</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Uyarı: Bu alıcıdan bu ödemeyi kabul etmek üzeresiniz. Bir öğeyi gönderiyorsanız, bir Syscoin mesaj yoluyla alıcıya bir takip numarası iletiniz.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Uyarı: Bu alıcıdan bu ödemeyi kabul etmek üzeresiniz. Bir öğeyi gönderiyorsanız, bir Zioncoin mesaj yoluyla alıcıya bir takip numarası iletiniz.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2373,8 +2373,8 @@
         <translation>Güncel sekmedeki verileri bir dosyaya aktar</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>Bunlar kayıtlı Syscoin Aliases vardır. Alias ​​işlemleri (güncelleme, transfer oluşturun) 2-5 dakika sürer aktif hale gelmesi.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>Bunlar kayıtlı Zioncoin Aliases vardır. Alias ​​işlemleri (güncelleme, transfer oluşturun) 2-5 dakika sürer aktif hale gelmesi.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -2488,8 +2488,8 @@
         <translation>Güncel sekmedeki verileri bir dosyaya aktar</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
-        <translation>Bunlar kayıtlı Syscoin Belgeleri vardır. Sertifika işlemleri (güncelleme, transfer oluşturun) aktif hale 2-5 dakika sürer. Sen sağa açılan kullanarak ilgili sertifikaları görüntülemek için takma ad seçebilirsiniz.</translation>
+        <source>These are your registered Zioncoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
+        <translation>Bunlar kayıtlı Zioncoin Belgeleri vardır. Sertifika işlemleri (güncelleme, transfer oluşturun) aktif hale 2-5 dakika sürer. Sen sağa açılan kullanarak ilgili sertifikaları görüntülemek için takma ad seçebilirsiniz.</translation>
     </message>
     <message>
         <source>All</source>
@@ -2611,8 +2611,8 @@
         <translation>Güncel sekmedeki verileri bir dosyaya aktar</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
-        <translation>Bunlar kayıtlı Syscoin escrows vardır. işlemleri (tam, serbest, geri ödeme oluşturmak) aktif hale gelmesi 2-5 dakika sürer Emanet. Sen sağa açılan kullanarak ilgili escrows görüntülemek için takma ad seçebilirsiniz.</translation>
+        <source>These are your registered Zioncoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
+        <translation>Bunlar kayıtlı Zioncoin escrows vardır. işlemleri (tam, serbest, geri ödeme oluşturmak) aktif hale gelmesi 2-5 dakika sürer Emanet. Sen sağa açılan kullanarak ilgili escrows görüntülemek için takma ad seçebilirsiniz.</translation>
     </message>
     <message>
         <source>All</source>
@@ -2655,8 +2655,8 @@
         <translation>Emanet onaylama Var Onayla</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Uyarı: Bu alıcıdan bu ödemeyi kabul etmek üzeresiniz. Bir öğeyi gönderiyorsanız, bir Syscoin mesaj yoluyla alıcıya bir takip numarası iletiniz.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Uyarı: Bu alıcıdan bu ödemeyi kabul etmek üzeresiniz. Bir öğeyi gönderiyorsanız, bir Zioncoin mesaj yoluyla alıcıya bir takip numarası iletiniz.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2730,8 +2730,8 @@
         <translation>Güncel sekmedeki verileri bir dosyaya aktar</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
-        <translation>Bunlar kayıtlı Syscoin Teklifler vardır. Teklif işlemleri (oluşturma, güncelleme,) aktif hale 2-5 dakika sürer. Sen sağa açılan kullanarak ilgili teklifleri görmek için takma ad seçebilirsiniz.</translation>
+        <source>These are your registered Zioncoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
+        <translation>Bunlar kayıtlı Zioncoin Teklifler vardır. Teklif işlemleri (oluşturma, güncelleme,) aktif hale 2-5 dakika sürer. Sen sağa açılan kullanarak ilgili teklifleri görmek için takma ad seçebilirsiniz.</translation>
     </message>
     <message>
         <source>Manage Affiliates</source>
@@ -2989,8 +2989,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Syscoin Teklif Kabul</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Zioncoin Teklif Kabul</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3009,8 +3009,8 @@
         <translation>BTC ile ödeme</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>Syscoin ile ödeme</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>Zioncoin ile ödeme</translation>
     </message>
     <message>
         <source>Use Escrow</source>
@@ -3048,8 +3048,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Syscoin Teklif Kabul</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Zioncoin Teklif Kabul</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3151,8 +3151,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Syscoin Teklif Kabul</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Zioncoin Teklif Kabul</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3566,8 +3566,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>Syscoin Teklifler ara (satın almak için tek üzerinde çift tıklayın). (varsayılan olarak açık) potansiyel olarak saldırgan Teklifler atlamak istiyorsanız cüzdan seçenekleri Güvenli Arama seçin</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>Zioncoin Teklifler ara (satın almak için tek üzerinde çift tıklayın). (varsayılan olarak açık) potansiyel olarak saldırgan Teklifler atlamak istiyorsanız cüzdan seçenekleri Güvenli Arama seçin</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Offer's starting with 'name'). Empty will search for all.</source>
@@ -3752,8 +3752,8 @@
         <translation>Pencere kapatıldığında uygulamadan çıkmak yerine uygulamayı küçültür. Bu seçenek etkinleştirildiğinde, uygulama sadece menüden çıkış seçildiğinde kapanacaktır.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Kullanıcı arayüzünün dili burada belirtilebilir. Bu ayar Syscoin Çekirdeği tekrar başlatıldığında etkinleşecektir.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Kullanıcı arayüzünün dili burada belirtilebilir. Bu ayar Zioncoin Çekirdeği tekrar başlatıldığında etkinleşecektir.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -3772,8 +3772,8 @@
         <translation>Kullanıcı Arabirimi Tema:</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Kullanıcı arayüzü teması burada ayarlanabilir. Bu ayar Syscoin Çekirdek yeniden başlattıktan sonra yürürlüğe girecek.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Kullanıcı arayüzü teması burada ayarlanabilir. Bu ayar Zioncoin Çekirdek yeniden başlattıktan sonra yürürlüğe girecek.</translation>
     </message>
     <message>
         <source>Default Alias:</source>
@@ -3848,12 +3848,12 @@
         <translation>&amp;Şebeke</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>Sistemde oturum açıldığında Syscoin Çekirdeğini otomatik olarak başlat.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>Sistemde oturum açıldığında Zioncoin Çekirdeğini otomatik olarak başlat.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>Syscoin Çekirdeğini sistem oturumuyla &amp;başlat</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>Zioncoin Çekirdeğini sistem oturumuyla &amp;başlat</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -3880,16 +3880,16 @@
         <translation>Teyit edilmemiş para üstünü &amp;harca</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönlendiricide Syscoin istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönlendiricide Zioncoin istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Portları &amp;UPnP kullanarak haritala</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>Syscoin şebekesine SOCKS5 vekil sunucusu vasıtasıyla bağlan.</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>Zioncoin şebekesine SOCKS5 vekil sunucusu vasıtasıyla bağlan.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -3928,8 +3928,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Syscoin şebekesine gizli Tor servisleri için ayrı bir SOCKS5 vekil sunucusu vasıtasıyla bağlan.</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Zioncoin şebekesine gizli Tor servisleri için ayrı bir SOCKS5 vekil sunucusu vasıtasıyla bağlan.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -3973,7 +3973,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Syscoin gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
+        <translation>Zioncoin gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -4050,8 +4050,8 @@
 <context>
     <name>OutMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>Bunlar gönderdiğiniz adres Syscoin mesajlardır. Sen sağa açılan kullanarak ilgili mesajları görüntülemek için takma ad seçebilirsiniz.</translation>
+        <source>These are Zioncoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>Bunlar gönderdiğiniz adres Zioncoin mesajlardır. Sen sağa açılan kullanarak ilgili mesajları görüntülemek için takma ad seçebilirsiniz.</translation>
     </message>
     <message>
         <source>New Msg</source>
@@ -4105,7 +4105,7 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Görüntülenen veriler zaman aşımına uğramış olabilir. Bağlantı kurulduğunda cüzdanınız otomatik olarak şebeke ile eşleşir ancak bu işlem henüz tamamlanmamıştır.</translation>
     </message>
     <message>
@@ -4180,8 +4180,8 @@
         <translation>Ödeme talebi hatası</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Syscoin başlatılamadı: tıkla-ve-öde yöneticisi</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Zioncoin başlatılamadı: tıkla-ve-öde yöneticisi</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -4196,8 +4196,8 @@
         <translation>Geçersiz ödeme adresi %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>URI okunamadı! Sebebi geçersiz bir Syscoin adresi veya hatalı URI parametreleri olabilir.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>URI okunamadı! Sebebi geçersiz bir Zioncoin adresi veya hatalı URI parametreleri olabilir.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -4683,8 +4683,8 @@
         <translation>&amp;Hâlihazırda bulunan bir alım adresini kullan (önerilmez)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
-        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir mesaj. Not: Bu mesaj ödeme ile birlikte Syscoin şebekesi üzerinden gönderilmeyecektir.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
+        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir mesaj. Not: Bu mesaj ödeme ile birlikte Zioncoin şebekesi üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -4864,7 +4864,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Syscoin yolla</translation>
+        <translation>Zioncoin yolla</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -4943,8 +4943,8 @@
         <translation>toplam asgari</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
-        <translation>Asgari ücreti ödemek, bloklarda boşluktan daha az muamele hacmi olduğu sürece bir sorun çıkarmaz. Fakat şebekenin işleyecebileceğinden daha çok syscoin muameleleri talebi olduğunda bunun asla teyit edilmeyen bir muamele olabileceğinin farkında olmalısınız.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
+        <translation>Asgari ücreti ödemek, bloklarda boşluktan daha az muamele hacmi olduğu sürece bir sorun çıkarmaz. Fakat şebekenin işleyecebileceğinden daha çok Zioncoin muameleleri talebi olduğunda bunun asla teyit edilmeyen bir muamele olabileceğinin farkında olmalısınız.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -5103,8 +5103,8 @@
         <translation><numerusform>%n bloğu(ler) içinde onay başlaması Tahmini.</numerusform><numerusform>%n bloğu(ler) içinde onay başlaması Tahmini.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Uyarı: geçersiz Syscoin adresi</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Uyarı: geçersiz Zioncoin adresi</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -5138,8 +5138,8 @@
         <translation>Bu, normal bir ödemedir.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
-        <translation>Ödemenin yollanacağı Syscoin adresi</translation>
+        <source>The Zioncoin address to send the payment to</source>
+        <translation>Ödemenin yollanacağı Zioncoin adresi</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -5158,8 +5158,8 @@
         <translation>Bu unsuru kaldır</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Ücret yollanan meblağdan alınacaktır. Alıcı meblağ alanında girdiğinizden daha az syscoin alacaktır.  Eğer birden çok alıcı seçiliyse ücret eşit olarak bölünecektir.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Ücret yollanan meblağdan alınacaktır. Alıcı meblağ alanında girdiğinizden daha az Zioncoin alacaktır.  Eğer birden çok alıcı seçiliyse ücret eşit olarak bölünecektir.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -5182,8 +5182,8 @@
         <translation>Kullanılmış adres listesine eklemek için bu adrese bir etiket girin</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>Syscoin: URI'siyle ilişkili ve bilginiz için muameleyle saklanacak bir mesaj. Not: Bu mesaj Syscoin şebekesi üzerinden gönderilmeyecektir.</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>Zioncoin: URI'siyle ilişkili ve bilginiz için muameleyle saklanacak bir mesaj. Not: Bu mesaj Zioncoin şebekesi üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -5243,8 +5243,8 @@
         <translation>Genel durum çözme ham işlem</translation>
     </message>
     <message>
-        <source>General exception decoding raw syscoin transaction</source>
-        <translation>Genel durum çözme ham syscoin işlem</translation>
+        <source>General exception decoding raw Zioncoin transaction</source>
+        <translation>Genel durum çözme ham Zioncoin işlem</translation>
     </message>
     <message>
         <source>Transaction was completed successfully!</source>
@@ -5270,12 +5270,12 @@
         <translation>Mesaj &amp;imzala</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Adreslerinize yollanan syscoinleri alabileceğiniz ispatlamak için adreslerinizle mesaj/anlaşma imzalayabilirsiniz. Oltalama saldırılarının kimliğinizi imzanızla elde etmeyi deneyebilecekleri için belirsiz ya da rastgele hiçbir şey imzalamamaya dikkat ediniz. Sadece ayrıntılı açıklaması olan ve tümüne katıldığınız ifadeleri imzalayınız.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Adreslerinize yollanan Zioncoinleri alabileceğiniz ispatlamak için adreslerinizle mesaj/anlaşma imzalayabilirsiniz. Oltalama saldırılarının kimliğinizi imzanızla elde etmeyi deneyebilecekleri için belirsiz ya da rastgele hiçbir şey imzalamamaya dikkat ediniz. Sadece ayrıntılı açıklaması olan ve tümüne katıldığınız ifadeleri imzalayınız.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
-        <translation>Mesajın imzalanmasında kullanılacak Syscoin adresi</translation>
+        <source>The Zioncoin address to sign the message with</source>
+        <translation>Mesajın imzalanmasında kullanılacak Zioncoin adresi</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -5306,8 +5306,8 @@
         <translation>Güncel imzayı sistem panosuna kopyala</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Bu Syscoin adresinin sizin olduğunu ispatlamak için mesajı imzalayın</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Bu Zioncoin adresinin sizin olduğunu ispatlamak için mesajı imzalayın</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -5330,12 +5330,12 @@
         <translation>Alıcının adresini, mesajı (satır sonları, boşluklar, sekmeler vs. karakterleri tam olarak kopyaladığınızdan emin olunuz) ve imzayı aşağıda giriniz. Bir ortadaki adam saldırısı tarafından kandırılmaya mâni olmak için imzadan, imzalı mesajın içeriğini aşan bir anlam çıkarmamaya dikkat ediniz. Bunun sadece imzalayan tarafın adres ile alım yapabildiğini ispatladığını ve herhangi bir muamelenin gönderi tarafını kanıtlayamayacağını unutmayınız!</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
-        <translation>Mesajın imzalanmasında kullanılan Syscoin adresi</translation>
+        <source>The Zioncoin address the message was signed with</source>
+        <translation>Mesajın imzalanmasında kullanılan Zioncoin adresi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Belirtilen Syscoin adresi ile imzalandığını doğrulamak için mesajı kontrol et</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Belirtilen Zioncoin adresi ile imzalandığını doğrulamak için mesajı kontrol et</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -5406,7 +5406,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Mesaj imzala...</translation>
@@ -5500,8 +5500,8 @@
         <translation>Diskteki bloklar yeniden endeksleniyor...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Bir Syscoin adresine Syscoin yolla</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Bir Zioncoin adresine Zioncoin yolla</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -5524,8 +5524,8 @@
         <translation>Mesaj &amp;kontrol et...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -5544,12 +5544,12 @@
         <translation>Cüzdanınızın özel anahtarlarını şifrele</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Mesajları adreslerin size ait olduğunu ispatlamak için Syscoin adresleri ile imzala</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Mesajları adreslerin size ait olduğunu ispatlamak için Zioncoin adresleri ile imzala</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Belirtilen Syscoin adresleri ile imzalandıklarından emin olmak için mesajları kontrol et</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Belirtilen Zioncoin adresleri ile imzalandıklarından emin olmak için mesajları kontrol et</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -5568,8 +5568,8 @@
         <translation>Sekme araç çubuğu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Ödeme talep et (QR kodu ve syscoin URI'si oluşturur)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Ödeme talep et (QR kodu ve Zioncoin URI'si oluşturur)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -5580,16 +5580,16 @@
         <translation>Kullanılmış alım adresleri ve etiketlerin listesini göster</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Bir syscoin: bağlantısı ya da ödeme talebi aç</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Bir Zioncoin: bağlantısı ya da ödeme talebi aç</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Komut satırı seçenekleri</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
-        <translation><numerusform>Syscoin şebekesine %n faal bağlantı</numerusform><numerusform>Syscoin şebekesine %n faal bağlantı</numerusform></translation>
+        <source>%n active connection(s) to Zioncoin network</source>
+        <translation><numerusform>Zioncoin şebekesine %n faal bağlantı</numerusform><numerusform>Zioncoin şebekesine %n faal bağlantı</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -5656,12 +5656,12 @@
         <translation>teklifler ile escrows</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>Syscoin Çekirdeği &amp;hakkında</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>Zioncoin Çekirdeği &amp;hakkında</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Syscoin command-line options</source>
-        <translation>Olası Syscoin komut satırı seçeneklerinin listesini görmek için %1 yardım mesajını göster</translation>
+        <source>Show the %1 help message to get a list with possible Zioncoin command-line options</source>
+        <translation>Olası Zioncoin komut satırı seçeneklerinin listesini görmek için %1 yardım mesajını göster</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -5881,7 +5881,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Oluşturulan syscoin'lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu "kabul edilmedi" olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
+        <translation>Oluşturulan Zioncoin'lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu "kabul edilmedi" olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -6443,7 +6443,7 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Syscoin yolla</translation>
+        <translation>Zioncoin yolla</translation>
     </message>
     <message>
         <source>Could not sign multisig transaction: Invalid response from signrawtransaction</source>
@@ -6490,7 +6490,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Seçenekler:</translation>
@@ -6556,8 +6556,8 @@
         <translation>Dışarıdan gelen bağlantıları kabul et (varsayılan: -proxy veya -connect yoksa 1)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Çekirdeği</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Çekirdeği</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -6625,7 +6625,7 @@
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Bu yayın öncesi bir deneme sürümüdür - tüm riski siz üstlenmiş olursunuz - syscoin oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
+        <translation>Bu yayın öncesi bir deneme sürümüdür - tüm riski siz üstlenmiş olursunuz - Zioncoin oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
     </message>
     <message>
         <source>Unable to rewind the database to a pre-fork state. You will need to redownload the blockchain</source>
@@ -7288,16 +7288,16 @@
         <translation>-checkblocks'un blok kontrolünün ne kadar kapsamlı olacağı (0 ilâ 4, varsayılan: %u)</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
-        <translation>Geçersiz Syscoin Kimlik. Hiçbir önceki veya sonunda tire ile 3 ila 64 karakter alan adı spec ve 2 ila 6 karakterden oluşan bir TLD takip etmelidir</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
+        <translation>Geçersiz Zioncoin Kimlik. Hiçbir önceki veya sonunda tire ile 3 ila 64 karakter alan adı spec ve 2 ila 6 karakterden oluşan bir TLD takip etmelidir</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
-        <translation>Geçersiz Syscoin Kimlik. Hiçbir önceki veya sonunda tire ile 3 ila 64 karakter alan adı spec takip etmelidir</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
+        <translation>Geçersiz Zioncoin Kimlik. Hiçbir önceki veya sonunda tire ile 3 ila 64 karakter alan adı spec takip etmelidir</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Please enter a password atleast 4 characters long</source>
-        <translation>Geçersiz Syscoin Kimlik. 4 karakter uzunluğunda bir şifre atleast girin</translation>
+        <source>Invalid Zioncoin Identity. Please enter a password atleast 4 characters long</source>
+        <translation>Geçersiz Zioncoin Kimlik. 4 karakter uzunluğunda bir şifre atleast girin</translation>
     </message>
     <message>
         <source>Invalid price and/or quantity values. Quantity must be less than 4294967296 and greater than or equal to -1</source>
@@ -7336,16 +7336,16 @@
         <translation>Blokların ve muamelelerin bloom filtreleri ile süzülmesini destekle (varsayılan: %u)</translation>
     </message>
     <message>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
-        <translation>Syscoin geliştiriciler küresel bir ağ tarafından üretilen açık kaynak yazılım. Indirerek, dağıtım ve Syscoin ve Syscoin ağını kullanarak size her türlü sorumluluk Syscoin Proje geçmiş, şimdi ve gelecekte katılan geliştiriciler bırakın. Sen Syscoin ağdaki kreasyonları sorumludur. Sen Syscoin Projesi geliştiriciler eylemleri / veri veya ağ üzerinde kendiniz ya da başkaları tarafından ağ üzerinde oluşturulan herhangi * tanım hangi maruz kalabileceği * ve kuruluşlar için hiçbir sorumluluk taşıdığını kabul ediyorum.</translation>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <translation>Zioncoin geliştiriciler küresel bir ağ tarafından üretilen açık kaynak yazılım. Indirerek, dağıtım ve Zioncoin ve Zioncoin ağını kullanarak size her türlü sorumluluk Zioncoin Proje geçmiş, şimdi ve gelecekte katılan geliştiriciler bırakın. Sen Zioncoin ağdaki kreasyonları sorumludur. Sen Zioncoin Projesi geliştiriciler eylemleri / veri veya ağ üzerinde kendiniz ya da başkaları tarafından ağ üzerinde oluşturulan herhangi * tanım hangi maruz kalabileceği * ve kuruluşlar için hiçbir sorumluluk taşıdığını kabul ediyorum.</translation>
     </message>
     <message>
-        <source>The Syscoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
-        <translation>Bu işlem için kullanmaya çalıştığınız Syscoin takma geçersiz veya güncellenmiş olup henüz teyit edilmemiş! bir blok bekleyin ve tekrar deneyin ...</translation>
+        <source>The Zioncoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
+        <translation>Bu işlem için kullanmaya çalıştığınız Zioncoin takma geçersiz veya güncellenmiş olup henüz teyit edilmemiş! bir blok bekleyin ve tekrar deneyin ...</translation>
     </message>
     <message>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
-        <translation>Syscoin Projesi geliştiriciler Syscoin ağdaki verileri değiştirmek için gücümüz yok, bu daha fazla Syscoin, Syscoin ağı ve Syscoin hizmetlerinin kullanımı yoluyla kabul değişmez blockchain, tarafından desteklenmektedir. Bu koşulları kabul etmiyorsanız, Syscoin ve ilgili hizmetleri kullanmaktan kaçının lütfen.</translation>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
+        <translation>Zioncoin Projesi geliştiriciler Zioncoin ağdaki verileri değiştirmek için gücümüz yok, bu daha fazla Zioncoin, Zioncoin ağı ve Zioncoin hizmetlerinin kullanımı yoluyla kabul değişmez blockchain, tarafından desteklenmektedir. Bu koşulları kabul etmiyorsanız, Zioncoin ve ilgili hizmetleri kullanmaktan kaçının lütfen.</translation>
     </message>
     <message>
         <source>This resold offer must be of higher price than the original offer including any discount</source>
@@ -7504,8 +7504,8 @@
         <translation>Sadece aktif emanet serbest bırakabilirsiniz</translation>
     </message>
     <message>
-        <source>Can't determine type of alias input into syscoin service transaction</source>
-        <translation>syscoin servis işlemi içine takma girdi türünü belirlemek olamaz</translation>
+        <source>Can't determine type of alias input into Zioncoin service transaction</source>
+        <translation>Zioncoin servis işlemi içine takma girdi türünü belirlemek olamaz</translation>
     </message>
     <message>
         <source>Cannot change category to wanted</source>
@@ -7708,8 +7708,8 @@
         <translation>Komisyon -90 ile 100 arasında olmalı</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
-        <translation>Telif hakkı 2009-%i Syscoin Çekirdeği Geliştiricileri</translation>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
+        <translation>Telif hakkı 2009-%i Zioncoin Çekirdeği Geliştiricileri</translation>
     </message>
     <message>
         <source>Could not create escrow transaction: Invalid response from createescrow</source>
@@ -8272,8 +8272,8 @@
         <translation>Hiçbir özel anahtarlar bu emanet yer bulundu</translation>
     </message>
     <message>
-        <source>Non-Syscoin transaction found</source>
-        <translation>Sigara Syscoin işlem bulundu</translation>
+        <source>Non-Zioncoin transaction found</source>
+        <translation>Sigara Zioncoin işlem bulundu</translation>
     </message>
     <message>
         <source>Not enough quantity left in this offer for this purchase</source>

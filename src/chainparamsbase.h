@@ -1,16 +1,16 @@
-// Copyright (c) 2014-2015 The Syscoin Core developers
+// Copyright (c) 2014-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CHAINPARAMSBASE_H
-#define SYSCOIN_CHAINPARAMSBASE_H
+#ifndef Zioncoin_CHAINPARAMSBASE_H
+#define Zioncoin_CHAINPARAMSBASE_H
 
 #include <string>
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between syscoin-cli and syscoind)
- * of a given instance of the Syscoin system.
+ * CBaseChainParams defines the base parameters (shared between Zioncoin-cli and Zioncoind)
+ * of a given instance of the Zioncoin system.
  */
 class CBaseChainParams
 {
@@ -59,4 +59,4 @@ std::string ChainNameFromCommandLine();
  */
 bool AreBaseParamsConfigured();
 
-#endif // SYSCOIN_CHAINPARAMSBASE_H
+#endif // Zioncoin_CHAINPARAMSBASE_H

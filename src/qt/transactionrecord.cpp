@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,16 +14,16 @@
 
 #include <boost/foreach.hpp>
 using namespace std;
-// SYSCOIN
+// Zioncoin
 #include "offer.h"
 #include "escrow.h"
-extern int GetSyscoinTxVersion();
-extern bool IsSyscoinDataOutput(const CTxOut& out);
-extern bool IsSyscoinTxMine(const CTransaction& tx, const string &type);
+extern int GetZioncoinTxVersion();
+extern bool IsZioncoinDataOutput(const CTxOut& out);
+extern bool IsZioncoinTxMine(const CTransaction& tx, const string &type);
 extern std::string stringFromVch(const std::vector<unsigned char> &vch);
-extern bool DecodeAndParseSyscoinTx(const CTransaction& tx, int& op, int& nOut, vector<vector<unsigned char> >& vvch);
+extern bool DecodeAndParseZioncoinTx(const CTransaction& tx, int& op, int& nOut, vector<vector<unsigned char> >& vvch);
 enum {RECV=0, SEND=1};
-static bool CreateSyscoinTransactionRecord(TransactionRecord& sub, int op, const vector<vector<unsigned char> > &vvchArgs, const CWalletTx &wtx, int type)
+static bool CreateZioncoinTransactionRecord(TransactionRecord& sub, int op, const vector<vector<unsigned char> > &vvchArgs, const CWalletTx &wtx, int type)
 {
 	COffer offer;
 	CEscrow escrow;
@@ -40,7 +40,7 @@ static bool CreateSyscoinTransactionRecord(TransactionRecord& sub, int op, const
 		break;
 	case OP_ALIAS_UPDATE:
 		if(type == SEND)
-			sub.type = (IsSyscoinTxMine(wtx, "alias")) ? TransactionRecord::AliasUpdate : TransactionRecord::AliasTransfer;	
+			sub.type = (IsZioncoinTxMine(wtx, "alias")) ? TransactionRecord::AliasUpdate : TransactionRecord::AliasTransfer;	
 		else if(type == RECV)
 			sub.type = TransactionRecord::AliasRecv;
 		break;
@@ -138,21 +138,21 @@ static bool CreateSyscoinTransactionRecord(TransactionRecord& sub, int op, const
 	sub.address = stringFromVch(vvchArgs[0]);
 	return true;
 }
-static bool CreateSyscoinTransactions(const CWallet *wallet, const CWalletTx& wtx, QList<TransactionRecord>& parts, const int64_t &nTime, const CAmount &nNet, const int type)
+static bool CreateZioncoinTransactions(const CWallet *wallet, const CWalletTx& wtx, QList<TransactionRecord>& parts, const int64_t &nTime, const CAmount &nNet, const int type)
 {
-	if(wtx.nVersion != GetSyscoinTxVersion())
+	if(wtx.nVersion != GetZioncoinTxVersion())
 		return false;	
 	uint256 hash = wtx.GetHash();
     vector<vector<unsigned char> > vvchArgs;
     int op, nOut;
-	// there should only be one data carrying syscoin output per transaction, but there may be more than 1 syscoin utxo in a transaction
+	// there should only be one data carrying Zioncoin output per transaction, but there may be more than 1 Zioncoin utxo in a transaction
 	// we want to display the data carrying one and not the empty utxo	
 	// alias payment does not carry a data output, just alias payment scriptpubkey
-	if(!DecodeAndParseSyscoinTx(wtx, op, nOut, vvchArgs))
+	if(!DecodeAndParseZioncoinTx(wtx, op, nOut, vvchArgs))
 		return false;
 
 	TransactionRecord sub(hash, nTime);
-	if(!CreateSyscoinTransactionRecord(sub, op, vvchArgs, wtx, type))
+	if(!CreateZioncoinTransactionRecord(sub, op, vvchArgs, wtx, type))
 		return false;
 
 	BOOST_FOREACH(const CTxOut& txout, wtx.vout)
@@ -209,8 +209,8 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
         //
         // Credit
         //
-		// SYSCOIN - this should be a received service
-		if(!CreateSyscoinTransactions(wallet, wtx, parts, nTime, nNet, RECV))
+		// Zioncoin - this should be a received service
+		if(!CreateZioncoinTransactions(wallet, wtx, parts, nTime, nNet, RECV))
 		{
 			BOOST_FOREACH(const CTxOut& txout, wtx.vout)
 			{
@@ -222,14 +222,14 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
 					sub.idx = parts.size(); // sequence number
 					sub.credit = txout.nValue;
 					sub.involvesWatchAddress = mine & ISMINE_WATCH_ONLY;
-					// SYSCOIN
+					// Zioncoin
 					if (ExtractDestination(txout.scriptPubKey, address) /*&& IsMine(*wallet, address)*/)
 					{
-							// Received by Syscoin Address
+							// Received by Zioncoin Address
 							sub.type = TransactionRecord::RecvWithAddress;
-							// SYSCOIN show alias in record
-							CSyscoinAddress sysAddress = CSyscoinAddress(address);
-							sysAddress = CSyscoinAddress(sysAddress.ToString());
+							// Zioncoin show alias in record
+							CZioncoinAddress sysAddress = CZioncoinAddress(address);
+							sysAddress = CZioncoinAddress(sysAddress.ToString());
 							if(sysAddress.isAlias)
 								sub.address = sysAddress.aliasName;
 							else
@@ -285,8 +285,8 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
             //
             // Debit
             //
-			// SYSCOIN - this should be a new service you've created
-			if(!CreateSyscoinTransactions(wallet, wtx, parts, nTime, nNet, SEND))
+			// Zioncoin - this should be a new service you've created
+			if(!CreateZioncoinTransactions(wallet, wtx, parts, nTime, nNet, SEND))
 			{
 				CAmount nTxFee = nDebit - wtx.GetValueOut();
 
@@ -307,11 +307,11 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
 					CTxDestination address;
 					if (ExtractDestination(txout.scriptPubKey, address))
 					{
-						// Sent to Syscoin Address
+						// Sent to Zioncoin Address
 						sub.type = TransactionRecord::SendToAddress;
-						// SYSCOIN show alias in record
-						CSyscoinAddress sysAddress = CSyscoinAddress(address);
-						sysAddress = CSyscoinAddress(sysAddress.ToString());
+						// Zioncoin show alias in record
+						CZioncoinAddress sysAddress = CZioncoinAddress(address);
+						sysAddress = CZioncoinAddress(sysAddress.ToString());
 						if(sysAddress.isAlias)
 							sub.address = sysAddress.aliasName;
 						else
@@ -342,8 +342,8 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
             //
             // Mixed debit transaction, can't break down payees
             //
-			// SYSCOIN - this should be a new service you've created
-			if(!CreateSyscoinTransactions(wallet, wtx, parts, nTime, nNet, SEND))
+			// Zioncoin - this should be a new service you've created
+			if(!CreateZioncoinTransactions(wallet, wtx, parts, nTime, nNet, SEND))
 			{
 				parts.append(TransactionRecord(hash, nTime, TransactionRecord::Other, "", nNet, 0));
 				parts.last().involvesWatchAddress = involvesWatchAddress;

@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -243,7 +243,7 @@ TransactionTableModel::TransactionTableModel(const PlatformStyle *_platformStyle
         fProcessingQueuedTransactions(false),
         platformStyle(_platformStyle)
 {
-    columns << QString() << QString() << tr("Date") << tr("Type") << tr("Label") << SyscoinUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
+    columns << QString() << QString() << tr("Date") << tr("Type") << tr("Label") << ZioncoinUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
     priv->refreshWallet();
 
     connect(walletModel->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
@@ -260,7 +260,7 @@ TransactionTableModel::~TransactionTableModel()
 /** Updates the column title to "Amount (DisplayUnit)" and emits headerDataChanged() signal for table headers to react. */
 void TransactionTableModel::updateAmountColumnTitle()
 {
-    columns[Amount] = SyscoinUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
+    columns[Amount] = ZioncoinUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
     Q_EMIT headerDataChanged(Qt::Horizontal,Amount,Amount);
 }
 
@@ -380,7 +380,7 @@ QString TransactionTableModel::formatTxType(const TransactionRecord *wtx) const
         return tr("Payment to yourself");
     case TransactionRecord::Generated:
         return tr("Mined");
-	// SYSCOIN
+	// Zioncoin
     case TransactionRecord::AliasActivate:
         return tr("Alias Activated");
     case TransactionRecord::AliasPaymentSent:
@@ -446,7 +446,7 @@ QString TransactionTableModel::formatTxType(const TransactionRecord *wtx) const
 
 QVariant TransactionTableModel::txAddressDecoration(const TransactionRecord *wtx) const
 {
-	// SYSCOIN
+	// Zioncoin
 	QString theme = GUIUtil::getThemeName();
     switch(wtx->type)
     {
@@ -454,7 +454,7 @@ QVariant TransactionTableModel::txAddressDecoration(const TransactionRecord *wtx
         return QIcon(":/icons/" + theme + "/tx_mined");
     case TransactionRecord::RecvWithAddress:
     case TransactionRecord::RecvFromOther:
-	// SYSCOIN
+	// Zioncoin
 	case TransactionRecord::AliasRecv:
 	case TransactionRecord::AliasPaymentRecv:
 	case TransactionRecord::CertRecv:
@@ -467,7 +467,7 @@ QVariant TransactionTableModel::txAddressDecoration(const TransactionRecord *wtx
         return QIcon(":/icons/" + theme + "/tx_input");
     case TransactionRecord::SendToAddress:
     case TransactionRecord::SendToOther:
-	// SYSCOIN
+	// Zioncoin
 	case TransactionRecord::AliasActivate:
 	case TransactionRecord::AliasPaymentSent:
 	case TransactionRecord::AliasUpdate:
@@ -510,7 +510,7 @@ QString TransactionTableModel::formatTxToAddress(const TransactionRecord *wtx, b
     case TransactionRecord::Generated:
         return lookupAddress(wtx->address, tooltip) + watchAddress;
     case TransactionRecord::SendToOther:
-	// SYSCOIN
+	// Zioncoin
     case TransactionRecord::AliasActivate:
 	case TransactionRecord::AliasPaymentRecv:
 	case TransactionRecord::AliasPaymentSent:
@@ -568,9 +568,9 @@ QVariant TransactionTableModel::addressColor(const TransactionRecord *wtx) const
     return QVariant();
 }
 
-QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed, SyscoinUnits::SeparatorStyle separators) const
+QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed, ZioncoinUnits::SeparatorStyle separators) const
 {
-    QString str = SyscoinUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), wtx->credit + wtx->debit, false, separators);
+    QString str = ZioncoinUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), wtx->credit + wtx->debit, false, separators);
     if(showUnconfirmed)
     {
         if(!wtx->status.countsForBalance)
@@ -583,7 +583,7 @@ QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool
 
 QVariant TransactionTableModel::txStatusDecoration(const TransactionRecord *wtx) const
 {
-	// SYSCOIN
+	// Zioncoin
 	QString theme = GUIUtil::getThemeName();
     switch(wtx->status.status)
     {
@@ -624,7 +624,7 @@ QVariant TransactionTableModel::txStatusDecoration(const TransactionRecord *wtx)
 
 QVariant TransactionTableModel::txWatchonlyDecoration(const TransactionRecord *wtx) const
 {
-	// SYSCOIN
+	// Zioncoin
 	QString theme = GUIUtil::getThemeName();
     if (wtx->involvesWatchAddress)
          return QIcon(":/icons/" + theme + "/eye");
@@ -677,7 +677,7 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
         case ToAddress:
             return formatTxToAddress(rec, false);
         case Amount:
-            return formatTxAmount(rec, true, SyscoinUnits::separatorAlways);
+            return formatTxAmount(rec, true, ZioncoinUnits::separatorAlways);
         }
         break;
     case Qt::EditRole:
@@ -769,14 +769,14 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
                 details.append(QString::fromStdString(rec->address));
                 details.append(" ");
             }
-            details.append(formatTxAmount(rec, false, SyscoinUnits::separatorNever));
+            details.append(formatTxAmount(rec, false, ZioncoinUnits::separatorNever));
             return details;
         }
     case ConfirmedRole:
         return rec->status.countsForBalance;
     case FormattedAmountRole:
         // Used for copy/export, so don't include separators
-        return formatTxAmount(rec, false, SyscoinUnits::separatorNever);
+        return formatTxAmount(rec, false, ZioncoinUnits::separatorNever);
     case StatusRole:
         return rec->status.status;
     }

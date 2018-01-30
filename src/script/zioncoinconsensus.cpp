@@ -1,9 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "syscoinconsensus.h"
+#include "Zioncoinconsensus.h"
 
 #include "primitives/transaction.h"
 #include "pubkey.h"
@@ -54,7 +54,7 @@ private:
     size_t m_remaining;
 };
 
-inline int set_error(syscoinconsensus_error* ret, syscoinconsensus_error serror)
+inline int set_error(Zioncoinconsensus_error* ret, Zioncoinconsensus_error serror)
 {
     if (ret)
         *ret = serror;
@@ -71,49 +71,49 @@ ECCryptoClosure instance_of_eccryptoclosure;
 
 static int verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen, CAmount amount,
                                     const unsigned char *txTo        , unsigned int txToLen,
-                                    unsigned int nIn, unsigned int flags, syscoinconsensus_error* err)
+                                    unsigned int nIn, unsigned int flags, Zioncoinconsensus_error* err)
 {
     try {
         TxInputStream stream(SER_NETWORK, PROTOCOL_VERSION, txTo, txToLen);
         CTransaction tx;
         stream >> tx;
         if (nIn >= tx.vin.size())
-            return set_error(err, syscoinconsensus_ERR_TX_INDEX);
+            return set_error(err, Zioncoinconsensus_ERR_TX_INDEX);
         if (tx.GetSerializeSize(SER_NETWORK, PROTOCOL_VERSION) != txToLen)
-            return set_error(err, syscoinconsensus_ERR_TX_SIZE_MISMATCH);
+            return set_error(err, Zioncoinconsensus_ERR_TX_SIZE_MISMATCH);
 
         // Regardless of the verification result, the tx did not error.
-        set_error(err, syscoinconsensus_ERR_OK);
+        set_error(err, Zioncoinconsensus_ERR_OK);
         PrecomputedTransactionData txdata(tx);
         return VerifyScript(tx.vin[nIn].scriptSig, CScript(scriptPubKey, scriptPubKey + scriptPubKeyLen), nIn < tx.wit.vtxinwit.size() ? &tx.wit.vtxinwit[nIn].scriptWitness : NULL, flags, TransactionSignatureChecker(&tx, nIn, amount, txdata), NULL);
     } catch (const std::exception&) {
-        return set_error(err, syscoinconsensus_ERR_TX_DESERIALIZE); // Error deserializing
+        return set_error(err, Zioncoinconsensus_ERR_TX_DESERIALIZE); // Error deserializing
     }
 }
 
-int syscoinconsensus_verify_script_with_amount(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen, int64_t amount,
+int Zioncoinconsensus_verify_script_with_amount(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen, int64_t amount,
                                     const unsigned char *txTo        , unsigned int txToLen,
-                                    unsigned int nIn, unsigned int flags, syscoinconsensus_error* err)
+                                    unsigned int nIn, unsigned int flags, Zioncoinconsensus_error* err)
 {
     CAmount am(amount);
     return ::verify_script(scriptPubKey, scriptPubKeyLen, am, txTo, txToLen, nIn, flags, err);
 }
 
 
-int syscoinconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
+int Zioncoinconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
                                    const unsigned char *txTo        , unsigned int txToLen,
-                                   unsigned int nIn, unsigned int flags, syscoinconsensus_error* err)
+                                   unsigned int nIn, unsigned int flags, Zioncoinconsensus_error* err)
 {
-    if (flags & syscoinconsensus_SCRIPT_FLAGS_VERIFY_WITNESS) {
-        return set_error(err, syscoinconsensus_ERR_AMOUNT_REQUIRED);
+    if (flags & Zioncoinconsensus_SCRIPT_FLAGS_VERIFY_WITNESS) {
+        return set_error(err, Zioncoinconsensus_ERR_AMOUNT_REQUIRED);
     }
 
     CAmount am(0);
     return ::verify_script(scriptPubKey, scriptPubKeyLen, am, txTo, txToLen, nIn, flags, err);
 }
 
-unsigned int syscoinconsensus_version()
+unsigned int Zioncoinconsensus_version()
 {
     // Just use the API version for now
-    return SYSCOINCONSENSUS_API_VER;
+    return ZioncoinCONSENSUS_API_VER;
 }

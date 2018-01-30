@@ -1,21 +1,21 @@
 
 Debian
 ====================
-This directory contains files used to package syscoind/syscoin-qt
-for Debian-based Linux systems. If you compile syscoind/syscoin-qt yourself, there are some useful files here.
+This directory contains files used to package Zioncoind/Zioncoin-qt
+for Debian-based Linux systems. If you compile Zioncoind/Zioncoin-qt yourself, there are some useful files here.
 
-## syscoin: URI support ##
+## Zioncoin: URI support ##
 
 
-syscoin-qt.desktop  (Gnome / Open Desktop)
+Zioncoin-qt.desktop  (Gnome / Open Desktop)
 To install:
 
-	sudo desktop-file-install syscoin-qt.desktop
+	sudo desktop-file-install Zioncoin-qt.desktop
 	sudo update-desktop-database
 
 If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your syscoin-qt binary to `/usr/bin`
-and the `../../share/pixmaps/syscoin128.png` to `/usr/share/pixmaps`
+the .desktop file or copy or symlink your Zioncoin-qt binary to `/usr/bin`
+and the `../../share/pixmaps/Zioncoin128.png` to `/usr/share/pixmaps`
 
-syscoin-qt.protocol (KDE)
+Zioncoin-qt.protocol (KDE)
 

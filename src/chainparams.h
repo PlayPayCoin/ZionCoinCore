@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_CHAINPARAMS_H
-#define SYSCOIN_CHAINPARAMS_H
+#ifndef Zioncoin_CHAINPARAMS_H
+#define Zioncoin_CHAINPARAMS_H
 
 #include "chainparamsbase.h"
 #include "consensus/params.h"
@@ -35,7 +35,7 @@ struct CCheckpointData {
 
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
- * Syscoin system. There are three: the main network on which people trade goods
+ * Zioncoin system. There are three: the main network on which people trade goods
  * and services, the public test network which gets reset from time to time and
  * a regression test mode which is intended for private networks only. It has
  * minimal difficulty to ensure that blocks can be found instantly.
@@ -43,7 +43,7 @@ struct CCheckpointData {
 class CChainParams
 {
 public:
-	// SYSCOIN allow old SYSCOIN address scheme
+	// Zioncoin allow old Zioncoin address scheme
     enum Base58Type {
         PUBKEY_ADDRESS,
         PUBKEY_ADDRESS_SYS,
@@ -130,4 +130,4 @@ void SelectParams(const std::string& chain);
  */
 void UpdateRegtestBIP9Parameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout);
 
-#endif // SYSCOIN_CHAINPARAMS_H
+#endif // Zioncoin_CHAINPARAMS_H

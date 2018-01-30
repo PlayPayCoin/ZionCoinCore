@@ -3,7 +3,7 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/syscoin/syscoin2/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/Zioncoin/Zioncoin2/blob/master/doc/translation_process.md#synchronising-translations).
 
 Before every minor and major release:
 
@@ -14,19 +14,19 @@ Before every minor and major release:
 
 Before every major release:
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/syscoin/syscoin2/pull/7415) for an example.
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/Zioncoin/Zioncoin2/pull/7415) for an example.
 
 ### First time / New builders
 
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/syscoin-core/gitian.sigs.git
-    git clone https://github.com/syscoin-core/syscoin-detached-sigs.git
+    git clone https://github.com/Zioncoin-core/gitian.sigs.git
+    git clone https://github.com/Zioncoin-core/Zioncoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/syscoin/syscoin2.git
+    git clone https://github.com/Zioncoin/Zioncoin2.git
 
-### Syscoin maintainers/release engineers, update version in sources
+### Zioncoin maintainers/release engineers, update version in sources
 
 Update the following:
 
@@ -63,7 +63,7 @@ Tag version (or release candidate) in git
 
 Setup Gitian descriptors:
 
-    pushd ./syscoin
+    pushd ./Zioncoin
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -97,7 +97,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../syscoin/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../Zioncoin/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -105,49 +105,49 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url syscoin=/path/to/syscoin,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url Zioncoin=/path/to/Zioncoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Syscoin Core for Linux, Windows, and OS X:
+### Build and sign Zioncoin Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --memory 3000 --commit syscoin=v${VERSION} ../syscoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../syscoin/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/syscoin-*.tar.gz build/out/src/syscoin-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit Zioncoin=v${VERSION} ../Zioncoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../Zioncoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/Zioncoin-*.tar.gz build/out/src/Zioncoin-*.tar.gz ../
 
-    ./bin/gbuild --memory 3000 --commit syscoin=v${VERSION} ../syscoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../syscoin/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/syscoin-*-win-unsigned.tar.gz inputs/syscoin-win-unsigned.tar.gz
-    mv build/out/syscoin-*.zip build/out/syscoin-*.exe ../
+    ./bin/gbuild --memory 3000 --commit Zioncoin=v${VERSION} ../Zioncoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../Zioncoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/Zioncoin-*-win-unsigned.tar.gz inputs/Zioncoin-win-unsigned.tar.gz
+    mv build/out/Zioncoin-*.zip build/out/Zioncoin-*.exe ../
 
-    ./bin/gbuild --memory 3000 --commit syscoin=v${VERSION} ../syscoin/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../syscoin/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/syscoin-*-osx-unsigned.tar.gz inputs/syscoin-osx-unsigned.tar.gz
-    mv build/out/syscoin-*.tar.gz build/out/syscoin-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit Zioncoin=v${VERSION} ../Zioncoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../Zioncoin/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/Zioncoin-*-osx-unsigned.tar.gz inputs/Zioncoin-osx-unsigned.tar.gz
+    mv build/out/Zioncoin-*.tar.gz build/out/Zioncoin-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`syscoin-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`syscoin-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`syscoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `syscoin-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`syscoin-${VERSION}-osx-unsigned.dmg`, `syscoin-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`Zioncoin-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`Zioncoin-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`Zioncoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `Zioncoin-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`Zioncoin-${VERSION}-osx-unsigned.dmg`, `Zioncoin-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring
 
-    gpg --import syscoin/contrib/gitian-keys/*.pgp
+    gpg --import Zioncoin/contrib/gitian-keys/*.pgp
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../syscoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../syscoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../syscoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../Zioncoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../Zioncoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../Zioncoin/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -165,25 +165,25 @@ Commit your signature to gitian.sigs:
 Wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [syscoin-detached-sigs](https://github.com/syscoin-core/syscoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [Zioncoin-detached-sigs](https://github.com/Zioncoin-core/Zioncoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../syscoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../syscoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../syscoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/syscoin-osx-signed.dmg ../syscoin-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../Zioncoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../Zioncoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../Zioncoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/Zioncoin-osx-signed.dmg ../Zioncoin-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../syscoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../syscoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../syscoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/syscoin-*win64-setup.exe ../syscoin-${VERSION}-win64-setup.exe
-    mv build/out/syscoin-*win32-setup.exe ../syscoin-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../Zioncoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../Zioncoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../Zioncoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/Zioncoin-*win64-setup.exe ../Zioncoin-${VERSION}-win64-setup.exe
+    mv build/out/Zioncoin-*win32-setup.exe ../Zioncoin-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -205,23 +205,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-syscoin-${VERSION}-aarch64-linux-gnu.tar.gz
-syscoin-${VERSION}-arm-linux-gnueabihf.tar.gz
-syscoin-${VERSION}-i686-pc-linux-gnu.tar.gz
-syscoin-${VERSION}-x86_64-linux-gnu.tar.gz
-syscoin-${VERSION}-osx64.tar.gz
-syscoin-${VERSION}-osx.dmg
-syscoin-${VERSION}.tar.gz
-syscoin-${VERSION}-win32-setup.exe
-syscoin-${VERSION}-win32.zip
-syscoin-${VERSION}-win64-setup.exe
-syscoin-${VERSION}-win64.zip
+Zioncoin-${VERSION}-aarch64-linux-gnu.tar.gz
+Zioncoin-${VERSION}-arm-linux-gnueabihf.tar.gz
+Zioncoin-${VERSION}-i686-pc-linux-gnu.tar.gz
+Zioncoin-${VERSION}-x86_64-linux-gnu.tar.gz
+Zioncoin-${VERSION}-osx64.tar.gz
+Zioncoin-${VERSION}-osx.dmg
+Zioncoin-${VERSION}.tar.gz
+Zioncoin-${VERSION}-win32-setup.exe
+Zioncoin-${VERSION}-win32.zip
+Zioncoin-${VERSION}-win64-setup.exe
+Zioncoin-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the syscoin.org server, nor put them in the torrent*.
+space *do not upload these to the Zioncoin.org server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -231,44 +231,44 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the syscoin.org server
-  into `/var/www/bin/syscoin-core-${VERSION}`
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the Zioncoin.org server
+  into `/var/www/bin/Zioncoin-core-${VERSION}`
 
 - A `.torrent` will appear in the directory after a few minutes. Optionally help seed this torrent. To get the `magnet:` URI use:
 ```bash
 transmission-show -m <torrent file>
 ```
 Insert the magnet URI into the announcement sent to mailing lists. This permits
-people without access to `syscoin.org` to download the binary distribution.
+people without access to `Zioncoin.org` to download the binary distribution.
 Also put it into the `optional_magnetlink:` slot in the YAML file for
-syscoin.org (see below for syscoin.org update instructions).
+Zioncoin.org (see below for Zioncoin.org update instructions).
 
-- Update syscoin.org version
+- Update Zioncoin.org version
 
-  - First, check to see if the Syscoin.org maintainers have prepared a
-    release: https://github.com/syscoin-dot-org/syscoin.org/labels/Releases
+  - First, check to see if the Zioncoin.org maintainers have prepared a
+    release: https://github.com/Zioncoin-dot-org/Zioncoin.org/labels/Releases
 
       - If they have, it will have previously failed their Travis CI
         checks because the final release files weren't uploaded.
         Trigger a Travis CI rebuild---if it passes, merge.
 
-  - If they have not prepared a release, follow the Syscoin.org release
-    instructions: https://github.com/syscoin-dot-org/syscoin.org#release-notes
+  - If they have not prepared a release, follow the Zioncoin.org release
+    instructions: https://github.com/Zioncoin-dot-org/Zioncoin.org#release-notes
 
   - After the pull request is merged, the website will automatically show the newest version within 15 minutes, as well
     as update the OS download links. Ping @saivann/@harding (saivann/harding on Freenode) in case anything goes wrong
 
 - Announce the release:
 
-  - syscoin-dev and syscoin-core-dev mailing list
+  - Zioncoin-dev and Zioncoin-core-dev mailing list
 
-  - Syscoin Core announcements list https://syscoincore.org/en/list/announcements/join/
+  - Zioncoin Core announcements list https://Zioncoincore.org/en/list/announcements/join/
 
-  - syscoincore.org blog post
+  - Zioncoincore.org blog post
 
-  - Update title of #syscoin on Freenode IRC
+  - Update title of #Zioncoin on Freenode IRC
 
-  - Optionally twitter, reddit /r/Syscoin, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/Zioncoin, ... but this will usually sort out itself
 
   - Notify BlueMatt so that he can start building [the PPAs](https://launchpad.net/~bitcoin/+archive/ubuntu/bitcoin)
 

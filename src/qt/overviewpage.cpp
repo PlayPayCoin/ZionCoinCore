@@ -1,11 +1,11 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "overviewpage.h"
 #include "ui_overviewpage.h"
 
-#include "syscoinunits.h"
+#include "Zioncoinunits.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
 #include "guiutil.h"
@@ -26,7 +26,7 @@ class TxViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     TxViewDelegate(const PlatformStyle *platformStyle, QObject *parent=nullptr):
-        QAbstractItemDelegate(parent), unit(SyscoinUnits::SYS),
+        QAbstractItemDelegate(parent), unit(ZioncoinUnits::SYS),
         platformStyle(platformStyle)
     {
 
@@ -84,7 +84,7 @@ public:
             foreground = option.palette.color(QPalette::Text);
         }
         painter->setPen(foreground);
-        QString amountText = SyscoinUnits::formatWithUnit(unit, amount, true, SyscoinUnits::separatorAlways);
+        QString amountText = ZioncoinUnits::formatWithUnit(unit, amount, true, ZioncoinUnits::separatorAlways);
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -123,7 +123,7 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) 
 {
     ui->setupUi(this);
 
-	// SYSCOIN
+	// Zioncoin
 	QString theme = GUIUtil::getThemeName();
     // use a SingleColorIcon for the "out of sync warning" icon
     QIcon icon = platformStyle->SingleColorIcon(":/icons/" + theme + "/warning");
@@ -163,14 +163,14 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     currentWatchOnlyBalance = watchOnlyBalance;
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
-    ui->labelBalance->setText(SyscoinUnits::formatWithUnit(unit, balance, false, SyscoinUnits::separatorAlways));
-    ui->labelUnconfirmed->setText(SyscoinUnits::formatWithUnit(unit, unconfirmedBalance, false, SyscoinUnits::separatorAlways));
-    ui->labelImmature->setText(SyscoinUnits::formatWithUnit(unit, immatureBalance, false, SyscoinUnits::separatorAlways));
-    ui->labelTotal->setText(SyscoinUnits::formatWithUnit(unit, balance + unconfirmedBalance + immatureBalance, false, SyscoinUnits::separatorAlways));
-    ui->labelWatchAvailable->setText(SyscoinUnits::formatWithUnit(unit, watchOnlyBalance, false, SyscoinUnits::separatorAlways));
-    ui->labelWatchPending->setText(SyscoinUnits::formatWithUnit(unit, watchUnconfBalance, false, SyscoinUnits::separatorAlways));
-    ui->labelWatchImmature->setText(SyscoinUnits::formatWithUnit(unit, watchImmatureBalance, false, SyscoinUnits::separatorAlways));
-    ui->labelWatchTotal->setText(SyscoinUnits::formatWithUnit(unit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, SyscoinUnits::separatorAlways));
+    ui->labelBalance->setText(ZioncoinUnits::formatWithUnit(unit, balance, false, ZioncoinUnits::separatorAlways));
+    ui->labelUnconfirmed->setText(ZioncoinUnits::formatWithUnit(unit, unconfirmedBalance, false, ZioncoinUnits::separatorAlways));
+    ui->labelImmature->setText(ZioncoinUnits::formatWithUnit(unit, immatureBalance, false, ZioncoinUnits::separatorAlways));
+    ui->labelTotal->setText(ZioncoinUnits::formatWithUnit(unit, balance + unconfirmedBalance + immatureBalance, false, ZioncoinUnits::separatorAlways));
+    ui->labelWatchAvailable->setText(ZioncoinUnits::formatWithUnit(unit, watchOnlyBalance, false, ZioncoinUnits::separatorAlways));
+    ui->labelWatchPending->setText(ZioncoinUnits::formatWithUnit(unit, watchUnconfBalance, false, ZioncoinUnits::separatorAlways));
+    ui->labelWatchImmature->setText(ZioncoinUnits::formatWithUnit(unit, watchImmatureBalance, false, ZioncoinUnits::separatorAlways));
+    ui->labelWatchTotal->setText(ZioncoinUnits::formatWithUnit(unit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, ZioncoinUnits::separatorAlways));
 
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users
@@ -264,6 +264,6 @@ void OverviewPage::updateAlerts(const QString &warnings)
 void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
     ui->labelWalletStatus->setVisible(fShow);
-	// SYSCOIN
+	// Zioncoin
     ui->labelTransactionsStatus->setVisible(false);
 }

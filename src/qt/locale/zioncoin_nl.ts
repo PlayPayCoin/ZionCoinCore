@@ -384,12 +384,12 @@
         <translation>Ontvang adressen</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Syscoinadressen om betalingen mee te doen. Controleer altijd het bedrag en het ontvang adres voordat u uw syscoins verstuurt.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw Zioncoinadressen om betalingen mee te doen. Controleer altijd het bedrag en het ontvang adres voordat u uw Zioncoins verstuurt.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw Syscoinadressen waarmee u kunt betalen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw Zioncoinadressen waarmee u kunt betalen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -478,8 +478,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>Zoeken naar Syscoin Alias. Selecteer Safe Search van wallet opties als u wilt mogelijk aanstootgevende Alias ​​weglaten (standaard ingeschakeld)</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>Zoeken naar Zioncoin Alias. Selecteer Safe Search van wallet opties als u wilt mogelijk aanstootgevende Alias ​​weglaten (standaard ingeschakeld)</translation>
     </message>
     <message>
         <source>Error searching alias: </source>
@@ -599,8 +599,8 @@
         <translation>Bevestig versleuteling van uw portemonnee</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW SYSCOINS VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW ZioncoinS VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -611,8 +611,8 @@
         <translation>Portemonnee versleuteld</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your syscoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 zal nu sluiten om de encryptie te voltooien. Vergeet niet dat het versleutelen van uw portemonnee niet volledig kan uw syscoins te beschermen tegen diefstal door malware uw computer infecteren.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Zioncoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 zal nu sluiten om de encryptie te voltooien. Vergeet niet dat het versleutelen van uw portemonnee niet volledig kan uw Zioncoins te beschermen tegen diefstal door malware uw computer infecteren.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -693,8 +693,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>Zoeken naar Syscoin Certificaten. Selecteer Safe Search van wallet opties als u wilt mogelijk aanstootgevende Certificaten weglaten (standaard ingeschakeld)</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>Zoeken naar Zioncoin Certificaten. Selecteer Safe Search van wallet opties als u wilt mogelijk aanstootgevende Certificaten weglaten (standaard ingeschakeld)</translation>
     </message>
     <message>
         <source>Copy Value</source>
@@ -961,8 +961,8 @@
         <translation>Bewerk adres om naar te versturen</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>Het opgegeven adres "%1" is een ongeldig Syscoinadres</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>Het opgegeven adres "%1" is een ongeldig Zioncoinadres</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1076,8 +1076,8 @@
         <translation>Kies een standaard vervaltijd (in UTC) voor deze alias van 1 tot 5 jaar of kijk op de 'Gebruik Custom Expire Time' vakje om een ​​verloopdatum timestamp te voeren. Het is exponentieel duurder per jaar, berekening FEERATE * (2,88 ^ jaar). FEERATE is de dynamische Satoshi per byte vergoeding ingesteld bij de prijs peg alias gebruikt voor dit alias.</translation>
     </message>
     <message>
-        <source>Warning: transferring your alias will transfer ownership all of your syscoin services that use this alias.</source>
-        <translation>Let op: de overdracht van uw alias zal het eigendom overdragen van al uw syscoin diensten die deze alias gebruiken.</translation>
+        <source>Warning: transferring your alias will transfer ownership all of your Zioncoin services that use this alias.</source>
+        <translation>Let op: de overdracht van uw alias zal het eigendom overdragen van al uw Zioncoin diensten die deze alias gebruiken.</translation>
     </message>
     <message>
         <source>Is this alias safe to search? Anything that can be considered offensive to someone should be set to 'No' here. If you do create an alias that is offensive and do not set this option to 'No' your alias will be banned!</source>
@@ -1164,8 +1164,8 @@
         <translation>Fout het overbrengen van Alias:</translation>
     </message>
     <message>
-        <source>The entered alias is not a valid Syscoin alias. Alias: </source>
-        <translation>De ingevoerde alias is geen geldige Syscoin alias. Alias:</translation>
+        <source>The entered alias is not a valid Zioncoin alias. Alias: </source>
+        <translation>De ingevoerde alias is geen geldige Zioncoin alias. Alias:</translation>
     </message>
     <message>
         <source>New Alias</source>
@@ -1351,8 +1351,8 @@
         <translation>Fout het overbrengen Cert:</translation>
     </message>
     <message>
-        <source>The entered cert is not a valid Syscoin cert.</source>
-        <translation>De ingevoerde cert is geen geldige Syscoin cert.</translation>
+        <source>The entered cert is not a valid Zioncoin cert.</source>
+        <translation>De ingevoerde cert is geen geldige Zioncoin cert.</translation>
     </message>
     <message>
         <source>General exception creating new Cert</source>
@@ -1510,12 +1510,12 @@
         <translation>Als u wilt kunt u uw merchant geolocatie (lengte- en breedtegraden) in te voeren om bij te houden verzendkosten en andere logistieke informatie te helpen</translation>
     </message>
     <message>
-        <source>You will receive payment in Syscoin equivalent to the Market-value of the currency you have selected</source>
-        <translation>Je zal de betaling in Syscoin gelijk aan de markt-waarde van de valuta die u hebt geselecteerd ontvangen</translation>
+        <source>You will receive payment in Zioncoin equivalent to the Market-value of the currency you have selected</source>
+        <translation>Je zal de betaling in Zioncoin gelijk aan de markt-waarde van de valuta die u hebt geselecteerd ontvangen</translation>
     </message>
     <message>
-        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Syscoin Marketplace, you will need to import your Syscoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
-        <translation>Kies welke crypto-valuta die u wilt toestaan ​​als betalingsmethode voor deze aanbieding. Uw keuzes zijn een combinatie van SYS, BTC of ZEC. Een voorbeeld instelling voor alle drie: 'SYS + BTC + ZEC'. Voor SYS en ZEC: 'SYS + ZEC'. Houd er rekening mee dat, om te besteden munten om je betaald via Syscoin Marketplace, moet u uw persoonlijke sleutel Syscoin in externe portemonnee (s) als BTC of ZEC worden gekozen importeren.</translation>
+        <source>Choose which crypto-currency you want to allow as a payment method for this offer. Your choices are any combination of SYS, BTC or ZEC. An example setting for all three: 'SYS+BTC+ZEC'. For SYS and ZEC: 'SYS+ZEC'. Please note that in order spend coins paid to you via Zioncoin Marketplace, you will need to import your Zioncoin private key in external wallet(s) if BTC or ZEC are chosen.</source>
+        <translation>Kies welke crypto-valuta die u wilt toestaan ​​als betalingsmethode voor deze aanbieding. Uw keuzes zijn een combinatie van SYS, BTC of ZEC. Een voorbeeld instelling voor alle drie: 'SYS + BTC + ZEC'. Voor SYS en ZEC: 'SYS + ZEC'. Houd er rekening mee dat, om te besteden munten om je betaald via Zioncoin Marketplace, moet u uw persoonlijke sleutel Zioncoin in externe portemonnee (s) als BTC of ZEC worden gekozen importeren.</translation>
     </message>
     <message>
         <source>Enter the 'percentage' amount(without the % sign) that you would like to mark-up the price to</source>
@@ -1602,8 +1602,8 @@
         <translation>Algemene uitzondering updating Aanbieding:</translation>
     </message>
     <message>
-        <source>The entered offer is not a valid Syscoin offer</source>
-        <translation>De ingevoerde aanbod is geen geldige Syscoin aanbod</translation>
+        <source>The entered offer is not a valid Zioncoin offer</source>
+        <translation>De ingevoerde aanbod is geen geldige Zioncoin aanbod</translation>
     </message>
     <message>
         <source>This transaction requires more signatures. Transaction hex has been copied to your clipboard for your reference. Please provide it to a signee that has not yet signed.</source>
@@ -1919,8 +1919,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>Zoeken naar Syscoin Escrows.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>Zoeken naar Zioncoin Escrows.</translation>
     </message>
     <message>
         <source>Copy Offer ID</source>
@@ -1935,8 +1935,8 @@
         <translation>Bevestig Escrow Erkenning</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Waarschuwing: U bent klaar voor deze betaling van de koper te erkennen. Als u verzendt een artikel, neem dan communiceren een het volgen aantal aan de koper via een Syscoin bericht.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Waarschuwing: U bent klaar voor deze betaling van de koper te erkennen. Als u verzendt een artikel, neem dan communiceren een het volgen aantal aan de koper via een Zioncoin bericht.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2055,8 +2055,8 @@
         <translation>versie</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>Syscoin Client</translation>
+        <source>Zioncoin Client</source>
+        <translation>Zioncoin Client</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -2110,8 +2110,8 @@
 <context>
     <name>InMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>Dit zijn Syscoin berichten die u hebt ontvangen. U kunt kiezen welke aliassen naar gerelateerde berichten met behulp van de dropdown naar rechts te bekijken.</translation>
+        <source>These are Zioncoin messages you have received. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>Dit zijn Zioncoin berichten die u hebt ontvangen. U kunt kiezen welke aliassen naar gerelateerde berichten met behulp van de dropdown naar rechts te bekijken.</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -2189,8 +2189,8 @@
         <translation>Omdat dit de eerste keer is dat het programma gestart is, kunt u nu kiezen waar %1 de data moet opslaan.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Syscoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 zal een kopie van de Syscoin blokketen downloaden en opslaan. Tenminste %2 GB aan data wordt opgeslagen in deze map en het zal groeien in de tijd. De portemonnee wordt ook in deze map opgeslagen.</translation>
+        <source>%1 will download and store a copy of the Zioncoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 zal een kopie van de Zioncoin blokketen downloaden en opslaan. Tenminste %2 GB aan data wordt opgeslagen in deze map en het zal groeien in de tijd. De portemonnee wordt ook in deze map opgeslagen.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -2300,12 +2300,12 @@
         <translation>U bent de 'koopman' van het aanbod in depot gehouden, kunt u de munten terug naar de koper terug te betalen.</translation>
     </message>
     <message>
-        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Syscoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
-        <translation>U bent de 'arbiter' van het aanbod in depot gehouden, kunt u de munten terug aan de koper terug te betalen als u het bewijs dat de handelaar de overeenkomst niet op het aanbod item te verzenden had eer te hebben. U kunt ook de munten vrij te geven aan de handelaar als de koper niet heeft vrijgegeven in een tijdige manor. U mag Syscoin berichten gebruiken om te communiceren met de koper en de verkoper om ervoor te zorgen dat u voldoende bewijs voor uw beslissing.</translation>
+        <source>You are the 'arbiter' of the offer held in escrow, you may refund the coins back to the buyer if you have evidence that the merchant did not honour the agreement to ship the offer item. You may also release the coins to the merchant if the buyer has not released in a timely manor. You may use Zioncoin messages to communicate with the buyer and merchant to ensure you have adequate proof for your decision.</source>
+        <translation>U bent de 'arbiter' van het aanbod in depot gehouden, kunt u de munten terug aan de koper terug te betalen als u het bewijs dat de handelaar de overeenkomst niet op het aanbod item te verzenden had eer te hebben. U kunt ook de munten vrij te geven aan de handelaar als de koper niet heeft vrijgegeven in een tijdige manor. U mag Zioncoin berichten gebruiken om te communiceren met de koper en de verkoper om ervoor te zorgen dat u voldoende bewijs voor uw beslissing.</translation>
     </message>
     <message>
-        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Syscoin messages. You may leave feedback after the money is claimed by the merchant.</source>
-        <translation>U bent de 'koper' van het aanbod in depot gehouden. De escrow is vrijgegeven aan de handelaar. U kunt communiceren met uw arbiter of merchant via Syscoin berichten. U kunt feedback te verlaten na het geld dat door de handelaar wordt beweerd.</translation>
+        <source>You are the 'buyer' of the offer held in escrow. The escrow has been released to the merchant. You may communicate with your arbiter or merchant via Zioncoin messages. You may leave feedback after the money is claimed by the merchant.</source>
+        <translation>U bent de 'koper' van het aanbod in depot gehouden. De escrow is vrijgegeven aan de handelaar. U kunt communiceren met uw arbiter of merchant via Zioncoin berichten. U kunt feedback te verlaten na het geld dat door de handelaar wordt beweerd.</translation>
     </message>
     <message>
         <source>You are the 'merchant' of the offer held in escrow. The payment of coins have been released to you, you may claim them now. After claiming, please return to this dialog and provide feedback for this escrow transaction.</source>
@@ -2344,8 +2344,8 @@
         <translation>De escrow is met succes terugbetaald aan de koper. De escrow is voltooid.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>De escrow-status werd niet herkend. Neem contact op met de Syscoin team.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>De escrow-status werd niet herkend. Neem contact op met de Zioncoin team.</translation>
     </message>
     <message>
         <source>arbiter</source>
@@ -2619,12 +2619,12 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met de Syscoin netwerk nadat een verbinding tot stand is gebracht, maar dit proces is nog niet afgerond. Dit betekent dat recente transacties niet zichtbaar zijn, en het saldo niet up-to-date tot dit proces is voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet. This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met de Zioncoin netwerk nadat een verbinding tot stand is gebracht, maar dit proces is nog niet afgerond. Dit betekent dat recente transacties niet zichtbaar zijn, en het saldo niet up-to-date tot dit proces is voltooid.</translation>
     </message>
     <message>
-        <source>Spending syscoins may not be possible during that phase!</source>
-        <translation>Besteden syscoins wellicht niet mogelijk zijn tijdens die fase!</translation>
+        <source>Spending Zioncoins may not be possible during that phase!</source>
+        <translation>Besteden Zioncoins wellicht niet mogelijk zijn tijdens die fase!</translation>
     </message>
     <message>
         <source>Amount of blocks left</source>
@@ -2778,8 +2778,8 @@
         <translation>Bevestigt de betaling Bevestiging</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Waarschuwing: U bent klaar voor deze betaling van de koper te erkennen. Als u verzendt een artikel, neem dan communiceren een het volgen aantal aan de koper via een Syscoin bericht.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Waarschuwing: U bent klaar voor deze betaling van de koper te erkennen. Als u verzendt een artikel, neem dan communiceren een het volgen aantal aan de koper via een Zioncoin bericht.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -2973,8 +2973,8 @@
         <translation>Exporteren</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>Dit zijn je geregistreerd Syscoin Alias. Alias ​​operaties (maken, bijwerken, transfer) nemen 2-5 minuten om actief te worden.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>Dit zijn je geregistreerd Zioncoin Alias. Alias ​​operaties (maken, bijwerken, transfer) nemen 2-5 minuten om actief te worden.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -3108,8 +3108,8 @@
         <translation>Exporteren</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
-        <translation>Dit zijn je geregistreerd Syscoin Certificaten. Certificaat operaties (maken, bijwerken, transfer) nemen 2-5 minuten om actief te worden. U kunt kiezen welke aliassen om gerelateerde certificaten met behulp van de dropdown naar rechts te bekijken.</translation>
+        <source>These are your registered Zioncoin Certificates. Certificate operations (create, update, transfer) take 2-5 minutes to become active.  You can choose which aliases to view related certificates using the dropdown to the right.</source>
+        <translation>Dit zijn je geregistreerd Zioncoin Certificaten. Certificaat operaties (maken, bijwerken, transfer) nemen 2-5 minuten om actief te worden. U kunt kiezen welke aliassen om gerelateerde certificaten met behulp van de dropdown naar rechts te bekijken.</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3259,8 +3259,8 @@
         <translation>Exporteren</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
-        <translation>Dit zijn je geregistreerd Syscoin Escrows. Escrow activiteiten (creëren, release, terugbetaling, compleet) nemen 2-5 minuten om actief te worden. U kunt kiezen welke aliassen om gerelateerde escrows met behulp van de dropdown naar rechts te bekijken.</translation>
+        <source>These are your registered Zioncoin Escrows. Escrow operations (create, release, refund, complete) take 2-5 minutes to become active. You can choose which aliases to view related escrows using the dropdown to the right.</source>
+        <translation>Dit zijn je geregistreerd Zioncoin Escrows. Escrow activiteiten (creëren, release, terugbetaling, compleet) nemen 2-5 minuten om actief te worden. U kunt kiezen welke aliassen om gerelateerde escrows met behulp van de dropdown naar rechts te bekijken.</translation>
     </message>
     <message>
         <source>All</source>
@@ -3323,8 +3323,8 @@
         <translation>Bevestig Escrow Erkenning</translation>
     </message>
     <message>
-        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Syscoin message.</source>
-        <translation>Waarschuwing: U bent klaar voor deze betaling van de koper te erkennen. Als u verzendt een artikel, neem dan communiceren een het volgen aantal aan de koper via een Syscoin bericht.</translation>
+        <source>Warning: You are about to acknowledge this payment from the buyer. If you are shipping an item, please communicate a tracking number to the buyer via a Zioncoin message.</source>
+        <translation>Waarschuwing: U bent klaar voor deze betaling van de koper te erkennen. Als u verzendt een artikel, neem dan communiceren een het volgen aantal aan de koper via een Zioncoin bericht.</translation>
     </message>
     <message>
         <source>Are you sure you wish to acknowledge this payment?</source>
@@ -3418,8 +3418,8 @@
         <translation>Exporteer de data in de huidige tab naar een bestand</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
-        <translation>Dit zijn je geregistreerd Syscoin aanbiedingen. Aanbieding operaties (create, update) nemen 2-5 minuten om actief te worden. U kunt kiezen welke aliassen om gerelateerde aanbiedingen met behulp van de dropdown naar rechts te bekijken.</translation>
+        <source>These are your registered Zioncoin Offers. Offer operations (create, update) take 2-5 minutes to become active. You can choose which aliases to view related offers using the dropdown to the right.</source>
+        <translation>Dit zijn je geregistreerd Zioncoin aanbiedingen. Aanbieding operaties (create, update) nemen 2-5 minuten om actief te worden. U kunt kiezen welke aliassen om gerelateerde aanbiedingen met behulp van de dropdown naar rechts te bekijken.</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -3683,8 +3683,8 @@
         <translation>Fout antwoord op bericht:</translation>
     </message>
     <message>
-        <source>The entered message is not a valid Syscoin message</source>
-        <translation>De ingevoerde bericht is geen geldige Syscoin bericht</translation>
+        <source>The entered message is not a valid Zioncoin message</source>
+        <translation>De ingevoerde bericht is geen geldige Zioncoin bericht</translation>
     </message>
     <message>
         <source>General exception creating new message</source>
@@ -3749,8 +3749,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Accepteer Syscoin Aanbod</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Accepteer Zioncoin Aanbod</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3769,8 +3769,8 @@
         <translation>Betalen met BTC</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>Betalen met Syscoin</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>Betalen met Zioncoin</translation>
     </message>
     <message>
         <source>Pay with SYS</source>
@@ -3785,8 +3785,8 @@
         <translation>Kon munt niet vinden in de tarieven peg voor deze aanbieding. Valuta:</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant</source>
-        <translation>Voer een Syscoin arbiter die mutally wordt vertrouwd tussen jezelf en de handelaar</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant</source>
+        <translation>Voer een Zioncoin arbiter die mutally wordt vertrouwd tussen jezelf en de handelaar</translation>
     </message>
     <message>
         <source>Are you sure you want to purchase</source>
@@ -3844,8 +3844,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Accepteer Syscoin Aanbod</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Accepteer Zioncoin Aanbod</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -3900,12 +3900,12 @@
         <translation>Kan geen JSON resultaten ontleden</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>Voer een Syscoin arbiter die mutally vertrouwen tussen u en de handelaar. toelaten dan het selectievakje 'Gebruik Escrow'</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>Voer een Zioncoin arbiter die mutally vertrouwen tussen u en de handelaar. toelaten dan het selectievakje 'Gebruik Escrow'</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>Betaling bij Syscoin decentrale Marketplace. Aanbod ID:</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>Betaling bij Zioncoin decentrale Marketplace. Aanbod ID:</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4019,8 +4019,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Accepteer Syscoin Aanbod</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Accepteer Zioncoin Aanbod</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -4083,12 +4083,12 @@
         <translation>Kan geen JSON resultaten ontleden</translation>
     </message>
     <message>
-        <source>Enter a Syscoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
-        <translation>Voer een Syscoin arbiter die mutally vertrouwen tussen u en de handelaar. toelaten dan het selectievakje 'Gebruik Escrow'</translation>
+        <source>Enter a Zioncoin arbiter that is mutally trusted between yourself and the merchant. Then enable the 'Use Escrow' checkbox</source>
+        <translation>Voer een Zioncoin arbiter die mutally vertrouwen tussen u en de handelaar. toelaten dan het selectievakje 'Gebruik Escrow'</translation>
     </message>
     <message>
-        <source>Payment on Syscoin Decentralized Marketplace. Offer ID: </source>
-        <translation>Betaling bij Syscoin decentrale Marketplace. Aanbod ID:</translation>
+        <source>Payment on Zioncoin Decentralized Marketplace. Offer ID: </source>
+        <translation>Betaling bij Zioncoin decentrale Marketplace. Aanbod ID:</translation>
     </message>
     <message>
         <source>Failed to generate multisig address: </source>
@@ -4598,8 +4598,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>Zoeken naar Syscoin aanbiedingen (dubbelklik op één aan te schaffen). Selecteer Safe Search van wallet opties als u wilt mogelijk aanstootgevende aanbiedingen weglaten (standaard ingeschakeld)</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>Zoeken naar Zioncoin aanbiedingen (dubbelklik op één aan te schaffen). Selecteer Safe Search van wallet opties als u wilt mogelijk aanstootgevende aanbiedingen weglaten (standaard ingeschakeld)</translation>
     </message>
     <message>
         <source>Copy Title</source>
@@ -4844,7 +4844,7 @@
         <translation>Minimaliseren in plaats van de applicatie af te sluiten wanneer het venster is afgesloten. Als deze optie is ingeschakeld, zal de toepassing pas worden afgesloten na het selecteren van Exit in het menu.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
         <translation>Stel hier de taal van de applicatie in. Deze instelling zal van kracht worden na het herstarten van de applicatie.</translation>
     </message>
     <message>
@@ -4864,8 +4864,8 @@
         <translation>User Interface Thema:</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>De gebruikersinterface thema kan hier worden ingesteld. Deze instelling wordt van kracht na het herstarten van Syscoin Core.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>De gebruikersinterface thema kan hier worden ingesteld. Deze instelling wordt van kracht na het herstarten van Zioncoin Core.</translation>
     </message>
     <message>
         <source>Default Alias:</source>
@@ -4940,12 +4940,12 @@
         <translation>&amp;Netwerk</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>Syscoin Core automatisch starten bij inloggen.</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>Zioncoin Core automatisch starten bij inloggen.</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>&amp;Start Syscoin Core tijdens login.</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>&amp;Start Zioncoin Core tijdens login.</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -4972,16 +4972,16 @@
         <translation>&amp;Spendeer onbevestigd wisselgeld</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de Syscoinpoort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Open de Zioncoinpoort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Portmapping via &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>Verbind met het Syscoinnetwerk via een SOCKS5 proxy.</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>Verbind met het Zioncoinnetwerk via een SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -5020,8 +5020,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Maak verbinding met Syscoinnetwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Maak verbinding met Zioncoinnetwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -5142,8 +5142,8 @@
 <context>
     <name>OutMessageListPage</name>
     <message>
-        <source>These are Syscoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
-        <translation>Dit zijn Syscoin berichten die u hebt verzonden. U kunt kiezen welke aliassen naar gerelateerde berichten met behulp van de dropdown naar rechts te bekijken.</translation>
+        <source>These are Zioncoin messages you have sent. You can choose which aliases to view related messages using the dropdown to the right.</source>
+        <translation>Dit zijn Zioncoin berichten die u hebt verzonden. U kunt kiezen welke aliassen naar gerelateerde berichten met behulp van de dropdown naar rechts te bekijken.</translation>
     </message>
     <message>
         <source>Copy Subject</source>
@@ -5209,8 +5209,8 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het Syscoinnetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het Zioncoinnetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -5284,8 +5284,8 @@
         <translation>Fout bij betalingsverzoek</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Kan syscoin niet starten: click-to-pay handler</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Kan Zioncoin niet starten: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -5300,8 +5300,8 @@
         <translation>Ongeldig betalingsadres %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig Syscoinadres of misvormde URI-parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig Zioncoinadres of misvormde URI-parameters.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -5394,8 +5394,8 @@
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a Syscoin address e.g. johnsmith or </source>
-        <translation>Voer een Syscoin adres bijv. johnsmith of</translation>
+        <source>Enter a Zioncoin address e.g. johnsmith or </source>
+        <translation>Voer een Zioncoin adres bijv. johnsmith of</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -5791,8 +5791,8 @@
         <translation>H&amp;ergebruik en bestaand ontvangstadres (niet aanbevolen)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
-        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, welke zal getoond worden wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het Syscoinnetwerk.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
+        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, welke zal getoond worden wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het Zioncoinnetwerk.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -6071,8 +6071,8 @@
         <translation>totaal ten minste</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
-        <translation>De minimale toeslag betalen is prima mits het transactievolume kleiner is dan de ruimte in de blokken. Let wel op dat dit tot gevolg kan hebben dat een transactie nooit wordt bevestigd als er meer vraag is naar syscointransacties dan het netwerk kan verwerken.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
+        <translation>De minimale toeslag betalen is prima mits het transactievolume kleiner is dan de ruimte in de blokken. Let wel op dat dit tot gevolg kan hebben dat een transactie nooit wordt bevestigd als er meer vraag is naar Zioncointransacties dan het netwerk kan verwerken.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -6231,8 +6231,8 @@
         <translation><numerusform>Geschatte de bevestiging binnen %n blok (s) te beginnen.</numerusform><numerusform>Geschatte de bevestiging binnen %n blok (s) te beginnen.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Waarschuwing: Ongeldig Syscoinadres</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Waarschuwing: Ongeldig Zioncoinadres</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -6266,8 +6266,8 @@
         <translation>Dit is een normale betaling.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
-        <translation>Het Syscoinadres om betaling aan te versturen</translation>
+        <source>The Zioncoin address to send the payment to</source>
+        <translation>Het Zioncoinadres om betaling aan te versturen</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -6286,8 +6286,8 @@
         <translation>Verwijder deze toevoeging</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>De transactiekosten zal worden afgetrokken van het bedrag dat verstuurd wordt. De ontvangers zullen minder syscoins ontvangen dan ingevoerd is in het hoeveelheidsveld. Als er meerdere ontvangers geselecteerd zijn, dan worden de transactiekosten gelijk verdeeld.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>De transactiekosten zal worden afgetrokken van het bedrag dat verstuurd wordt. De ontvangers zullen minder Zioncoins ontvangen dan ingevoerd is in het hoeveelheidsveld. Als er meerdere ontvangers geselecteerd zijn, dan worden de transactiekosten gelijk verdeeld.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -6310,8 +6310,8 @@
         <translation>Vul een label voor dit adres in om het aan de lijst met gebruikte adressen toe te voegen</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>Een bericht dat werd toegevoegd aan de syscoin: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Syscoinnetwerk.</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>Een bericht dat werd toegevoegd aan de Zioncoin: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Zioncoinnetwerk.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -6371,32 +6371,32 @@
         <translation>Algemene uitzondering decoderen rauwe transactie</translation>
     </message>
     <message>
-        <source>Sign a raw syscoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
-        <translation>Teken een rauwe syscoin transactie en stuur het naar het netwerk als het is compleet met alle benodigde handtekeningen. Vul hieronder de rauwe hex gecodeerde transactie</translation>
+        <source>Sign a raw Zioncoin transaction and send it to the network if it is complete with all required signatures. Enter the raw hex encoded transaction below</source>
+        <translation>Teken een rauwe Zioncoin transactie en stuur het naar het netwerk als het is compleet met alle benodigde handtekeningen. Vul hieronder de rauwe hex gecodeerde transactie</translation>
     </message>
     <message>
-        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any syscoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
-        <translation>Zodra u een geldige rauwe transactie aan te gaan in het algemeen gedeelte zal dit gebied bevolkt met de rauwe transactie-informatie met inbegrip van alle syscoin gerelateerde service-informatie worden, zodat u weet wat de transactie aan het doen is vóór de ondertekening en mogelijk op te sturen naar het netwerk.</translation>
+        <source>Once you enter a valid raw transaction in the general section this area will become populated with the raw transaction information including any Zioncoin related service information so you will know what the transaction is doing before signing and potentially sending it to the network.</source>
+        <translation>Zodra u een geldige rauwe transactie aan te gaan in het algemeen gedeelte zal dit gebied bevolkt met de rauwe transactie-informatie met inbegrip van alle Zioncoin gerelateerde service-informatie worden, zodat u weet wat de transactie aan het doen is vóór de ondertekening en mogelijk op te sturen naar het netwerk.</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction. Currently there is nothing to display</source>
-        <translation>Onderstaande gebied is om syscoin specifieke informatie met betrekking tot deze transactie weer te geven. Momenteel is er niets om te laten zien</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction. Currently there is nothing to display</source>
+        <translation>Onderstaande gebied is om Zioncoin specifieke informatie met betrekking tot deze transactie weer te geven. Momenteel is er niets om te laten zien</translation>
     </message>
     <message>
         <source>Error creating decoding raw transaction: </source>
         <translation>Fout bij het maken decoderen van ruwe transactie:</translation>
     </message>
     <message>
-        <source>The area below is to display syscoin specific information regarding this transaction</source>
-        <translation>Onderstaande gebied is om syscoin specifieke informatie over deze transactie weer te geven</translation>
+        <source>The area below is to display Zioncoin specific information regarding this transaction</source>
+        <translation>Onderstaande gebied is om Zioncoin specifieke informatie over deze transactie weer te geven</translation>
     </message>
     <message>
-        <source>Error creating decoding raw syscoin transaction: </source>
-        <translation>Fout bij het maken decoderen van ruwe syscoin transactie:</translation>
+        <source>Error creating decoding raw Zioncoin transaction: </source>
+        <translation>Fout bij het maken decoderen van ruwe Zioncoin transactie:</translation>
     </message>
     <message>
-        <source>General exception decoding raw syscoin transaction</source>
-        <translation>Algemene uitzondering decoderen ruwe syscoin transactie</translation>
+        <source>General exception decoding raw Zioncoin transaction</source>
+        <translation>Algemene uitzondering decoderen ruwe Zioncoin transactie</translation>
     </message>
     <message>
         <source>Transaction was completed successfully!</source>
@@ -6426,12 +6426,12 @@
         <translation>&amp;Onderteken Bericht</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u Syscoins kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u Zioncoins kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
-        <translation>Het Syscoinadres om bericht mee te ondertekenen</translation>
+        <source>The Zioncoin address to sign the message with</source>
+        <translation>Het Zioncoinadres om bericht mee te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -6462,8 +6462,8 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald Syscoinadres bezit</translation>
+        <source>Sign the message to prove you own this Zioncoin address</source>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald Zioncoinadres bezit</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -6486,12 +6486,12 @@
         <translation>Voer het adres van de ontvanger in, bericht (zorg ervoor dat de regeleinden, spaties, tabs etc. precies kloppen) en onderteken onderaan om het bericht te verifiëren. Wees voorzicht om niet meer in de ondertekening te lezen dan in het getekende bericht zelf, om te voorkomen dat je wordt aangevallen met een man-in-the-middle attack. Houd er mee rekening dat dit alleen de ondertekende partij bewijst met het ontvangen adres, er kan niet bewezen worden dat er een transactie heeft plaatsgevonden!</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
-        <translation>Het Syscoinadres waarmee het bericht ondertekend is</translation>
+        <source>The Zioncoin address the message was signed with</source>
+        <translation>Het Zioncoinadres waarmee het bericht ondertekend is</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde Syscoinadres het bericht heeft ondertekend.</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde Zioncoinadres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -6562,7 +6562,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Onderteken bericht...</translation>
@@ -6672,8 +6672,8 @@
         <translation>Bezig met herindexeren van blokken op harde schijf...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Verstuur munten naar een Syscoinadres</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Verstuur munten naar een Zioncoinadres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -6696,8 +6696,8 @@
         <translation>&amp;Verifiëer bericht...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -6716,12 +6716,12 @@
         <translation>Versleutel de geheime sleutels die bij uw portemonnee horen</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw Syscoinadressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw Zioncoinadressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Syscoinadressen</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Zioncoinadressen</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -6740,8 +6740,8 @@
         <translation>Tab-werkbalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en syscoin: URI's)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR-codes en Zioncoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -6752,16 +6752,16 @@
         <translation>Toon de lijst met gebruikte ontvangst adressen en labels</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Open een syscoin: URI of betalingsverzoek</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Open een Zioncoin: URI of betalingsverzoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Opdrachtregelopties</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
-        <translation><numerusform>%n actieve verbinding met Syscoinnetwerk</numerusform><numerusform>%n actieve verbindingen met Syscoinnetwerk</numerusform></translation>
+        <source>%n active connection(s) to Zioncoin network</source>
+        <translation><numerusform>%n actieve verbinding met Zioncoinnetwerk</numerusform><numerusform>%n actieve verbindingen met Zioncoinnetwerk</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -6828,12 +6828,12 @@
         <translation>Escrows met aanbiedingen</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>&amp;Over Syscoin Core</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>&amp;Over Zioncoin Core</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Syscoin command-line options</source>
-        <translation>Toon het %1 hulpbericht om een lijst te krijgen met mogelijke Syscoin commandoregelopties</translation>
+        <source>Show the %1 help message to get a list with possible Zioncoin command-line options</source>
+        <translation>Toon het %1 hulpbericht om een lijst te krijgen met mogelijke Zioncoin commandoregelopties</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -7666,7 +7666,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opties:</translation>
@@ -7732,8 +7732,8 @@
         <translation>Accepteer verbindingen van buitenaf (standaard: 1 als geen -proxy of -connect is opgegeven)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Syscoin Core</translation>
+        <source>Zioncoin Core</source>
+        <translation>Zioncoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -8464,16 +8464,16 @@
         <translation>Hoe grondig de blokverificatie van -checkblocks is (0-4, standaard: %u)</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
-        <translation>Ongeldige Syscoin Identity. Moet de domeinnaam spec van 3-64 karakters zonder voorafgaande of trailing streepjes en een TLD van 2-6 tekens volgen</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes and a TLD of 2 to 6 characters</source>
+        <translation>Ongeldige Zioncoin Identity. Moet de domeinnaam spec van 3-64 karakters zonder voorafgaande of trailing streepjes en een TLD van 2-6 tekens volgen</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
-        <translation>Ongeldige Syscoin Identity. Moet de domeinnaam spec van 3-64 tekens te volgen, zonder voorafgaande of trailing streepjes</translation>
+        <source>Invalid Zioncoin Identity. Must follow the domain name spec of 3 to 64 characters with no preceding or trailing dashes</source>
+        <translation>Ongeldige Zioncoin Identity. Moet de domeinnaam spec van 3-64 tekens te volgen, zonder voorafgaande of trailing streepjes</translation>
     </message>
     <message>
-        <source>Invalid Syscoin Identity. Please enter a password atleast 4 characters long</source>
-        <translation>Ongeldige Syscoin Identity. Voer uw wachtwoord tenminste 4 tekens lang zijn</translation>
+        <source>Invalid Zioncoin Identity. Please enter a password atleast 4 characters long</source>
+        <translation>Ongeldige Zioncoin Identity. Voer uw wachtwoord tenminste 4 tekens lang zijn</translation>
     </message>
     <message>
         <source>Invalid price and/or quantity values. Quantity must be less than 4294967296 and greater than or equal to -1</source>
@@ -8512,16 +8512,16 @@
         <translation>Ondersteun filtering van blokken en transacties met bloomfilters (standaard: %u)</translation>
     </message>
     <message>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
-        <translation>Syscoin is open source software geproduceerd door een wereldwijd netwerk van ontwikkelaars. Door het downloaden, distributie en het gebruik van Syscoin en Syscoin netwerk de ontwikkelaars die betrokken zijn bij de Syscoin Project verleden, heden en de toekomst van alle aansprakelijkheid los je. U bent verantwoordelijk voor uw creaties op het Syscoin netwerk. U stemt ermee in dat de ontwikkelaars van de Syscoin Project dragen geen verantwoordelijkheid voor de acties / data of entiteiten van * enige * definitie gemaakt op het netwerk door uzelf of anderen op het netwerk waarmee u kunnen worden blootgesteld.</translation>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <translation>Zioncoin is open source software geproduceerd door een wereldwijd netwerk van ontwikkelaars. Door het downloaden, distributie en het gebruik van Zioncoin en Zioncoin netwerk de ontwikkelaars die betrokken zijn bij de Zioncoin Project verleden, heden en de toekomst van alle aansprakelijkheid los je. U bent verantwoordelijk voor uw creaties op het Zioncoin netwerk. U stemt ermee in dat de ontwikkelaars van de Zioncoin Project dragen geen verantwoordelijkheid voor de acties / data of entiteiten van * enige * definitie gemaakt op het netwerk door uzelf of anderen op het netwerk waarmee u kunnen worden blootgesteld.</translation>
     </message>
     <message>
-        <source>The Syscoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
-        <translation>De Syscoin alias die u probeert te gebruiken voor deze transactie is ongeldig of is bijgewerkt en nog niet bevestigd! Wacht een blok en probeer het opnieuw ...</translation>
+        <source>The Zioncoin alias you are trying to use for this transaction is invalid or has been updated and not confirmed yet! Please wait a block and try again...</source>
+        <translation>De Zioncoin alias die u probeert te gebruiken voor deze transactie is ongeldig of is bijgewerkt en nog niet bevestigd! Wacht een blok en probeer het opnieuw ...</translation>
     </message>
     <message>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
-        <translation>De ontwikkelaars van de Syscoin Project niet de bevoegdheid om gegevens over de Syscoin netwerk wijzigen niet wordt ondersteund door een onveranderlijke blockchain, die u erkent verder door het gebruik van Syscoin, de Syscoin netwerk en Syscoin diensten. Als u het niet eens bent met deze voorwaarden, gelieve zich te onthouden van het gebruik van Syscoin en de aanverwante diensten.</translation>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
+        <translation>De ontwikkelaars van de Zioncoin Project niet de bevoegdheid om gegevens over de Zioncoin netwerk wijzigen niet wordt ondersteund door een onveranderlijke blockchain, die u erkent verder door het gebruik van Zioncoin, de Zioncoin netwerk en Zioncoin diensten. Als u het niet eens bent met deze voorwaarden, gelieve zich te onthouden van het gebruik van Zioncoin en de aanverwante diensten.</translation>
     </message>
     <message>
         <source>This resold offer must be of higher price than the original offer including any discount</source>
@@ -8680,8 +8680,8 @@
         <translation>Kan alleen een actieve escrow vrijgeven</translation>
     </message>
     <message>
-        <source>Can't determine type of alias input into syscoin service transaction</source>
-        <translation>Kan type alias inbreng niet bepalen in syscoin dienst transactie</translation>
+        <source>Can't determine type of alias input into Zioncoin service transaction</source>
+        <translation>Kan type alias inbreng niet bepalen in Zioncoin dienst transactie</translation>
     </message>
     <message>
         <source>Cannot change category to wanted</source>
@@ -8884,8 +8884,8 @@
         <translation>Commissie moet tussen -90 en 100</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
-        <translation>Auteursrecht (C) 2009-%i De Syscoin Core Ontwikkelaars</translation>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
+        <translation>Auteursrecht (C) 2009-%i De Zioncoin Core Ontwikkelaars</translation>
     </message>
     <message>
         <source>Could not create escrow transaction: Invalid response from createescrow</source>
@@ -9448,8 +9448,8 @@
         <translation>Geen private sleutels gevonden die betrokken zijn bij deze escrow</translation>
     </message>
     <message>
-        <source>Non-Syscoin transaction found</source>
-        <translation>Non-Syscoin transactie gevonden</translation>
+        <source>Non-Zioncoin transaction found</source>
+        <translation>Non-Zioncoin transactie gevonden</translation>
     </message>
     <message>
         <source>Not enough quantity left in this offer for this purchase</source>

@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,14 +29,14 @@
 #include <boost/thread.hpp>
 #include <boost/tuple/tuple.hpp>
 #include <queue>
-// SYSCOIN need constant SYSCOIN_TX_VERSION
-extern int GetSyscoinTxVersion();
-extern int GetSyscoinDataOutput(const CTransaction& tx);
+// Zioncoin need constant Zioncoin_TX_VERSION
+extern int GetZioncoinTxVersion();
+extern int GetZioncoinDataOutput(const CTransaction& tx);
 using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// SyscoinMiner
+// ZioncoinMiner
 //
 
 //
@@ -119,7 +119,7 @@ void BlockAssembler::resetBlock()
     // These counters do not include coinbase tx
     nBlockTx = 0;
     nFees = 0;
-	// SYSCOIN 
+	// Zioncoin 
 	nSysRegenFees = 0;
 	nSysBlockTx = 0;
 
@@ -146,7 +146,7 @@ CBlockTemplate* BlockAssembler::CreateNewBlock(const CScript& scriptPubKeyIn)
     CBlockIndex* pindexPrev = chainActive.Tip();
     nHeight = pindexPrev->nHeight + 1;
 
-	// SYSCOIN
+	// Zioncoin
     const int32_t nChainId = chainparams.GetConsensus ().nAuxpowChainId;
     const int32_t nVersion = ComputeBlockVersion(pindexPrev, chainparams.GetConsensus());
     pblock->SetBaseVersion(nVersion, nChainId);
@@ -183,14 +183,14 @@ CBlockTemplate* BlockAssembler::CreateNewBlock(const CScript& scriptPubKeyIn)
     coinbaseTx.vin[0].prevout.SetNull();
     coinbaseTx.vout.resize(1);
     coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
-	 // SYSCOIN Compute final coinbase transaction. Add Syscoin dynamic inflation based on service demand
+	 // Zioncoin Compute final coinbase transaction. Add Zioncoin dynamic inflation based on service demand
     coinbaseTx.vout[0].nValue = nSysRegenFees + nFees + GetBlockSubsidy(nHeight, chainparams.GetConsensus());
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
     pblock->vtx[0] = coinbaseTx;
     pblocktemplate->vchCoinbaseCommitment = GenerateCoinbaseCommitment(*pblock, pindexPrev, chainparams.GetConsensus());
     pblocktemplate->vTxFees[0] = -nFees;
 	uint64_t nSerializeSize = GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION);
-	// SYSCOIN
+	// Zioncoin
 	LogPrintf("CreateNewBlock(): total size: %u block weight: %u txs: %u fees: %ld sigops %d systxs: %u sysfees: %ld\n", nSerializeSize, GetBlockWeight(*pblock), nBlockTx, nFees, nBlockSigOpsCost, nSysBlockTx, nSysRegenFees);
     // Fill in header
     pblock->hashPrevBlock  = pindexPrev->GetBlockHash();
@@ -329,13 +329,13 @@ void BlockAssembler::AddToBlock(CTxMemPool::txiter iter)
     ++nBlockTx;
     nBlockSigOpsCost += iter->GetSigOpCost();
     nFees += iter->GetFee();
-	// SYSCOIN inflate and regenerate based on opreturn value set when creating the service(user)
-	if(iter->GetTx().nVersion == GetSyscoinTxVersion())
+	// Zioncoin inflate and regenerate based on opreturn value set when creating the service(user)
+	if(iter->GetTx().nVersion == GetZioncoinTxVersion())
 	{
 		nSysBlockTx++;
 		if(nSysBlockTx >= 5)
 		{
-			int nOut = GetSyscoinDataOutput(iter->GetTx());
+			int nOut = GetZioncoinDataOutput(iter->GetTx());
 			if (nOut != -1)
 				nSysRegenFees += iter->GetTx().vout[nOut].nValue*2;
 		}

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Syscoin Core developers
+# Copyright (c) 2014-2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 from test_framework.util import *
 
 
-class ZapWalletTXesTest (SyscoinTestFramework):
+class ZapWalletTXesTest (ZioncoinTestFramework):
 
     def __init__(self):
         super().__init__()
@@ -52,18 +52,18 @@ class ZapWalletTXesTest (SyscoinTestFramework):
         tx3 = self.nodes[0].gettransaction(txid3)
         assert_equal(tx3['txid'], txid3) #tx3 must be available (unconfirmed)
         
-        #restart syscoind
+        #restart Zioncoind
         self.nodes[0].stop()
-        syscoind_processes[0].wait()
+        Zioncoind_processes[0].wait()
         self.nodes[0] = start_node(0,self.options.tmpdir)
         
         tx3 = self.nodes[0].gettransaction(txid3)
         assert_equal(tx3['txid'], txid3) #tx must be available (unconfirmed)
         
         self.nodes[0].stop()
-        syscoind_processes[0].wait()
+        Zioncoind_processes[0].wait()
         
-        #restart syscoind with zapwallettxes
+        #restart Zioncoind with zapwallettxes
         self.nodes[0] = start_node(0,self.options.tmpdir, ["-zapwallettxes=1"])
         
         assert_raises(JSONRPCException, self.nodes[0].gettransaction, [txid3])

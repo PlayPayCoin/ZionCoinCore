@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: syscoind.service
-Upstart: syscoind.conf
-OpenRC:  syscoind.openrc
-         syscoind.openrcconf
-CentOS:  syscoind.init
-OS X:    org.syscoin.syscoind.plist
+SystemD: Zioncoind.service
+Upstart: Zioncoind.conf
+OpenRC:  Zioncoind.openrc
+         Zioncoind.openrcconf
+CentOS:  Zioncoind.init
+OS X:    org.Zioncoin.Zioncoind.plist
 
 have been made available to assist packagers in creating node packages here.
 

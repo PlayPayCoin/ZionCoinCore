@@ -288,12 +288,12 @@
         <translation>Adresa prijatia</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto sú Vaše Syscoin adresy pre posielanie platieb. Vždy skontrolujte množstvo a prijímaciu adresu pred poslaním coins.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto sú Vaše Zioncoin adresy pre posielanie platieb. Vždy skontrolujte množstvo a prijímaciu adresu pred poslaním coins.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto sú vaše Syscoin adresy pre prijímanie platieb. Odporúča sa použiť novú prijímaciu adresu pre každú transakciu.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto sú vaše Zioncoin adresy pre prijímanie platieb. Odporúča sa použiť novú prijímaciu adresu pre každú transakciu.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -370,8 +370,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
-        <translation>Hľadať Syscoin aliasov. Vyberte Bezpečné vyhľadávanie z možností peňaženky, ak si prajete vynechať potenciálne nevhodných aliasov (v predvolenom nastavení)</translation>
+        <source>Search for Zioncoin Aliases. Select Safe Search from wallet options if you wish to omit potentially offensive Aliases(On by default)</source>
+        <translation>Hľadať Zioncoin aliasov. Vyberte Bezpečné vyhľadávanie z možností peňaženky, ak si prajete vynechať potenciálne nevhodných aliasov (v predvolenom nastavení)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Aliases starting with 'name'). Empty will search for all.</source>
@@ -467,8 +467,8 @@
         <translation>Potvrďte šifrovanie peňaženky</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SYSCOINS&lt;/b&gt;!</source>
-        <translation>Varovanie: Ak zašifrujete peňaženku a stratíte heslo, &lt;b&gt;STRATÍTE VŠETKY VAŠE SYSCOINY&lt;/b&gt;!⏎</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZioncoinS&lt;/b&gt;!</source>
+        <translation>Varovanie: Ak zašifrujete peňaženku a stratíte heslo, &lt;b&gt;STRATÍTE VŠETKY VAŠE ZioncoinY&lt;/b&gt;!⏎</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -553,8 +553,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
-        <translation>Hľadať Syscoin certifikáty. Vyberte Bezpečné vyhľadávanie z možností peňaženky, ak si prajete vynechať potenciálne nevhodných certifikáty (v predvolenom nastavení)</translation>
+        <source>Search for Zioncoin Certificates. Select Safe Search from wallet options if you wish to omit potentially offensive Certificates(On by default)</source>
+        <translation>Hľadať Zioncoin certifikáty. Vyberte Bezpečné vyhľadávanie z možností peňaženky, ak si prajete vynechať potenciálne nevhodných certifikáty (v predvolenom nastavení)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Certificates starting with 'name'). Empty will search for all.</source>
@@ -801,8 +801,8 @@
         <translation>Upraviť odosielaciu adresu</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Syscoin address.</source>
-        <translation>Vložená adresa "%1" nieje platnou adresou syscoin.</translation>
+        <source>The entered address "%1" is not a valid Zioncoin address.</source>
+        <translation>Vložená adresa "%1" nieje platnou adresou Zioncoin.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1327,8 +1327,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Escrows.</source>
-        <translation>Hľadať Syscoin escrows.</translation>
+        <source>Search for Zioncoin Escrows.</source>
+        <translation>Hľadať Zioncoin escrows.</translation>
     </message>
     <message>
         <source>Enter search term. Search for arbiter/seller or escrow GUID. Empty will search for all.</source>
@@ -1423,8 +1423,8 @@
         <translation>verzia</translation>
     </message>
     <message>
-        <source>Syscoin Client</source>
-        <translation>Syscoin Client</translation>
+        <source>Zioncoin Client</source>
+        <translation>Zioncoin Client</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -1612,8 +1612,8 @@
         <translation>Escrow bola úspešne vrátená kupujúcemu. Escrow je kompletný.</translation>
     </message>
     <message>
-        <source>The escrow status was not recognized. Please contact the Syscoin team.</source>
-        <translation>Stav Escrow nebola rozpoznaná. Obráťte sa na tím Syscoin.</translation>
+        <source>The escrow status was not recognized. Please contact the Zioncoin team.</source>
+        <translation>Stav Escrow nebola rozpoznaná. Obráťte sa na tím Zioncoin.</translation>
     </message>
     <message>
         <source>none</source>
@@ -1933,8 +1933,8 @@
         <translation>Exportovať tento náhľad do súboru</translation>
     </message>
     <message>
-        <source>These are your registered Syscoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
-        <translation>To sú vaše registrované Syscoin aliasov. Alias ​​operácie (vytváranie, aktualizácia, prenos) trvať 2-5 minút, aby sa stal aktívnym.</translation>
+        <source>These are your registered Zioncoin Aliases. Alias operations (create, update, transfer) take 2-5 minutes to become active.</source>
+        <translation>To sú vaše registrované Zioncoin aliasov. Alias ​​operácie (vytváranie, aktualizácia, prenos) trvať 2-5 minút, aby sa stal aktívnym.</translation>
     </message>
     <message>
         <source>You cannot edit this alias because it has expired</source>
@@ -2445,8 +2445,8 @@
 <context>
     <name>OfferAcceptDialog</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Prijať Syscoin Ponuka</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Prijať Zioncoin Ponuka</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2461,8 +2461,8 @@
         <translation>Platiť sa BTC</translation>
     </message>
     <message>
-        <source>Pay with Syscoin</source>
-        <translation>Platiť sa Syscoin</translation>
+        <source>Pay with Zioncoin</source>
+        <translation>Platiť sa Zioncoin</translation>
     </message>
     <message>
         <source>Use Escrow</source>
@@ -2496,8 +2496,8 @@
 <context>
     <name>OfferAcceptDialogBTC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Prijať Syscoin Ponuka</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Prijať Zioncoin Ponuka</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2571,8 +2571,8 @@
 <context>
     <name>OfferAcceptDialogZEC</name>
     <message>
-        <source>Accept Syscoin Offer</source>
-        <translation>Prijať Syscoin Ponuka</translation>
+        <source>Accept Zioncoin Offer</source>
+        <translation>Prijať Zioncoin Ponuka</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2870,8 +2870,8 @@
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <source>Search for Syscoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
-        <translation>Hľadanie Syscoin Ponuka (dvojklik na jeden ku kúpe). Vyberte Bezpečné vyhľadávanie z možností peňaženky, ak si prajete vynechať potenciálne nevhodných ponúk (v predvolenom nastavení)</translation>
+        <source>Search for Zioncoin Offers (double click on one to purchase). Select Safe Search from wallet options if you wish to omit potentially offensive Offers(On by default)</source>
+        <translation>Hľadanie Zioncoin Ponuka (dvojklik na jeden ku kúpe). Vyberte Bezpečné vyhľadávanie z možností peňaženky, ak si prajete vynechať potenciálne nevhodných ponúk (v predvolenom nastavení)</translation>
     </message>
     <message>
         <source>Enter search term, regex accepted (ie: ^name returns all Offer's starting with 'name'). Empty will search for all.</source>
@@ -3048,8 +3048,8 @@
         <translation>Minimalizovať namiesto ukončenia aplikácie keď sa okno zavrie. Keď je zvolená táto možnosť, aplikácia sa zavrie len po zvolení Ukončiť v menu.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Tu sa dá nastaviť jazyk užívateľského rozhrania. Toto nastavenie bude účinné po reštartovaní Jadra Syscoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Tu sa dá nastaviť jazyk užívateľského rozhrania. Toto nastavenie bude účinné po reštartovaní Jadra Zioncoin.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -3068,8 +3068,8 @@
         <translation>Užívateľské rozhranie Téma:</translation>
     </message>
     <message>
-        <source>The user interface theme can be set here. This setting will take effect after restarting Syscoin Core.</source>
-        <translation>Téma Užívateľské rozhranie možno nastaviť tu. Toto nastavenie sa prejaví až po reštartovaní Syscoin Core.</translation>
+        <source>The user interface theme can be set here. This setting will take effect after restarting Zioncoin Core.</source>
+        <translation>Téma Užívateľské rozhranie možno nastaviť tu. Toto nastavenie sa prejaví až po reštartovaní Zioncoin Core.</translation>
     </message>
     <message>
         <source>Default Peg Alias:</source>
@@ -3104,12 +3104,12 @@
         <translation>&amp;Sieť</translation>
     </message>
     <message>
-        <source>Automatically start Syscoin Core after logging in to the system.</source>
-        <translation>Automaticky spustiť Jadro Syscoin po prihlásení do systému</translation>
+        <source>Automatically start Zioncoin Core after logging in to the system.</source>
+        <translation>Automaticky spustiť Jadro Zioncoin po prihlásení do systému</translation>
     </message>
     <message>
-        <source>&amp;Start Syscoin Core on system login</source>
-        <translation>&amp;Spustiť Syscoin pri spustení systému správy okien</translation>
+        <source>&amp;Start Zioncoin Core on system login</source>
+        <translation>&amp;Spustiť Zioncoin pri spustení systému správy okien</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -3136,16 +3136,16 @@
         <translation>Minúť nepotvrdený výdavok</translation>
     </message>
     <message>
-        <source>Automatically open the Syscoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otvorit port pre Syscoin na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
+        <source>Automatically open the Zioncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otvorit port pre Zioncoin na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapovať port pomocou &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a SOCKS5 proxy.</source>
-        <translation>Pripojiť do siete Syscoin cez proxy server SOCKS5.</translation>
+        <source>Connect to the Zioncoin network through a SOCKS5 proxy.</source>
+        <translation>Pripojiť do siete Zioncoin cez proxy server SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -3184,8 +3184,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Syscoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Pripojiť k Syscoinovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
+        <source>Connect to the Zioncoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Pripojiť k Zioncoinovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -3221,7 +3221,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Zvoľte ako deliť syscoin pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
+        <translation>Zvoľte ako deliť Zioncoin pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -3345,8 +3345,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Syscoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informácie môžu byť neaktuálne. Vaša peňaženka sa automaticky synchronizuje so sieťou Syscoin po nadviazaní spojenia, ale tento proces ešte nie je ukončený.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zioncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informácie môžu byť neaktuálne. Vaša peňaženka sa automaticky synchronizuje so sieťou Zioncoin po nadviazaní spojenia, ale tento proces ešte nie je ukončený.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -3420,8 +3420,8 @@
         <translation>Chyba pri vyžiadaní platby</translation>
     </message>
     <message>
-        <source>Cannot start syscoin: click-to-pay handler</source>
-        <translation>Nedá sa spustiť obslužný program syscoin: click-to-pay zaplatiť kliknutím</translation>
+        <source>Cannot start Zioncoin: click-to-pay handler</source>
+        <translation>Nedá sa spustiť obslužný program Zioncoin: click-to-pay zaplatiť kliknutím</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -3436,8 +3436,8 @@
         <translation>Neplatná adresa platby %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Syscoin address or malformed URI parameters.</source>
-        <translation>URI sa nedá analyzovať! To môže byť spôsobené neplatnou Syscoin adresou alebo zle upravenými vlastnosťami URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Zioncoin address or malformed URI parameters.</source>
+        <translation>URI sa nedá analyzovať! To môže byť spôsobené neplatnou Zioncoin adresou alebo zle upravenými vlastnosťami URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -3876,8 +3876,8 @@
         <translation>Znovu použiť jestvujúcu prijímaciu adresu (neodporúča sa)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Syscoin network.</source>
-        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť Syscoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Zioncoin network.</source>
+        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť Zioncoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -4045,7 +4045,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Poslať Syscoins</translation>
+        <translation>Poslať Zioncoins</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -4124,7 +4124,7 @@
         <translation>spolu aspoň</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for syscoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Zioncoin transactions than the network can process.</source>
         <translation>Zaplatenie len minimálneho poplatku je v poriadku, pokiaľ existuje menej transakcií ako miesta v blokoch. Uvedomte si však, že ak bude vyšší dopyt po transakciách ako dokáže sieť spracovať, môže byť vaša transakcia odsúvaná a nepotvrdená donekonečna.</translation>
     </message>
     <message>
@@ -4233,7 +4233,7 @@
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Potvrdiť odoslanie syscoins</translation>
+        <translation>Potvrdiť odoslanie Zioncoins</translation>
     </message>
     <message>
         <source>The recipient address is not valid. Please recheck.</source>
@@ -4272,8 +4272,8 @@
         <translation>Vypršala platnosť požiadavky na platbu.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Syscoin address</source>
-        <translation>Varovanie: Nesprávna Syscoin adresa</translation>
+        <source>Warning: Invalid Zioncoin address</source>
+        <translation>Varovanie: Nesprávna Zioncoin adresa</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -4307,7 +4307,7 @@
         <translation>Toto je normálna platba.</translation>
     </message>
     <message>
-        <source>The Syscoin address to send the payment to</source>
+        <source>The Zioncoin address to send the payment to</source>
         <translation>Zvoľte adresu kam poslať platbu</translation>
     </message>
     <message>
@@ -4327,8 +4327,8 @@
         <translation>Odstrániť túto položku</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less syscoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Poplatok sa odpočíta od čiastky, ktorú odosielate. Príjemca dostane menej syscoinov ako zadáte. Ak je vybraných viacero príjemcov, poplatok je rozdelený rovným dielom.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Zioncoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Poplatok sa odpočíta od čiastky, ktorú odosielate. Príjemca dostane menej Zioncoinov ako zadáte. Ak je vybraných viacero príjemcov, poplatok je rozdelený rovným dielom.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -4351,8 +4351,8 @@
         <translation>Vložte popis pre túto adresu aby sa uložila do zoznamu použitých adries</translation>
     </message>
     <message>
-        <source>A message that was attached to the syscoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Syscoin network.</source>
-        <translation>Správa ktorá bola pripojená k syscoin: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť Syscoin.</translation>
+        <source>A message that was attached to the Zioncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Zioncoin network.</source>
+        <translation>Správa ktorá bola pripojená k Zioncoin: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť Zioncoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -4407,12 +4407,12 @@
         <translation>&amp;Podpísať Správu</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive syscoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Môžete sa prihlásiť správ / dohody so svojimi adresami dokázať, môžete získať syscoins odoslanej na ne. Dávajte pozor, aby ste podpísať nič nejasnú alebo náhodné, pretože phishingové útoky môžu pokúsiť prinútiť vás k podpisu vašu identitu k nim. podpisovať iba plne detailné vyjadrenie súhlasíte s.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Zioncoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Môžete sa prihlásiť správ / dohody so svojimi adresami dokázať, môžete získať Zioncoins odoslanej na ne. Dávajte pozor, aby ste podpísať nič nejasnú alebo náhodné, pretože phishingové útoky môžu pokúsiť prinútiť vás k podpisu vašu identitu k nim. podpisovať iba plne detailné vyjadrenie súhlasíte s.</translation>
     </message>
     <message>
-        <source>The Syscoin address to sign the message with</source>
-        <translation>Syscoin adresa pre podpísanie správy s</translation>
+        <source>The Zioncoin address to sign the message with</source>
+        <translation>Zioncoin adresa pre podpísanie správy s</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4443,7 +4443,7 @@
         <translation>Kopírovať práve zvolenú adresu do systémového klipbordu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Syscoin address</source>
+        <source>Sign the message to prove you own this Zioncoin address</source>
         <translation>Podpíšte správu aby ste dokázali že vlastníte túto adresu</translation>
     </message>
     <message>
@@ -4467,12 +4467,12 @@
         <translation>Zadajte adresu prijímača, správy (zabezpečiť skopírovanie riadkov, medzery, tabulátory atď presne) a podpis dole na overenie správy. Dávajte pozor, aby ste čítať viac do podpisu, než to, čo je v podpísanom samotnej správy, aby sa vyhli oklamať útoku man-in-the-middle. Všimnite si, že to len dokazuje podpisu strana dostane s adresou, nemôže preukázať sendership akejkoľvek transakcie!</translation>
     </message>
     <message>
-        <source>The Syscoin address the message was signed with</source>
-        <translation>Adresa Syscoin, ktorou bola podpísaná správa</translation>
+        <source>The Zioncoin address the message was signed with</source>
+        <translation>Adresa Zioncoin, ktorou bola podpísaná správa</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Syscoin address</source>
-        <translation>Overím správy sa uistiť že bola podpísaná označenou Syscoin adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Zioncoin address</source>
+        <translation>Overím správy sa uistiť že bola podpísaná označenou Zioncoin adresou</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -4543,7 +4543,7 @@
     </message>
 </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Podpísať &amp;správu...</translation>
@@ -4629,8 +4629,8 @@
         <translation>Preindexúvam bloky na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a Syscoin address</source>
-        <translation>Poslať syscoins na adresu</translation>
+        <source>Send coins to a Zioncoin address</source>
+        <translation>Poslať Zioncoins na adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -4653,8 +4653,8 @@
         <translation>O&amp;veriť správu...</translation>
     </message>
     <message>
-        <source>Syscoin</source>
-        <translation>Syscoin</translation>
+        <source>Zioncoin</source>
+        <translation>Zioncoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -4673,12 +4673,12 @@
         <translation>Zašifruj súkromné kľúče ktoré patria do vašej peňaženky</translation>
     </message>
     <message>
-        <source>Sign messages with your Syscoin addresses to prove you own them</source>
-        <translation>Podpísať správu s vašou adresou Syscoin aby ste preukázali že ju vlastníte</translation>
+        <source>Sign messages with your Zioncoin addresses to prove you own them</source>
+        <translation>Podpísať správu s vašou adresou Zioncoin aby ste preukázali že ju vlastníte</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Syscoin addresses</source>
-        <translation>Overiť či správa bola podpísaná uvedenou Syscoin adresou</translation>
+        <source>Verify messages to ensure they were signed with specified Zioncoin addresses</source>
+        <translation>Overiť či správa bola podpísaná uvedenou Zioncoin adresou</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -4697,8 +4697,8 @@
         <translation>Lišta záložiek</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and syscoin: URIs)</source>
-        <translation>Vyžiadať platby (vygeneruje QR kódy a syscoin: URI)</translation>
+        <source>Request payments (generates QR codes and Zioncoin: URIs)</source>
+        <translation>Vyžiadať platby (vygeneruje QR kódy a Zioncoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -4709,16 +4709,16 @@
         <translation>Zobraziť zoznam použitých prijímacích adries a ich popisov</translation>
     </message>
     <message>
-        <source>Open a syscoin: URI or payment request</source>
-        <translation>Otvoriť syscoin URI alebo výzvu k platbe</translation>
+        <source>Open a Zioncoin: URI or payment request</source>
+        <translation>Otvoriť Zioncoin URI alebo výzvu k platbe</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Možnosti príkazového riadku</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Syscoin network</source>
-        <translation><numerusform>%n aktívne pripojenie do siete Syscoin</numerusform><numerusform>%n aktívne pripojenia do siete Syscoin</numerusform><numerusform>%n aktívnych pripojení do siete Syscoin</numerusform></translation>
+        <source>%n active connection(s) to Zioncoin network</source>
+        <translation><numerusform>%n aktívne pripojenie do siete Zioncoin</numerusform><numerusform>%n aktívne pripojenia do siete Zioncoin</numerusform><numerusform>%n aktívnych pripojení do siete Zioncoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -4777,8 +4777,8 @@
         <translation>Escrows s ponukami</translation>
     </message>
     <message>
-        <source>&amp;About Syscoin Core</source>
-        <translation>O jadre Syscoin</translation>
+        <source>&amp;About Zioncoin Core</source>
+        <translation>O jadre Zioncoin</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -5440,7 +5440,7 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Poslať Syscoins</translation>
+        <translation>Poslať Zioncoins</translation>
     </message>
     </context>
 <context>
@@ -5475,7 +5475,7 @@
     </message>
 </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Možnosti:</translation>
@@ -5533,8 +5533,8 @@
         <translation>Prijať spojenia zvonku (predvolené: 1 ak žiadne -proxy alebo -connect)</translation>
     </message>
     <message>
-        <source>Syscoin Core</source>
-        <translation>Jadro Syscoin</translation>
+        <source>Zioncoin Core</source>
+        <translation>Jadro Zioncoin</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -5562,7 +5562,7 @@
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Toto je pred-testovacia verzia - použitie je na vlastné riziko - nepoužívajte na tvorbu syscoin ani obchodovanie.</translation>
+        <translation>Toto je pred-testovacia verzia - použitie je na vlastné riziko - nepoužívajte na tvorbu Zioncoin ani obchodovanie.</translation>
     </message>
     <message>
         <source>Use UPnP to map the listening port (default: 1 when listening and no -proxy)</source>
@@ -6055,12 +6055,12 @@ The network does not appear to fully agree! Some miners appear to be experiencin
         <translation>Výstupné ladiace informácie (predvolené: %u, dodanie &lt;category&gt; je voliteľné)</translation>
     </message>
     <message>
-        <source>Syscoin is open source software produced by a global network of developers. By downloading, distributing and using Syscoin and the Syscoin network you release the developers involved in the Syscoin Project past, present, and future from any and all liability. You are responsible for your creations on the Syscoin network. You agree that the developers of the Syscoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
-        <translation>Syscoin je open source softvér vyrábaná celosvetovej siete vývojárov. Stiahnutím, distribúcie a používania Syscoin a sieť Syscoin uvoľnenie vývojárov zapojené do projektu Syscoin minulosti, prítomnosti a budúcnosti z akéhokoľvek a všetkej zodpovednosti. Ste zodpovední za svoje výtvory v sieti Syscoin. Súhlasíte s tým, že vývojári Syscoin projektu nenesú žiadnu zodpovednosť za činy / dát alebo subjektov * akýkoľvek * definícia vytvorená na sieti podľa seba aj ostatných v sieti, ku ktorému môžu byť vystavení.</translation>
+        <source>Zioncoin is open source software produced by a global network of developers. By downloading, distributing and using Zioncoin and the Zioncoin network you release the developers involved in the Zioncoin Project past, present, and future from any and all liability. You are responsible for your creations on the Zioncoin network. You agree that the developers of the Zioncoin Project carry no responsibility for the actions/data or entities of *any* definition created on the network by yourself or others on the network to which you may be exposed.</source>
+        <translation>Zioncoin je open source softvér vyrábaná celosvetovej siete vývojárov. Stiahnutím, distribúcie a používania Zioncoin a sieť Zioncoin uvoľnenie vývojárov zapojené do projektu Zioncoin minulosti, prítomnosti a budúcnosti z akéhokoľvek a všetkej zodpovednosti. Ste zodpovední za svoje výtvory v sieti Zioncoin. Súhlasíte s tým, že vývojári Zioncoin projektu nenesú žiadnu zodpovednosť za činy / dát alebo subjektov * akýkoľvek * definícia vytvorená na sieti podľa seba aj ostatných v sieti, ku ktorému môžu byť vystavení.</translation>
     </message>
     <message>
-        <source>The developers of the Syscoin Project do not have the power to modify data on the Syscoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Syscoin, the Syscoin network, and Syscoin services. If you do not agree to these terms, please refrain from using Syscoin and its related services.</source>
-        <translation>Vývojári z Syscoin projektu nemajú moc meniť dáta v sieti Syscoin, že sa opiera o nezmeniteľné blockchain, ktorý ďalej potvrdí cez použitie Syscoin, siete Syscoin a služby Syscoin. Ak nesúhlasíte s týmito podmienkami, prosím, zdržať používanie Syscoin a jej súvisiacich služieb.</translation>
+        <source>The developers of the Zioncoin Project do not have the power to modify data on the Zioncoin network, it is backed by an immutable blockchain, which you further acknowledge through use of Zioncoin, the Zioncoin network, and Zioncoin services. If you do not agree to these terms, please refrain from using Zioncoin and its related services.</source>
+        <translation>Vývojári z Zioncoin projektu nemajú moc meniť dáta v sieti Zioncoin, že sa opiera o nezmeniteľné blockchain, ktorý ďalej potvrdí cez použitie Zioncoin, siete Zioncoin a služby Zioncoin. Ak nesúhlasíte s týmito podmienkami, prosím, zdržať používanie Zioncoin a jej súvisiacich služieb.</translation>
     </message>
     <message>
         <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
@@ -6147,8 +6147,8 @@ The network does not appear to fully agree! Some miners appear to be experiencin
         <translation>Kupujúci alias nie je vo vašej peňaženke</translation>
     </message>
     <message>
-        <source>Can't determine type of alias input into syscoin service transaction</source>
-        <translation>Nemožno určiť typ vstupu alias do syscoin servisnej transakcie</translation>
+        <source>Can't determine type of alias input into Zioncoin service transaction</source>
+        <translation>Nemožno určiť typ vstupu alias do Zioncoin servisnej transakcie</translation>
     </message>
     <message>
         <source>Cannot exceed 10 arbiter feedbacks</source>
@@ -6291,8 +6291,8 @@ The network does not appear to fully agree! Some miners appear to be experiencin
         <translation>Certifikát transakcia má neznámy op</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Syscoin Core Developers</source>
-        <translation>Autorské práva (C) 2009-%i Vývojári jadra Syscoin</translation>
+        <source>Copyright (C) 2009-%i The Zioncoin Core Developers</source>
+        <translation>Autorské práva (C) 2009-%i Vývojári jadra Zioncoin</translation>
     </message>
     <message>
         <source>Could not create escrow transaction: Invalid response from createescrow</source>
@@ -6619,8 +6619,8 @@ The network does not appear to fully agree! Some miners appear to be experiencin
         <translation>Transakcia správa má neznámy op</translation>
     </message>
     <message>
-        <source>Non-Syscoin transaction found</source>
-        <translation>Non-Syscoin transakcie nájdených</translation>
+        <source>Non-Zioncoin transaction found</source>
+        <translation>Non-Zioncoin transakcie nájdených</translation>
     </message>
     <message>
         <source>Not enough quantity left in this offer for this purchase</source>

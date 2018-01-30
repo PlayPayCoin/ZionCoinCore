@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Syscoin Core developers
+// Copyright (c) 2009-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_NET_H
-#define SYSCOIN_NET_H
+#ifndef Zioncoin_NET_H
+#define Zioncoin_NET_H
 
 #include "amount.h"
 #include "bloom.h"
@@ -47,7 +47,7 @@ static const int FEELER_INTERVAL = 120;
 static const unsigned int MAX_INV_SZ = 50000;
 /** The maximum number of new addresses to accumulate before announcing. */
 static const unsigned int MAX_ADDR_TO_SEND = 1000;
-// SYSCOIN
+// Zioncoin
 /**
  * Maximum length of incoming protocol messages (no message over 32 MiB is
  * currently acceptable).  Bitcoin has 4 MiB here, but we need more space
@@ -860,4 +860,4 @@ struct AddedNodeInfo
 
 std::vector<AddedNodeInfo> GetAddedNodeInfo();
 
-#endif // SYSCOIN_NET_H
+#endif // Zioncoin_NET_H

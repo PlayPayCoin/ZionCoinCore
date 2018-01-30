@@ -72,12 +72,12 @@
         <translation>Alış adresleri</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödeme gönderebileceğiniz Syscoin adreslerinizdir. Para göndermeden önce mutlaka alıcı adresini ve tutarı kontrol edin.</translation>
+        <source>These are your Zioncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödeme gönderebileceğiniz Zioncoin adreslerinizdir. Para göndermeden önce mutlaka alıcı adresini ve tutarı kontrol edin.</translation>
     </message>
     <message>
-        <source>These are your Syscoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödeme alabileceğiniz Syscoin adreslerinizdir. Her işlem için yeni bir adres kullanmanız önerilir.</translation>
+        <source>These are your Zioncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödeme alabileceğiniz Zioncoin adreslerinizdir. Her işlem için yeni bir adres kullanmanız önerilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -398,7 +398,7 @@
     <name>SplashScreen</name>
     </context>
 <context>
-    <name>SyscoinGUI</name>
+    <name>ZioncoinGUI</name>
     <message>
         <source>&amp;Receiving addresses...</source>
         <translation>Alış adresleri</translation>
@@ -456,6 +456,6 @@
     </message>
     </context>
 <context>
-    <name>syscoin-core</name>
+    <name>Zioncoin-core</name>
     </context>
 </TS>

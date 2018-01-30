@@ -1,9 +1,9 @@
-#include "test/test_syscoin_services.h"
+#include "test/test_Zioncoin_services.h"
 #include "utiltime.h"
 #include "rpc/server.h"
 #include "alias.h"
 #include <boost/test/unit_test.hpp>
-BOOST_FIXTURE_TEST_SUITE (syscoin_cert_tests, BasicSyscoinTestingSetup)
+BOOST_FIXTURE_TEST_SUITE (Zioncoin_cert_tests, BasicZioncoinTestingSetup)
 
 BOOST_AUTO_TEST_CASE (generate_big_certdata)
 {

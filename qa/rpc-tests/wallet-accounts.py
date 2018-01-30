@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# Copyright (c) 2016 The Syscoin Core developers
+# Copyright (c) 2016 The Zioncoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_framework import SyscoinTestFramework
+from test_framework.test_framework import ZioncoinTestFramework
 from test_framework.util import (
     start_nodes,
     start_node,
@@ -12,7 +12,7 @@ from test_framework.util import (
 )
 
 
-class WalletAccountsTest(SyscoinTestFramework):
+class WalletAccountsTest(ZioncoinTestFramework):
 
     def __init__(self):
         super().__init__()

@@ -1,12 +1,12 @@
-// Copyright (c) 2011-2015 The Syscoin Core developers
+// Copyright (c) 2011-2015 The Zioncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SYSCOIN_QT_PAYMENTSERVER_H
-#define SYSCOIN_QT_PAYMENTSERVER_H
+#ifndef Zioncoin_QT_PAYMENTSERVER_H
+#define Zioncoin_QT_PAYMENTSERVER_H
 
 // This class handles payment requests from clicking on
-// syscoin: URIs
+// Zioncoin: URIs
 //
 // This is somewhat tricky, because we have to deal with
 // the situation where the user clicks on a link during
@@ -145,4 +145,4 @@ private:
     OptionsModel *optionsModel;
 };
 
-#endif // SYSCOIN_QT_PAYMENTSERVER_H
+#endif // Zioncoin_QT_PAYMENTSERVER_H

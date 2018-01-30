@@ -1,7 +1,7 @@
 The [pull-tester](/qa/pull-tester/) folder contains a script to call
 multiple tests from the [rpc-tests](/qa/rpc-tests/) folder.
 
-Every pull request to the syscoin repository is built and run through
+Every pull request to the Zioncoin repository is built and run through
 the regression test suite. You can also run all or only individual
 tests locally.
 
@@ -50,9 +50,9 @@ Possible options, which apply to each individual test run:
 
 ```
   -h, --help            show this help message and exit
-  --nocleanup           Leave syscoinds and test.* datadir on exit or error
-  --noshutdown          Don't stop syscoinds after the test execution
-  --srcdir=SRCDIR       Source directory containing syscoind/syscoin-cli
+  --nocleanup           Leave Zioncoinds and test.* datadir on exit or error
+  --noshutdown          Don't stop Zioncoinds after the test execution
+  --srcdir=SRCDIR       Source directory containing Zioncoind/Zioncoin-cli
                         (default: ../../src)
   --tmpdir=TMPDIR       Root directory for datadirs
   --tracerpc            Print out all RPC calls as they are made
@@ -77,7 +77,7 @@ to recover with:
 
 ```bash
 rm -rf cache
-killall syscoind
+killall Zioncoind
 ```
 
 Writing tests
